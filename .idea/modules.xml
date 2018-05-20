@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/eMPoS.iml" filepath="$PROJECT_DIR$/eMPoS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TEmPoS.iml" filepath="$PROJECT_DIR$/TEmPoS.iml" />
     </modules>
   </component>
 </project>
