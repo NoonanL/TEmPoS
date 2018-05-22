@@ -3,12 +3,19 @@ package TEmPoS.Servlet;
 import TEmPoS.db.H2User;
 
 import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.io.BufferedReader;
 import java.io.IOException;
+import com.google.gson.*;
+
+import java.io.PrintWriter;
 import java.util.Map;
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 public class LoginServlet extends HttpServlet{
 
@@ -29,10 +36,36 @@ public class LoginServlet extends HttpServlet{
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String username = request.getParameter("userName");
-        String password = request.getParameter("password");
-        System.out.println("User " + username + " trying to log in with password " + password + ".");
 
+        JSONObject responseJson = new JSONObject();
+
+        // Read from request
+        StringBuilder buffer = new StringBuilder();
+        BufferedReader reader = request.getReader();
+        String line;
+        while ((line = reader.readLine()) != null) {
+            buffer.append(line);
+        }
+        String data = buffer.toString();
+        //System.out.println(data);
+
+        JSONObject input = new JSONObject(data);
+        String username = input.getString("username");
+        String password = input.getString("password");
+        System.out.println("User " + username + " attempting to log in.");
+
+        if(h2User.login(username,password)){
+            System.out.println("Login Successful");
+            responseJson.put("auth", "OK");
+        }else{
+            System.out.println("Login Failed");
+            responseJson.put("auth", "false");
+        }
+
+        response.setContentType("application/json");
+        PrintWriter out = response.getWriter();
+        out.print(responseJson);
+        out.flush();
     }
 
     private boolean doLogin(HttpServletRequest request, String userName, String password) throws IOException {
@@ -42,5 +75,16 @@ public class LoginServlet extends HttpServlet{
             return true;
         }
         return false;
+    }
+
+    public JSONObject requestParamsToJSON(ServletRequest req) {
+        JSONObject jsonObj = new JSONObject();
+        Map<String,String[]> params = req.getParameterMap();
+        for (Map.Entry<String,String[]> entry : params.entrySet()) {
+            String v[] = entry.getValue();
+            Object o = (v.length == 1) ? v[0] : v;
+            jsonObj.put(entry.getKey(), o);
+        }
+        return jsonObj;
     }
 }

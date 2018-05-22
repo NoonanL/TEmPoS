@@ -32,6 +32,8 @@
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.13" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-jdk14:1.7.13" level="project" />
     <orderEntry type="library" name="Maven: org.projectlombok:lombok:1.16.12" level="project" />
+    <orderEntry type="library" name="Maven: org.json:json:20180130" level="project" />
+    <orderEntry type="library" name="Maven: com.google.code.gson:gson:2.8.2" level="project" />
     <orderEntry type="library" name="Maven: org.eclipse.jetty.aggregate:jetty-all:9.4.9.v20180320" level="project" />
     <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-client:9.4.9.v20180320" level="project" />
     <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-http:9.4.9.v20180320" level="project" />

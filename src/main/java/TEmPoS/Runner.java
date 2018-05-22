@@ -32,9 +32,8 @@ public class Runner {
         handler.setInitParameter("org.eclipse.jetty.servlet.Default." + "resourceBase", "TEmPoS/src/main/resources/webapp");
 
 
-        LoginServlet login = new LoginServlet();
+        LoginServlet login = new LoginServlet(db);
         handler.addServlet(new ServletHolder(login), "/loginServlet");
-
 
         /*
         sets default servlet path.
