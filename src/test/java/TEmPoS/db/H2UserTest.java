@@ -104,11 +104,18 @@ public class H2UserTest {
     }
 
     @Test
+    public void getUserData(){
+        System.out.println("=====================================");
+        System.out.println("Testing get user data (except password)");
+        System.out.println("=====================================");
+        System.out.println(db.getUserDetails("Test User2"));
+    }
+
+    @Test
     public void isAdmin(){
         System.out.println("=====================================");
         System.out.println("Testing if user has admin privileges.");
         System.out.println("=====================================");
-        //System.out.println(db.getUserDetails("Test User2"));
         if(db.isAdmin("Test User")){
             System.out.println("User has admin status");
         }else{

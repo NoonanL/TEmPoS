@@ -78,7 +78,6 @@ public class H2User extends H2Base {
     }
 
         public boolean isAdmin(String userName) {
-        System.out.println("Got here");
         final String IS_ADMIN_QUERY = "SELECT 1 FROM users WHERE (name=? AND isAdmin=?)";
         try (PreparedStatement ps = getConnection().prepareStatement(IS_ADMIN_QUERY)){
             ps.setString(1, userName);
