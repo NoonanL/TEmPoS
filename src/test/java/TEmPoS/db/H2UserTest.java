@@ -37,7 +37,7 @@ public class H2UserTest {
         System.out.println("=====================================");
         System.out.println("Testing User Registration - will now fail because database with test user already exists");
         System.out.println("=====================================");
-        if(db.register("Test User", "password")){
+        if(db.register("Test User", "password", "Y")){
             System.out.println("User successfuly registered");
         }else{
             System.out.println("registration failed");

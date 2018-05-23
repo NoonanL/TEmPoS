@@ -26,7 +26,7 @@ public class H2User extends H2Base {
     }
 
     private void initTable(Connection conn) throws SQLException {
-        execute(conn, "CREATE TABLE IF NOT EXISTS users (name VARCHAR(255) PRIMARY KEY, hash VARCHAR(255))");
+        execute(conn, "CREATE TABLE IF NOT EXISTS users (id int AUTO_INCREMENT, name VARCHAR(255) PRIMARY KEY, hash VARCHAR(255), isAdmin VARCHAR(32))");
     }
 
     public synchronized boolean login(@NonNull final String userName, @NonNull final String password) {
@@ -39,10 +39,10 @@ public class H2User extends H2Base {
         }
     }
 
-    public synchronized boolean register(@NonNull final String userName, @NonNull final String password) {
+    public synchronized boolean register(@NonNull final String userName, @NonNull final String password, @NonNull final String isAdmin) {
         errIfClosed();
         try {
-            return registerSQL(userName, password);
+            return registerSQL(userName, password, isAdmin);
         } catch (SQLException e) {
             LOG.error("Can't register " + userName + ": " + e.getMessage());
             return false;
@@ -74,7 +74,7 @@ public class H2User extends H2Base {
         return false;
     }
 
-    private boolean registerSQL(String userName, String password) throws SQLException {
+    private boolean registerSQL(String userName, String password, String isAdmin) throws SQLException {
         String hash = hash(password);
         if (hash == null) {
             return false;
@@ -82,10 +82,11 @@ public class H2User extends H2Base {
         if (hasUserSQL(userName)) {
             return false;
         }
-        String query = "INSERT into users (name, hash) VALUES(?,?)";
+        String query = "INSERT into users (name, hash, isAdmin) VALUES(?,?,?)";
         try (PreparedStatement ps = getConnection().prepareStatement(query)) {
             ps.setString(1, userName);
             ps.setString(2, hash);
+            ps.setString(3, isAdmin);
             int count = ps.executeUpdate();
             LOG.debug("insert count = " + count);
             return count == 1;
