@@ -62,6 +62,35 @@ public class H2User extends H2Base {
         }
     }
 
+    public String getUserDetails(String username){
+        final String GET_USER_QUERY = "SELECT id, name, isAdmin FROM users WHERE name=?";
+        String details = null;
+        try (PreparedStatement ps = getConnection().prepareStatement(GET_USER_QUERY)){
+            ps.setString(1, username);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                details = rs.getString(1) + " / " +  rs.getString(2) + " / " +  rs.getString(3);
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return details;
+    }
+
+        public boolean isAdmin(String userName) {
+        System.out.println("Got here");
+        final String IS_ADMIN_QUERY = "SELECT 1 FROM users WHERE (name=? AND isAdmin=?)";
+        try (PreparedStatement ps = getConnection().prepareStatement(IS_ADMIN_QUERY)){
+            ps.setString(1, userName);
+            ps.setString(2, "Y");
+            ResultSet rs = ps.executeQuery();
+            return rs.next();
+        } catch (SQLException e) {
+            System.out.println(e.toString());
+            return false;
+        }
+    }
+
     private boolean loginSQL(String userName, String password) throws SQLException {
         try (PreparedStatement ps = getConnection().prepareStatement("SELECT hash FROM users WHERE name = ?")) {
             ps.setString(1, userName);
@@ -119,5 +148,7 @@ public class H2User extends H2Base {
             return null;
         }
     }
+
+
 
 }

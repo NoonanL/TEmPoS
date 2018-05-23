@@ -37,7 +37,7 @@ public class H2UserTest {
         System.out.println("=====================================");
         System.out.println("Testing User Registration - will now fail because database with test user already exists");
         System.out.println("=====================================");
-        if(db.register("Test User", "password", "Y")){
+        if(db.register("Test User2", "password", "Y")){
             System.out.println("User successfuly registered");
         }else{
             System.out.println("registration failed");
@@ -101,6 +101,18 @@ public class H2UserTest {
         }else{
             System.out.println("Login Failed");
         }
+    }
 
+    @Test
+    public void isAdmin(){
+        System.out.println("=====================================");
+        System.out.println("Testing if user has admin privileges.");
+        System.out.println("=====================================");
+        //System.out.println(db.getUserDetails("Test User2"));
+        if(db.isAdmin("Test User")){
+            System.out.println("User has admin status");
+        }else{
+            System.out.println("User does NOT have admin status");
+        }
     }
 }

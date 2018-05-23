@@ -24,6 +24,11 @@ public class Runner {
 
         Server server = new Server(PORT);
 
+        if(db.isAdmin("Test User")){
+            System.out.println("User has admin status");
+        }else{
+            System.out.println("User does NOT have admin status");
+        }
 
         /*
         servlet handler controls the context, ie where web resources are located.
