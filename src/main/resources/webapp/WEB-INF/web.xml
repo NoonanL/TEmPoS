@@ -16,4 +16,13 @@
         <url-pattern>/loginServlet</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>IsAdminServlet</servlet-name>
+        <servlet-class>TEmPoS.Servlet.IsAdminServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>IsAdminServlet</servlet-name>
+        <url-pattern>/isAdminServlet</url-pattern>
+    </servlet-mapping>
+
 </web-app>

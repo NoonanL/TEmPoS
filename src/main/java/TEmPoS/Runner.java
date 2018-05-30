@@ -1,5 +1,6 @@
 package TEmPoS;
 
+import TEmPoS.Servlet.IsAdminServlet;
 import TEmPoS.Servlet.LoginServlet;
 import TEmPoS.db.ConnectionSupplier;
 import TEmPoS.db.H2User;
@@ -23,7 +24,7 @@ public class Runner {
     private void start() throws Exception {
 
         Server server = new Server(PORT);
-        
+
         /*
         servlet handler controls the context, ie where web resources are located.
          */
@@ -33,6 +34,10 @@ public class Runner {
 
         LoginServlet login = new LoginServlet(db);
         handler.addServlet(new ServletHolder(login), "/loginServlet");
+
+        IsAdminServlet isAdminServlet = new IsAdminServlet(db);
+        handler.addServlet(new ServletHolder(isAdminServlet), "/isAdminServlet");
+
 
         /*
         sets default servlet path.
