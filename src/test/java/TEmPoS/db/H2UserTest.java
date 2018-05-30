@@ -1,5 +1,6 @@
 package TEmPoS.db;
 
+import org.json.JSONObject;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -109,6 +110,11 @@ public class H2UserTest {
         System.out.println("Testing get user data (except password)");
         System.out.println("=====================================");
         System.out.println(db.getUserDetails("Test User2"));
+    }
+    @Test
+    public void getUsers(){
+        JSONObject responseJson = new JSONObject(db.getUsers());
+        System.out.println(responseJson);
     }
 
     @Test

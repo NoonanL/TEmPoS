@@ -34,4 +34,13 @@
         <url-pattern>/createUserServlet</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>GetUsersServlet</servlet-name>
+        <servlet-class>TEmPoS.Servlet.GetUsersServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetUsersServlet</servlet-name>
+        <url-pattern>/getUsersServlet</url-pattern>
+    </servlet-mapping>
+
 </web-app>

@@ -1,6 +1,7 @@
 package TEmPoS;
 
 import TEmPoS.Servlet.CreateUserServlet;
+import TEmPoS.Servlet.GetUsersServlet;
 import TEmPoS.Servlet.IsAdminServlet;
 import TEmPoS.Servlet.LoginServlet;
 import TEmPoS.db.ConnectionSupplier;
@@ -42,6 +43,8 @@ public class Runner {
         CreateUserServlet createUserServlet = new CreateUserServlet(db);
         handler.addServlet(new ServletHolder(createUserServlet), "/createUserServlet");
 
+        GetUsersServlet getUsersServlet = new GetUsersServlet(db);
+        handler.addServlet(new ServletHolder(getUsersServlet), "/getUsersServlet");
 
         /*
         sets default servlet path.

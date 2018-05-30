@@ -8,6 +8,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 public class H2User extends H2Base {
 
@@ -75,6 +77,20 @@ public class H2User extends H2Base {
             throw new RuntimeException(e);
         }
         return details;
+    }
+
+    public Map<String, String> getUsers(){
+        final String GET_USER_QUERY = "SELECT name, isAdmin FROM users";
+        Map<String, String> userList = new LinkedHashMap<>();
+        try (PreparedStatement ps = getConnection().prepareStatement(GET_USER_QUERY)){
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                userList.put(rs.getString(1) ,rs.getString(2));
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return userList;
     }
 
         public boolean isAdmin(String userName) {
