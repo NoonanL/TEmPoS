@@ -43,15 +43,15 @@ public class CreateUserServlet extends HttpServlet {
         JSONObject input = new JSONObject(data);
         String newUsername = input.getString("username");
         String password = input.getString("password");
-        String adminStatus = input.getString("adminStatus");
+        String adminStatus = input.getString("isAdmin");
         System.out.println("Creating new user with username " + newUsername + ", admin status " + adminStatus + ".");
 
         if(h2User.register(newUsername,password,adminStatus)){
             System.out.println("New user created.");
-            //responseJson.put("admin", "OK");
+            responseJson.put("auth", "OK");
         }else{
             System.out.println("Error creating user");
-            //responseJson.put("admin", "false");
+            responseJson.put("auth", "false");
         }
 
         response.setContentType("application/json");
