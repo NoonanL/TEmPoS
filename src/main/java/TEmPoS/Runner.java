@@ -1,5 +1,6 @@
 package TEmPoS;
 
+import TEmPoS.Servlet.CreateUserServlet;
 import TEmPoS.Servlet.IsAdminServlet;
 import TEmPoS.Servlet.LoginServlet;
 import TEmPoS.db.ConnectionSupplier;
@@ -37,6 +38,9 @@ public class Runner {
 
         IsAdminServlet isAdminServlet = new IsAdminServlet(db);
         handler.addServlet(new ServletHolder(isAdminServlet), "/isAdminServlet");
+
+        CreateUserServlet createUserServlet = new CreateUserServlet(db);
+        handler.addServlet(new ServletHolder(createUserServlet), "/createUserServlet");
 
 
         /*

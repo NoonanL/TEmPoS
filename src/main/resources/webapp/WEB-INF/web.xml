@@ -25,4 +25,13 @@
         <url-pattern>/isAdminServlet</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>CreateUserServlet</servlet-name>
+        <servlet-class>TEmPoS.Servlet.CreateUserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CreateUserServlet</servlet-name>
+        <url-pattern>/createUserServlet</url-pattern>
+    </servlet-mapping>
+
 </web-app>
