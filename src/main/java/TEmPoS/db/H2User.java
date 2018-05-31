@@ -1,13 +1,17 @@
 package TEmPoS.db;
 
 import TEmPoS.Util.Password;
+import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import lombok.NonNull;
+import sun.awt.image.ImageWatched;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -79,13 +83,19 @@ public class H2User extends H2Base {
         return details;
     }
 
-    public Map<String, String> getUsers(){
-        final String GET_USER_QUERY = "SELECT name, isAdmin FROM users";
-        Map<String, String> userList = new LinkedHashMap<>();
+    public JSONObject getUsers(){
+        final String GET_USER_QUERY = "SELECT id, name, isAdmin FROM users";
+        JSONObject userList = new JSONObject();
         try (PreparedStatement ps = getConnection().prepareStatement(GET_USER_QUERY)){
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                userList.put(rs.getString(1) ,rs.getString(2));
+                String id = rs.getString(1);
+                String username = rs.getString(2);
+                String isAdmin = rs.getString(3);
+                Map<String, String> user = new LinkedHashMap<>();
+                user.put("username" , username);
+                user.put("isAdmin" , isAdmin);
+                userList.put(id , new JSONObject(user));
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);

@@ -48,10 +48,10 @@ public class CreateUserServlet extends HttpServlet {
 
         if(h2User.register(newUsername,password,adminStatus)){
             System.out.println("New user created.");
-            responseJson.put("auth", "OK");
+            responseJson.put("response", "OK");
         }else{
             System.out.println("Error creating user");
-            responseJson.put("auth", "false");
+            responseJson.put("response", "false");
         }
 
         response.setContentType("application/json");

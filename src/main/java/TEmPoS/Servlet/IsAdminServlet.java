@@ -47,10 +47,10 @@ public class IsAdminServlet extends HttpServlet {
 
         if(h2User.isAdmin(username)){
             System.out.println("Is an Admin");
-            responseJson.put("admin", "OK");
+            responseJson.put("isAdmin", "true");
         }else{
             System.out.println("Is not an admin");
-            responseJson.put("admin", "false");
+            responseJson.put("isAdmin", "false");
         }
 
         response.setContentType("application/json");
