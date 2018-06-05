@@ -508,3 +508,6 @@ org.h2.jdbc.JdbcSQLException: Invalid value "3" for parameter "columnIndex" [900
 	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
 	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
 	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+2018-06-05 23:14:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "DELETEME"; SQL statement:
+DELETE FROM users WHERE id=? [22018-194]

@@ -55,7 +55,17 @@ public class H2User extends H2Base {
         }
     }
 
-    public boolean isRegistered(String userName) {
+    public void deleteUser(String username) {
+        final String DELETE_USER_QUERY = "DELETE FROM users WHERE name=?";
+        try (PreparedStatement ps = getConnection().prepareStatement(DELETE_USER_QUERY)) {
+            ps.setString(1, username);
+            ps.execute();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+        public boolean isRegistered(String userName) {
         try (PreparedStatement ps = getConnection().prepareStatement("SELECT 1 FROM users WHERE name = ?")) {
             ps.setString(1, userName);
             ResultSet rs = ps.executeQuery();

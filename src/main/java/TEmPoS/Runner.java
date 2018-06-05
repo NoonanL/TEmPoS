@@ -1,9 +1,6 @@
 package TEmPoS;
 
-import TEmPoS.Servlet.CreateUserServlet;
-import TEmPoS.Servlet.GetUsersServlet;
-import TEmPoS.Servlet.IsAdminServlet;
-import TEmPoS.Servlet.LoginServlet;
+import TEmPoS.Servlet.*;
 import TEmPoS.db.ConnectionSupplier;
 import TEmPoS.db.H2User;
 import org.eclipse.jetty.server.Server;
@@ -45,6 +42,9 @@ public class Runner {
 
         GetUsersServlet getUsersServlet = new GetUsersServlet(db);
         handler.addServlet(new ServletHolder(getUsersServlet), "/getUsersServlet");
+
+        DeleteUserServlet deleteUserServlet = new DeleteUserServlet(db);
+        handler.addServlet(new ServletHolder(deleteUserServlet), "/deleteUserServlet");
 
         /*
         sets default servlet path.

@@ -35,12 +35,21 @@
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>GetUsersServlet</servlet-name>
-        <servlet-class>TEmPoS.Servlet.GetUsersServlet</servlet-class>
-    </servlet>
+    <servlet-name>GetUsersServlet</servlet-name>
+    <servlet-class>TEmPoS.Servlet.GetUsersServlet</servlet-class>
+</servlet>
     <servlet-mapping>
         <servlet-name>GetUsersServlet</servlet-name>
         <url-pattern>/getUsersServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeleteUserServlet</servlet-name>
+        <servlet-class>TEmPoS.Servlet.DeleteUserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteUserServlet</servlet-name>
+        <url-pattern>/deleteUserServlet</url-pattern>
     </servlet-mapping>
 
 </web-app>

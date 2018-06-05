@@ -128,4 +128,17 @@ public class H2UserTest {
             System.out.println("User does NOT have admin status");
         }
     }
+
+    @Test
+    public void deleteUser(){
+        System.out.println("=====================================");
+        System.out.println("Testing delete User.");
+        System.out.println("=====================================");
+
+        db.register("DELETEME", "password", "Y");
+        System.out.println(db.getUsers().toString());
+        db.deleteUser("DELETEME");
+        System.out.println(db.getUsers().toString());
+
+    }
 }
