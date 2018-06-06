@@ -5,13 +5,11 @@ import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import lombok.NonNull;
-import sun.awt.image.ImageWatched;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -32,7 +30,7 @@ public class H2User extends H2Base {
     }
 
     private void initTable(Connection conn) throws SQLException {
-        execute(conn, "CREATE TABLE IF NOT EXISTS users (id int AUTO_INCREMENT, name VARCHAR(255) PRIMARY KEY, hash VARCHAR(255), isAdmin VARCHAR(32))");
+        execute(conn, "CREATE TABLE IF NOT EXISTS users (id int AUTO_INCREMENT, username VARCHAR(255) PRIMARY KEY, hash VARCHAR(255), isAdmin VARCHAR(32))");
     }
 
     public synchronized boolean login(@NonNull final String userName, @NonNull final String password) {
@@ -56,7 +54,7 @@ public class H2User extends H2Base {
     }
 
     public void deleteUser(String username) {
-        final String DELETE_USER_QUERY = "DELETE FROM users WHERE name=?";
+        final String DELETE_USER_QUERY = "DELETE FROM users WHERE username=?";
         try (PreparedStatement ps = getConnection().prepareStatement(DELETE_USER_QUERY)) {
             ps.setString(1, username);
             ps.execute();
@@ -65,8 +63,22 @@ public class H2User extends H2Base {
         }
     }
 
+    public boolean editUser(String targetUser, String username, String isAdmin) {
+        final String EDIT_USER_QUERY = "UPDATE users SET username =?, isAdmin=? WHERE username=?";
+        try (PreparedStatement ps = getConnection().prepareStatement(EDIT_USER_QUERY)) {
+            ps.setString(1, username);
+            ps.setString(2, isAdmin);
+            ps.setString(3, targetUser);
+            ps.execute();
+            return true;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
         public boolean isRegistered(String userName) {
-        try (PreparedStatement ps = getConnection().prepareStatement("SELECT 1 FROM users WHERE name = ?")) {
+        try (PreparedStatement ps = getConnection().prepareStatement("SELECT 1 FROM users WHERE username = ?")) {
             ps.setString(1, userName);
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
@@ -79,7 +91,7 @@ public class H2User extends H2Base {
     }
 
     public String getUserDetails(String username){
-        final String GET_USER_QUERY = "SELECT id, name, isAdmin FROM users WHERE name=?";
+        final String GET_USER_QUERY = "SELECT id, username, isAdmin FROM users WHERE username=?";
         String details = null;
         try (PreparedStatement ps = getConnection().prepareStatement(GET_USER_QUERY)){
             ps.setString(1, username);
@@ -94,7 +106,7 @@ public class H2User extends H2Base {
     }
 
     public JSONObject getUsers(){
-        final String GET_USER_QUERY = "SELECT id, name, isAdmin FROM users";
+        final String GET_USER_QUERY = "SELECT id, username, isAdmin FROM users";
         JSONObject userList = new JSONObject();
         try (PreparedStatement ps = getConnection().prepareStatement(GET_USER_QUERY)){
             ResultSet rs = ps.executeQuery();
@@ -114,7 +126,7 @@ public class H2User extends H2Base {
     }
 
         public boolean isAdmin(String userName) {
-        final String IS_ADMIN_QUERY = "SELECT 1 FROM users WHERE (name=? AND isAdmin=?)";
+        final String IS_ADMIN_QUERY = "SELECT 1 FROM users WHERE (username=? AND isAdmin=?)";
         try (PreparedStatement ps = getConnection().prepareStatement(IS_ADMIN_QUERY)){
             ps.setString(1, userName);
             ps.setString(2, "Y");
@@ -127,7 +139,7 @@ public class H2User extends H2Base {
     }
 
     private boolean loginSQL(String userName, String password) throws SQLException {
-        try (PreparedStatement ps = getConnection().prepareStatement("SELECT hash FROM users WHERE name = ?")) {
+        try (PreparedStatement ps = getConnection().prepareStatement("SELECT hash FROM users WHERE username = ?")) {
             ps.setString(1, userName);
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
@@ -146,7 +158,7 @@ public class H2User extends H2Base {
         if (hasUserSQL(userName)) {
             return false;
         }
-        String query = "INSERT into users (name, hash, isAdmin) VALUES(?,?,?)";
+        String query = "INSERT into users (username, hash, isAdmin) VALUES(?,?,?)";
         try (PreparedStatement ps = getConnection().prepareStatement(query)) {
             ps.setString(1, userName);
             ps.setString(2, hash);
@@ -159,7 +171,7 @@ public class H2User extends H2Base {
 
 
     private boolean hasUserSQL(String userName) throws SQLException {
-        try (PreparedStatement ps = getConnection().prepareStatement("SELECT name FROM users WHERE name = ?")) {
+        try (PreparedStatement ps = getConnection().prepareStatement("SELECT username FROM users WHERE username = ?")) {
             ps.setString(1, userName);
             ResultSet rs = ps.executeQuery();
             return rs.next();

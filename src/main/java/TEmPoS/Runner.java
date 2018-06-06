@@ -46,6 +46,9 @@ public class Runner {
         DeleteUserServlet deleteUserServlet = new DeleteUserServlet(db);
         handler.addServlet(new ServletHolder(deleteUserServlet), "/deleteUserServlet");
 
+        EditUserServlet editUserServlet = new EditUserServlet(db);
+        handler.addServlet(new ServletHolder(editUserServlet), "/editUserServlet");
+
         /*
         sets default servlet path.
          */
