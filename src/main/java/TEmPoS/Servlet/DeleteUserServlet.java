@@ -26,7 +26,8 @@ public class DeleteUserServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         //read from request
-        JSONObject input = new RequestJson().parse(request);
+        RequestJson requestParser = new RequestJson();
+        JSONObject input = requestParser.parse(request);
         String targetUser = input.getString("targetUser");
         String requestUser = input.getString("requestUser");
         //System.out.println("User " + requestUser + " attempting to delete account with username " + targetUser + ".");

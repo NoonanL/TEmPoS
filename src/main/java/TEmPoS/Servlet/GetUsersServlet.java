@@ -1,7 +1,7 @@
 package TEmPoS.Servlet;
 
+import TEmPoS.Util.RequestJson;
 import TEmPoS.db.H2User;
-import org.json.JSONArray;
 import org.json.JSONObject;
 
 import javax.servlet.ServletException;
@@ -10,9 +10,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
-import java.util.Map;
 
 public class GetUsersServlet extends HttpServlet {
 
@@ -31,7 +28,15 @@ public class GetUsersServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        JSONObject responseJson = h2User.getUsers();
+        RequestJson requestParser = new RequestJson();
+        JSONObject input = requestParser.parse(request);
+        String requestUser = input.getString("requestUser");
+
+        JSONObject responseJson = new JSONObject();
+        if(h2User.isRegistered(requestUser)) {
+            responseJson = h2User.getUsers();
+        }
+
 
         //System.out.println(responseJson);
         response.setContentType("application/json");

@@ -30,18 +30,26 @@ public class IsAdminServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         //read from request
-        JSONObject input = new RequestJson().parse(request);
+        RequestJson requestParser = new RequestJson();
+        JSONObject input = requestParser.parse(request);
+        String requestUser = input.getString("requestUser");
         String username = input.getString("username");
         //System.out.println("Is user " + username + " an Admin...");
 
         JSONObject responseJson = new JSONObject();
-        if(h2User.isAdmin(username)){
-            //System.out.println("Is an Admin");
-            responseJson.put("isAdmin", "true");
+        if(h2User.isAdmin(requestUser)){
+            if(h2User.isAdmin(username)){
+                //System.out.println("Is an Admin");
+                responseJson.put("response", "OK");
+                responseJson.put("isAdmin", "true");
+            }else{
+                //System.out.println("Is not an admin");
+                responseJson.put("isAdmin", "false");
+            }
         }else{
-            //System.out.println("Is not an admin");
-            responseJson.put("isAdmin", "false");
+            responseJson.put("response","false");
         }
+
 
         response.setContentType("application/json");
         PrintWriter out = response.getWriter();

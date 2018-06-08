@@ -29,7 +29,8 @@ public class LoginServlet extends HttpServlet{
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         // Read from request
-        JSONObject input = new RequestJson().parse(request);
+        RequestJson requestParser = new RequestJson();
+        JSONObject input = requestParser.parse(request);
         String username = input.getString("username");
         String password = input.getString("password");
         //System.out.println("User " + username + " attempting to log in.");
@@ -37,10 +38,8 @@ public class LoginServlet extends HttpServlet{
         JSONObject responseJson = new JSONObject();
 
         if(h2User.login(username,password)){
-            //System.out.println("Login Successful");
             responseJson.put("auth", "OK");
         }else{
-            //System.out.println("Login Failed");
             responseJson.put("auth", "false");
         }
 
