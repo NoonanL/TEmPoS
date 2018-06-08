@@ -1,5 +1,6 @@
 package TEmPoS.Servlet;
 
+import TEmPoS.Util.RequestJson;
 import TEmPoS.db.H2User;
 import org.json.JSONObject;
 
@@ -24,30 +25,20 @@ public class DeleteUserServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        JSONObject responseJson = new JSONObject();
-
-        // Read from request
-        StringBuilder buffer = new StringBuilder();
-        BufferedReader reader = request.getReader();
-        String line;
-        while ((line = reader.readLine()) != null) {
-            buffer.append(line);
-        }
-        String data = buffer.toString();
-        //System.out.println(data);
-
-        JSONObject input = new JSONObject(data);
+        //read from request
+        JSONObject input = new RequestJson().parse(request);
         String targetUser = input.getString("targetUser");
         String requestUser = input.getString("requestUser");
-        //String password = input.getString("password");
-        System.out.println("User " + requestUser + " attempting to delete account with username " + targetUser + ".");
+        //System.out.println("User " + requestUser + " attempting to delete account with username " + targetUser + ".");
+
+        JSONObject responseJson = new JSONObject();
         if(h2User.isAdmin(requestUser)){
-            System.out.println(requestUser + " is an Admin and may attempt to delete...");
+            //System.out.println(requestUser + " is an Admin and may attempt to delete...");
             h2User.deleteUser(targetUser);
             responseJson.put("response", "OK");
-            System.out.println(targetUser + " deleted.");
+            //System.out.println(targetUser + " deleted.");
         }else{
-            System.out.println(requestUser + " is not an admin.");
+            //System.out.println(requestUser + " is not an admin.");
             responseJson.put("response", "false");
         }
 

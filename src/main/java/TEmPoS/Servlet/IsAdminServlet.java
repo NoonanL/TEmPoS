@@ -1,5 +1,6 @@
 package TEmPoS.Servlet;
 
+import TEmPoS.Util.RequestJson;
 import TEmPoS.db.H2User;
 import org.json.JSONObject;
 
@@ -28,28 +29,17 @@ public class IsAdminServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        JSONObject responseJson = new JSONObject();
-
-        // Read from request
-        StringBuilder buffer = new StringBuilder();
-        BufferedReader reader = request.getReader();
-        String line;
-        while ((line = reader.readLine()) != null) {
-            buffer.append(line);
-        }
-        String data = buffer.toString();
-        //System.out.println(data);
-
-        JSONObject input = new JSONObject(data);
+        //read from request
+        JSONObject input = new RequestJson().parse(request);
         String username = input.getString("username");
-        //String password = input.getString("password");
-        System.out.println("Is user " + username + " an Admin...");
+        //System.out.println("Is user " + username + " an Admin...");
 
+        JSONObject responseJson = new JSONObject();
         if(h2User.isAdmin(username)){
-            System.out.println("Is an Admin");
+            //System.out.println("Is an Admin");
             responseJson.put("isAdmin", "true");
         }else{
-            System.out.println("Is not an admin");
+            //System.out.println("Is not an admin");
             responseJson.put("isAdmin", "false");
         }
 

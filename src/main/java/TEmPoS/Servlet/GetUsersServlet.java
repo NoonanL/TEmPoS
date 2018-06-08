@@ -33,7 +33,7 @@ public class GetUsersServlet extends HttpServlet {
 
         JSONObject responseJson = h2User.getUsers();
 
-        System.out.println(responseJson);
+        //System.out.println(responseJson);
         response.setContentType("application/json");
         PrintWriter out = response.getWriter();
         out.print(responseJson);

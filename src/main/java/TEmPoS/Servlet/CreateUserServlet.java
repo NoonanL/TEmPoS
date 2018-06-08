@@ -1,5 +1,6 @@
 package TEmPoS.Servlet;
 
+import TEmPoS.Util.RequestJson;
 import TEmPoS.db.H2User;
 import org.json.JSONObject;
 
@@ -28,29 +29,19 @@ public class CreateUserServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        JSONObject responseJson = new JSONObject();
-
-        // Read from request
-        StringBuilder buffer = new StringBuilder();
-        BufferedReader reader = request.getReader();
-        String line;
-        while ((line = reader.readLine()) != null) {
-            buffer.append(line);
-        }
-        String data = buffer.toString();
-        //System.out.println(data);
-
-        JSONObject input = new JSONObject(data);
+        //read from request
+        JSONObject input = new RequestJson().parse(request);
         String newUsername = input.getString("username");
         String password = input.getString("password");
         String adminStatus = input.getString("isAdmin");
-        System.out.println("Creating new user with username " + newUsername + ", admin status " + adminStatus + ".");
+        //System.out.println("Creating new user with username " + newUsername + ", admin status " + adminStatus + ".");
 
+        JSONObject responseJson = new JSONObject();
         if(h2User.register(newUsername,password,adminStatus)){
-            System.out.println("New user created.");
+            //System.out.println("New user created.");
             responseJson.put("response", "OK");
         }else{
-            System.out.println("Error creating user");
+            //System.out.println("Error creating user");
             responseJson.put("response", "false");
         }
 
