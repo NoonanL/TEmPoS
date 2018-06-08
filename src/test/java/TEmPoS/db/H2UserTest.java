@@ -38,7 +38,7 @@ public class H2UserTest {
         System.out.println("=====================================");
         System.out.println("Testing User Registration - will now fail because database with test user already exists");
         System.out.println("=====================================");
-        if(db.register("Test User2", "password", "Y")){
+        if(db.register("Test User For Testing Purposes", "password", "Y")){
             System.out.println("User successfuly registered");
         }else{
             System.out.println("registration failed");
@@ -51,7 +51,7 @@ public class H2UserTest {
         System.out.println("Testing successful isRegistered");
         System.out.println("=====================================");
 
-        if(db.isRegistered("Test User2")){
+        if(db.isRegistered("Test User For Testing Purposes")){
             System.out.println("User is registered.");
         }else{
             System.out.println("User is NOT registered.");
@@ -75,7 +75,7 @@ public class H2UserTest {
         System.out.println("Testing Successful Login");
         System.out.println("=====================================");
 
-        if(db.login("Liam", "password")){
+        if(db.login("Test User For Testing Purposes", "password")){
             System.out.println("User successfully logged in");
             }else{
             System.out.println("Login Failed");
@@ -109,7 +109,7 @@ public class H2UserTest {
         System.out.println("=====================================");
         System.out.println("Testing get user data (except password)");
         System.out.println("=====================================");
-        System.out.println(db.getUserDetails("Test User2"));
+        System.out.println(db.getUserDetails("Test User For Testing Purposes"));
     }
 
     @Test
@@ -117,15 +117,18 @@ public class H2UserTest {
         System.out.println("=====================================");
         System.out.println("Testing edit user data (except password)");
         System.out.println("=====================================");
-        if(db.register("Test User2", "password", "Y")){
+        if(db.register("Test User For Testing Purposes", "password", "Y")){
             System.out.println("User successfuly registered");
         }else{
             System.out.println("registration failed");
         }
-        System.out.println(db.getUserDetails("Test User Edited"));
+        System.out.println(db.getUserDetails("Test User For Testing Purposes"));
         System.out.println("Editing...");
-        db.editUser("Test User Edited", "Liam", "Y");
-        System.out.println(db.getUserDetails("Test User Edited"));
+        if(db.editUser("Test User For Testing Purposes", "Test User For Testing Purposes Edited", "Y")){
+            System.out.println("Test User successfully edited");
+        }
+        //returns test user to original state
+        db.editUser("Test User Edited", "Test User For Testing Purposes", "Y");
     }
 
     @Test
@@ -138,7 +141,7 @@ public class H2UserTest {
         System.out.println("=====================================");
         System.out.println("Testing if user has admin privileges.");
         System.out.println("=====================================");
-        if(db.isAdmin("Test User Edited")){
+        if(db.isAdmin("Test User For Testing Purposes")){
             System.out.println("User has admin status");
         }else{
             System.out.println("User does NOT have admin status");
@@ -151,9 +154,9 @@ public class H2UserTest {
         System.out.println("Testing delete User.");
         System.out.println("=====================================");
 
-        db.register("DELETEME", "password", "Y");
+        db.register("Delete me for Testing purposes", "password", "Y");
         System.out.println(db.getUsers().toString());
-        db.deleteUser("DELETEME");
+        db.deleteUser("Delete me for Testing purposes");
         System.out.println(db.getUsers().toString());
 
     }
