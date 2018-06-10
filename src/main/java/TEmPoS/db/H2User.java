@@ -19,6 +19,10 @@ public class H2User extends H2Base {
     private static final Logger LOG = LoggerFactory.getLogger(H2User.class);
 
 
+    /**
+     * establish connection to database
+     * @param connectionSupplier
+     */
     public H2User(ConnectionSupplier connectionSupplier) {
         super(connectionSupplier.provide());
         try {
@@ -29,10 +33,21 @@ public class H2User extends H2Base {
         }
     }
 
+    /**
+     * Initializes SQL table, creates one if it doesn't already exist.
+     * @param conn connection to the database file
+     * @throws SQLException
+     */
     private void initTable(Connection conn) throws SQLException {
         execute(conn, "CREATE TABLE IF NOT EXISTS users (id int AUTO_INCREMENT, username VARCHAR(255) PRIMARY KEY, hash VARCHAR(255), isAdmin VARCHAR(32))");
     }
 
+    /**
+     * Carries out appropriate tests on a given username and password
+     * @param userName
+     * @param password
+     * @return
+     */
     public synchronized boolean login(@NonNull final String userName, @NonNull final String password) {
         errIfClosed();
         try {
@@ -43,6 +58,13 @@ public class H2User extends H2Base {
         }
     }
 
+    /**
+     * Register a new user
+     * @param userName the username
+     * @param password the password
+     * @param isAdmin whether or not the user will have access to admin settings
+     * @return boolean either success or failure
+     */
     public synchronized boolean register(@NonNull final String userName, @NonNull final String password, @NonNull final String isAdmin) {
         errIfClosed();
         try {
@@ -53,6 +75,10 @@ public class H2User extends H2Base {
         }
     }
 
+    /**
+     * Delete a given user
+     * @param username the username of the user to delete
+     */
     public void deleteUser(String username) {
         final String DELETE_USER_QUERY = "DELETE FROM users WHERE username=?";
         try (PreparedStatement ps = getConnection().prepareStatement(DELETE_USER_QUERY)) {
@@ -63,6 +89,13 @@ public class H2User extends H2Base {
         }
     }
 
+    /**
+     * Edits a user by updating all of their fields with the exception of the password field
+     * @param targetUser the user to edit
+     * @param username the updated username
+     * @param isAdmin the updated admin status
+     * @return boolean for success or failure
+     */
     public boolean editUser(String targetUser, String username, String isAdmin) {
         final String EDIT_USER_QUERY = "UPDATE users SET username =?, isAdmin=? WHERE username=?";
         try (PreparedStatement ps = getConnection().prepareStatement(EDIT_USER_QUERY)) {
@@ -77,6 +110,11 @@ public class H2User extends H2Base {
         }
     }
 
+    /**
+     * Checks if a username already exists in the database
+     * @param userName the username to check
+     * @return boolean for success or failure
+     */
         public boolean isRegistered(String userName) {
         try (PreparedStatement ps = getConnection().prepareStatement("SELECT 1 FROM users WHERE username = ?")) {
             ps.setString(1, userName);
@@ -90,6 +128,11 @@ public class H2User extends H2Base {
         }
     }
 
+    /**
+     * Get a particular user's data
+     * @param username the username of the user's who's data you need
+     * @return boolean for success or failure
+     */
     public String getUserDetails(String username){
         final String GET_USER_QUERY = "SELECT id, username, isAdmin FROM users WHERE username=?";
         String details = null;
@@ -105,6 +148,11 @@ public class H2User extends H2Base {
         return details;
     }
 
+    /**
+     * Get all users in the database and their data
+     * @return a JSON object containing all user data in key value format where the key is the user id and the value
+     * is a json object formatted set of variables
+     */
     public JSONObject getUsers(){
         final String GET_USER_QUERY = "SELECT id, username, isAdmin FROM users";
         JSONObject userList = new JSONObject();
@@ -125,6 +173,11 @@ public class H2User extends H2Base {
         return userList;
     }
 
+    /**
+     * tests if a particular user has admin status
+     * @param userName the user to test for admin status
+     * @return true if the user is admin, false otherwise
+     */
         public boolean isAdmin(String userName) {
         final String IS_ADMIN_QUERY = "SELECT 1 FROM users WHERE (username=? AND isAdmin=?)";
         try (PreparedStatement ps = getConnection().prepareStatement(IS_ADMIN_QUERY)){
@@ -138,6 +191,13 @@ public class H2User extends H2Base {
         }
     }
 
+    /**
+     * Function to check login details against the database
+     * @param userName the username
+     * @param password password
+     * @return true if login success, false otherwise
+     * @throws SQLException
+     */
     private boolean loginSQL(String userName, String password) throws SQLException {
         try (PreparedStatement ps = getConnection().prepareStatement("SELECT hash FROM users WHERE username = ?")) {
             ps.setString(1, userName);
@@ -150,6 +210,14 @@ public class H2User extends H2Base {
         return false;
     }
 
+    /**
+     * add new user to the database so long as they dont already exist or username is not already taken
+     * @param userName new username
+     * @param password new password
+     * @param isAdmin new admin status
+     * @return true for success, false otherwise
+     * @throws SQLException
+     */
     private boolean registerSQL(String userName, String password, String isAdmin) throws SQLException {
         String hash = hash(password);
         if (hash == null) {
@@ -169,7 +237,12 @@ public class H2User extends H2Base {
         }
     }
 
-
+    /**
+     * checks if the username is already taken
+     * @param userName the username to check
+     * @return
+     * @throws SQLException
+     */
     private boolean hasUserSQL(String userName) throws SQLException {
         try (PreparedStatement ps = getConnection().prepareStatement("SELECT username FROM users WHERE username = ?")) {
             ps.setString(1, userName);
@@ -178,6 +251,12 @@ public class H2User extends H2Base {
         }
     }
 
+    /**
+     * Checks that the password is valid
+     * @param password password
+     * @param hash hash
+     * @return
+     */
     private boolean validate(String password, String hash) {
         try {
             return Password.validatePassword(password, hash);
@@ -187,6 +266,11 @@ public class H2User extends H2Base {
         }
     }
 
+    /**
+     * creates a hash of the user's desired password
+     * @param password user's password
+     * @return true for success, false otherwise
+     */
     private String hash(String password) {
         try {
             return Password.createHash(password);
