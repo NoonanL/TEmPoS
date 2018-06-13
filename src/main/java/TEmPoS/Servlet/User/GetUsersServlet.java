@@ -1,4 +1,4 @@
-package TEmPoS.Servlet;
+package TEmPoS.Servlet.User;
 
 import TEmPoS.Util.RequestJson;
 import TEmPoS.db.H2User;

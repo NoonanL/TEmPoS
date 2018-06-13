@@ -1,7 +1,10 @@
 package TEmPoS;
 
 import TEmPoS.Servlet.*;
+import TEmPoS.Servlet.Customer.CreateCustomerServlet;
+import TEmPoS.Servlet.User.*;
 import TEmPoS.db.ConnectionSupplier;
+import TEmPoS.db.H2Customer;
 import TEmPoS.db.H2User;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.DefaultServlet;
@@ -10,13 +13,15 @@ import org.eclipse.jetty.servlet.ServletHolder;
 
 public class Runner {
 
-    private H2User db;
+    private H2User userDB;
+    private H2Customer customerDB;
     private static final int PORT = 9001;
 
     private Runner() {
 
 
-        db = new H2User(new ConnectionSupplier(ConnectionSupplier.FILE));
+        userDB = new H2User(new ConnectionSupplier(ConnectionSupplier.FILE));
+        customerDB = new H2Customer(new ConnectionSupplier(ConnectionSupplier.FILE));
 
     }
 
@@ -31,23 +36,26 @@ public class Runner {
         handler.setInitParameter("org.eclipse.jetty.servlet.Default." + "resourceBase", "TEmPoS/src/main/resources/webapp");
 
 
-        LoginServlet login = new LoginServlet(db);
+        LoginServlet login = new LoginServlet(userDB);
         handler.addServlet(new ServletHolder(login), "/loginServlet");
 
-        IsAdminServlet isAdminServlet = new IsAdminServlet(db);
+        IsAdminServlet isAdminServlet = new IsAdminServlet(userDB);
         handler.addServlet(new ServletHolder(isAdminServlet), "/isAdminServlet");
 
-        CreateUserServlet createUserServlet = new CreateUserServlet(db);
+        CreateUserServlet createUserServlet = new CreateUserServlet(userDB);
         handler.addServlet(new ServletHolder(createUserServlet), "/createUserServlet");
 
-        GetUsersServlet getUsersServlet = new GetUsersServlet(db);
+        GetUsersServlet getUsersServlet = new GetUsersServlet(userDB);
         handler.addServlet(new ServletHolder(getUsersServlet), "/getUsersServlet");
 
-        DeleteUserServlet deleteUserServlet = new DeleteUserServlet(db);
+        DeleteUserServlet deleteUserServlet = new DeleteUserServlet(userDB);
         handler.addServlet(new ServletHolder(deleteUserServlet), "/deleteUserServlet");
 
-        EditUserServlet editUserServlet = new EditUserServlet(db);
+        EditUserServlet editUserServlet = new EditUserServlet(userDB);
         handler.addServlet(new ServletHolder(editUserServlet), "/editUserServlet");
+
+        CreateCustomerServlet createCustomerServlet = new CreateCustomerServlet(customerDB,userDB);
+        handler.addServlet(new ServletHolder(createCustomerServlet), "/createCustomerServlet");
 
         /*
         sets default servlet path.

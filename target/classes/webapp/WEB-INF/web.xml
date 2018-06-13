@@ -18,7 +18,7 @@
 
     <servlet>
         <servlet-name>IsAdminServlet</servlet-name>
-        <servlet-class>TEmPoS.Servlet.IsAdminServlet</servlet-class>
+        <servlet-class>TEmPoS.Servlet.User.IsAdminServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>IsAdminServlet</servlet-name>
@@ -27,7 +27,7 @@
 
     <servlet>
         <servlet-name>CreateUserServlet</servlet-name>
-        <servlet-class>TEmPoS.Servlet.CreateUserServlet</servlet-class>
+        <servlet-class>TEmPoS.Servlet.User.CreateUserServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>CreateUserServlet</servlet-name>
@@ -36,7 +36,7 @@
 
     <servlet>
     <servlet-name>GetUsersServlet</servlet-name>
-    <servlet-class>TEmPoS.Servlet.GetUsersServlet</servlet-class>
+    <servlet-class>TEmPoS.Servlet.User.GetUsersServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>GetUsersServlet</servlet-name>
@@ -45,7 +45,7 @@
 
     <servlet>
         <servlet-name>DeleteUserServlet</servlet-name>
-        <servlet-class>TEmPoS.Servlet.DeleteUserServlet</servlet-class>
+        <servlet-class>TEmPoS.Servlet.User.DeleteUserServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>DeleteUserServlet</servlet-name>
@@ -54,11 +54,20 @@
 
     <servlet>
         <servlet-name>EditUserServlet</servlet-name>
-        <servlet-class>TEmPoS.Servlet.EditUserServlet</servlet-class>
+        <servlet-class>TEmPoS.Servlet.User.EditUserServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>EditUserServlet</servlet-name>
         <url-pattern>/editUserServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CreateCustomerServlet</servlet-name>
+        <servlet-class>TEmPoS.Servlet.Customer.CreateCustomerServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CreateCustomerServlet</servlet-name>
+        <url-pattern>/createCustomerServlet</url-pattern>
     </servlet-mapping>
 
 </web-app>

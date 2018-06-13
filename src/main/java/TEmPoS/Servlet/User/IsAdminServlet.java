@@ -1,4 +1,4 @@
-package TEmPoS.Servlet;
+package TEmPoS.Servlet.User;
 
 import TEmPoS.Util.RequestJson;
 import TEmPoS.db.H2User;
@@ -12,13 +12,13 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-public class CreateUserServlet extends HttpServlet {
+public class IsAdminServlet extends HttpServlet {
 
     private H2User h2User;
 
-    public CreateUserServlet(){}
+    public IsAdminServlet(){}
 
-    public CreateUserServlet(H2User h2User) {
+    public IsAdminServlet(H2User h2User) {
         this.h2User = h2User;
     }
 
@@ -33,20 +33,21 @@ public class CreateUserServlet extends HttpServlet {
         RequestJson requestParser = new RequestJson();
         JSONObject input = requestParser.parse(request);
         String requestUser = input.getString("requestUser");
-        String newUsername = input.getString("username");
-        String password = input.getString("password");
-        String adminStatus = input.getString("isAdmin");
-        //System.out.println("Creating new user with username " + newUsername + ", admin status " + adminStatus + ".");
+        String username = input.getString("username");
+        //System.out.println("Is user " + username + " an Admin...");
 
         JSONObject responseJson = new JSONObject();
         if(h2User.isAdmin(requestUser)){
-            if(h2User.register(newUsername,password,adminStatus)){
-                //System.out.println("New user created.");
+            if(h2User.isAdmin(username)){
+                //System.out.println("Is an Admin");
                 responseJson.put("response", "OK");
+                responseJson.put("isAdmin", "true");
             }else{
-                //System.out.println("Error creating user");
-                responseJson.put("response", "false");
+                //System.out.println("Is not an admin");
+                responseJson.put("isAdmin", "false");
             }
+        }else{
+            responseJson.put("response","false");
         }
 
 
