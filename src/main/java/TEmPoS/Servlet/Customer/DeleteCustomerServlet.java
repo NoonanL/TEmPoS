@@ -13,38 +13,36 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
 
-public class CreateCustomerServlet extends HttpServlet {
+public class DeleteCustomerServlet extends HttpServlet {
 
     private H2Customer h2Customer;
     private H2User h2User;
 
-    public CreateCustomerServlet(){}
+    public DeleteCustomerServlet(){}
 
-    public CreateCustomerServlet(H2Customer h2Customer, H2User h2User){
+    public DeleteCustomerServlet(H2Customer h2Customer, H2User h2User){
         this.h2Customer = h2Customer;
         this.h2User = h2User;
     }
 
 
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) {
     }
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         //read from request
         RequestJson requestParser = new RequestJson();
         JSONObject input = requestParser.parse(request);
-        String firstname = input.getString("firstname");
-        String surname = input.getString("surname");
         String id = input.getString("id");
         String requestUser = input.getString("requestUser");
 
-        int editId = Integer.parseInt(id);
+        int deleteId = Integer.parseInt(id);
 
         JSONObject responseJson = new JSONObject();
         if(h2User.isRegistered(requestUser)){
-            if(h2Customer.editCustomer(editId, firstname, surname)){
+            if(h2Customer.deleteCustomerById(deleteId)){
                 //System.out.println("New user created.");
                 responseJson.put("response", "OK");
             }else{
@@ -53,11 +51,9 @@ public class CreateCustomerServlet extends HttpServlet {
             }
         }
 
-
         response.setContentType("application/json");
         PrintWriter out = response.getWriter();
         out.print(responseJson);
         out.flush();
     }
-
-    }
+}

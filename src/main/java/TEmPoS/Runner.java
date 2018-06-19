@@ -2,6 +2,9 @@ package TEmPoS;
 
 import TEmPoS.Servlet.*;
 import TEmPoS.Servlet.Customer.CreateCustomerServlet;
+import TEmPoS.Servlet.Customer.DeleteCustomerServlet;
+import TEmPoS.Servlet.Customer.EditCustomerServlet;
+import TEmPoS.Servlet.Customer.GetCustomersServlet;
 import TEmPoS.Servlet.User.*;
 import TEmPoS.db.ConnectionSupplier;
 import TEmPoS.db.H2Customer;
@@ -56,6 +59,15 @@ public class Runner {
 
         CreateCustomerServlet createCustomerServlet = new CreateCustomerServlet(customerDB,userDB);
         handler.addServlet(new ServletHolder(createCustomerServlet), "/createCustomerServlet");
+
+        DeleteCustomerServlet deleteCustomerServlet = new DeleteCustomerServlet(customerDB,userDB);
+        handler.addServlet(new ServletHolder(deleteCustomerServlet), "/deleteCustomerServlet");
+
+        EditCustomerServlet editCustomerServlet = new EditCustomerServlet(customerDB,userDB);
+        handler.addServlet(new ServletHolder(editCustomerServlet), "/editCustomerServlet");
+
+        GetCustomersServlet getCustomersServlet = new GetCustomersServlet(customerDB,userDB);
+        handler.addServlet(new ServletHolder(getCustomersServlet), "/getCustomersServlet");
 
         /*
         sets default servlet path.

@@ -107,13 +107,15 @@ public class H2Customer extends H2Base {
         return customer;
     }
 
-    public void deleteCustomerById(int id) {
+    public boolean deleteCustomerById(int id) {
         final String DELETE_USER_QUERY = "DELETE FROM customers WHERE id=?";
         try (PreparedStatement ps = getConnection().prepareStatement(DELETE_USER_QUERY)) {
             ps.setInt(1, id);
             ps.execute();
+            return true;
         } catch (SQLException e) {
             e.printStackTrace();
+            return false;
         }
     }
 
