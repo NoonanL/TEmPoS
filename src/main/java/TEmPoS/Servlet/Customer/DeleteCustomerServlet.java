@@ -35,7 +35,7 @@ public class DeleteCustomerServlet extends HttpServlet {
         //read from request
         RequestJson requestParser = new RequestJson();
         JSONObject input = requestParser.parse(request);
-        String id = input.getString("id");
+        String id = input.getString("targetCustomerId");
         String requestUser = input.getString("requestUser");
 
         int deleteId = Integer.parseInt(id);

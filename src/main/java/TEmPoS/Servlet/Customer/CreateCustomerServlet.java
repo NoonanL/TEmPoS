@@ -37,19 +37,21 @@ public class CreateCustomerServlet extends HttpServlet {
         JSONObject input = requestParser.parse(request);
         String firstname = input.getString("firstname");
         String surname = input.getString("surname");
-        String id = input.getString("id");
         String requestUser = input.getString("requestUser");
-
-        int editId = Integer.parseInt(id);
 
         JSONObject responseJson = new JSONObject();
         if(h2User.isRegistered(requestUser)){
-            if(h2Customer.editCustomer(editId, firstname, surname)){
-                //System.out.println("New user created.");
-                responseJson.put("response", "OK");
-            }else{
-                //System.out.println("Error creating user");
-                responseJson.put("response", "false");
+            try {
+                if(h2Customer.createCustomer(firstname, surname)){
+                    //System.out.println("New user created.");
+                    responseJson.put("response", "OK");
+                }else{
+                    //System.out.println("Error creating user");
+                    responseJson.put("response", "false");
+                }
+            } catch (SQLException e) {
+                System.out.println("error creating customer");
+                e.printStackTrace();
             }
         }
 

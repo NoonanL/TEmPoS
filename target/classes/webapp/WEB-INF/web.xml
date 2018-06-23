@@ -70,4 +70,31 @@
         <url-pattern>/createCustomerServlet</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>DeleteCustomerServlet</servlet-name>
+        <servlet-class>TEmPoS.Servlet.Customer.DeleteCustomerServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteCustomerServlet</servlet-name>
+        <url-pattern>/deleteCustomerServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>EditCustomerServlet</servlet-name>
+        <servlet-class>TEmPoS.Servlet.Customer.EditCustomerServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EditCustomerServlet</servlet-name>
+        <url-pattern>/editCustomerServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>GetCustomersServlet</servlet-name>
+        <servlet-class>TEmPoS.Servlet.Customer.GetCustomersServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetCustomersServlet</servlet-name>
+        <url-pattern>/getCustomersServlet</url-pattern>
+    </servlet-mapping>
+
 </web-app>

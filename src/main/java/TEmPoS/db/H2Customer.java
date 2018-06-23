@@ -34,9 +34,8 @@ public class H2Customer extends H2Base {
     /**
      * Initializes SQL table, creates one if it doesn't already exist.
      * @param conn connection to the database file
-     * @throws SQLException
      */
-    private void initTable(Connection conn) throws SQLException {
+    private void initTable(Connection conn) {
         execute(conn, "CREATE TABLE IF NOT EXISTS customers (id int AUTO_INCREMENT PRIMARY KEY, firstname VARCHAR(255), surname VARCHAR(255), purchaseHistory VARCHAR(1024))");
     }
 
