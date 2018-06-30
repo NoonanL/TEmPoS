@@ -107,4 +107,17 @@ public class H2CustomerTest {
 
         }
     }
+
+    @Test
+    public void searchCustomers() {
+        System.out.println(db.searchCustomers("e").toString());
+        JSONObject customers = db.searchCustomers("e");
+        for (Iterator it = customers.keys(); it.hasNext(); ) {
+            String json = it.next().toString();
+            //Skip connection response object.
+            JSONObject userJson = (customers.getJSONObject(json));
+            System.out.println(userJson);
+
+        }
+    }
 }

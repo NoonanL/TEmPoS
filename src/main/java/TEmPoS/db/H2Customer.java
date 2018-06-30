@@ -118,6 +118,29 @@ public class H2Customer extends H2Base {
         }
     }
 
+    public JSONObject searchCustomers(String searchString){
+        final String SEARCH_CUSTOMER_QUERY = "SELECT * FROM customers WHERE firstname LIKE ? OR surname LIKE ?";
+        JSONObject customerList = new JSONObject();
+        String searchWildcard = "%" + searchString + "%";
+        try (PreparedStatement ps = getConnection().prepareStatement(SEARCH_CUSTOMER_QUERY)){
+            ps.setString(1, searchWildcard);
+            ps.setString(2, searchWildcard);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                String id = rs.getString(1);
+                String firstname = rs.getString(2);
+                String surname = rs.getString(3);
+                Map<String, String> user = new LinkedHashMap<>();
+                user.put("id", id);
+                user.put("firstname" , firstname);
+                user.put("surname" , surname);
+                customerList.put(id , new JSONObject(user));
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return customerList;
+    }
     public JSONObject getCustomers(){
         final String GET_USER_QUERY = "SELECT id, firstname, surname FROM customers";
         JSONObject customerList = new JSONObject();

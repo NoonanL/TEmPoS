@@ -37,16 +37,18 @@ public class DeleteCustomerServlet extends HttpServlet {
         JSONObject input = requestParser.parse(request);
         String id = input.getString("targetCustomerId");
         String requestUser = input.getString("requestUser");
-
+        //System.out.println(id);
+        //System.out.println(requestUser);
         int deleteId = Integer.parseInt(id);
 
+        //System.out.println(deleteId);
         JSONObject responseJson = new JSONObject();
         if(h2User.isRegistered(requestUser)){
             if(h2Customer.deleteCustomerById(deleteId)){
-                //System.out.println("New user created.");
+                //System.out.println("customer deleted.");
                 responseJson.put("response", "OK");
             }else{
-                //System.out.println("Error creating user");
+                //System.out.println("Error deleting customer");
                 responseJson.put("response", "false");
             }
         }
