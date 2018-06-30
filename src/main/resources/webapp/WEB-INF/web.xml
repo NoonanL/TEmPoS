@@ -97,4 +97,13 @@
         <url-pattern>/getCustomersServlet</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>SearchCustomerServlet</servlet-name>
+        <servlet-class>TEmPoS.Servlet.Customer.SearchCustomerServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SearchCustomerServlet</servlet-name>
+        <url-pattern>/searchCustomerServlet</url-pattern>
+    </servlet-mapping>
+
 </web-app>
