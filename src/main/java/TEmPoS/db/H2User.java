@@ -6,12 +6,14 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import lombok.NonNull;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 public class H2User extends H2Base {
 
@@ -39,7 +41,7 @@ public class H2User extends H2Base {
      * @throws SQLException
      */
     private void initTable(Connection conn) throws SQLException {
-        execute(conn, "CREATE TABLE IF NOT EXISTS users (id int AUTO_INCREMENT, username VARCHAR(255) PRIMARY KEY, hash VARCHAR(255), isAdmin VARCHAR(32))");
+        loadResource("/schema.sql");
     }
 
     /**
@@ -279,7 +281,6 @@ public class H2User extends H2Base {
             return null;
         }
     }
-
 
 
 }
