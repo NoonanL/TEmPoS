@@ -1,5 +1,6 @@
 package TEmPoS.Servlet.Customer;
 
+import TEmPoS.Model.Customer;
 import TEmPoS.Util.RequestJson;
 import TEmPoS.db.H2Customer;
 import TEmPoS.db.H2User;
@@ -38,11 +39,15 @@ public class EditCustomerServlet extends HttpServlet {
         String surname = input.getString("surname");
         String requestUser = input.getString("requestUser");
 
+        Customer newCustomer = new Customer();
+        newCustomer.setFirstname(firstname);
+        newCustomer.setSurname(surname);
+
         int editId = Integer.parseInt(id);
 
         JSONObject responseJson = new JSONObject();
         if(h2User.isRegistered(requestUser)){
-            if(h2Customer.editCustomer(editId,firstname,surname)){
+            if(h2Customer.editCustomer(editId,newCustomer)){
                 //System.out.println("New user created.");
                 responseJson.put("response", "OK");
             }else{

@@ -10,8 +10,7 @@ CREATE TABLE IF NOT EXISTS customers (
   country VARCHAR(64),
   mobile VARCHAR(32),
   email VARCHAR(64),
-  marketingStatus VARCHAR(8),
-  purchaseHistory VARCHAR(32));
+  marketingStatus VARCHAR(8));
 
 CREATE TABLE IF NOT EXISTS users (
   id int AUTO_INCREMENT,
@@ -19,3 +18,8 @@ CREATE TABLE IF NOT EXISTS users (
   hash VARCHAR(255),
   isAdmin VARCHAR(32));
 
+CREATE TABLE IF NOT EXISTS transactions (
+  id int AUTO_INCREMENT PRIMARY KEY,
+  FOREIGN KEY (id) REFERENCES customers(id),
+  FOREIGN KEY (id) REFERENCES users(id),
+  value VARCHAR(32));

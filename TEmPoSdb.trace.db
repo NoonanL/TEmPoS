@@ -1,0 +1,161 @@
+2018-07-02 23:49:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "CUSTOMER" not found; SQL statement:
+CREATE TABLE IF NOT EXISTS customers (
+  id int AUTO_INCREMENT PRIMARY KEY,
+  title VARCHAR(32),
+  firstname VARCHAR(64),
+  surname VARCHAR(64),
+  street VARCHAR(64),
+  town VARCHAR(64),
+  postcode VARCHAR(32),
+  city VARCHAR(64),
+  country VARCHAR(64),
+  mobile VARCHAR(32),
+  email VARCHAR(64),
+  marketingStatus VARCHAR(8));
+
+CREATE TABLE IF NOT EXISTS users (
+  id int AUTO_INCREMENT,
+  username VARCHAR(255) PRIMARY KEY,
+  hash VARCHAR(255),
+  isAdmin VARCHAR(32));
+
+CREATE TABLE IF NOT EXISTS transactions (
+  id int AUTO_INCREMENT PRIMARY KEY,
+  FOREIGN KEY (customer) REFERENCES customers(id),
+  FOREIGN KEY (users) REFERENCES users(id),
+  value VARCHAR(32)); [42122-194]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.table.Table.getColumn(Table.java:676)
+	at org.h2.table.IndexColumn.mapColumns(IndexColumn.java:74)
+	at org.h2.command.ddl.AlterTableAddConstraint.tryUpdate(AlterTableAddConstraint.java:208)
+	at org.h2.command.ddl.AlterTableAddConstraint.update(AlterTableAddConstraint.java:77)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:176)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:101)
+	at org.h2.command.CommandList.executeRemaining(CommandList.java:36)
+	at org.h2.command.CommandList.update(CommandList.java:43)
+	at org.h2.command.CommandList.executeRemaining(CommandList.java:36)
+	at org.h2.command.CommandList.update(CommandList.java:43)
+	at org.h2.command.Command.executeUpdate(Command.java:258)
+	at org.h2.jdbc.JdbcPreparedStatement.execute(JdbcPreparedStatement.java:201)
+	at TEmPoS.db.H2Base.loadResource(H2Base.java:65)
+	at TEmPoS.db.H2User.initTable(H2User.java:44)
+	at TEmPoS.db.H2User.<init>(H2User.java:31)
+	at TEmPoS.Runner.<init>(Runner.java:23)
+	at TEmPoS.Runner.main(Runner.java:93)
+2018-07-02 23:51:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Parameter "#3" is not set; SQL statement:
+SELECT * FROM customers WHERE firstname LIKE ? OR surname LIKE ? OR postcode LIKE ? [90012-194]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:81)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:164)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:112)
+	at org.h2.command.Command.executeQuery(Command.java:201)
+	at org.h2.jdbc.JdbcPreparedStatement.executeQuery(JdbcPreparedStatement.java:110)
+	at TEmPoS.db.H2Customer.searchCustomers(H2Customer.java:164)
+	at TEmPoS.db.H2CustomerTest.searchCustomers(H2CustomerTest.java:131)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+2018-07-03 00:39:04 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Invalid value "0" for parameter "columnIndex" [90008-194]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.getInvalidValueException(DbException.java:228)
+	at org.h2.jdbc.JdbcResultSet.checkColumnIndex(JdbcResultSet.java:3189)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3217)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:290)
+	at TEmPoS.db.H2Customer.parseCustomers(H2Customer.java:198)
+	at TEmPoS.db.H2Customer.getCustomers(H2Customer.java:182)
+	at TEmPoS.Servlet.Customer.GetCustomersServlet.doPost(GetCustomersServlet.java:41)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:707)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:864)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:535)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:255)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1595)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:255)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1253)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:203)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:473)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1564)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:201)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1155)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:144)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.Server.handle(Server.java:531)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:352)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:260)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:281)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:102)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:118)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:319)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:175)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.produce(EatWhatYouKill.java:139)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:754)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:672)
+	at java.lang.Thread.run(Thread.java:748)
+2018-07-03 00:39:14 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Invalid value "0" for parameter "columnIndex" [90008-194]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.getInvalidValueException(DbException.java:228)
+	at org.h2.jdbc.JdbcResultSet.checkColumnIndex(JdbcResultSet.java:3189)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3217)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:290)
+	at TEmPoS.db.H2Customer.parseCustomers(H2Customer.java:198)
+	at TEmPoS.db.H2Customer.getCustomers(H2Customer.java:182)
+	at TEmPoS.Servlet.Customer.GetCustomersServlet.doPost(GetCustomersServlet.java:41)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:707)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:864)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:535)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:255)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1595)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:255)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1253)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:203)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:473)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1564)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:201)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1155)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:144)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.Server.handle(Server.java:531)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:352)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:260)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:281)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:102)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:118)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:319)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:175)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:133)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:366)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:754)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:672)
+	at java.lang.Thread.run(Thread.java:748)

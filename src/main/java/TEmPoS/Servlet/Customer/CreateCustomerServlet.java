@@ -1,5 +1,6 @@
 package TEmPoS.Servlet.Customer;
 
+import TEmPoS.Model.Customer;
 import TEmPoS.Util.RequestJson;
 import TEmPoS.db.H2Customer;
 import TEmPoS.db.H2User;
@@ -35,14 +36,17 @@ public class CreateCustomerServlet extends HttpServlet {
         //read from request
         RequestJson requestParser = new RequestJson();
         JSONObject input = requestParser.parse(request);
+        Customer newCustomer = new Customer();
         String firstname = input.getString("firstname");
         String surname = input.getString("surname");
         String requestUser = input.getString("requestUser");
+        newCustomer.setFirstname(firstname);
+        newCustomer.setSurname(surname);
 
         JSONObject responseJson = new JSONObject();
         if(h2User.isRegistered(requestUser)){
             try {
-                if(h2Customer.createCustomer(firstname, surname)){
+                if(h2Customer.createCustomer(newCustomer)){
                     //System.out.println("New user created.");
                     responseJson.put("response", "OK");
                 }else{

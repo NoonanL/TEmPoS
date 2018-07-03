@@ -1,5 +1,6 @@
 package TEmPoS.db;
 
+import TEmPoS.Model.Customer;
 import org.json.JSONObject;
 import org.junit.After;
 import org.junit.Before;
@@ -18,14 +19,27 @@ public class H2CustomerTest {
     static final Logger LOG = LoggerFactory.getLogger(H2CustomerTest.class);
 
     private H2Customer db;
+    Customer testCustomer = new Customer();
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         db = new H2Customer(new ConnectionSupplier(ConnectionSupplier.FILE));
+
+        testCustomer.setTitle("Mr");
+        testCustomer.setFirstname("Testy");
+        testCustomer.setSurname("Testerson");
+        testCustomer.setStreet("69 Boner Avenue");
+        testCustomer.setTown("Humpsville");
+        testCustomer.setPostcode("IV5 7DU");
+        testCustomer.setCity("Glasgow");
+        testCustomer.setMobile("07807168580");
+        testCustomer.setEmail("happyEndings@naughtybois.com");
+        testCustomer.setMarketingStatus("True");
+
     }
 
     @After
-    public void tearDown() throws Exception {
+    public void tearDown() {
         try {
             db.close();
         } catch (SQLException e) {
@@ -33,12 +47,14 @@ public class H2CustomerTest {
         }
     }
 
+
+
     @Test
     public void createCustomer() throws SQLException {
         System.out.println("=====================================");
         System.out.println("Testing Customer Registration");
         System.out.println("=====================================");
-        if(db.createCustomer("Test", "CustomerTesterson")){
+        if(db.createCustomer(testCustomer)){
             System.out.println("Customer successfuly registered");
         }else{
             System.out.println("Customer registration failed");
@@ -50,7 +66,7 @@ public class H2CustomerTest {
         System.out.println("=====================================");
         System.out.println("Testing edit customer data (except password)");
         System.out.println("=====================================");
-        if(db.editCustomer(1, "Test", "CustomerTesterson")){
+        if(db.editCustomer(1, testCustomer)){
             System.out.println("Customer successfuly edited");
         }else{
             System.out.println("Customer edit failed");
@@ -76,7 +92,9 @@ public class H2CustomerTest {
 
     @Test
     public void deleteCustomerById() throws SQLException {
-        db.createCustomer("DeleteMeTest", "DeleteMeTestCustomerTesterson");
+        db.createCustomer(testCustomer);
+        Customer newTest = testCustomer;
+        newTest.setSurname("DeleteMeTestCustomerTesterson");
         System.out.println(db.getCustomers());
         JSONObject users = db.getCustomersBySurname("DeleteMeTestCustomerTesterson");
         //iterate through list
