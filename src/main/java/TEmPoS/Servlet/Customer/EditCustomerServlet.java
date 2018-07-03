@@ -35,13 +35,21 @@ public class EditCustomerServlet extends HttpServlet {
         RequestJson requestParser = new RequestJson();
         JSONObject input = requestParser.parse(request);
         String id = input.getString("targetCustomerId");
-        String firstname = input.getString("firstname");
-        String surname = input.getString("surname");
         String requestUser = input.getString("requestUser");
 
         Customer newCustomer = new Customer();
-        newCustomer.setFirstname(firstname);
-        newCustomer.setSurname(surname);
+        newCustomer.setTitle(input.getString("title"));
+        newCustomer.setFirstname(input.getString("firstname"));
+        newCustomer.setSurname(input.getString("surname"));
+        newCustomer.setMarketingStatus(input.getString("marketingStatus"));
+        newCustomer.setEmail(input.getString("email"));
+        newCustomer.setCity(input.getString("city"));
+        newCustomer.setPostcode(input.getString("postcode"));
+        newCustomer.setTown(input.getString("town"));
+        newCustomer.setStreet(input.getString("street"));
+        newCustomer.setMobile(input.getString("mobile"));
+        newCustomer.setCountry(input.getString("country"));
+
 
         int editId = Integer.parseInt(id);
 
