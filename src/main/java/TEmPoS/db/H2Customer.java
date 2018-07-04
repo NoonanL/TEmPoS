@@ -204,8 +204,8 @@ public class H2Customer extends H2Base {
     private JSONObject parseCustomers(ResultSet rs) throws SQLException {
         JSONObject customerList = new JSONObject();
         while (rs.next()) {
-            String id = rs.getString(1);
             Customer newCustomer = new Customer();
+            newCustomer.setId(rs.getString(1));
             newCustomer.setTitle(rs.getString(2));
             newCustomer.setFirstname(rs.getString(3));
             newCustomer.setSurname(rs.getString(4));
@@ -218,7 +218,7 @@ public class H2Customer extends H2Base {
             newCustomer.setEmail(rs.getString(11));
             newCustomer.setMarketingStatus(rs.getString(12));
 
-            customerList.put(id , newCustomer.toJson());
+            customerList.put(newCustomer.getId() , newCustomer.toJson());
         }
         return customerList;
     }
