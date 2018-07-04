@@ -2,6 +2,10 @@ package TEmPoS.Model;
 
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
+import org.json.JSONObject;
+
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 public class Customer {
 
@@ -145,5 +149,25 @@ public class Customer {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public JSONObject toJson(){
+        JSONObject json;
+        Map<String, String> user = new LinkedHashMap<>();
+
+        user.put("id", this.getId());
+        user.put("title", this.getTitle());
+        user.put("firstname" , this.getFirstname());
+        user.put("surname" , this.getSurname());
+        user.put("street", this.getStreet());
+        user.put("town", this.getTown());
+        user.put("postcode", this.getPostcode());
+        user.put("city", this.getCity());
+        user.put("country", this.getCountry());
+        user.put("mobile", this.getMobile());
+        user.put("email", this.getEmail());
+        user.put("marketingStatus",this.getMarketingStatus());
+        json = new JSONObject(user);
+        return json;
     }
 }

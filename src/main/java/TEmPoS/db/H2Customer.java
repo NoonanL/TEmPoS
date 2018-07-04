@@ -54,9 +54,11 @@ public class H2Customer extends H2Base {
             ps.setString(9, customer.getMobile());
             ps.setString(10, customer.getEmail());
             ps.setString(11, customer.getMarketingStatus());
-            int count = ps.executeUpdate();
-            LOG.debug("insert count = " + count);
-            return count == 1;
+            ps.execute();
+            return true;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
         }
     }
 
@@ -115,21 +117,28 @@ public class H2Customer extends H2Base {
      */
     JSONObject getCustomerById(int id){
         final String GET_USER_QUERY = "SELECT * FROM customers WHERE id=?";
-        JSONObject customer = new JSONObject();
+        Customer customer = new Customer();
         try (PreparedStatement ps = getConnection().prepareStatement(GET_USER_QUERY)){
             ps.setInt(1, id);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                String firstname = rs.getString(1);
-                String surname = rs.getString(2);
-                customer.put("firstname" , firstname);
-                customer.put("surname" , surname);
-                customer.put("id", id);
+                customer.setId(rs.getString(1));
+                customer.setTitle(rs.getString(2));
+                customer.setFirstname(rs.getString(3));
+                customer.setSurname(rs.getString(4));
+                customer.setStreet(rs.getString(5));
+                customer.setTown(rs.getString(6));
+                customer.setPostcode(rs.getString(7));
+                customer.setCity(rs.getString(8));
+                customer.setCountry(rs.getString(9));
+                customer.setMobile(rs.getString(10));
+                customer.setEmail(rs.getString(11));
+                customer.setMarketingStatus(rs.getString(12));
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-        return customer;
+        return customer.toJson();
     }
 
     /**
@@ -196,36 +205,35 @@ public class H2Customer extends H2Base {
         JSONObject customerList = new JSONObject();
         while (rs.next()) {
             String id = rs.getString(1);
-            String title = rs.getString(2);
-            String firstname = rs.getString(3);
-            String surname = rs.getString(4);
-            String street = rs.getString(5);
-            String town = rs.getString(6);
-            String postcode = rs.getString(7);
-            String city = rs.getString(8);
-            String country = rs.getString(9);
-            String mobile = rs.getString(10);
-            String email = rs.getString(11);
-            String marketingStatus = rs.getString(12);
-            Map<String, String> user = new LinkedHashMap<>();
+            Customer newCustomer = new Customer();
+            newCustomer.setTitle(rs.getString(2));
+            newCustomer.setFirstname(rs.getString(3));
+            newCustomer.setSurname(rs.getString(4));
+            newCustomer.setStreet(rs.getString(5));
+            newCustomer.setTown(rs.getString(6));
+            newCustomer.setPostcode(rs.getString(7));
+            newCustomer.setCity(rs.getString(8));
+            newCustomer.setCountry(rs.getString(9));
+            newCustomer.setMobile(rs.getString(10));
+            newCustomer.setEmail(rs.getString(11));
+            newCustomer.setMarketingStatus(rs.getString(12));
 
-            // This is ridiculous. Fix me.
-
-            user.put("id", id);
-            user.put("title", title);
-            user.put("firstname" , firstname);
-            user.put("surname" , surname);
-            user.put("street", street);
-            user.put("town", town);
-            user.put("postcode", postcode);
-            user.put("city", city);
-            user.put("country", country);
-            user.put("mobile", mobile);
-            user.put("email", email);
-            user.put("marketingStatus", marketingStatus);
-            customerList.put(id , new JSONObject(user));
+            customerList.put(id , newCustomer.toJson());
         }
         return customerList;
+    }
+
+    /**
+     * BE CAREFUL WITH ME
+     * Function to delete the customer table
+     */
+    public boolean deleteTable(){
+        try (PreparedStatement ps = getConnection().prepareStatement("DROP TABLE customers")){
+            ps.execute();
+            return true;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
 }
