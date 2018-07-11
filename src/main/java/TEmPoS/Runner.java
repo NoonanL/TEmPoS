@@ -1,9 +1,11 @@
 package TEmPoS;
 
 import TEmPoS.Servlet.*;
+import TEmPoS.Servlet.Configuration.BranchesServlet;
 import TEmPoS.Servlet.Customer.*;
 import TEmPoS.Servlet.User.*;
 import TEmPoS.db.ConnectionSupplier;
+import TEmPoS.db.H2BranchList;
 import TEmPoS.db.H2Customer;
 import TEmPoS.db.H2User;
 import org.eclipse.jetty.server.Server;
@@ -15,6 +17,7 @@ public class Runner {
 
     private H2User userDB;
     private H2Customer customerDB;
+    private H2BranchList branchListDB;
     private static final int PORT = 9001;
 
     private Runner() {
@@ -22,6 +25,7 @@ public class Runner {
 
         userDB = new H2User(new ConnectionSupplier(ConnectionSupplier.FILE));
         customerDB = new H2Customer(new ConnectionSupplier(ConnectionSupplier.FILE));
+
 
     }
 
@@ -68,6 +72,9 @@ public class Runner {
 
         SearchCustomerServlet searchCustomerServlet = new SearchCustomerServlet(customerDB,userDB);
         handler.addServlet(new ServletHolder(searchCustomerServlet), "/searchCustomerServlet");
+
+        BranchesServlet branchesServlet = new BranchesServlet(branchListDB,userDB);
+        handler.addServlet(new ServletHolder(branchesServlet), "/branchesServlet");
 
         /*
         sets default servlet path.

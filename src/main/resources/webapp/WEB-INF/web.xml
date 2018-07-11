@@ -106,4 +106,13 @@
         <url-pattern>/searchCustomerServlet</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>BranchesServlet</servlet-name>
+        <servlet-class>TEmPoS.Servlet.Configuration.BranchesServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BranchesServlet</servlet-name>
+        <url-pattern>/branchesServlet</url-pattern>
+    </servlet-mapping>
+
 </web-app>
