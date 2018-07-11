@@ -18,12 +18,14 @@ public class dbUtils {
 
     private H2User db;
     private H2Customer customerDb;
+    private H2BranchList branchList;
 
 
     @Before
     public void setUp() {
         db = new H2User(new ConnectionSupplier(ConnectionSupplier.FILE));
         customerDb = new H2Customer(new ConnectionSupplier(ConnectionSupplier.FILE));
+        branchList = new H2BranchList(new ConnectionSupplier(ConnectionSupplier.FILE));
     }
 
     @After
@@ -57,6 +59,17 @@ public class dbUtils {
         }else{
             System.out.println("Failed to delete table");
         }
+    }
+
+    @Test
+    public void setBranches() throws SQLException {
+        System.out.println("=====================================");
+        System.out.println("Adding branches to table");
+        System.out.println("=====================================");
+        branchList.createBranch("Branch01");
+        branchList.createBranch("Branch02");
+        branchList.createBranch("Warehouse");
+
     }
 
 

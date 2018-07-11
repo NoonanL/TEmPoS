@@ -23,3 +23,7 @@ CREATE TABLE IF NOT EXISTS transactions (
   FOREIGN KEY (id) REFERENCES customers(id),
   FOREIGN KEY (id) REFERENCES users(id),
   value VARCHAR(32));
+
+CREATE TABLE IF NOT EXISTS branchList (
+  id int AUTO_INCREMENT PRIMARY KEY,
+  branch VARCHAR(32));
