@@ -52,14 +52,14 @@ public class H2BranchList extends H2Base {
         }
     }
 
-    public ArrayList<String> getBranchList(){
+    public JSONObject getBranchList(){
         final String GET_BRANCHES_QUERY = "SELECT * FROM branchList";
-        ArrayList<String> branchList = new ArrayList<>();
+        JSONObject branchList = new JSONObject();
         try (PreparedStatement ps = getConnection().prepareStatement(GET_BRANCHES_QUERY)){
             ResultSet rs = ps.executeQuery();
             while(rs.next()){
                 //System.out.println(rs.getString(2));
-                branchList.add(rs.getString(2));
+                branchList.put(rs.getString(1), rs.getString(2));
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);

@@ -53,15 +53,15 @@ public class H2BranchListTest {
         System.out.println("=====================================");
         System.out.println("Getting Branches");
         System.out.println("=====================================");
-        System.out.println(db.getBranchList().toString());
-//        JSONObject customers = db.getBranchList();
-//        for (Iterator it = customers.keys(); it.hasNext(); ) {
+        //System.out.println(db.getBranchList().toString());
+        JSONObject branches = db.getBranchList();
+        for (Iterator it = branches.keys(); it.hasNext(); ) {
 //            String json = it.next().toString();
 ////            //Skip connection response object.
 ////            JSONObject userJson = (customers.getJSONObject(json));
-//            System.out.println(json);
+            System.out.println(branches.getString(it.next().toString()));
 //
-//        }
+        }
     }
 
     @Test

@@ -25,6 +25,7 @@ public class Runner {
 
         userDB = new H2User(new ConnectionSupplier(ConnectionSupplier.FILE));
         customerDB = new H2Customer(new ConnectionSupplier(ConnectionSupplier.FILE));
+        branchListDB = new H2BranchList(new ConnectionSupplier(ConnectionSupplier.FILE));
 
 
     }
