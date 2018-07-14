@@ -1,12 +1,17 @@
 package TEmPoS.Model;
 
+import org.json.JSONObject;
+
+import java.util.LinkedHashMap;
+import java.util.Map;
+
 public class Product {
 
     private String id;
     private String SKU;
     private String name;
-    private Integer RRP;
-    private Integer cost;
+    private double RRP;
+    private double cost;
     private String department;
     private String brand;
     private String description;
@@ -15,7 +20,7 @@ public class Product {
     private Integer warehousestock;
 
 
-    public Product(String id, String sku, String name, Integer rrp, Integer cost, String department, String brand, String description, Integer branch01Stock, Integer branch02Stock, Integer warehousestock) {
+    public Product(String id, String sku, String name, double rrp, double cost, String department, String brand, String description, Integer branch01Stock, Integer branch02Stock, Integer warehousestock) {
         this.id = id;
         this.SKU = sku;
         this.name = name;
@@ -32,8 +37,6 @@ public class Product {
         this.id = "";
         this.SKU = null;
         this.name = "";
-        this.RRP = null;
-        this.cost = null;
         this.department = "";
         this.brand = "";
         this.description = "";
@@ -67,19 +70,19 @@ public class Product {
         this.name = name;
     }
 
-    public Integer getRRP() {
+    public double getRRP() {
         return RRP;
     }
 
-    public void setRRP(Integer RRP) {
+    public void setRRP(double RRP) {
         this.RRP = RRP;
     }
 
-    public Integer getCost() {
+    public double getCost() {
         return cost;
     }
 
-    public void setCost(Integer cost) {
+    public void setCost(double cost) {
         this.cost = cost;
     }
 
@@ -129,5 +132,33 @@ public class Product {
 
     public void setWarehousestock(Integer warehousestock) {
         this.warehousestock = warehousestock;
+    }
+
+    @Override
+    public String toString(){
+        String EOLN = "\n";
+        return this.name + EOLN +
+                this.SKU + EOLN +
+                this.RRP + EOLN +
+                this.branch01Stock;
+    }
+
+    public JSONObject toJson(){
+        JSONObject json;
+        Map<String, String> product = new LinkedHashMap<>();
+
+        product.put("id", this.getId());
+        product.put("SKU", this.getSKU());
+        product.put("name" , this.getName());
+        product.put("RRP" , String.valueOf(this.getRRP()));
+        product.put("cost", String.valueOf(this.getCost()));
+        product.put("department", this.getDepartment());
+        product.put("brand", this.getBrand());
+        product.put("description", this.getDescription());
+        product.put("branch01Stock", Integer.toString(this.getBranch01Stock()));
+        product.put("branch02Stock", Integer.toString(this.getBranch02Stock()));
+        product.put("warehousestock", Integer.toString(this.getWarehousestock()));
+        json = new JSONObject(product);
+        return json;
     }
 }

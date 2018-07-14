@@ -55,7 +55,7 @@ public class CreateCustomerServlet extends HttpServlet {
 
         JSONObject responseJson = new JSONObject();
         if(h2User.isRegistered(requestUser)){
-            try {
+
                 if(h2Customer.createCustomer(newCustomer)){
                     //System.out.println("New user created.");
                     responseJson.put("response", "OK");
@@ -63,10 +63,7 @@ public class CreateCustomerServlet extends HttpServlet {
                     //System.out.println("Error creating user");
                     responseJson.put("response", "false");
                 }
-            } catch (SQLException e) {
-                System.out.println("error creating customer");
-                e.printStackTrace();
-            }
+
         }
 
 
