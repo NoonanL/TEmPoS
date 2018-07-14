@@ -1,7 +1,5 @@
 package TEmPoS.Model;
 
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
 import org.json.JSONObject;
 
 import java.util.LinkedHashMap;

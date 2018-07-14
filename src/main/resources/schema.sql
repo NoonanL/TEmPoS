@@ -27,3 +27,17 @@ CREATE TABLE IF NOT EXISTS transactions (
 CREATE TABLE IF NOT EXISTS branchList (
   id int AUTO_INCREMENT PRIMARY KEY,
   branch VARCHAR(32));
+
+CREATE TABLE IF NOT EXISTS products(
+  id int AUTO_INCREMENT PRIMARY KEY,
+  SKU VARCHAR(32),
+  name VARCHAR(32),
+  RRP int,
+  cost int,
+  department VARCHAR(32),
+  brand VARCHAR(32),
+  description VARCHAR(1024),
+  branch01stock int,
+  branch02stock int,
+  warehousestock int
+);

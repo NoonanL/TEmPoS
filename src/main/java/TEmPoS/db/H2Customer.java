@@ -5,13 +5,9 @@ import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.IOException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.LinkedHashMap;
-import java.util.Map;
-import java.util.Scanner;
 
 public class H2Customer extends H2Base {
 
@@ -40,7 +36,7 @@ public class H2Customer extends H2Base {
     }
 
 
-    public boolean createCustomer(Customer customer) throws SQLException {
+    public boolean createCustomer(Customer customer) {
         String query = "INSERT into customers (title, firstname, surname, street, town, postcode, city, country, mobile, email, marketingStatus) VALUES(?,?,?,?,?,?,?,?,?,?,?)";
         try (PreparedStatement ps = getConnection().prepareStatement(query)) {
             ps.setString(1, customer.getTitle());
