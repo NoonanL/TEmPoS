@@ -1,7 +1,6 @@
 package TEmPoS.Servlet.Product;
 
 import TEmPoS.Model.Product;
-import TEmPoS.Servlet.Customer.CreateCustomerServlet;
 import TEmPoS.Util.RequestJson;
 import TEmPoS.db.H2Products;
 import TEmPoS.db.H2User;
@@ -14,14 +13,14 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-public class CreateProductServlet extends HttpServlet {
+public class EditProductServlet extends HttpServlet {
 
     private H2Products h2Products;
     private H2User h2User;
 
-    public CreateProductServlet(){}
+    public EditProductServlet(){}
 
-    public CreateProductServlet(H2Products h2Products, H2User h2User){
+    public EditProductServlet(H2Products h2Products, H2User h2User){
         this.h2Products = h2Products;
         this.h2User = h2User;
     }
@@ -35,8 +34,8 @@ public class CreateProductServlet extends HttpServlet {
         //read from request
         RequestJson requestParser = new RequestJson();
         JSONObject input = requestParser.parse(request);
-        Product newProduct = new Product();
 
+        Product newProduct = new Product();
         newProduct.setSKU(input.getString("SKU"));
         newProduct.setName(input.getString("name"));
         newProduct.setRRP(input.getDouble("RRP"));
@@ -46,11 +45,13 @@ public class CreateProductServlet extends HttpServlet {
         newProduct.setDescription(input.getString("description"));
 
         String requestUser = input.getString("requestUser");
+        String targerProductId = input.getString("targetProductId");
+        int editId = Integer.parseInt(targerProductId);
 
         JSONObject responseJson = new JSONObject();
         if(h2User.isRegistered(requestUser)){
 
-            if(h2Products.createProduct(newProduct)){
+            if(h2Products.editProduct(editId, newProduct)){
                 //System.out.println("New product created.");
                 responseJson.put("response", "OK");
             }else{
@@ -64,5 +65,4 @@ public class CreateProductServlet extends HttpServlet {
         out.print(responseJson);
         out.flush();
     }
-
 }

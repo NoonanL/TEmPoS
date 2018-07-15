@@ -15,12 +15,9 @@ public class Product {
     private String department;
     private String brand;
     private String description;
-    private Integer branch01Stock;
-    private Integer branch02Stock;
-    private Integer warehousestock;
 
 
-    public Product(String id, String sku, String name, double rrp, double cost, String department, String brand, String description, Integer branch01Stock, Integer branch02Stock, Integer warehousestock) {
+    public Product(String id, String sku, String name, double rrp, double cost, String department, String brand, String description) {
         this.id = id;
         this.SKU = sku;
         this.name = name;
@@ -29,9 +26,6 @@ public class Product {
         this.department = department;
         this.brand = brand;
         this.description = description;
-        this.branch01Stock = branch01Stock;
-        this.branch02Stock = branch02Stock;
-        this.warehousestock = warehousestock;
     }
     public Product() {
         this.id = "";
@@ -40,9 +34,6 @@ public class Product {
         this.department = "";
         this.brand = "";
         this.description = "";
-        this.branch01Stock = null;
-        this.branch02Stock = null;
-        this.warehousestock = null;
     }
 
 
@@ -110,37 +101,13 @@ public class Product {
         this.description = description;
     }
 
-    public Integer getBranch01Stock() {
-        return branch01Stock;
-    }
-
-    public void setBranch01Stock(Integer branch01Stock) {
-        this.branch01Stock = branch01Stock;
-    }
-
-    public Integer getBranch02Stock() {
-        return branch02Stock;
-    }
-
-    public void setBranch02Stock(Integer branch02Stock) {
-        this.branch02Stock = branch02Stock;
-    }
-
-    public Integer getWarehousestock() {
-        return warehousestock;
-    }
-
-    public void setWarehousestock(Integer warehousestock) {
-        this.warehousestock = warehousestock;
-    }
 
     @Override
     public String toString(){
         String EOLN = "\n";
         return this.name + EOLN +
                 this.SKU + EOLN +
-                this.RRP + EOLN +
-                this.branch01Stock;
+                this.RRP + EOLN;
     }
 
     public JSONObject toJson(){
@@ -155,9 +122,6 @@ public class Product {
         product.put("department", this.getDepartment());
         product.put("brand", this.getBrand());
         product.put("description", this.getDescription());
-        product.put("branch01Stock", Integer.toString(this.getBranch01Stock()));
-        product.put("branch02Stock", Integer.toString(this.getBranch02Stock()));
-        product.put("warehousestock", Integer.toString(this.getWarehousestock()));
         json = new JSONObject(product);
         return json;
     }

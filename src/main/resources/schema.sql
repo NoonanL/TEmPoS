@@ -30,14 +30,11 @@ CREATE TABLE IF NOT EXISTS branchList (
 
 CREATE TABLE IF NOT EXISTS products(
   id int AUTO_INCREMENT PRIMARY KEY,
-  SKU VARCHAR(32),
+  SKU VARCHAR(32) NOT NULL UNIQUE,
   name VARCHAR(32),
   RRP DECIMAL(13,4),
   cost DECIMAL(13,4),
   department VARCHAR(32),
   brand VARCHAR(32),
   description VARCHAR(1024),
-  branch01stock int,
-  branch02stock int,
-  warehousestock int
 );

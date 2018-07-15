@@ -5,6 +5,7 @@ import TEmPoS.Servlet.Configuration.BranchesServlet;
 import TEmPoS.Servlet.Customer.*;
 import TEmPoS.Servlet.Product.CreateProductServlet;
 import TEmPoS.Servlet.Product.DeleteProductServlet;
+import TEmPoS.Servlet.Product.EditProductServlet;
 import TEmPoS.Servlet.User.*;
 import TEmPoS.db.*;
 import org.eclipse.jetty.server.Server;
@@ -98,6 +99,8 @@ public class Runner {
         DeleteProductServlet deleteProductServlet = new DeleteProductServlet(productsDB,userDB);
         handler.addServlet(new ServletHolder(deleteProductServlet), "/deleteProductServlet");
 
+        EditProductServlet editProductServlet = new EditProductServlet(productsDB,userDB);
+        handler.addServlet(new ServletHolder(editProductServlet), "/editProductServlet");
 
         /*
         sets default servlet path.

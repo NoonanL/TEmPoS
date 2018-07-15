@@ -37,7 +37,7 @@ public class H2Products extends H2Base {
     }
 
     public boolean createProduct(Product product){
-        String query = "INSERT into products (SKU,name,RRP,cost,department,brand,description,branch01Stock,branch02Stock,warehousestock) VALUES(?,?,?,?,?,?,?,?,?,?)";
+        String query = "INSERT into products (SKU,name,RRP,cost,department,brand,description) VALUES(?,?,?,?,?,?,?)";
         try (PreparedStatement ps = getConnection().prepareStatement(query)) {
             ps.setString(1, product.getSKU());
             ps.setString(2, product.getName());
@@ -46,9 +46,6 @@ public class H2Products extends H2Base {
             ps.setString(5, product.getDepartment());
             ps.setString(6, product.getBrand());
             ps.setString(7, product.getDescription());
-            ps.setInt(8, product.getBranch01Stock());
-            ps.setInt(9, product.getBranch02Stock());
-            ps.setInt(10, product.getWarehousestock());
             ps.execute();
             return true;
         } catch (SQLException e) {
@@ -58,7 +55,7 @@ public class H2Products extends H2Base {
     }
 
     public boolean editProduct (int targetId, Product product){
-        final String EDIT_USER_QUERY = "UPDATE products SET SKU =?, name=?, RRP=?, cost=?, department=?, brand=?, description=?, branch01Stock=?, branch02Stock=?, warehousestock=? WHERE id=?";
+        final String EDIT_USER_QUERY = "UPDATE products SET SKU =?, name=?, RRP=?, cost=?, department=?, brand=?, description=? WHERE id=?";
         try (PreparedStatement ps = getConnection().prepareStatement(EDIT_USER_QUERY)) {
             ps.setString(1, product.getSKU());
             ps.setString(2, product.getName());
@@ -67,10 +64,7 @@ public class H2Products extends H2Base {
             ps.setString(5, product.getDepartment());
             ps.setString(6, product.getBrand());
             ps.setString(7, product.getDescription());
-            ps.setInt(8, product.getBranch01Stock());
-            ps.setInt(9, product.getBranch02Stock());
-            ps.setInt(10, product.getWarehousestock());
-            ps.setInt(11, targetId);
+            ps.setInt(8, targetId);
             ps.execute();
             return true;
         } catch (SQLException e) {
@@ -133,9 +127,6 @@ public class H2Products extends H2Base {
             newProduct.setDepartment(rs.getString(6));
             newProduct.setBrand(rs.getString(7));
             newProduct.setDescription(rs.getString(8));
-            newProduct.setBranch01Stock(rs.getInt(9));
-            newProduct.setBranch02Stock(rs.getInt(10));
-            newProduct.setWarehousestock(rs.getInt(11));
             productList.put(newProduct.getId() , newProduct.toJson());
         }
         return productList;

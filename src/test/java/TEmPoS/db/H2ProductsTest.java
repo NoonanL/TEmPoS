@@ -29,9 +29,6 @@ public class H2ProductsTest {
         testProduct.setDepartment("Sticks");
         testProduct.setBrand("Vic Firth");
         testProduct.setDescription("One pair of Vic Firth 5A Drumsticks.");
-        testProduct.setBranch01Stock(12);
-        testProduct.setBranch02Stock(0);
-        testProduct.setWarehousestock(144);
     }
 
     @After
@@ -63,7 +60,6 @@ public class H2ProductsTest {
         System.out.println("=====================================");
         System.out.println(testProduct.toString());
         testProduct.setName("Vic 5A Edited Yo");
-        testProduct.setWarehousestock(666);
         if(db.editProduct(2, testProduct)){
             System.out.println("Test product successfully edited.");
             System.out.println(db.getProductBySKU("12345").toString());

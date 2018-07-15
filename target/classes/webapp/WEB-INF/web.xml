@@ -154,5 +154,15 @@
         <url-pattern>/deleteProductServlet</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>EditProductServlet</servlet-name>
+        <servlet-class>TEmPoS.Servlet.Product.EditProductServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EditProductServlet</servlet-name>
+        <url-pattern>/editProductServlet</url-pattern>
+    </servlet-mapping>
+
+
 
 </web-app>
