@@ -136,7 +136,6 @@
 
     <!--PRODUCT SERVLETS-->
 
-
     <servlet>
         <servlet-name>CreateProductServlet</servlet-name>
         <servlet-class>TEmPoS.Servlet.Product.CreateProductServlet</servlet-class>
@@ -144,6 +143,15 @@
     <servlet-mapping>
         <servlet-name>CreateProductServlet</servlet-name>
         <url-pattern>/createProductServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeleteProductServlet</servlet-name>
+        <servlet-class>TEmPoS.Servlet.Product.DeleteProductServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteProductServlet</servlet-name>
+        <url-pattern>/deleteProductServlet</url-pattern>
     </servlet-mapping>
 
 
