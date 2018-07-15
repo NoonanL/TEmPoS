@@ -192,6 +192,15 @@
         <url-pattern>/createBrandServlet</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>DeleteBrandServlet</servlet-name>
+        <servlet-class>TEmPoS.Servlet.Brands.DeleteBrandServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteBrandServlet</servlet-name>
+        <url-pattern>/seleteBrandServlet</url-pattern>
+    </servlet-mapping>
+
 
 
 </web-app>
