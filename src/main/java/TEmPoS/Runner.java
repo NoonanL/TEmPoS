@@ -1,6 +1,7 @@
 package TEmPoS;
 
 import TEmPoS.Servlet.*;
+import TEmPoS.Servlet.Brands.CreateBrandServlet;
 import TEmPoS.Servlet.Configuration.BranchesServlet;
 import TEmPoS.Servlet.Customer.*;
 import TEmPoS.Servlet.Product.*;
@@ -109,6 +110,12 @@ public class Runner {
 
         SearchProductsServlet searchProductsServlet = new SearchProductsServlet(productsDB,userDB);
         handler.addServlet(new ServletHolder(searchProductsServlet), "/searchProductsServlet");
+
+
+        //BRANDS SERVLETS
+
+        CreateBrandServlet createBrandServlet = new CreateBrandServlet(brandsDB,userDB);
+        handler.addServlet(new ServletHolder(createBrandServlet), "/createBrandServlet");
 
         /*
         sets default servlet path.

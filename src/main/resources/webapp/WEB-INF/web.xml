@@ -182,5 +182,16 @@
     </servlet-mapping>
 
 
+    <!--BRANDS SERVLETS-->
+    <servlet>
+        <servlet-name>CreateBrandServlet</servlet-name>
+        <servlet-class>TEmPoS.Servlet.Brands.CreateBrandServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CreateBrandServlet</servlet-name>
+        <url-pattern>/createBrandServlet</url-pattern>
+    </servlet-mapping>
+
+
 
 </web-app>
