@@ -38,3 +38,19 @@ CREATE TABLE IF NOT EXISTS products(
   brand VARCHAR(32),
   description VARCHAR(1024),
 );
+
+CREATE TABLE IF NOT EXISTS departments (
+  id         int AUTO_INCREMENT PRIMARY KEY,
+  department VARCHAR(64)
+);
+--
+-- CREATE TABLE IF NOT EXISTS brands (
+--   id         int AUTO_INCREMENT PRIMARY KEY,
+--   brand VARCHAR(64),
+--   distributor VARCHAR(64)
+-- );
+--
+-- CREATE TABLE IF NOT EXISTS distributors (
+--   id         int AUTO_INCREMENT PRIMARY KEY,
+--   distributor VARCHAR(64)
+-- );

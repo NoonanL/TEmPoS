@@ -17,6 +17,7 @@ public class Runner {
     private H2Customer customerDB;
     private H2BranchList branchListDB;
     private H2Products productsDB;
+    private H2Departments departmentsDB;
     private static final int PORT = 9001;
 
     private Runner() {
@@ -26,6 +27,7 @@ public class Runner {
         customerDB = new H2Customer(new ConnectionSupplier(ConnectionSupplier.FILE));
         branchListDB = new H2BranchList(new ConnectionSupplier(ConnectionSupplier.FILE));
         productsDB = new H2Products(new ConnectionSupplier(ConnectionSupplier.FILE));
+        departmentsDB = new H2Departments(new ConnectionSupplier(ConnectionSupplier.FILE));
 
 
     }
