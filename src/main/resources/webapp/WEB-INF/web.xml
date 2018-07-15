@@ -163,6 +163,15 @@
         <url-pattern>/editProductServlet</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>GetProductsServlet</servlet-name>
+        <servlet-class>TEmPoS.Servlet.Product.GetProductsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetProductsServlet</servlet-name>
+        <url-pattern>/getProductsServlet</url-pattern>
+    </servlet-mapping>
+
 
 
 </web-app>
