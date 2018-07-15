@@ -48,6 +48,7 @@ public class DeleteProductServlet extends HttpServlet {
             }else{
                 //System.out.println("Error deleting customer");
                 responseJson.put("response", "false");
+                responseJson.put("error", "Failed to delete product.");
             }
         }
         response.setContentType("application/json");

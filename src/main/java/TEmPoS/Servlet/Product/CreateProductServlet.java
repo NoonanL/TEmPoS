@@ -54,7 +54,7 @@ public class CreateProductServlet extends HttpServlet {
             try {
                 if(h2Products.existingSku(newProduct.getSKU())){
                     responseJson.put("response", "false");
-                    responseJson.put("uniqueSKU", "false");
+                    responseJson.put("error", "SKU Not Unique.");
                 }else{
                     if(h2Products.createProduct(newProduct)){
                         //System.out.println("New product created.");
@@ -62,6 +62,7 @@ public class CreateProductServlet extends HttpServlet {
                     }else{
                         //System.out.println("Error creating product");
                         responseJson.put("response", "false");
+                        responseJson.put("error", "Failed to create new product.");
                     }
                 }
             } catch (SQLException e) {
