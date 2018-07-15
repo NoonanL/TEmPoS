@@ -85,6 +85,18 @@ public class H2ProductsTest {
     }
 
     @Test
+    public void checkSku() throws SQLException {
+        System.out.println("=====================================");
+        System.out.println("Testing if SKU already exists");
+        System.out.println("=====================================");
+        if(db.existingSku("12345")){
+            System.out.println("SKU already exists!!");
+        }else{
+            System.out.println("SKU is unique.");
+        }
+    }
+
+    @Test
     public void deleteProductById() {
         System.out.println("=====================================");
         System.out.println("Testing delete product by id");

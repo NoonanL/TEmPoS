@@ -132,6 +132,15 @@ public class H2Products extends H2Base {
         return productList;
     }
 
+    public boolean existingSku(String sku) throws SQLException {
+        final String GET_SKU_QUERY = "SELECT * FROM products WHERE SKU=?";
+        try (PreparedStatement ps = getConnection().prepareStatement(GET_SKU_QUERY)) {
+            ps.setString(1, sku);
+            ResultSet rs = ps.executeQuery();
+            return rs.next();
+        }
+    }
+
     public boolean deleteProductById(int id) {
         final String DELETE_PRODUCT_QUERY = "DELETE FROM products WHERE id=?";
         try (PreparedStatement ps = getConnection().prepareStatement(DELETE_PRODUCT_QUERY)) {

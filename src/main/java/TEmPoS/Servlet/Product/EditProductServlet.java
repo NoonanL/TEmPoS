@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.SQLException;
 
 public class EditProductServlet extends HttpServlet {
 
@@ -49,17 +50,26 @@ public class EditProductServlet extends HttpServlet {
         int editId = Integer.parseInt(targerProductId);
 
         JSONObject responseJson = new JSONObject();
-        if(h2User.isRegistered(requestUser)){
+        if(h2User.isRegistered(requestUser)) {
 
-            if(h2Products.editProduct(editId, newProduct)){
-                //System.out.println("New product created.");
-                responseJson.put("response", "OK");
-            }else{
-                //System.out.println("Error creating product");
-                responseJson.put("response", "false");
+            try {
+                if (h2Products.existingSku(newProduct.getSKU())) {
+                    responseJson.put("response", "false");
+                    responseJson.put("uniqueSKU", "false");
+                } else {
+                    if (h2Products.editProduct(editId, newProduct)) {
+                        //System.out.println("New product created.");
+                        responseJson.put("response", "OK");
+                    } else {
+                        //System.out.println("Error creating product");
+                        responseJson.put("response", "false");
+                    }
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
             }
-
         }
+
         response.setContentType("application/json");
         PrintWriter out = response.getWriter();
         out.print(responseJson);
