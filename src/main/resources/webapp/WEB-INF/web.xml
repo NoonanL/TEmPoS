@@ -172,6 +172,15 @@
         <url-pattern>/getProductsServlet</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>SearchProductsServlet</servlet-name>
+        <servlet-class>TEmPoS.Servlet.Product.SearchProductsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SearchProductsServlet</servlet-name>
+        <url-pattern>/searchProductsServlet</url-pattern>
+    </servlet-mapping>
+
 
 
 </web-app>
