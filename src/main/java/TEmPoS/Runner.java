@@ -3,11 +3,9 @@ package TEmPoS;
 import TEmPoS.Servlet.*;
 import TEmPoS.Servlet.Configuration.BranchesServlet;
 import TEmPoS.Servlet.Customer.*;
+import TEmPoS.Servlet.Product.CreateProductServlet;
 import TEmPoS.Servlet.User.*;
-import TEmPoS.db.ConnectionSupplier;
-import TEmPoS.db.H2BranchList;
-import TEmPoS.db.H2Customer;
-import TEmPoS.db.H2User;
+import TEmPoS.db.*;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.DefaultServlet;
 import org.eclipse.jetty.servlet.ServletContextHandler;
@@ -18,6 +16,7 @@ public class Runner {
     private H2User userDB;
     private H2Customer customerDB;
     private H2BranchList branchListDB;
+    private H2Products productsDB;
     private static final int PORT = 9001;
 
     private Runner() {
@@ -26,6 +25,7 @@ public class Runner {
         userDB = new H2User(new ConnectionSupplier(ConnectionSupplier.FILE));
         customerDB = new H2Customer(new ConnectionSupplier(ConnectionSupplier.FILE));
         branchListDB = new H2BranchList(new ConnectionSupplier(ConnectionSupplier.FILE));
+        productsDB = new H2Products(new ConnectionSupplier(ConnectionSupplier.FILE));
 
 
     }
@@ -41,11 +41,16 @@ public class Runner {
         handler.setInitParameter("org.eclipse.jetty.servlet.Default." + "resourceBase", "TEmPoS/src/main/resources/webapp");
 
 
+        // LOGIN SERVLETS
+
         LoginServlet login = new LoginServlet(userDB);
         handler.addServlet(new ServletHolder(login), "/loginServlet");
 
         IsAdminServlet isAdminServlet = new IsAdminServlet(userDB);
         handler.addServlet(new ServletHolder(isAdminServlet), "/isAdminServlet");
+
+
+        //USER SERVLETS
 
         CreateUserServlet createUserServlet = new CreateUserServlet(userDB);
         handler.addServlet(new ServletHolder(createUserServlet), "/createUserServlet");
@@ -58,6 +63,9 @@ public class Runner {
 
         EditUserServlet editUserServlet = new EditUserServlet(userDB);
         handler.addServlet(new ServletHolder(editUserServlet), "/editUserServlet");
+
+
+        //CUSTOMER SERVLETS
 
         CreateCustomerServlet createCustomerServlet = new CreateCustomerServlet(customerDB,userDB);
         handler.addServlet(new ServletHolder(createCustomerServlet), "/createCustomerServlet");
@@ -74,8 +82,17 @@ public class Runner {
         SearchCustomerServlet searchCustomerServlet = new SearchCustomerServlet(customerDB,userDB);
         handler.addServlet(new ServletHolder(searchCustomerServlet), "/searchCustomerServlet");
 
+
+        //CONFIGURATION SERVLETS
+
         BranchesServlet branchesServlet = new BranchesServlet(branchListDB,userDB);
         handler.addServlet(new ServletHolder(branchesServlet), "/branchesServlet");
+
+
+        //PRODUCT SERVLETS
+
+        CreateProductServlet createProductServlet = new CreateProductServlet(productsDB,userDB);
+        handler.addServlet(new ServletHolder(createProductServlet), "/createProductServlet");
 
         /*
         sets default servlet path.

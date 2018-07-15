@@ -7,6 +7,12 @@
          version="3.0"
          metadata-complete="true">
 
+
+
+
+    <!--LOGIN SERVLETS-->
+
+
     <servlet>
         <servlet-name>LoginServlet</servlet-name>
         <servlet-class>TEmPoS.Servlet.LoginServlet</servlet-class>
@@ -15,6 +21,10 @@
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/loginServlet</url-pattern>
     </servlet-mapping>
+
+
+    <!--USER SERVLETS-->
+
 
     <servlet>
         <servlet-name>IsAdminServlet</servlet-name>
@@ -61,6 +71,10 @@
         <url-pattern>/editUserServlet</url-pattern>
     </servlet-mapping>
 
+
+    <!--CUSTOMER SERVLETS-->
+
+
     <servlet>
         <servlet-name>CreateCustomerServlet</servlet-name>
         <servlet-class>TEmPoS.Servlet.Customer.CreateCustomerServlet</servlet-class>
@@ -106,6 +120,10 @@
         <url-pattern>/searchCustomerServlet</url-pattern>
     </servlet-mapping>
 
+
+    <!--CONFIGURATION SERVLETS-->
+
+
     <servlet>
         <servlet-name>BranchesServlet</servlet-name>
         <servlet-class>TEmPoS.Servlet.Configuration.BranchesServlet</servlet-class>
@@ -114,5 +132,19 @@
         <servlet-name>BranchesServlet</servlet-name>
         <url-pattern>/branchesServlet</url-pattern>
     </servlet-mapping>
+
+
+    <!--PRODUCT SERVLETS-->
+
+
+    <servlet>
+        <servlet-name>CreateProductServlet</servlet-name>
+        <servlet-class>TEmPoS.Servlet.Product.CreateProductServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CreateProductServlet</servlet-name>
+        <url-pattern>/createProductServlet</url-pattern>
+    </servlet-mapping>
+
 
 </web-app>
