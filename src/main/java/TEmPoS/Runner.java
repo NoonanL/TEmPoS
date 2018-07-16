@@ -3,6 +3,7 @@ package TEmPoS;
 import TEmPoS.Servlet.*;
 import TEmPoS.Servlet.Brands.CreateBrandServlet;
 import TEmPoS.Servlet.Brands.DeleteBrandServlet;
+import TEmPoS.Servlet.Brands.EditBrandServlet;
 import TEmPoS.Servlet.Configuration.BranchesServlet;
 import TEmPoS.Servlet.Customer.*;
 import TEmPoS.Servlet.Product.*;
@@ -120,6 +121,10 @@ public class Runner {
 
         DeleteBrandServlet deleteBrandServlet = new DeleteBrandServlet(brandsDB,userDB);
         handler.addServlet(new ServletHolder(deleteBrandServlet), "/deleteBrandServlet");
+
+        EditBrandServlet editBrandServlet = new EditBrandServlet(brandsDB,userDB);
+        handler.addServlet(new ServletHolder(editBrandServlet), "/editBrandServlet");
+
         /*
         sets default servlet path.
          */
