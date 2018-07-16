@@ -220,5 +220,17 @@
     </servlet-mapping>
 
 
+    <!--DISTRIBUTOR SERVLETS-->
+
+    <servlet>
+        <servlet-name>CreateDistributorServlet</servlet-name>
+        <servlet-class>TEmPoS.Servlet.Distributors.CreateDistributorServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CreateDistributorServlet</servlet-name>
+        <url-pattern>/createDistributorServlet</url-pattern>
+    </servlet-mapping>
+
+
 
 </web-app>

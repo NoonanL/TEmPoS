@@ -7,6 +7,7 @@ import TEmPoS.Servlet.Brands.EditBrandServlet;
 import TEmPoS.Servlet.Brands.GetBrandsServlet;
 import TEmPoS.Servlet.Configuration.BranchesServlet;
 import TEmPoS.Servlet.Customer.*;
+import TEmPoS.Servlet.Distributors.CreateDistributorServlet;
 import TEmPoS.Servlet.Product.*;
 import TEmPoS.Servlet.User.*;
 import TEmPoS.db.*;
@@ -23,6 +24,7 @@ public class Runner {
     private H2Products productsDB;
     private H2Departments departmentsDB;
     private H2Brands brandsDB;
+    private H2Distributors distributorsDB;
     private static final int PORT = 9001;
 
     private Runner() {
@@ -34,7 +36,7 @@ public class Runner {
         productsDB = new H2Products(new ConnectionSupplier(ConnectionSupplier.FILE));
         departmentsDB = new H2Departments(new ConnectionSupplier(ConnectionSupplier.FILE));
         brandsDB = new H2Brands(new ConnectionSupplier(ConnectionSupplier.FILE));
-
+        distributorsDB = new H2Distributors(new ConnectionSupplier(ConnectionSupplier.FILE));
 
     }
 
@@ -128,6 +130,12 @@ public class Runner {
 
         GetBrandsServlet getBrandsServlet = new GetBrandsServlet(brandsDB,userDB);
         handler.addServlet(new ServletHolder(getBrandsServlet), "/getBrandsServlet");
+
+
+        //DISTRIBUTOR SERVLETS
+        CreateDistributorServlet createDistributorServlet = new CreateDistributorServlet(distributorsDB,userDB);
+        handler.addServlet(new ServletHolder(createDistributorServlet), "/createDistributorServlet");
+
 
         /*
         sets default servlet path.

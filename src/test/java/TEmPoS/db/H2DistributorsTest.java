@@ -40,7 +40,7 @@ public class H2DistributorsTest {
                 ){
             System.out.println("Distributors successfuly added");
         }else{
-            System.out.println("Distributor creation failed");
+            System.out.println("Distributors creation failed");
         }
     }
 
@@ -55,10 +55,10 @@ public class H2DistributorsTest {
     @Test
     public void deleteDistributor() {
         System.out.println("=====================================");
-        System.out.println("Testing delete Distributor by id");
+        System.out.println("Testing delete Distributors by id");
         System.out.println("=====================================");
         if(db.deleteDistributor(1)){
-            System.out.println("Distributor successfully deleted");
+            System.out.println("Distributors successfully deleted");
         }else{
             System.out.println("Failed to delete distributor");
         }
@@ -70,9 +70,9 @@ public class H2DistributorsTest {
         System.out.println("Testing if distributor already exists");
         System.out.println("=====================================");
         if(db.existingDistributor("EMD")){
-            System.out.println("Distributor already exists!!");
+            System.out.println("Distributors already exists!!");
         }else{
-            System.out.println("Distributor is unique.");
+            System.out.println("Distributors is unique.");
         }
     }
 }
