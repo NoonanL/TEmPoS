@@ -49,8 +49,8 @@ CREATE TABLE IF NOT EXISTS brands (
   brand VARCHAR(64),
   distributor VARCHAR(64)
 );
---
--- CREATE TABLE IF NOT EXISTS distributors (
---   id         int AUTO_INCREMENT PRIMARY KEY,
---   distributor VARCHAR(64)
--- );
+
+CREATE TABLE IF NOT EXISTS distributors (
+  id         int AUTO_INCREMENT PRIMARY KEY,
+  distributor VARCHAR(64)
+);

@@ -182,5 +182,43 @@
     </servlet-mapping>
 
 
+    <!--BRANDS SERVLETS-->
+    <servlet>
+        <servlet-name>CreateBrandServlet</servlet-name>
+        <servlet-class>TEmPoS.Servlet.Brands.CreateBrandServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CreateBrandServlet</servlet-name>
+        <url-pattern>/createBrandServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeleteBrandServlet</servlet-name>
+        <servlet-class>TEmPoS.Servlet.Brands.DeleteBrandServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteBrandServlet</servlet-name>
+        <url-pattern>/seleteBrandServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>EditBrandServlet</servlet-name>
+        <servlet-class>TEmPoS.Servlet.Brands.EditBrandServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EditBrandServlet</servlet-name>
+        <url-pattern>/editBrandServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>GetBrandsServlet</servlet-name>
+        <servlet-class>TEmPoS.Servlet.Brands.GetBrandsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetBrandsServlet</servlet-name>
+        <url-pattern>/getBrandsServlet</url-pattern>
+    </servlet-mapping>
+
+
 
 </web-app>
