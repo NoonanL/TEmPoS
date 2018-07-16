@@ -210,5 +210,15 @@
         <url-pattern>/editBrandServlet</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>GetBrandsServlet</servlet-name>
+        <servlet-class>TEmPoS.Servlet.Brands.GetBrandsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetBrandsServlet</servlet-name>
+        <url-pattern>/getBrandsServlet</url-pattern>
+    </servlet-mapping>
+
+
 
 </web-app>
