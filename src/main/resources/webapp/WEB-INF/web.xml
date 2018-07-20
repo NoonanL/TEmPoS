@@ -240,6 +240,16 @@
         <url-pattern>/deleteDistributorServlet</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>EditDistributorServlet</servlet-name>
+        <servlet-class>TEmPoS.Servlet.Distributors.EditDistributorServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EditDistributorServlet</servlet-name>
+        <url-pattern>/editDistributorServlet</url-pattern>
+    </servlet-mapping>
+
+
 
 
 

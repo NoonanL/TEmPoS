@@ -220,5 +220,37 @@
     </servlet-mapping>
 
 
+    <!--DISTRIBUTOR SERVLETS-->
+
+    <servlet>
+        <servlet-name>CreateDistributorServlet</servlet-name>
+        <servlet-class>TEmPoS.Servlet.Distributors.CreateDistributorServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CreateDistributorServlet</servlet-name>
+        <url-pattern>/createDistributorServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeleteDistributorServlet</servlet-name>
+        <servlet-class>TEmPoS.Servlet.Distributors.DeleteDistributorServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteDistributorServlet</servlet-name>
+        <url-pattern>/deleteDistributorServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>EditDistributorServlet</servlet-name>
+        <servlet-class>TEmPoS.Servlet.Distributors.EditDistributorServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EditDistributorServlet</servlet-name>
+        <url-pattern>/editDistributorServlet</url-pattern>
+    </servlet-mapping>
+
+
+
+
 
 </web-app>

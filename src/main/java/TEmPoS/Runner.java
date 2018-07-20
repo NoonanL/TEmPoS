@@ -9,6 +9,7 @@ import TEmPoS.Servlet.Configuration.BranchesServlet;
 import TEmPoS.Servlet.Customer.*;
 import TEmPoS.Servlet.Distributors.CreateDistributorServlet;
 import TEmPoS.Servlet.Distributors.DeleteDistributorServlet;
+import TEmPoS.Servlet.Distributors.EditDistributorServlet;
 import TEmPoS.Servlet.Product.*;
 import TEmPoS.Servlet.User.*;
 import TEmPoS.db.*;
@@ -29,7 +30,6 @@ public class Runner {
     private static final int PORT = 9001;
 
     private Runner() {
-
 
         userDB = new H2User(new ConnectionSupplier(ConnectionSupplier.FILE));
         customerDB = new H2Customer(new ConnectionSupplier(ConnectionSupplier.FILE));
@@ -139,6 +139,10 @@ public class Runner {
 
         DeleteDistributorServlet deleteDistributorServlet = new DeleteDistributorServlet(distributorsDB,userDB);
         handler.addServlet(new ServletHolder(deleteDistributorServlet), "/deleteDistributorServlet");
+
+        EditDistributorServlet editDistributorServlet = new EditDistributorServlet(distributorsDB,userDB);
+        handler.addServlet(new ServletHolder(editDistributorServlet), "/editDistributorServlet");
+
 
 
         /*

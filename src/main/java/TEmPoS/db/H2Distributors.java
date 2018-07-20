@@ -1,6 +1,7 @@
 package TEmPoS.db;
 
 import TEmPoS.Model.Brand;
+import TEmPoS.Model.Distributor;
 import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -50,13 +51,11 @@ public class H2Distributors extends H2Base {
 
     public JSONObject getDistributors(){
         final String GET_DISTRIBUTORS_QUERY = "SELECT * FROM distributors";
-        JSONObject distributorList = new JSONObject();
+        JSONObject distributorList;
         try (PreparedStatement ps = getConnection().prepareStatement(GET_DISTRIBUTORS_QUERY)){
             ResultSet rs = ps.executeQuery();
-            while(rs.next()){
-                distributorList.put(rs.getString(1), rs.getString(2));
-            }
-        } catch (SQLException e) {
+            distributorList = parseDistributors(rs);
+            } catch (SQLException e) {
             throw new RuntimeException(e);
         }
         return distributorList;
@@ -66,6 +65,19 @@ public class H2Distributors extends H2Base {
         final String DELETE_DISTRIBUTOR_QUERY = "DELETE FROM distributors WHERE id=?";
         try (PreparedStatement ps = getConnection().prepareStatement(DELETE_DISTRIBUTOR_QUERY)) {
             ps.setInt(1, id);
+            ps.execute();
+            return true;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    public boolean editDistributor(Distributor distributor) throws SQLException {
+        String query = "UPDATE distributors SET distributor =? WHERE id=?";
+        try (PreparedStatement ps = getConnection().prepareStatement(query)) {
+            ps.setString(1, distributor.getName());
+            ps.setInt(2, Integer.parseInt(distributor.getId()));
             ps.execute();
             return true;
         } catch (SQLException e) {
@@ -90,6 +102,17 @@ public class H2Distributors extends H2Base {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    private JSONObject parseDistributors(ResultSet rs) throws SQLException {
+        JSONObject distributorList = new JSONObject();
+        while (rs.next()) {
+            Distributor distributor = new Distributor();
+            distributor.setId(rs.getString(1));
+            distributor.setName(rs.getString(2));
+            distributorList.put(distributor.getId() , distributor.toJson());
+        }
+        return distributorList;
     }
 
 

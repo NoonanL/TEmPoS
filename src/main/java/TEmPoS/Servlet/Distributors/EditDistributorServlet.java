@@ -1,10 +1,9 @@
-package TEmPoS.Servlet.Brands;
+package TEmPoS.Servlet.Distributors;
 
 import TEmPoS.Model.Brand;
-import TEmPoS.Model.Customer;
+import TEmPoS.Model.Distributor;
 import TEmPoS.Util.RequestJson;
-import TEmPoS.db.H2Brands;
-import TEmPoS.db.H2Products;
+import TEmPoS.db.H2Distributors;
 import TEmPoS.db.H2User;
 import org.json.JSONObject;
 
@@ -16,15 +15,15 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
 
-public class EditBrandServlet extends HttpServlet {
+public class EditDistributorServlet extends HttpServlet {
 
-    private H2Brands h2Brands;
     private H2User h2User;
+    private H2Distributors h2Distributors;
 
-    public EditBrandServlet(){}
+    public EditDistributorServlet(){}
 
-    public EditBrandServlet(H2Brands h2Brands, H2User h2User){
-        this.h2Brands = h2Brands;
+    public EditDistributorServlet(H2Distributors h2Distributors, H2User h2User){
+        this.h2Distributors = h2Distributors;
         this.h2User = h2User;
     }
 
@@ -37,29 +36,28 @@ public class EditBrandServlet extends HttpServlet {
         //read from request
         RequestJson requestParser = new RequestJson();
         JSONObject input = requestParser.parse(request);
-        String id = input.getString("targetBrandId");
+        String id = input.getString("targetDistributorId");
         String requestUser = input.getString("requestUser");
 
-        Brand newBrand = new Brand();
-        newBrand.setId(id);
-        newBrand.setBrand(input.getString("brand"));
-        newBrand.setDistributor(input.getString("distributor"));
+        Distributor distributor = new Distributor();
+        distributor.setId(id);
+        distributor.setName(input.getString("name"));
 
         //int editId = Integer.parseInt(id); - No longer needed if we pass the whole object eh?
 
         JSONObject responseJson = new JSONObject();
         if(h2User.isRegistered(requestUser)) {
             try {
-                if (h2Brands.existingBrand(newBrand.getBrand())) {
-                    responseJson.put("error", "Brand already exists!");
+                if (h2Distributors.existingDistributor(distributor.getName())) {
+                    responseJson.put("error", "Distributor already exists!");
                 } else {
-                    if (h2Brands.editBrand(newBrand)) {
+                    if (h2Distributors.editDistributor(distributor)) {
                         //System.out.println("New user created.");
                         responseJson.put("response", "OK");
                     } else {
                         //System.out.println("Error creating user");
                         responseJson.put("response", "false");
-                        responseJson.put("error", "Error editing Brand.");
+                        responseJson.put("error", "Error editing Distributor.");
                     }
                 }
             } catch (SQLException e) {
@@ -72,4 +70,5 @@ public class EditBrandServlet extends HttpServlet {
         out.print(responseJson);
         out.flush();
     }
+
 }
