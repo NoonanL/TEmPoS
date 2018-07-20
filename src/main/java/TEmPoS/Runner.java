@@ -10,6 +10,7 @@ import TEmPoS.Servlet.Customer.*;
 import TEmPoS.Servlet.Distributors.CreateDistributorServlet;
 import TEmPoS.Servlet.Distributors.DeleteDistributorServlet;
 import TEmPoS.Servlet.Distributors.EditDistributorServlet;
+import TEmPoS.Servlet.Distributors.GetDistributorsServlet;
 import TEmPoS.Servlet.Product.*;
 import TEmPoS.Servlet.User.*;
 import TEmPoS.db.*;
@@ -143,6 +144,8 @@ public class Runner {
         EditDistributorServlet editDistributorServlet = new EditDistributorServlet(distributorsDB,userDB);
         handler.addServlet(new ServletHolder(editDistributorServlet), "/editDistributorServlet");
 
+        GetDistributorsServlet getDistributorsServlet = new GetDistributorsServlet(distributorsDB,userDB);
+        handler.addServlet(new ServletHolder(getDistributorsServlet), "/getDistributorsServlet");
 
 
         /*
