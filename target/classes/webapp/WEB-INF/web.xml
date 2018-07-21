@@ -249,6 +249,15 @@
         <url-pattern>/editDistributorServlet</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>GetDistributorsServlet</servlet-name>
+        <servlet-class>TEmPoS.Servlet.Distributors.GetDistributorsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetDistributorsServlet</servlet-name>
+        <url-pattern>/getDistributorsServlet</url-pattern>
+    </servlet-mapping>
+
 
 
 

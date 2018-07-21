@@ -34,7 +34,7 @@ public class EditCustomerServlet extends HttpServlet {
         //read from request
         RequestJson requestParser = new RequestJson();
         JSONObject input = requestParser.parse(request);
-        String id = input.getString("targetCustomerId");
+        String id = input.getString("id");
         String requestUser = input.getString("requestUser");
 
         Customer newCustomer = new Customer();
