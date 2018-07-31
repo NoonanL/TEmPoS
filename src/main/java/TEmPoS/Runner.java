@@ -8,6 +8,7 @@ import TEmPoS.Servlet.Brands.GetBrandsServlet;
 import TEmPoS.Servlet.Configuration.BranchesServlet;
 import TEmPoS.Servlet.Customer.*;
 import TEmPoS.Servlet.Departments.CreateDepartmentServlet;
+import TEmPoS.Servlet.Departments.DeleteDepartmentServlet;
 import TEmPoS.Servlet.Distributors.CreateDistributorServlet;
 import TEmPoS.Servlet.Distributors.DeleteDistributorServlet;
 import TEmPoS.Servlet.Distributors.EditDistributorServlet;
@@ -152,6 +153,9 @@ public class Runner {
         //DEPARTMENTS SERVLETS
         CreateDepartmentServlet createDepartmentServlet = new CreateDepartmentServlet(departmentsDB,userDB);
         handler.addServlet(new ServletHolder(createDepartmentServlet), "/createDepartmentServlet");
+
+        DeleteDepartmentServlet deleteDepartmentServlet = new DeleteDepartmentServlet(departmentsDB,userDB);
+        handler.addServlet(new ServletHolder(deleteDepartmentServlet), "/deleteDepartmentServlet");
 
         /*
         sets default servlet path.
