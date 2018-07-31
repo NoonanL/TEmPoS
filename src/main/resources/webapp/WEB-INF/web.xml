@@ -278,5 +278,16 @@
         <url-pattern>/deleteDepartmentServlet</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>EditDepartmentServlet</servlet-name>
+        <servlet-class>TEmPoS.Servlet.Departments.EditDepartmentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EditDepartmentServlet</servlet-name>
+        <url-pattern>/editDepartmentServlet</url-pattern>
+    </servlet-mapping>
+
+
+
 
 </web-app>
