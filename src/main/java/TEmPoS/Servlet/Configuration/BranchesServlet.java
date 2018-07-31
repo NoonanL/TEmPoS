@@ -38,6 +38,9 @@ public class BranchesServlet extends HttpServlet {
         JSONObject responseJson = new JSONObject();
         if(h2User.isRegistered(requestUser)) {
             responseJson = h2BranchList.getBranchList();
+
+            responseJson.put("response", "OK");
+            responseJson.put("error", "None.");
         }
 
 

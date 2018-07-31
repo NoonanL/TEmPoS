@@ -45,11 +45,11 @@ public class DeleteCustomerServlet extends HttpServlet {
         JSONObject responseJson = new JSONObject();
         if(h2User.isRegistered(requestUser)){
             if(h2Customer.deleteCustomerById(deleteId)){
-                //System.out.println("customer deleted.");
                 responseJson.put("response", "OK");
+                responseJson.put("error", "None.");
             }else{
-                //System.out.println("Error deleting customer");
                 responseJson.put("response", "false");
+                responseJson.put("error", "Failed to delete customer.");
             }
         }
 

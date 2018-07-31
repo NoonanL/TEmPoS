@@ -54,18 +54,16 @@ public class CreateCustomerServlet extends HttpServlet {
 
 
         JSONObject responseJson = new JSONObject();
-        if(h2User.isRegistered(requestUser)){
+        if(h2User.isRegistered(requestUser)) {
 
-                if(h2Customer.createCustomer(newCustomer)){
-                    //System.out.println("New user created.");
-                    responseJson.put("response", "OK");
-                }else{
-                    //System.out.println("Error creating user");
-                    responseJson.put("response", "false");
-                }
-
+            if (h2Customer.createCustomer(newCustomer)) {
+                responseJson.put("response", "OK");
+                responseJson.put("error", "None.");
+            } else {
+                responseJson.put("response", "false");
+                responseJson.put("error", "Failed to create new customer.");
+            }
         }
-
 
         response.setContentType("application/json");
         PrintWriter out = response.getWriter();

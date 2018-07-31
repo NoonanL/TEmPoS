@@ -39,6 +39,8 @@ public class GetCustomersServlet extends HttpServlet {
         JSONObject responseJson = new JSONObject();
         if(h2User.isRegistered(requestUser)){
             responseJson = h2Customer.getCustomers();
+            responseJson.put("response", "OK.");
+            responseJson.put("error", "None.");
         }
 
 

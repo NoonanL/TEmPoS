@@ -40,8 +40,9 @@ public class SearchCustomerServlet extends HttpServlet {
         JSONObject responseJson = new JSONObject();
         if(h2User.isRegistered(requestUser)){
             responseJson = h2Customer.searchCustomers(searchString);
+            responseJson.put("response", "OK.");
+            responseJson.put("error", "None.");
         }
-
 
         response.setContentType("application/json");
         PrintWriter out = response.getWriter();

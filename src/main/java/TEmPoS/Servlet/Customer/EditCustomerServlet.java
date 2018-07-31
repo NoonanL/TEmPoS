@@ -56,11 +56,11 @@ public class EditCustomerServlet extends HttpServlet {
         JSONObject responseJson = new JSONObject();
         if(h2User.isRegistered(requestUser)){
             if(h2Customer.editCustomer(editId,newCustomer)){
-                //System.out.println("New user created.");
                 responseJson.put("response", "OK");
+                responseJson.put("error", "None.");
             }else{
-                //System.out.println("Error creating user");
                 responseJson.put("response", "false");
+                responseJson.put("error", "Failed to edit customer.");
             }
         }
 
