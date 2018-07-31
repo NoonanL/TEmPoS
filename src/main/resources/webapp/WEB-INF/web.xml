@@ -259,7 +259,15 @@
     </servlet-mapping>
 
 
-
+    <!--DEPARTMENTS SERVLETS-->
+    <servlet>
+        <servlet-name>CreateDepartmentServlet</servlet-name>
+        <servlet-class>TEmPoS.Servlet.Departments.CreateDepartmentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CreateDepartmentServlet</servlet-name>
+        <url-pattern>/createDepartmentServlet</url-pattern>
+    </servlet-mapping>
 
 
 </web-app>

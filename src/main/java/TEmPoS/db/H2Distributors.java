@@ -37,7 +37,7 @@ public class H2Distributors extends H2Base {
         loadResource("/schema.sql");
     }
 
-    public boolean createDistributor(String distributor) throws SQLException {
+    public boolean createDistributor(String distributor) {
         String query = "INSERT into distributors (distributor) VALUES(?)";
         try (PreparedStatement ps = getConnection().prepareStatement(query)) {
             ps.setString(1, distributor);
@@ -73,7 +73,7 @@ public class H2Distributors extends H2Base {
         }
     }
 
-    public boolean editDistributor(Distributor distributor) throws SQLException {
+    public boolean editDistributor(Distributor distributor) {
         String query = "UPDATE distributors SET distributor =? WHERE id=?";
         try (PreparedStatement ps = getConnection().prepareStatement(query)) {
             ps.setString(1, distributor.getName());

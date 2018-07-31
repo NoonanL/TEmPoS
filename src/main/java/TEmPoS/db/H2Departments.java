@@ -1,5 +1,7 @@
 package TEmPoS.db;
 
+import TEmPoS.Model.Department;
+import TEmPoS.Model.Distributor;
 import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -34,10 +36,10 @@ public class H2Departments extends H2Base {
         loadResource("/schema.sql");
     }
 
-    public boolean createDepartment(String department) throws SQLException {
+    public boolean createDepartment(Department department) {
         String query = "INSERT into departments (department) VALUES(?)";
         try (PreparedStatement ps = getConnection().prepareStatement(query)) {
-            ps.setString(1, department);
+            ps.setString(1, department.getDepartment());
             ps.execute();
             return true;
         } catch (SQLException e) {
@@ -46,11 +48,11 @@ public class H2Departments extends H2Base {
         }
     }
 
-    public boolean editDepartment(int id, String department) throws SQLException {
+    public boolean editDepartment(Department department) {
         String query = "UPDATE departments SET department =? WHERE id=?";
         try (PreparedStatement ps = getConnection().prepareStatement(query)) {
-            ps.setString(1, department);
-            ps.setInt(2, id);
+            ps.setString(1, department.getDepartment());
+            ps.setInt(2, Integer.parseInt(department.getId()));
             ps.execute();
             return true;
         } catch (SQLException e) {
@@ -64,9 +66,7 @@ public class H2Departments extends H2Base {
         JSONObject departmentList = new JSONObject();
         try (PreparedStatement ps = getConnection().prepareStatement(GET_DEPARTMENTS_QUERY)){
             ResultSet rs = ps.executeQuery();
-            while(rs.next()){
-                departmentList.put(rs.getString(1), rs.getString(2));
-            }
+            departmentList = parseDepartments(rs);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -84,6 +84,27 @@ public class H2Departments extends H2Base {
             return false;
         }
     }
+
+    private JSONObject parseDepartments(ResultSet rs) throws SQLException {
+        JSONObject departmentList = new JSONObject();
+        while (rs.next()) {
+            Department department = new Department();
+            department.setId(rs.getString(1));
+            department.setDepartment(rs.getString(2));
+            departmentList.put(department.getId() , department.toJson());
+        }
+        return departmentList;
+    }
+
+    public boolean existingDepartment(String department) throws SQLException{
+        final String GET_DEPARTMENT_QUERY = "SELECT * FROM departments WHERE department=?";
+        try (PreparedStatement ps = getConnection().prepareStatement(GET_DEPARTMENT_QUERY)) {
+            ps.setString(1, department);
+            ResultSet rs = ps.executeQuery();
+            return rs.next();
+        }
+    }
+
 
     public boolean deleteTable(){
         try (PreparedStatement ps = getConnection().prepareStatement("DROP TABLE departments")){
