@@ -287,6 +287,15 @@
         <url-pattern>/editDepartmentServlet</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>GetDepartmentsServlet</servlet-name>
+        <servlet-class>TEmPoS.Servlet.Departments.GetDepartmentsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetDepartmentsServlet</servlet-name>
+        <url-pattern>/getDepartmentsServlet</url-pattern>
+    </servlet-mapping>
+
 
 
 
