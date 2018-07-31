@@ -81,13 +81,15 @@ public class H2User extends H2Base {
      * Delete a given user
      * @param username the username of the user to delete
      */
-    public void deleteUser(String username) {
+    public boolean deleteUser(String username) {
         final String DELETE_USER_QUERY = "DELETE FROM users WHERE username=?";
         try (PreparedStatement ps = getConnection().prepareStatement(DELETE_USER_QUERY)) {
             ps.setString(1, username);
             ps.execute();
+            return true;
         } catch (SQLException e) {
             e.printStackTrace();
+            return false;
         }
     }
 

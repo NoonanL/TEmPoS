@@ -33,14 +33,15 @@ public class DeleteUserServlet extends HttpServlet {
         //System.out.println("User " + requestUser + " attempting to delete account with username " + targetUser + ".");
 
         JSONObject responseJson = new JSONObject();
-        if(h2User.isAdmin(requestUser)){
+        if(h2User.isAdmin(requestUser)) {
             //System.out.println(requestUser + " is an Admin and may attempt to delete...");
-            h2User.deleteUser(targetUser);
-            responseJson.put("response", "OK");
-            //System.out.println(targetUser + " deleted.");
-        }else{
-            //System.out.println(requestUser + " is not an admin.");
-            responseJson.put("response", "false");
+            if (h2User.deleteUser(targetUser)) {
+                responseJson.put("response", "OK");
+                responseJson.put("error", "None.");
+            } else {
+                responseJson.put("response", "false");
+                responseJson.put("error", "Error deleting user.");
+            }
         }
 
         response.setContentType("application/json");

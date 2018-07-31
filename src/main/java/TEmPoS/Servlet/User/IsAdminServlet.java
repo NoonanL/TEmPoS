@@ -42,12 +42,16 @@ public class IsAdminServlet extends HttpServlet {
                 //System.out.println("Is an Admin");
                 responseJson.put("response", "OK");
                 responseJson.put("isAdmin", "true");
+                responseJson.put("error", "None.");
             }else{
                 //System.out.println("Is not an admin");
+                responseJson.put("response", "false");
+                responseJson.put("error", "None.");
                 responseJson.put("isAdmin", "false");
             }
         }else{
             responseJson.put("response","false");
+            responseJson.put("error", "Request user is not an admin.");
         }
 
 

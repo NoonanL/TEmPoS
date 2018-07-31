@@ -40,15 +40,16 @@ public class EditUserServlet extends HttpServlet {
         JSONObject responseJson = new JSONObject();
         if(h2User.isAdmin(requestUser)){
             if(h2User.editUser(targetUser, newUsername, adminStatus)){
-                //System.out.println("User successfully edited");
                 responseJson.put("response", "OK");
+                responseJson.put("error", "None.");
             }else{
-                //System.out.println("Error editing user");
                 responseJson.put("response", "false");
+                responseJson.put("error", "Error editing user.");
             }
         }else{
            //System.out.println("Request user NOT an admin - Access denied.");
             responseJson.put("response", "false");
+            responseJson.put("error", "User is not an admin.");
         }
 
         response.setContentType("application/json");
