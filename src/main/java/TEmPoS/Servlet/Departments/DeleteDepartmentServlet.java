@@ -43,8 +43,8 @@ public class DeleteDepartmentServlet extends HttpServlet {
         JSONObject responseJson = new JSONObject();
         if(h2User.isRegistered(requestUser)){
             if(h2Departments.deleteDeparment(deleteId)){
-                //System.out.println("customer deleted.");
                 responseJson.put("response", "OK");
+                responseJson.put("error", "None.");
             }else{
                 //System.out.println("Error deleting customer");
                 responseJson.put("response", "false");

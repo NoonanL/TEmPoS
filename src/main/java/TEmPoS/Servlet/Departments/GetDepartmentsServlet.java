@@ -39,6 +39,8 @@ public class GetDepartmentsServlet extends HttpServlet {
         JSONObject responseJson = new JSONObject();
         if(h2User.isRegistered(requestUser)){
             responseJson = h2Departments.getDepartments();
+            responseJson.put("response", "OK");
+            responseJson.put("error", "None.");
         }
 
 

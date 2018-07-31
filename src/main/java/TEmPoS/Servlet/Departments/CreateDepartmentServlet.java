@@ -50,8 +50,8 @@ public class CreateDepartmentServlet extends HttpServlet {
                     responseJson.put("error", "Department name not unique.");
                 }else{
                     if(h2Departments.createDepartment(newDepartment)){
-                        //System.out.println("New product created.");
                         responseJson.put("response", "OK");
+                        responseJson.put("error", "None.");
                     }else{
                         //System.out.println("Error creating product");
                         responseJson.put("response", "false");

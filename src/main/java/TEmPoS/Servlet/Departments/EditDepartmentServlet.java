@@ -48,11 +48,12 @@ public class EditDepartmentServlet extends HttpServlet {
         if(h2User.isRegistered(requestUser)) {
             try {
                 if (h2Departments.existingDepartment(department.getDepartment())) {
+                    responseJson.put("response", "false");
                     responseJson.put("error", "Brand already exists!");
                 } else {
                     if (h2Departments.editDepartment(department)) {
-                        //System.out.println("New user created.");
                         responseJson.put("response", "OK");
+                        responseJson.put("error", "None.");
                     } else {
                         //System.out.println("Error creating user");
                         responseJson.put("response", "false");
