@@ -44,6 +44,7 @@ public class DeleteBrandServlet extends HttpServlet {
             if(h2Brands.deleteBrand(deleteId)){
                 //System.out.println("customer deleted.");
                 responseJson.put("response", "OK");
+                responseJson.put("error", "None");
             }else{
                 //System.out.println("Error deleting customer");
                 responseJson.put("response", "false");

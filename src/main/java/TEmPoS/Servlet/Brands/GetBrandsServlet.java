@@ -38,6 +38,8 @@ public class GetBrandsServlet extends HttpServlet {
 
         JSONObject responseJson = new JSONObject();
         if(h2User.isRegistered(requestUser)){
+            responseJson.put("response", "OK");
+            responseJson.put("error", "None.");
             responseJson = h2Brands.getBrands();
         }
 

@@ -46,17 +46,15 @@ public class CreateBrandServlet extends HttpServlet {
 
         JSONObject responseJson = new JSONObject();
         if(h2User.isRegistered(requestUser)){
-
             try {
                 if(h2Brands.existingBrand(newBrand.getBrand())){
                     responseJson.put("response", "false");
                     responseJson.put("error", "Brand name not unique.");
                 }else{
                     if(h2Brands.createBrand(newBrand)){
-                        //System.out.println("New product created.");
                         responseJson.put("response", "OK");
+                        responseJson.put("error", "None.");
                     }else{
-                        //System.out.println("Error creating product");
                         responseJson.put("response", "false");
                         responseJson.put("error", "Failed to create new brand.");
                     }
@@ -64,7 +62,6 @@ public class CreateBrandServlet extends HttpServlet {
             } catch (SQLException e) {
                 e.printStackTrace();
             }
-
         }
         response.setContentType("application/json");
         PrintWriter out = response.getWriter();
