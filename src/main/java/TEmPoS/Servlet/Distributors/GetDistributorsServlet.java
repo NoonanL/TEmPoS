@@ -39,6 +39,8 @@ public class GetDistributorsServlet extends HttpServlet {
         JSONObject responseJson = new JSONObject();
         if(h2User.isRegistered(requestUser)){
             responseJson = h2Distributors.getDistributors();
+            responseJson.put("response", "OK");
+            responseJson.put("error", "None.");
         }
 
         response.setContentType("application/json");

@@ -52,8 +52,8 @@ public class EditDistributorServlet extends HttpServlet {
                     responseJson.put("error", "Distributor already exists!");
                 } else {
                     if (h2Distributors.editDistributor(distributor)) {
-                        //System.out.println("New user created.");
                         responseJson.put("response", "OK");
+                        responseJson.put("error", "None.");
                     } else {
                         //System.out.println("Error creating user");
                         responseJson.put("response", "false");

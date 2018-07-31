@@ -50,6 +50,7 @@ public class CreateDistributorServlet extends HttpServlet {
                 }else{
                     if(h2Distributors.createDistributor(input.getString("distributor"))){
                         responseJson.put("response", "OK");
+                        responseJson.put("error", "None.");
                     }else{
                         //System.out.println("Error creating product");
                         responseJson.put("response", "false");
