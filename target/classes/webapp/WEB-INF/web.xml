@@ -259,6 +259,43 @@
     </servlet-mapping>
 
 
+    <!--DEPARTMENTS SERVLETS-->
+    <servlet>
+        <servlet-name>CreateDepartmentServlet</servlet-name>
+        <servlet-class>TEmPoS.Servlet.Departments.CreateDepartmentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CreateDepartmentServlet</servlet-name>
+        <url-pattern>/createDepartmentServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeleteDepartmentServlet</servlet-name>
+        <servlet-class>TEmPoS.Servlet.Departments.DeleteDepartmentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteDepartmentServlet</servlet-name>
+        <url-pattern>/deleteDepartmentServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>EditDepartmentServlet</servlet-name>
+        <servlet-class>TEmPoS.Servlet.Departments.EditDepartmentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EditDepartmentServlet</servlet-name>
+        <url-pattern>/editDepartmentServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>GetDepartmentsServlet</servlet-name>
+        <servlet-class>TEmPoS.Servlet.Departments.GetDepartmentsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetDepartmentsServlet</servlet-name>
+        <url-pattern>/getDepartmentsServlet</url-pattern>
+    </servlet-mapping>
+
 
 
 

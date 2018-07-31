@@ -1,5 +1,6 @@
 package TEmPoS.db;
 
+import TEmPoS.Model.Department;
 import org.json.JSONObject;
 import org.junit.After;
 import org.junit.Before;
@@ -17,6 +18,9 @@ public class H2DepartmentsTest {
     static final Logger LOG = LoggerFactory.getLogger(H2CustomerTest.class);
 
     private H2Departments db;
+    private Department test1 = new Department("Sticks");
+    private Department test2 = new Department("Heads");
+    private Department test3 = new Department("Cymbals");
 
     @Before
     public void setUp() {
@@ -37,9 +41,9 @@ public class H2DepartmentsTest {
         System.out.println("=====================================");
         System.out.println("Creating Departments");
         System.out.println("=====================================");
-        if(db.createDepartment("Sticks") &&
-                db.createDepartment("Heads") &&
-                db.createDepartment("Cymbals")
+        if(db.createDepartment(test1) &&
+                db.createDepartment(test2) &&
+                db.createDepartment(test3)
                 ){
             System.out.println("Departments successfuly added");
         }else{
@@ -63,7 +67,7 @@ public class H2DepartmentsTest {
         System.out.println("=====================================");
         System.out.println("Testing Department editing");
         System.out.println("=====================================");
-        if(db.editDepartment(1, "NEWNAME")){
+        if(db.editDepartment(test3)){
             System.out.println("Department successfully edited.");
             System.out.println(db.getDepartments());
         }else{
@@ -82,6 +86,16 @@ public class H2DepartmentsTest {
             System.out.println("Failed to delete Department");
         }
 
+    }
+
+    @Test
+    public void testPurposes(){
+        Department test1 = new Department("Sticks");
+        if(db.createDepartment(test1)){
+            System.out.println("Departments successfuly added");
+        }else{
+            System.out.println("Department creation failed failed");
+        }
     }
 
 

@@ -17,7 +17,12 @@ public class Department {
 
     public Department(String id, String department) {
             this.id =id;
-        this.department =department;
+        this.department = department;
+    }
+
+    public Department(String department) {
+        this.id = "";
+        this.department = department;
     }
 
     public void setId(String id){
