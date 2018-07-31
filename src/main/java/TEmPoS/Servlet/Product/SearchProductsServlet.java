@@ -38,6 +38,8 @@ public class SearchProductsServlet extends HttpServlet {
         JSONObject responseJson = new JSONObject();
         if(h2User.isRegistered(requestUser)){
             responseJson = h2Products.searchProducts(searchString);
+            responseJson.put("response", "OK");
+            responseJson.put("error", "None.");
         }
 
 
