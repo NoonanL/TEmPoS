@@ -1,10 +1,8 @@
 package TEmPoS.Servlet.Brands;
 
 import TEmPoS.Model.Brand;
-import TEmPoS.Model.Customer;
 import TEmPoS.Util.RequestJson;
 import TEmPoS.db.H2Brands;
-import TEmPoS.db.H2Products;
 import TEmPoS.db.H2User;
 import org.json.JSONObject;
 
@@ -37,7 +35,7 @@ public class EditBrandServlet extends HttpServlet {
         //read from request
         RequestJson requestParser = new RequestJson();
         JSONObject input = requestParser.parse(request);
-        String id = input.getString("targetBrandId");
+        String id = input.getString("id");
         String requestUser = input.getString("requestUser");
 
         Brand newBrand = new Brand();
@@ -50,10 +48,6 @@ public class EditBrandServlet extends HttpServlet {
         JSONObject responseJson = new JSONObject();
         if(h2User.isRegistered(requestUser)) {
             try {
-                if (h2Brands.existingBrand(newBrand.getBrand())) {
-                    responseJson.put("response", "false");
-                    responseJson.put("error", "Brand already exists!");
-                } else {
                     if (h2Brands.editBrand(newBrand)) {
                         responseJson.put("response", "OK");
                         responseJson.put("error", "None.");
@@ -62,7 +56,7 @@ public class EditBrandServlet extends HttpServlet {
                         responseJson.put("response", "false");
                         responseJson.put("error", "Error editing Brand.");
                     }
-                }
+
             } catch (SQLException e) {
                 e.printStackTrace();
             }

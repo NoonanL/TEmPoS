@@ -48,12 +48,12 @@ public class EditDistributorServlet extends HttpServlet {
         JSONObject responseJson = new JSONObject();
         if(h2User.isRegistered(requestUser)) {
             try {
-                if (h2Distributors.existingDistributor(distributor.getName())) {
+                if (h2Distributors.existingDistributor(distributor.getName(), "name")) {
                     responseJson.put("error", "Distributor already exists!");
                 } else {
                     if (h2Distributors.editDistributor(distributor)) {
+                        //System.out.println("New user created.");
                         responseJson.put("response", "OK");
-                        responseJson.put("error", "None.");
                     } else {
                         //System.out.println("Error creating user");
                         responseJson.put("response", "false");

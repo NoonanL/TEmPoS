@@ -1,10 +1,8 @@
 package TEmPoS.Servlet.Brands;
 
 import TEmPoS.Model.Brand;
-import TEmPoS.Model.Product;
 import TEmPoS.Util.RequestJson;
 import TEmPoS.db.H2Brands;
-import TEmPoS.db.H2Products;
 import TEmPoS.db.H2User;
 import org.json.JSONObject;
 

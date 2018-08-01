@@ -75,6 +75,19 @@ public class H2Brands extends H2Base {
         return brandList;
     }
 
+    public JSONObject getBrand(int id){
+        final String GET_BRAND_BY_ID_QUERY = "SELECT * FROM brands WHERE id=?";
+        JSONObject brandList;
+        try (PreparedStatement ps = getConnection().prepareStatement(GET_BRAND_BY_ID_QUERY)){
+            ps.setInt(1, id);
+            ResultSet rs = ps.executeQuery();
+            brandList = parseBrands(rs);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return brandList;
+    }
+
     public boolean deleteBrand(int id){
         final String DELETE_BRAND_QUERY = "DELETE FROM brands WHERE id=?";
         try (PreparedStatement ps = getConnection().prepareStatement(DELETE_BRAND_QUERY)) {

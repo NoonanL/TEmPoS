@@ -41,16 +41,16 @@ CREATE TABLE IF NOT EXISTS products(
 
 CREATE TABLE IF NOT EXISTS departments (
   id         int AUTO_INCREMENT PRIMARY KEY,
-  department VARCHAR(64)
+  department VARCHAR(64) NOT NULL UNIQUE
 );
 
 CREATE TABLE IF NOT EXISTS brands (
   id         int AUTO_INCREMENT PRIMARY KEY,
-  brand VARCHAR(64),
+  brand VARCHAR(64) NOT NULL UNIQUE ,
   distributor VARCHAR(64)
 );
 
 CREATE TABLE IF NOT EXISTS distributors (
   id         int AUTO_INCREMENT PRIMARY KEY,
-  distributor VARCHAR(64)
+  distributor VARCHAR(64) NOT NULL UNIQUE
 );

@@ -1,7 +1,6 @@
 package TEmPoS.db;
 
 import TEmPoS.Model.Brand;
-import org.json.JSONObject;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -9,7 +8,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.sql.SQLException;
-import java.util.Iterator;
 
 import static org.junit.Assert.*;
 

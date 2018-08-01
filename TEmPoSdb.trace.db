@@ -364,7 +364,7 @@ SELECT * FROM brands WHERE name=? [42122-194]
 	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1204)
 	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:73)
 	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:288)
-	at TEmPoS.db.H2Brands.existingBrand(H2Brands.java:92)
+	at existingBrandName(H2Brands.java:92)
 	at TEmPoS.db.H2BrandsTest.existingBrand(H2BrandsTest.java:95)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)

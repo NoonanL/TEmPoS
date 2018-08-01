@@ -86,10 +86,10 @@ public class H2Distributors extends H2Base {
         }
     }
 
-    public boolean existingDistributor(String distributor) throws SQLException{
-        final String GET_DISTRIBUTOR_QUERY = "SELECT * FROM distributors WHERE distributor=?";
+    public boolean existingDistributor(String query, String field) throws SQLException{
+        final String GET_DISTRIBUTOR_QUERY = "SELECT * FROM distributors WHERE " + field + "=?";
         try (PreparedStatement ps = getConnection().prepareStatement(GET_DISTRIBUTOR_QUERY)) {
-            ps.setString(1, distributor);
+            ps.setString(1, query);
             ResultSet rs = ps.executeQuery();
             return rs.next();
         }

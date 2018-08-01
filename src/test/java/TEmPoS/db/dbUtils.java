@@ -22,6 +22,7 @@ public class dbUtils {
     private H2Products productsDB;
     private H2Brands brandsDB;
     private H2Distributors h2Distributors;
+    private H2Departments departmentsDB;
 
 
     @Before
@@ -32,6 +33,7 @@ public class dbUtils {
         productsDB = new H2Products(new ConnectionSupplier(ConnectionSupplier.FILE));
         brandsDB = new H2Brands(new ConnectionSupplier(ConnectionSupplier.FILE));
         h2Distributors = new H2Distributors(new ConnectionSupplier(ConnectionSupplier.FILE));
+        departmentsDB = new H2Departments(new ConnectionSupplier(ConnectionSupplier.FILE));
     }
 
     @After
@@ -107,8 +109,20 @@ public class dbUtils {
         System.out.println("=====================================");
         System.out.println("Deleting distributors table");
         System.out.println("=====================================");
-        if(brandsDB.deleteTable()){
+        if(h2Distributors.deleteTable()){
             System.out.println("Distributors table deleted");
+        }else{
+            System.out.println("Failed to delete table");
+        }
+    }
+
+    @Test
+    public void deleteDepartments(){
+        System.out.println("=====================================");
+        System.out.println("Deleting departments table");
+        System.out.println("=====================================");
+        if(departmentsDB.deleteTable()){
+            System.out.println("departments table deleted");
         }else{
             System.out.println("Failed to delete table");
         }

@@ -69,7 +69,7 @@ public class H2DistributorsTest {
         System.out.println("=====================================");
         System.out.println("Testing if distributor already exists");
         System.out.println("=====================================");
-        if(db.existingDistributor("EMD")){
+        if(db.existingDistributor("EMD", "name")){
             System.out.println("Distributors already exists!!");
         }else{
             System.out.println("Distributors is unique.");
