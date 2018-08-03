@@ -36,24 +36,26 @@ public class EditDistributorServlet extends HttpServlet {
         //read from request
         RequestJson requestParser = new RequestJson();
         JSONObject input = requestParser.parse(request);
-        String id = input.getString("targetDistributorId");
+        String id = input.getString("id");
         String requestUser = input.getString("requestUser");
 
         Distributor distributor = new Distributor();
         distributor.setId(id);
-        distributor.setName(input.getString("name"));
+        distributor.setName(input.getString("distributor"));
 
         //int editId = Integer.parseInt(id); - No longer needed if we pass the whole object eh?
 
         JSONObject responseJson = new JSONObject();
         if(h2User.isRegistered(requestUser)) {
             try {
-                if (h2Distributors.existingDistributor(distributor.getName(), "name")) {
+                if (h2Distributors.existingDistributor(distributor.getName(), "distributor")) {
+                    responseJson.put("response", "false");
                     responseJson.put("error", "Distributor already exists!");
                 } else {
                     if (h2Distributors.editDistributor(distributor)) {
                         //System.out.println("New user created.");
                         responseJson.put("response", "OK");
+                        responseJson.put("error", "None.");
                     } else {
                         //System.out.println("Error creating user");
                         responseJson.put("response", "false");

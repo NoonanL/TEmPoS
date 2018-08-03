@@ -44,7 +44,7 @@ public class CreateDistributorServlet extends HttpServlet {
         if(h2User.isRegistered(requestUser)){
 
             try {
-                if(h2Distributors.existingDistributor(input.getString("distributor"), "name")){
+                if(h2Distributors.existingDistributor(input.getString("distributor"), "distributor")){
                     responseJson.put("response", "false");
                     responseJson.put("error", "Distributor already exists.");
                 }else{
