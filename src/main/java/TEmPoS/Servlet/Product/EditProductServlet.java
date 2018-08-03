@@ -46,29 +46,21 @@ public class EditProductServlet extends HttpServlet {
         newProduct.setDescription(input.getString("description"));
 
         String requestUser = input.getString("requestUser");
-        String targerProductId = input.getString("targetProductId");
+        String targerProductId = input.getString("id");
         int editId = Integer.parseInt(targerProductId);
 
         JSONObject responseJson = new JSONObject();
         if(h2User.isRegistered(requestUser)) {
 
-            try {
-                if (h2Products.existingSku(newProduct.getSKU())) {
-                    responseJson.put("response", "false");
-                    responseJson.put("error", "SKU Not Unique.");
+                if (h2Products.editProduct(editId, newProduct)) {
+                    responseJson.put("response", "OK");
+                    responseJson.put("error", "None.");
                 } else {
-                    if (h2Products.editProduct(editId, newProduct)) {
-                        responseJson.put("response", "OK");
-                        responseJson.put("error", "None.");
-                    } else {
-                        //System.out.println("Error creating product");
-                        responseJson.put("response", "false");
-                        responseJson.put("error", "Failed to edit product.");
-                    }
+                    //System.out.println("Error creating product");
+                    responseJson.put("response", "false");
+                    responseJson.put("error", "Failed to edit product.");
                 }
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
+
         }
 
         response.setContentType("application/json");
