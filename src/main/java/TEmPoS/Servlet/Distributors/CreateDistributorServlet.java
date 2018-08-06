@@ -2,6 +2,7 @@ package TEmPoS.Servlet.Distributors;
 
 import TEmPoS.Model.Brand;
 import TEmPoS.Util.RequestJson;
+import TEmPoS.Util.ValidationFilter;
 import TEmPoS.db.H2Brands;
 import TEmPoS.db.H2Distributors;
 import TEmPoS.db.H2User;
@@ -14,18 +15,23 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class CreateDistributorServlet extends HttpServlet {
 
-
     private H2Distributors h2Distributors;
     private H2User h2User;
+    private ArrayList<String> requiredParams = new ArrayList<>();
 
     public CreateDistributorServlet(){}
 
     public CreateDistributorServlet(H2Distributors h2Distributors, H2User h2User){
         this.h2Distributors = h2Distributors;
         this.h2User = h2User;
+
+        requiredParams.add("distributor");
+        requiredParams.add("requestUser");
+
     }
 
     @Override
@@ -37,31 +43,30 @@ public class CreateDistributorServlet extends HttpServlet {
         //read from request
         RequestJson requestParser = new RequestJson();
         JSONObject input = requestParser.parse(request);
-
-        String requestUser = input.getString("requestUser");
-
         JSONObject responseJson = new JSONObject();
-        if(h2User.isRegistered(requestUser)){
 
-            try {
-                if(h2Distributors.existingDistributor(input.getString("distributor"), "distributor")){
+        ValidationFilter inputChecker = new ValidationFilter(requiredParams, input);
+
+        if(inputChecker.isValid()) {
+
+            String requestUser = input.getString("requestUser");
+
+            if (h2User.isRegistered(requestUser)) {
+
+                if (h2Distributors.createDistributor(input.getString("distributor"))) {
+                    responseJson.put("response", "OK");
+                    responseJson.put("error", "None.");
+                } else {
+                    //System.out.println("Error creating product");
                     responseJson.put("response", "false");
-                    responseJson.put("error", "Distributor already exists.");
-                }else{
-                    if(h2Distributors.createDistributor(input.getString("distributor"))){
-                        responseJson.put("response", "OK");
-                        responseJson.put("error", "None.");
-                    }else{
-                        //System.out.println("Error creating product");
-                        responseJson.put("response", "false");
-                        responseJson.put("error", "Failed to create new distributor.");
-                    }
+                    responseJson.put("error", "Failed to create new distributor.");
                 }
-            } catch (SQLException e) {
-                e.printStackTrace();
             }
-
+        }else{
+            responseJson.put("response", "false");
+            responseJson.put("error", "Missing required fields.");
         }
+
         response.setContentType("application/json");
         PrintWriter out = response.getWriter();
         out.print(responseJson);
