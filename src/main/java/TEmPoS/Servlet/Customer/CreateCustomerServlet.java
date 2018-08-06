@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class CreateCustomerServlet extends HttpServlet {
 
@@ -37,32 +38,67 @@ public class CreateCustomerServlet extends HttpServlet {
         RequestJson requestParser = new RequestJson();
         JSONObject input = requestParser.parse(request);
 
-        Customer newCustomer = new Customer();
-        newCustomer.setTitle(input.getString("title"));
-        newCustomer.setFirstname(input.getString("firstname"));
-        newCustomer.setSurname(input.getString("surname"));
-        newCustomer.setMarketingStatus(input.getString("marketingStatus"));
-        newCustomer.setEmail(input.getString("email"));
-        newCustomer.setCity(input.getString("city"));
-        newCustomer.setPostcode(input.getString("postcode"));
-        newCustomer.setTown(input.getString("town"));
-        newCustomer.setStreet(input.getString("street"));
-        newCustomer.setMobile(input.getString("mobile"));
-        newCustomer.setCountry(input.getString("country"));
+        boolean validRequest = false;
+
+        ArrayList<String> requiredParams = new ArrayList<>();
+        requiredParams.add("title");
+        requiredParams.add("firstname");
+        requiredParams.add("surname");
+        requiredParams.add("marketingStatus");
+        requiredParams.add("email");
+        requiredParams.add("city");
+        requiredParams.add("postcode");
+        requiredParams.add("town");
+        requiredParams.add("street");
+        requiredParams.add("mobile");
+        requiredParams.add("country");
+        requiredParams.add("requestUser");
+
+        for(String s : requiredParams){
+            validRequest = input.getBoolean(s);
+        }
+
+        if(validRequest){
+
+        }
+
 
         String requestUser = input.getString("requestUser");
-
 
         JSONObject responseJson = new JSONObject();
         if(h2User.isRegistered(requestUser)) {
 
-            if (h2Customer.createCustomer(newCustomer)) {
-                responseJson.put("response", "OK");
-                responseJson.put("error", "None.");
-            } else {
-                responseJson.put("response", "false");
-                responseJson.put("error", "Failed to create new customer.");
+
+            for(String s : requiredParams){
+
+               if(!input.getBoolean(s)){
+                   responseJson.put("response", "false");
+                   responseJson.put("error", "Missing required keys.");
+               }else{
+                   Customer newCustomer = new Customer();
+                   newCustomer.setTitle(input.getString("title"));
+                   newCustomer.setFirstname(input.getString("firstname"));
+                   newCustomer.setSurname(input.getString("surname"));
+                   newCustomer.setMarketingStatus(input.getString("marketingStatus"));
+                   newCustomer.setEmail(input.getString("email"));
+                   newCustomer.setCity(input.getString("city"));
+                   newCustomer.setPostcode(input.getString("postcode"));
+                   newCustomer.setTown(input.getString("town"));
+                   newCustomer.setStreet(input.getString("street"));
+                   newCustomer.setMobile(input.getString("mobile"));
+                   newCustomer.setCountry(input.getString("country"));
+
+                   if (h2Customer.createCustomer(newCustomer)) {
+                       responseJson.put("response", "OK");
+                       responseJson.put("error", "None.");
+                   } else {
+                       responseJson.put("response", "false");
+                       responseJson.put("error", "Failed to create new customer.");
+                   }
+               }
             }
+
+
         }
 
         response.setContentType("application/json");

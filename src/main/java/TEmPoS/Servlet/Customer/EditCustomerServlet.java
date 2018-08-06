@@ -34,10 +34,11 @@ public class EditCustomerServlet extends HttpServlet {
         //read from request
         RequestJson requestParser = new RequestJson();
         JSONObject input = requestParser.parse(request);
-        String id = input.getString("id");
+        //String id = input.getString("id");
         String requestUser = input.getString("requestUser");
 
         Customer newCustomer = new Customer();
+        newCustomer.setId(input.getString("id"));
         newCustomer.setTitle(input.getString("title"));
         newCustomer.setFirstname(input.getString("firstname"));
         newCustomer.setSurname(input.getString("surname"));
@@ -51,11 +52,11 @@ public class EditCustomerServlet extends HttpServlet {
         newCustomer.setCountry(input.getString("country"));
 
 
-        int editId = Integer.parseInt(id);
+        //int editId = Integer.parseInt(id);
 
         JSONObject responseJson = new JSONObject();
         if(h2User.isRegistered(requestUser)){
-            if(h2Customer.editCustomer(editId,newCustomer)){
+            if(h2Customer.editCustomer(newCustomer)){
                 responseJson.put("response", "OK");
                 responseJson.put("error", "None.");
             }else{

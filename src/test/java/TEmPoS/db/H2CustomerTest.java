@@ -66,7 +66,7 @@ public class H2CustomerTest {
         System.out.println("=====================================");
         System.out.println("Testing edit customer data (except password)");
         System.out.println("=====================================");
-        if(db.editCustomer(1, testCustomer)){
+        if(db.editCustomer(testCustomer)){
             System.out.println("Customer successfuly edited");
         }else{
             System.out.println("Customer edit failed");

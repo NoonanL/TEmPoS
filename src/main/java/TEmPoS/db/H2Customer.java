@@ -36,6 +36,11 @@ public class H2Customer extends H2Base {
     }
 
 
+    /**
+     * Creates a new customer in the database
+     * @param customer
+     * @return
+     */
     public boolean createCustomer(Customer customer) {
         String query = "INSERT into customers (title, firstname, surname, street, town, postcode, city, country, mobile, email, marketingStatus) VALUES(?,?,?,?,?,?,?,?,?,?,?)";
         try (PreparedStatement ps = getConnection().prepareStatement(query)) {
@@ -60,11 +65,10 @@ public class H2Customer extends H2Base {
 
     /**
      * Edits an existing instance of a customer
-     * @param targetId the target customer to edit
      * @param customer the updated firstname
      * @return boolean success/failure
      */
-    public boolean editCustomer(int targetId, Customer customer) {
+    public boolean editCustomer(Customer customer) {
         final String EDIT_USER_QUERY = "UPDATE customers SET title =?, firstname=?, surname=?, street=?, town=?, postcode=?, city=?, country=?, mobile=?, email=?, marketingStatus=? WHERE id=?";
         try (PreparedStatement ps = getConnection().prepareStatement(EDIT_USER_QUERY)) {
             ps.setString(1, customer.getTitle());
@@ -78,7 +82,7 @@ public class H2Customer extends H2Base {
             ps.setString(9, customer.getMobile());
             ps.setString(10, customer.getEmail());
             ps.setString(11, customer.getMarketingStatus());
-            ps.setInt(12, targetId);
+            ps.setInt(12, Integer.parseInt(customer.getId()));
             ps.execute();
             return true;
         } catch (SQLException e) {
