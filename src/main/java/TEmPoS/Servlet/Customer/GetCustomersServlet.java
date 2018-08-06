@@ -24,7 +24,7 @@ public class GetCustomersServlet extends HttpServlet {
     public GetCustomersServlet(H2Customer h2Customer, H2User h2User){
         this.h2Customer = h2Customer;
         this.h2User = h2User;
-        
+
         requiredParams.add("requestUser");
     }
 

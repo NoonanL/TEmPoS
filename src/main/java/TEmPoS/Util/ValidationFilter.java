@@ -14,6 +14,10 @@ public class ValidationFilter {
         this.input = input;
     }
 
+    /**
+     * Checks if there is a matching key for all fields in the required list.
+     * @return true or false
+     */
     public boolean isValid(){
 
         for(String s : required){
