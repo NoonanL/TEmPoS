@@ -22,8 +22,6 @@ public class CreateCustomerServlet extends HttpServlet {
     private H2User h2User;
     private ArrayList<String> requiredParams = new ArrayList<>();
 
-
-
     public CreateCustomerServlet(){}
 
     public CreateCustomerServlet(H2Customer h2Customer, H2User h2User){
@@ -61,7 +59,6 @@ public class CreateCustomerServlet extends HttpServlet {
         ValidationFilter inputChecker = new ValidationFilter(requiredParams, input);
 
         if(inputChecker.isValid()){
-            System.out.println("Valid input");
 
             String requestUser = input.getString("requestUser");
 

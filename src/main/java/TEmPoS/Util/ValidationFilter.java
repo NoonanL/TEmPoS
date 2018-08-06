@@ -18,7 +18,7 @@ public class ValidationFilter {
 
         for(String s : required){
             if(!input.has(s)){
-                System.out.println("Couldn't find key!");
+                System.out.println("Couldn't find key " + s + "!");
                 return false;
             }
         }
