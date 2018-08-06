@@ -3,21 +3,27 @@ package TEmPoS.Util;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
 public class ValidationFilter {
 
-    public ValidationFilter(ArrayList<String> required, JSONObject input){
+    private ArrayList<String> required;
+    private JSONObject input;
 
-        for (Iterator it = input.keys(); it.hasNext();) {
-            if(required.contains(it.next().toString())){
-                System.out.println("Key found");
-            }else{
-                System.out.println("Key not found - error!");
-            }
-        }
+    public ValidationFilter(ArrayList<String> required, JSONObject input){
+        this.required = required;
+        this.input = input;
     }
 
+    public boolean isValid(){
+
+        for(String s : required){
+            if(!input.has(s)){
+                System.out.println("Couldn't find key!");
+                return false;
+            }
+        }
+        return true;
+    }
 
 }
 
