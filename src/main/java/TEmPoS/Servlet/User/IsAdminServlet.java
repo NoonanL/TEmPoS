@@ -25,7 +25,6 @@ public class IsAdminServlet extends HttpServlet {
         this.h2User = h2User;
 
         requiredParams.add("username");
-        requiredParams.add("isAdmin");
         requiredParams.add("requestUser");
     }
 
