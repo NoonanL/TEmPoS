@@ -1,6 +1,7 @@
 package TEmPoS.Servlet.User;
 
 import TEmPoS.Util.RequestJson;
+import TEmPoS.Util.ValidationFilter;
 import TEmPoS.db.H2User;
 import org.json.JSONObject;
 
@@ -11,15 +12,21 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 
 public class IsAdminServlet extends HttpServlet {
 
     private H2User h2User;
+    private ArrayList<String> requiredParams = new ArrayList<>();
 
     public IsAdminServlet(){}
 
     public IsAdminServlet(H2User h2User) {
         this.h2User = h2User;
+
+        requiredParams.add("username");
+        requiredParams.add("isAdmin");
+        requiredParams.add("requestUser");
     }
 
     @Override
@@ -32,28 +39,35 @@ public class IsAdminServlet extends HttpServlet {
         //read from request
         RequestJson requestParser = new RequestJson();
         JSONObject input = requestParser.parse(request);
-        String requestUser = input.getString("requestUser");
-        String username = input.getString("username");
-        //System.out.println("Is user " + username + " an Admin...");
-
         JSONObject responseJson = new JSONObject();
-        if(h2User.isAdmin(requestUser)){
-            if(h2User.isAdmin(username)){
-                //System.out.println("Is an Admin");
-                responseJson.put("response", "OK");
-                responseJson.put("isAdmin", "true");
-                responseJson.put("error", "None.");
-            }else{
-                //System.out.println("Is not an admin");
-                responseJson.put("response", "false");
-                responseJson.put("error", "None.");
-                responseJson.put("isAdmin", "false");
-            }
-        }else{
-            responseJson.put("response","false");
-            responseJson.put("error", "Request user is not an admin.");
-        }
 
+        ValidationFilter inputChecker = new ValidationFilter(requiredParams, input);
+
+        if(inputChecker.isValid()) {
+
+            String requestUser = input.getString("requestUser");
+            String username = input.getString("username");
+
+            if (h2User.isAdmin(requestUser)) {
+                if (h2User.isAdmin(username)) {
+                    //System.out.println("Is an Admin");
+                    responseJson.put("response", "OK");
+                    responseJson.put("isAdmin", "true");
+                    responseJson.put("error", "None.");
+                } else {
+                    //System.out.println("Is not an admin");
+                    responseJson.put("response", "false");
+                    responseJson.put("error", "None.");
+                    responseJson.put("isAdmin", "false");
+                }
+            } else {
+                responseJson.put("response", "false");
+                responseJson.put("error", "Request user is not an admin.");
+            }
+        }else {
+            responseJson.put("response", "false");
+            responseJson.put("error", "Missing required fields.");
+        }
 
         response.setContentType("application/json");
         PrintWriter out = response.getWriter();

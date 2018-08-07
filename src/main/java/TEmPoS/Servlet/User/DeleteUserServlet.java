@@ -1,6 +1,7 @@
 package TEmPoS.Servlet.User;
 
 import TEmPoS.Util.RequestJson;
+import TEmPoS.Util.ValidationFilter;
 import TEmPoS.db.H2User;
 import org.json.JSONObject;
 
@@ -11,15 +12,21 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 
 public class DeleteUserServlet extends HttpServlet {
 
     private H2User h2User;
+    private ArrayList<String> requiredParams = new ArrayList<>();
 
     public DeleteUserServlet(){}
 
     public DeleteUserServlet(H2User h2User){
         this.h2User = h2User;
+
+        requiredParams.add("targetUser");
+        requiredParams.add("requestUser");
+
     }
 
     @Override
@@ -28,20 +35,28 @@ public class DeleteUserServlet extends HttpServlet {
         //read from request
         RequestJson requestParser = new RequestJson();
         JSONObject input = requestParser.parse(request);
-        String targetUser = input.getString("targetUser");
-        String requestUser = input.getString("requestUser");
-        //System.out.println("User " + requestUser + " attempting to delete account with username " + targetUser + ".");
-
         JSONObject responseJson = new JSONObject();
-        if(h2User.isAdmin(requestUser)) {
-            //System.out.println(requestUser + " is an Admin and may attempt to delete...");
-            if (h2User.deleteUser(targetUser)) {
-                responseJson.put("response", "OK");
-                responseJson.put("error", "None.");
-            } else {
-                responseJson.put("response", "false");
-                responseJson.put("error", "Error deleting user.");
+
+        ValidationFilter inputChecker = new ValidationFilter(requiredParams, input);
+
+        if(inputChecker.isValid()) {
+
+            String targetUser = input.getString("targetUser");
+            String requestUser = input.getString("requestUser");
+
+            if (h2User.isAdmin(requestUser)) {
+                //System.out.println(requestUser + " is an Admin and may attempt to delete...");
+                if (h2User.deleteUser(targetUser)) {
+                    responseJson.put("response", "OK");
+                    responseJson.put("error", "None.");
+                } else {
+                    responseJson.put("response", "false");
+                    responseJson.put("error", "Error deleting user.");
+                }
             }
+        }else {
+            responseJson.put("response", "false");
+            responseJson.put("error", "Missing required fields.");
         }
 
         response.setContentType("application/json");

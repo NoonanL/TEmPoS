@@ -1,6 +1,7 @@
 package TEmPoS.Servlet;
 
 import TEmPoS.Util.RequestJson;
+import TEmPoS.Util.ValidationFilter;
 import TEmPoS.db.H2User;
 import org.json.JSONObject;
 
@@ -10,16 +11,22 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 
 public class LoginServlet extends HttpServlet{
 
     private H2User h2User;
+    private ArrayList<String> requiredParams = new ArrayList<>();
+
 
     public LoginServlet() {
     }
 
     public LoginServlet(H2User h2User) {
         this.h2User = h2User;
+
+        requiredParams.add("username");
+        requiredParams.add("password");
     }
 
     @Override
@@ -31,17 +38,25 @@ public class LoginServlet extends HttpServlet{
         // Read from request
         RequestJson requestParser = new RequestJson();
         JSONObject input = requestParser.parse(request);
-        String username = input.getString("username");
-        String password = input.getString("password");
-        //System.out.println("User " + username + " attempting to log in.");
-
         JSONObject responseJson = new JSONObject();
 
-        if(h2User.login(username,password)){
-            responseJson.put("auth", "OK");
-        }else{
-            responseJson.put("auth", "false");
+        ValidationFilter inputChecker = new ValidationFilter(requiredParams, input);
+
+        if(inputChecker.isValid()) {
+
+            String username = input.getString("username");
+            String password = input.getString("password");
+
+            if (h2User.login(username, password)) {
+                responseJson.put("auth", "OK");
+            } else {
+                responseJson.put("auth", "false");
+            }
+        }else {
+            responseJson.put("response", "false");
+            responseJson.put("error", "Missing required fields.");
         }
+
 
         response.setContentType("application/json");
         PrintWriter out = response.getWriter();
