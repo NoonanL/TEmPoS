@@ -1,5 +1,6 @@
 package TEmPoS.db;
 
+import TEmPoS.Model.Brand;
 import TEmPoS.Model.Department;
 import TEmPoS.Model.Distributor;
 import org.json.JSONObject;
@@ -73,6 +74,19 @@ public class H2Departments extends H2Base {
         return departmentList;
     }
 
+    public JSONObject getDepartment(int id){
+        final String GET_DEPARTMENT_BY_ID_QUERY = "SELECT * FROM departments WHERE id=?";
+        JSONObject departmentList;
+        try (PreparedStatement ps = getConnection().prepareStatement(GET_DEPARTMENT_BY_ID_QUERY)){
+            ps.setInt(1, id);
+            ResultSet rs = ps.executeQuery();
+            departmentList = parseDepartments(rs);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return departmentList;
+    }
+
     public boolean deleteDeparment(int id){
         final String DELETE_DEPARTMENT_QUERY = "DELETE FROM departments WHERE id=?";
         try (PreparedStatement ps = getConnection().prepareStatement(DELETE_DEPARTMENT_QUERY)) {
@@ -112,6 +126,19 @@ public class H2Departments extends H2Base {
             return true;
         } catch (SQLException e) {
             throw new RuntimeException(e);
+        }
+    }
+
+    public boolean propagate(String oldVal, Department department){
+        String query = "UPDATE products SET department =? WHERE department=?";
+        try (PreparedStatement ps = getConnection().prepareStatement(query)) {
+            ps.setString(1, department.getDepartment());
+            ps.setString(2, oldVal);
+            ps.execute();
+            return true;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
         }
     }
 }

@@ -16,6 +16,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class EditDepartmentServlet extends HttpServlet {
 
@@ -45,13 +46,23 @@ public class EditDepartmentServlet extends HttpServlet {
         RequestJson requestParser = new RequestJson();
         JSONObject input = requestParser.parse(request);
         JSONObject responseJson = new JSONObject();
+        String oldVal = "";
 
         ValidationFilter inputChecker = new ValidationFilter(requiredParams, input);
 
         if(inputChecker.isValid()) {
 
-
             String requestUser = input.getString("requestUser");
+
+            JSONObject oldValJson = h2Departments.getDepartment(Integer.parseInt(input.getString("id")));
+            for (Iterator it = oldValJson.keys(); it.hasNext(); ) {
+                String json = it.next().toString();
+                if(!json.equals("connection") && !json.equals("error") && !json.equals("response")) {
+                    JSONObject userJson = (oldValJson.getJSONObject(json));
+                    oldVal = userJson.getString("department");
+
+                }
+            }
 
             Department department = new Department();
             department.setId(input.getString("id"));
@@ -64,7 +75,7 @@ public class EditDepartmentServlet extends HttpServlet {
                         responseJson.put("response", "false");
                         responseJson.put("error", "Brand already exists!");
                     } else {
-                        if (h2Departments.editDepartment(department)) {
+                        if (h2Departments.editDepartment(department) && h2Departments.propagate(oldVal, department)) {
                             responseJson.put("response", "OK");
                             responseJson.put("error", "None.");
                         } else {
