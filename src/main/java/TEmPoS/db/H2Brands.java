@@ -129,4 +129,18 @@ public class H2Brands extends H2Base {
         }
         return brandList;
     }
+
+    public boolean propagate(String oldVal, Brand brand){
+        String query = "UPDATE products SET brand =? WHERE brand=?";
+        try (PreparedStatement ps = getConnection().prepareStatement(query)) {
+            ps.setString(1, brand.getBrand());
+            ps.setString(2, oldVal);
+            ps.execute();
+            return true;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
 }
