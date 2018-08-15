@@ -16,6 +16,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class EditDistributorServlet extends HttpServlet {
 
@@ -44,6 +45,7 @@ public class EditDistributorServlet extends HttpServlet {
         RequestJson requestParser = new RequestJson();
         JSONObject input = requestParser.parse(request);
         JSONObject responseJson = new JSONObject();
+        String oldVal = "";
 
         ValidationFilter inputChecker = new ValidationFilter(requiredParams, input);
 
@@ -51,6 +53,17 @@ public class EditDistributorServlet extends HttpServlet {
 
             String id = input.getString("id");
             String requestUser = input.getString("requestUser");
+
+            JSONObject oldValJson = h2Distributors.getDistributor(Integer.parseInt(id));
+            for (Iterator it = oldValJson.keys(); it.hasNext(); ) {
+                String json = it.next().toString();
+                if(!json.equals("connection") && !json.equals("error") && !json.equals("response")) {
+                    JSONObject userJson = (oldValJson.getJSONObject(json));
+                    oldVal = userJson.getString("name");
+
+                }
+            }
+            //System.out.println("Old value is " + oldVal + ", and new value will be " + newVal + ".");
 
             Distributor distributor = new Distributor();
             distributor.setId(id);
@@ -62,7 +75,7 @@ public class EditDistributorServlet extends HttpServlet {
                         responseJson.put("response", "false");
                         responseJson.put("error", "Distributor already exists!");
                     } else {
-                        if (h2Distributors.editDistributor(distributor)) {
+                        if (h2Distributors.editDistributor(distributor) && h2Distributors.propagate(oldVal, distributor)) {
                             //System.out.println("New user created.");
                             responseJson.put("response", "OK");
                             responseJson.put("error", "None.");

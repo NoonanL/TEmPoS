@@ -61,6 +61,20 @@ public class H2Distributors extends H2Base {
         return distributorList;
     }
 
+    public JSONObject getDistributor(int id){
+        final String GET_DISTRIBUTOR_BY_ID_QUERY = "SELECT * FROM distributors WHERE id=?";
+        JSONObject distributorList;
+        try (PreparedStatement ps = getConnection().prepareStatement(GET_DISTRIBUTOR_BY_ID_QUERY)){
+            ps.setInt(1, id);
+            ResultSet rs = ps.executeQuery();
+            distributorList = parseDistributors(rs);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return distributorList;
+    }
+
+
     public boolean deleteDistributor(int id){
         final String DELETE_DISTRIBUTOR_QUERY = "DELETE FROM distributors WHERE id=?";
         try (PreparedStatement ps = getConnection().prepareStatement(DELETE_DISTRIBUTOR_QUERY)) {
@@ -114,6 +128,21 @@ public class H2Distributors extends H2Base {
         }
         return distributorList;
     }
+
+
+    public boolean propagate(String oldVal, Distributor distributor){
+        String query = "UPDATE brands SET distributor =? WHERE distributor=?";
+        try (PreparedStatement ps = getConnection().prepareStatement(query)) {
+            ps.setString(1, distributor.getName());
+            ps.setString(2, oldVal);
+            ps.execute();
+            return true;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
 
 
 
