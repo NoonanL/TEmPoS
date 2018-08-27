@@ -15,12 +15,15 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class EditProductServlet extends HttpServlet {
 
     private H2Products h2Products;
     private H2User h2User;
     private ArrayList<String> requiredParams = new ArrayList<>();
+    private Map<String, String> requiredMap = new HashMap<>();
 
     public EditProductServlet(){}
 
@@ -28,15 +31,26 @@ public class EditProductServlet extends HttpServlet {
         this.h2Products = h2Products;
         this.h2User = h2User;
 
-        requiredParams.add("id");
-        requiredParams.add("SKU");
-        requiredParams.add("name");
-        requiredParams.add("RRP");
-        requiredParams.add("cost");
-        requiredParams.add("department");
-        requiredParams.add("brand");
-        requiredParams.add("description");
-        requiredParams.add("requestUser");
+//        requiredParams.add("id");
+//        requiredParams.add("SKU");
+//        requiredParams.add("name");
+//        requiredParams.add("RRP");
+//        requiredParams.add("cost");
+//        requiredParams.add("department");
+//        requiredParams.add("brand");
+//        requiredParams.add("description");
+//        requiredParams.add("requestUser");
+
+        requiredMap.put("id", "integer");
+        requiredMap.put("SKU", "String");
+        requiredMap.put("name", "String");
+        requiredMap.put("RRP", "double");
+        requiredMap.put("cost", "double");
+        requiredMap.put("department", "String");
+        requiredMap.put("brand", "String");
+        requiredMap.put("description", "String");
+        requiredMap.put("requestUser", "String");
+
     }
 
     @Override
@@ -50,7 +64,7 @@ public class EditProductServlet extends HttpServlet {
         JSONObject input = requestParser.parse(request);
         JSONObject responseJson = new JSONObject();
 
-        ValidationFilter inputChecker = new ValidationFilter(requiredParams, input);
+        ValidationFilter inputChecker = new ValidationFilter(requiredMap, input);
 
         if(inputChecker.isValid()) {
 
