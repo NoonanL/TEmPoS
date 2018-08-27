@@ -12,11 +12,13 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class LoginServlet extends HttpServlet{
 
     private H2User h2User;
-    private ArrayList<String> requiredParams = new ArrayList<>();
+    private Map<String, String> requiredParams = new HashMap<>();
 
 
     public LoginServlet() {
@@ -25,8 +27,8 @@ public class LoginServlet extends HttpServlet{
     public LoginServlet(H2User h2User) {
         this.h2User = h2User;
 
-        requiredParams.add("username");
-        requiredParams.add("password");
+        requiredParams.put("username", "String");
+        requiredParams.put("password", "String");
     }
 
     @Override

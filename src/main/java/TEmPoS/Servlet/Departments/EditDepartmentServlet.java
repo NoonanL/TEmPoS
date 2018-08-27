@@ -16,13 +16,15 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Map;
 
 public class EditDepartmentServlet extends HttpServlet {
 
     private H2Departments h2Departments;
     private H2User h2User;
-    private ArrayList<String> requiredParams = new ArrayList<>();
+    private Map<String, String> requiredParams = new HashMap<>();
 
     public EditDepartmentServlet(){}
 
@@ -30,9 +32,9 @@ public class EditDepartmentServlet extends HttpServlet {
         this.h2Departments = h2Departments;
         this.h2User = h2User;
 
-        requiredParams.add("id");
-        requiredParams.add("department");
-        requiredParams.add("requestUser");
+        requiredParams.put("id", "integer");
+        requiredParams.put("department", "String");
+        requiredParams.put("requestUser", "String");
     }
 
 

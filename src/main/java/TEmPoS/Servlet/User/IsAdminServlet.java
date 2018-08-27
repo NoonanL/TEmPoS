@@ -13,19 +13,21 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class IsAdminServlet extends HttpServlet {
 
     private H2User h2User;
-    private ArrayList<String> requiredParams = new ArrayList<>();
+    private Map<String, String> requiredParams = new HashMap<>();
 
     public IsAdminServlet(){}
 
     public IsAdminServlet(H2User h2User) {
         this.h2User = h2User;
 
-        requiredParams.add("username");
-        requiredParams.add("requestUser");
+        requiredParams.put("username", "String");
+        requiredParams.put("requestUser", "String");
     }
 
     @Override

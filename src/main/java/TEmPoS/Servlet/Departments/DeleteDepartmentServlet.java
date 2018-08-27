@@ -13,12 +13,14 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class DeleteDepartmentServlet extends HttpServlet {
 
     private H2Departments h2Departments;
     private H2User h2User;
-    private ArrayList<String> requiredParams = new ArrayList<>();
+    private Map<String, String> requiredParams = new HashMap<>();
 
     public DeleteDepartmentServlet(){}
 
@@ -26,8 +28,8 @@ public class DeleteDepartmentServlet extends HttpServlet {
         this.h2Departments = h2Departments;
         this.h2User = h2User;
 
-        requiredParams.add("targetDepartmentId");
-        requiredParams.add("requestUser");
+        requiredParams.put("targetDepartmentId", "String");
+        requiredParams.put("requestUser", "String");
     }
 
 

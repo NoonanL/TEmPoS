@@ -16,12 +16,14 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class CreateDepartmentServlet extends HttpServlet {
 
     private H2Departments h2Departments;
     private H2User h2User;
-    private ArrayList<String> requiredParams = new ArrayList<>();
+    private Map<String, String> requiredParams = new HashMap<>();
 
     public CreateDepartmentServlet(){}
 
@@ -29,8 +31,8 @@ public class CreateDepartmentServlet extends HttpServlet {
         this.h2Departments = h2Departments;
         this.h2User = h2User;
 
-        requiredParams.add("department");
-        requiredParams.add("requestUser");
+        requiredParams.put("department", "String");
+        requiredParams.put("requestUser", "String");
     }
 
     @Override

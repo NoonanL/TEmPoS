@@ -12,12 +12,14 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class SearchCustomerServlet extends HttpServlet {
 
     private H2Customer h2Customer;
     private H2User h2User;
-    private ArrayList<String> requiredParams = new ArrayList<>();
+    private Map<String, String> requiredParams = new HashMap<>();
 
     public SearchCustomerServlet() {
     }
@@ -26,8 +28,8 @@ public class SearchCustomerServlet extends HttpServlet {
         this.h2Customer = h2Customer;
         this.h2User = h2User;
 
-        requiredParams.add("searchString");
-        requiredParams.add("requestUser");
+        requiredParams.put("searchString", "String");
+        requiredParams.put("requestUser", "String");
     }
 
 

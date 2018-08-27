@@ -13,19 +13,21 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class DeleteUserServlet extends HttpServlet {
 
     private H2User h2User;
-    private ArrayList<String> requiredParams = new ArrayList<>();
+    private Map<String, String> requiredParams = new HashMap<>();
 
     public DeleteUserServlet(){}
 
     public DeleteUserServlet(H2User h2User){
         this.h2User = h2User;
 
-        requiredParams.add("targetUser");
-        requiredParams.add("requestUser");
+        requiredParams.put("targetUser", "String");
+        requiredParams.put("requestUser", "String");
 
     }
 

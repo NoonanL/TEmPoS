@@ -13,12 +13,14 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class DeleteBrandServlet extends HttpServlet {
 
     private H2Brands h2Brands;
     private H2User h2User;
-    private ArrayList<String> requiredParams = new ArrayList<>();
+    private Map<String, String> requiredParams = new HashMap<>();
 
     public DeleteBrandServlet(){}
 
@@ -26,8 +28,8 @@ public class DeleteBrandServlet extends HttpServlet {
         this.h2Brands = h2Brands;
         this.h2User = h2User;
 
-        requiredParams.add("targetBrandId");
-        requiredParams.add("requestUser");
+        requiredParams.put("targetBrandId", "integer");
+        requiredParams.put("requestUser", "String");
     }
 
     @Override

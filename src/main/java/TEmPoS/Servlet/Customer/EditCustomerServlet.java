@@ -13,12 +13,14 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class EditCustomerServlet extends HttpServlet {
 
     private H2Customer h2Customer;
     private H2User h2User;
-    private ArrayList<String> requiredParams = new ArrayList<>();
+    private Map<String, String> requiredParams = new HashMap<>();
 
     public EditCustomerServlet(){}
 
@@ -26,19 +28,18 @@ public class EditCustomerServlet extends HttpServlet {
         this.h2Customer = h2Customer;
         this.h2User = h2User;
 
-        requiredParams.add("id");
-        requiredParams.add("title");
-        requiredParams.add("firstname");
-        requiredParams.add("surname");
-        requiredParams.add("marketingStatus");
-        requiredParams.add("email");
-        requiredParams.add("city");
-        requiredParams.add("postcode");
-        requiredParams.add("town");
-        requiredParams.add("street");
-        requiredParams.add("mobile");
-        requiredParams.add("country");
-        requiredParams.add("requestUser");
+        requiredParams.put("id", "String");
+        requiredParams.put("firstname", "String");
+        requiredParams.put("surname", "String");
+        requiredParams.put("marketingStatus", "String");
+        requiredParams.put("email", "String");
+        requiredParams.put("city", "String");
+        requiredParams.put("postcode", "String");
+        requiredParams.put("town", "String");
+        requiredParams.put("street", "String");
+        requiredParams.put("mobile", "String");
+        requiredParams.put("country", "String");
+        requiredParams.put("requestUser", "String");
 
     }
 
