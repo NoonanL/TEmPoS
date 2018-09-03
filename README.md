@@ -15,3 +15,26 @@ Servlets to handle the following <br>
     - Delete an existing user (DeleteUser Servlet)*<br>
     - Get all users (GetUsers Servlet)<br>
 Functionality marked by an asterisk* requires the requesting user to have positive Admin Status to execute.</p>
+
+<br><br>--API DOCUMENTATiON--
+
+<p>
+
+<br>User Handling:
+<br>
+/loginServlet
+<br>	Type = POST 
+
+        { 
+         "username": "",
+         "password": ""
+	     }
+		 
+		 
+        {
+         "response" : "",
+         "error"    : ""
+         }
+
+
+</p>

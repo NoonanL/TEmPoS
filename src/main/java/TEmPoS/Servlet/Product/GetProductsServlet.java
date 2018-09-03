@@ -6,6 +6,7 @@ import TEmPoS.db.H2Products;
 import TEmPoS.db.H2User;
 import org.json.JSONObject;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -53,6 +54,16 @@ public class GetProductsServlet extends HttpServlet {
 
             if (h2User.isRegistered(requestUser)) {
                 responseJson = h2Products.getAllProducts();
+                System.out.println(request.getSession());
+                Cookie[] cookies = request.getCookies();
+                if(cookies != null) {
+                    for (Cookie cookie : cookies) {
+                        if (cookie.getName().equals("mySession")) {
+                            System.out.println("JSESSIONID=" + cookie.getValue());
+                            break;
+                        }
+                    }
+                }
                 responseJson.put("response", "OK");
                 responseJson.put("error", "None.");
             }

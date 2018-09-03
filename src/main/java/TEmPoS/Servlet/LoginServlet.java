@@ -6,9 +6,7 @@ import TEmPoS.db.H2User;
 import org.json.JSONObject;
 
 import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.*;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -51,6 +49,15 @@ public class LoginServlet extends HttpServlet{
 
             if (h2User.login(username, password)) {
                 responseJson.put("auth", "OK");
+                HttpSession session = request.getSession();
+                System.out.println("User session: " + session.getId());
+                session.setAttribute("user", username);
+                session.setAttribute("mySession", session.getId());
+                //setting session to expiry in 30 mins
+                session.setMaxInactiveInterval(30*60);
+                Cookie userName = new Cookie("user", username);
+                userName.setMaxAge(30*60);
+                response.addCookie(userName);
             } else {
                 responseJson.put("auth", "false");
             }

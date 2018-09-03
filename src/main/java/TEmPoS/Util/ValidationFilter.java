@@ -21,6 +21,7 @@ public class ValidationFilter {
         this.requiredMap = requiredMap;
         this.input = input;
     }
+
 //
 //    /**
 //     * Checks if there is a matching key for all fields in the required list.
@@ -37,6 +38,10 @@ public class ValidationFilter {
 //        return true;
 //    }
 
+    /**
+     * Checks that keys exist where expected and are of the specified type
+     * @return true if all keys exist and are of the correct type
+     */
     public boolean isValid(){
 
         for (Map.Entry<String, String> entry : requiredMap.entrySet())
