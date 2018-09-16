@@ -17,6 +17,7 @@ import TEmPoS.Servlet.Distributors.EditDistributorServlet;
 import TEmPoS.Servlet.Distributors.GetDistributorsServlet;
 import TEmPoS.Servlet.Product.*;
 import TEmPoS.Servlet.Stock.CreateStockServlet;
+import TEmPoS.Servlet.Stock.DecrementStockServlet;
 import TEmPoS.Servlet.Stock.GetStockServlet;
 import TEmPoS.Servlet.Stock.IncrementStockServlet;
 import TEmPoS.Servlet.User.*;
@@ -138,6 +139,9 @@ public class Runner {
 
         IncrementStockServlet incrementStockServlet = new IncrementStockServlet(stockDB,userDB);
         handler.addServlet(new ServletHolder(incrementStockServlet), "/incrementStockServlet");
+
+        DecrementStockServlet decrementStockServlet = new DecrementStockServlet(stockDB,userDB);
+        handler.addServlet(new ServletHolder(decrementStockServlet), "/decrementStockServlet");
 
         //BRANDS SERVLETS
 
