@@ -39,6 +39,13 @@ CREATE TABLE IF NOT EXISTS products(
   description VARCHAR(1024),
 );
 
+CREATE TABLE IF NOT EXISTS stock (
+  id         int AUTO_INCREMENT PRIMARY KEY,
+  productId int NOT NULL UNIQUE,
+  branch01 int NOT NULL,
+  branch02 int NOT NULL
+);
+
 CREATE TABLE IF NOT EXISTS departments (
   id         int AUTO_INCREMENT PRIMARY KEY,
   department VARCHAR(64) NOT NULL UNIQUE

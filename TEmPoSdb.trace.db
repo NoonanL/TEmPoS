@@ -538,3 +538,17 @@ SELECT * FROM distributors WHERE name=? [42122-194]
 	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:754)
 	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:672)
 	at java.lang.Thread.run(Thread.java:748)
+2018-09-16 22:46:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-194]
+2018-09-16 22:46:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-194]
+2018-09-16 22:46:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-194]
+2018-09-16 22:46:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-194]
+2018-09-16 22:46:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-194]
+2018-09-16 22:46:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-194]
+2018-09-16 22:48:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-194]
