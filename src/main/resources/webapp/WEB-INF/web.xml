@@ -219,6 +219,16 @@
         <url-pattern>/decrementStockServlet</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>EditStockServlet</servlet-name>
+        <servlet-class>TEmPoS.Servlet.Stock.EditStockServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EditStockServlet</servlet-name>
+        <url-pattern>/editStockServlet</url-pattern>
+    </servlet-mapping>
+
+
     <!--BRANDS SERVLETS-->
     <servlet>
         <servlet-name>CreateBrandServlet</servlet-name>
