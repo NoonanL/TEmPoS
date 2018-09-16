@@ -59,7 +59,7 @@ public class GetProductsServlet extends HttpServlet {
                 if(cookies != null) {
                     for (Cookie cookie : cookies) {
                         if (cookie.getName().equals("mySession")) {
-                            System.out.println("JSESSIONID=" + cookie.getValue());
+                            //System.out.println("JSESSIONID=" + cookie.getValue());
                             break;
                         }
                     }
