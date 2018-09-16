@@ -16,6 +16,8 @@ import TEmPoS.Servlet.Distributors.DeleteDistributorServlet;
 import TEmPoS.Servlet.Distributors.EditDistributorServlet;
 import TEmPoS.Servlet.Distributors.GetDistributorsServlet;
 import TEmPoS.Servlet.Product.*;
+import TEmPoS.Servlet.Stock.CreateStockServlet;
+import TEmPoS.Servlet.Stock.GetStockServlet;
 import TEmPoS.Servlet.User.*;
 import TEmPoS.db.*;
 import org.eclipse.jetty.server.Server;
@@ -32,6 +34,7 @@ public class Runner {
     private H2Departments departmentsDB;
     private H2Brands brandsDB;
     private H2Distributors distributorsDB;
+    private H2Stock stockDB;
     private static final int PORT = 9001;
 
     private Runner() {
@@ -43,6 +46,7 @@ public class Runner {
         departmentsDB = new H2Departments(new ConnectionSupplier(ConnectionSupplier.FILE));
         brandsDB = new H2Brands(new ConnectionSupplier(ConnectionSupplier.FILE));
         distributorsDB = new H2Distributors(new ConnectionSupplier(ConnectionSupplier.FILE));
+        stockDB = new H2Stock(new ConnectionSupplier(ConnectionSupplier.FILE));
 
     }
 
@@ -122,6 +126,14 @@ public class Runner {
         SearchProductsServlet searchProductsServlet = new SearchProductsServlet(productsDB,userDB);
         handler.addServlet(new ServletHolder(searchProductsServlet), "/searchProductsServlet");
 
+
+        //STOCK SERVLETS
+
+        CreateStockServlet createStockServlet = new CreateStockServlet(stockDB,userDB);
+        handler.addServlet(new ServletHolder(createStockServlet), "/createStockServlet");
+
+        GetStockServlet getStockServlet = new GetStockServlet(stockDB,userDB);
+        handler.addServlet(new ServletHolder(getStockServlet), "/getStockServlet");
 
         //BRANDS SERVLETS
 
