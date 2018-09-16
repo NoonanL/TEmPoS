@@ -30,7 +30,6 @@ public class GetStockServlet extends HttpServlet {
 
         requiredParams.put("productId", "integer");
         requiredParams.put("branchId", "String");
-        requiredParams.put("distributor", "String");
         requiredParams.put("requestUser", "String");
 
     }

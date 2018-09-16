@@ -18,6 +18,7 @@ import TEmPoS.Servlet.Distributors.GetDistributorsServlet;
 import TEmPoS.Servlet.Product.*;
 import TEmPoS.Servlet.Stock.CreateStockServlet;
 import TEmPoS.Servlet.Stock.GetStockServlet;
+import TEmPoS.Servlet.Stock.IncrementStockServlet;
 import TEmPoS.Servlet.User.*;
 import TEmPoS.db.*;
 import org.eclipse.jetty.server.Server;
@@ -134,6 +135,9 @@ public class Runner {
 
         GetStockServlet getStockServlet = new GetStockServlet(stockDB,userDB);
         handler.addServlet(new ServletHolder(getStockServlet), "/getStockServlet");
+
+        IncrementStockServlet incrementStockServlet = new IncrementStockServlet(stockDB,userDB);
+        handler.addServlet(new ServletHolder(incrementStockServlet), "/incrementStockServlet");
 
         //BRANDS SERVLETS
 

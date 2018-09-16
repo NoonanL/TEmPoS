@@ -201,6 +201,14 @@
         <url-pattern>/getStockServlet</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>IncrementStockServlet</servlet-name>
+        <servlet-class>TEmPoS.Servlet.Stock.IncrementStockServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>IncrementStockServlet</servlet-name>
+        <url-pattern>/incrementStockServlet</url-pattern>
+    </servlet-mapping>
 
     <!--BRANDS SERVLETS-->
     <servlet>

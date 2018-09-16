@@ -1,9 +1,7 @@
 package TEmPoS.Servlet.Stock;
 
-import TEmPoS.Model.Brand;
 import TEmPoS.Util.RequestJson;
 import TEmPoS.Util.ValidationFilter;
-import TEmPoS.db.H2Brands;
 import TEmPoS.db.H2Stock;
 import TEmPoS.db.H2User;
 import org.json.JSONObject;
@@ -14,23 +12,23 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
 
-public class CreateStockServlet extends HttpServlet {
+public class IncrementStockServlet extends HttpServlet {
 
     private H2Stock h2Stock;
     private H2User h2User;
     private Map<String, String> requiredParams = new HashMap<>();
 
-    public CreateStockServlet(){}
+    public IncrementStockServlet(){}
 
-    public CreateStockServlet(H2Stock h2Stock, H2User h2User){
+    public IncrementStockServlet(H2Stock h2Stock, H2User h2User){
         this.h2Stock = h2Stock;
         this.h2User = h2User;
 
         requiredParams.put("productId", "integer");
+        requiredParams.put("branchId", "String");
         requiredParams.put("requestUser", "String");
 
     }
@@ -50,16 +48,17 @@ public class CreateStockServlet extends HttpServlet {
 
         if(inputChecker.isValid()) {
 
-        int productId = input.getInt("productId");
-        String requestUser = input.getString("requestUser");
+            int productId = input.getInt("productId");
+            String branchId = input.getString("branchId");
+            String requestUser = input.getString("requestUser");
 
             if (h2User.isRegistered(requestUser)) {
-                if (h2Stock.createStockListing(productId)) {
+                if (h2Stock.incrementStock(productId, branchId)) {
                     responseJson.put("response", "OK");
                     responseJson.put("error", "None.");
                 } else {
                     responseJson.put("response", "false");
-                    responseJson.put("error", "Failed to create new stock listing.");
+                    responseJson.put("error", "Failed to increment stock listing.");
                 }
 
             }
@@ -73,5 +72,4 @@ public class CreateStockServlet extends HttpServlet {
         out.print(responseJson);
         out.flush();
     }
-
 }
