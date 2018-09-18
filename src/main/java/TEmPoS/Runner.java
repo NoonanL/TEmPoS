@@ -143,6 +143,9 @@ public class Runner {
         EditStockServlet editStockServlet = new EditStockServlet(stockDB,userDB);
         handler.addServlet(new ServletHolder(editStockServlet), "/editStockServlet");
 
+        GetStockByBranchServlet getStockByBranchServlet = new GetStockByBranchServlet(stockDB,userDB);
+        handler.addServlet(new ServletHolder(getStockByBranchServlet), "/getStockByBranchServlet");
+
         //BRANDS SERVLETS
 
         CreateBrandServlet createBrandServlet = new CreateBrandServlet(brandsDB,userDB);

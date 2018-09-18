@@ -82,18 +82,21 @@ public class H2Stock extends H2Base {
         return stockLevel;
     }
 
-    public void getBranchStock(String branchId){
-        final String GET_BRANCH_QUERY = "SELECT * FROM stock";
+    public JSONObject getBranchStock(String branchId){
+        final String GET_BRANCH_QUERY = "SELECT productId," + branchId + " FROM stock";
+        JSONObject stockList = new JSONObject();
         try (PreparedStatement ps = getConnection().prepareStatement(GET_BRANCH_QUERY)){
             ResultSet rs = ps.executeQuery();
             while(rs.next()){
-                System.out.println(rs.getInt(2));
-                System.out.println(rs.getInt(3));
+                stockList.put(rs.getString(1), rs.getInt(2));
+//                System.out.println(rs.getInt(2));
+//                System.out.println(rs.getInt(3));
             }
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+        return  stockList;
     }
 
     public boolean incrementStock(int productId, String branchId){

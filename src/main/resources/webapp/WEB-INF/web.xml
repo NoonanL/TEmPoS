@@ -228,6 +228,15 @@
         <url-pattern>/editStockServlet</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>GetStockByBranchServlet</servlet-name>
+        <servlet-class>TEmPoS.Servlet.Stock.GetStockByBranchServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetStockByBranchServlet</servlet-name>
+        <url-pattern>/getStockByBranchServlet</url-pattern>
+    </servlet-mapping>
+
 
     <!--BRANDS SERVLETS-->
     <servlet>
