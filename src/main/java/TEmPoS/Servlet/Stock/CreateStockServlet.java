@@ -54,14 +54,22 @@ public class CreateStockServlet extends HttpServlet {
         String requestUser = input.getString("requestUser");
 
             if (h2User.isRegistered(requestUser)) {
-                if (h2Stock.createStockListing(productId)) {
-                    responseJson.put("response", "OK");
-                    responseJson.put("error", "None.");
-                } else {
-                    responseJson.put("response", "false");
-                    responseJson.put("error", "Failed to create new stock listing.");
+                try {
+                    if(h2Stock.existingStock(productId)){
+                        responseJson.put("response", "false");
+                        responseJson.put("error", "Stock Not Unique.");
+                    }else{
+                        if (h2Stock.createStockListing(productId)) {
+                            responseJson.put("response", "OK");
+                            responseJson.put("error", "None.");
+                        } else {
+                            responseJson.put("response", "false");
+                            responseJson.put("error", "Failed to create new stock listing.");
+                        }
+                    }
+                } catch (SQLException e) {
+                    e.printStackTrace();
                 }
-
             }
         }else{
             responseJson.put("response", "false");

@@ -40,7 +40,7 @@ public class H2Stock extends H2Base {
     }
 
     public boolean createStockListing(int productId){
-        String query = "INSERT into stock (productId, branch01, branch02) VALUES(?,?,?)";
+        String query = "INSERT into stock (productId, Branch01, Branch02) VALUES(?,?,?)";
         try (PreparedStatement ps = getConnection().prepareStatement(query)) {
             ps.setInt(1, productId);
             ps.setInt(2, 0);
@@ -117,6 +117,15 @@ public class H2Stock extends H2Base {
         } catch (SQLException e) {
             e.printStackTrace();
             return false;
+        }
+    }
+
+    public boolean existingStock(int id) throws SQLException {
+        final String EXISTING_STOCK_QUERY = "SELECT * FROM stock WHERE productId=?";
+        try (PreparedStatement ps = getConnection().prepareStatement(EXISTING_STOCK_QUERY)) {
+            ps.setInt(1, id);
+            ResultSet rs = ps.executeQuery();
+            return rs.next();
         }
     }
 
