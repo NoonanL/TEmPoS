@@ -181,6 +181,15 @@
         <url-pattern>/searchProductsServlet</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>GetProductByIdServlet</servlet-name>
+        <servlet-class>TEmPoS.Servlet.Product.GetProductByIdServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetProductByIdServlet</servlet-name>
+        <url-pattern>/getProductByIdServlet</url-pattern>
+    </servlet-mapping>
+
 
     <!--STOCK SERVLETS-->
     <servlet>

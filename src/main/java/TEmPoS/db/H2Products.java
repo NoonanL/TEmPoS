@@ -115,6 +115,20 @@ public class H2Products extends H2Base {
         return productList;
     }
 
+    public JSONObject getProductById(int id){
+        final String GET_PRODUCT_QUERY = "SELECT * FROM products WHERE id=?";
+        //String details = null;
+        JSONObject productList;
+        try (PreparedStatement ps = getConnection().prepareStatement(GET_PRODUCT_QUERY)){
+            ps.setInt(1, id);
+            ResultSet rs = ps.executeQuery();
+            productList = parseProducts(rs);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return productList;
+    }
+
     private JSONObject parseProducts(ResultSet rs) throws SQLException {
         JSONObject productList = new JSONObject();
         while (rs.next()) {

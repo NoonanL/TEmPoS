@@ -125,6 +125,9 @@ public class Runner {
         SearchProductsServlet searchProductsServlet = new SearchProductsServlet(productsDB,userDB);
         handler.addServlet(new ServletHolder(searchProductsServlet), "/searchProductsServlet");
 
+        GetProductByIdServlet getProductByIdServlet = new GetProductByIdServlet(productsDB,userDB);
+        handler.addServlet(new ServletHolder(getProductByIdServlet), "/getProductByIdServlet");
+
 
         //STOCK SERVLETS
 
