@@ -27,7 +27,7 @@ public class IncrementStockServlet extends HttpServlet {
         this.h2Stock = h2Stock;
         this.h2User = h2User;
 
-        requiredParams.put("productId", "integer");
+        requiredParams.put("productId", "String");
         requiredParams.put("branchId", "String");
         requiredParams.put("requestUser", "String");
 

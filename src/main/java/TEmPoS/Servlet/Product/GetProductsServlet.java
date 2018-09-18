@@ -54,7 +54,7 @@ public class GetProductsServlet extends HttpServlet {
 
             if (h2User.isRegistered(requestUser)) {
                 responseJson = h2Products.getAllProducts();
-                System.out.println(request.getSession());
+                //System.out.println(request.getSession());
                 Cookie[] cookies = request.getCookies();
                 if(cookies != null) {
                     for (Cookie cookie : cookies) {

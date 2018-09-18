@@ -61,7 +61,7 @@ public class H2StockTest {
         System.out.println("=====================================");
         System.out.println("Testing get stock listing");
         System.out.println("=====================================");
-        System.out.println(db.getStockLevel(123, "branch01"));
+        System.out.println(db.getStockLevel(4, "Branch01"));
     }
 
     @Test
@@ -69,7 +69,7 @@ public class H2StockTest {
         System.out.println("=====================================");
         System.out.println("Testing get all stock");
         System.out.println("=====================================");
-        db.getBranchStock("branch01");
+        db.getBranchStock("Branch01");
     }
 
     @Test

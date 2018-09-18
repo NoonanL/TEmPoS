@@ -42,8 +42,8 @@ CREATE TABLE IF NOT EXISTS products(
 CREATE TABLE IF NOT EXISTS stock (
   id         int AUTO_INCREMENT PRIMARY KEY,
   productId int NOT NULL UNIQUE,
-  branch01 int NOT NULL,
-  branch02 int NOT NULL
+  Branch01 int NOT NULL,
+  Branch02 int NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS departments (

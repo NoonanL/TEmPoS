@@ -182,6 +182,53 @@
     </servlet-mapping>
 
 
+    <!--STOCK SERVLETS-->
+    <servlet>
+        <servlet-name>CreateStockServlet</servlet-name>
+        <servlet-class>TEmPoS.Servlet.Stock.CreateStockServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CreateStockServlet</servlet-name>
+        <url-pattern>/createStockServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>GetStockServlet</servlet-name>
+        <servlet-class>TEmPoS.Servlet.Stock.GetStockServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetStockServlet</servlet-name>
+        <url-pattern>/getStockServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>IncrementStockServlet</servlet-name>
+        <servlet-class>TEmPoS.Servlet.Stock.IncrementStockServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>IncrementStockServlet</servlet-name>
+        <url-pattern>/incrementStockServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DecrementStockServlet</servlet-name>
+        <servlet-class>TEmPoS.Servlet.Stock.DecrementStockServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DecrementStockServlet</servlet-name>
+        <url-pattern>/decrementStockServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>EditStockServlet</servlet-name>
+        <servlet-class>TEmPoS.Servlet.Stock.EditStockServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EditStockServlet</servlet-name>
+        <url-pattern>/editStockServlet</url-pattern>
+    </servlet-mapping>
+
+
     <!--BRANDS SERVLETS-->
     <servlet>
         <servlet-name>CreateBrandServlet</servlet-name>
