@@ -59,7 +59,7 @@ public class GetStockByBranchServlet extends HttpServlet {
 
 //                    responseJson.put("response", "false");
 //                    responseJson.put("error", "Failed to create new stock listing.");
-            System.out.println(responseJson);
+            //System.out.println(responseJson);
             }
         }else{
             responseJson.put("response", "false");
