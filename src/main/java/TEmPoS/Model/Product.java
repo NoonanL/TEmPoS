@@ -15,9 +15,10 @@ public class Product {
     private String department;
     private String brand;
     private String description;
+    private int quantity;
 
 
-    public Product(String id, String sku, String name, double rrp, double cost, String department, String brand, String description) {
+    public Product(String id, String sku, String name, double rrp, double cost, String department, String brand, String description, int quantity) {
         this.id = id;
         this.SKU = sku;
         this.name = name;
@@ -26,6 +27,7 @@ public class Product {
         this.department = department;
         this.brand = brand;
         this.description = description;
+        this.quantity = quantity;
     }
     public Product() {
         this.id = "";
@@ -34,6 +36,7 @@ public class Product {
         this.department = "";
         this.brand = "";
         this.description = "";
+        this.quantity = 0;
     }
 
 
@@ -122,7 +125,16 @@ public class Product {
         product.put("department", this.getDepartment());
         product.put("brand", this.getBrand());
         product.put("description", this.getDescription());
+        product.put("quantity", String.valueOf(this.getQuantity()));
         json = new JSONObject(product);
         return json;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 }

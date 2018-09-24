@@ -52,7 +52,9 @@ public class GetStockByBranchServlet extends HttpServlet {
             String requestUser = input.getString("requestUser");
 
             if (h2User.isRegistered(requestUser)) {
-                responseJson = h2Stock.getBranchStock(branchId);
+
+
+                responseJson = h2Stock.getAllProductsQuantity(branchId);
 
                 responseJson.put("response", "OK");
                 responseJson.put("error", "None.");

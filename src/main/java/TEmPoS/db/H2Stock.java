@@ -99,6 +99,18 @@ public class H2Stock extends H2Base {
         return  stockList;
     }
 
+    public JSONObject getAllProductsQuantity(String branchId){
+        final String GET_PRODUCTS_QUERY = "SELECT * FROM products";
+        JSONObject productList;
+        try (PreparedStatement ps = getConnection().prepareStatement(GET_PRODUCTS_QUERY)){
+            ResultSet rs = ps.executeQuery();
+            productList = parseProductsWithStock(rs, branchId);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return productList;
+    }
+
     public boolean incrementStock(int productId, String branchId){
         final String INCREMENT_STOCK_QUERY = "UPDATE stock SET " + branchId + " = " + branchId + " + 1 WHERE productId=?";
         try (PreparedStatement ps = getConnection().prepareStatement(INCREMENT_STOCK_QUERY)) {
@@ -145,6 +157,39 @@ public class H2Stock extends H2Base {
         }
     }
 
+    private JSONObject parseProducts(ResultSet rs, int quantity) throws SQLException {
+        JSONObject productList = new JSONObject();
+        while (rs.next()) {
+            Product newProduct = new Product();
+            newProduct.setId(rs.getString(1));
+            newProduct.setSKU(rs.getString(2));
+            newProduct.setName(rs.getString(3));
+            newProduct.setRRP(rs.getDouble(4));
+            newProduct.setCost(rs.getDouble(5));
+            newProduct.setDepartment(rs.getString(6));
+            newProduct.setBrand(rs.getString(7));
+            newProduct.setDescription(rs.getString(8));
+            productList.put(newProduct.getId() , newProduct.toJson());
+        }
+        return productList;
+    }
 
+    private JSONObject parseProductsWithStock(ResultSet rs, String branchId) throws SQLException {
+        JSONObject productList = new JSONObject();
+        while (rs.next()) {
+            Product newProduct = new Product();
+            newProduct.setId(rs.getString(1));
+            newProduct.setSKU(rs.getString(2));
+            newProduct.setName(rs.getString(3));
+            newProduct.setRRP(rs.getDouble(4));
+            newProduct.setCost(rs.getDouble(5));
+            newProduct.setDepartment(rs.getString(6));
+            newProduct.setBrand(rs.getString(7));
+            newProduct.setDescription(rs.getString(8));
+            newProduct.setQuantity(getStockLevel(Integer.parseInt(newProduct.getId()), branchId));
+            productList.put(newProduct.getId() , newProduct.toJson());
+        }
+        return productList;
+    }
 
 }
