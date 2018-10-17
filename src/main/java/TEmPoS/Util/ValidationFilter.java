@@ -27,55 +27,12 @@ public class ValidationFilter {
     public static boolean authorizedRequest(HttpServletRequest request) {
 
         ArrayList<String> ipWhitelist = TextReader.getValidIpList();
-        JSONObject input = null;
 
         if (!ipWhitelist.contains(request.getRemoteAddr())) {
-            System.out.println("Rejected IP");
+            //System.out.println("Rejected IP");
             return false;
         } else {
-            System.out.println("IP Accepted");
-//            try {
-//                //System.out.println(request);
-//                RequestJson requestParser = new RequestJson();
-//                input = requestParser.parse(request);
-//                System.out.println("JSON successfully parsed");
-//                System.out.println(input);
-//            } catch (Exception e) {
-//                System.out.println("Error parsing JSON data from request: " + e);
-//                return false;
-//            }
-//            for (Map.Entry<String, String> entry : requiredMap.entrySet())
-//            {
-//                //System.out.println(entry.getKey() + "/" + entry.getValue());
-//                if(!input.has(entry.getKey())){
-//                    System.out.println("Couldn't find key " + entry.getKey() + "!");
-//                    return false;
-//                }else{
-//                    String testVal = input.getString(entry.getKey());
-//                    switch(entry.getValue()) {
-//                        case "String":
-//                            break;
-//                        case "double":
-//                            try {
-//                                //System.out.println("Testing value : " + testVal);
-//                                Double.parseDouble(testVal);
-//                            } catch (Exception e) {
-//                                System.out.println(e);
-//                                return false;
-//                            }
-//                            break;
-//                        case "integer":
-//                            try {
-//                                Integer.parseInt(testVal);
-//                            } catch (NumberFormatException e) {
-//                                System.out.println(e);
-//                                return false;
-//                            }
-//                            break;
-//                    }
-//                }
-//                System.out.println("All required keys present");
-//            }
+            //System.out.println("IP Accepted");
             return true;
         }
     }

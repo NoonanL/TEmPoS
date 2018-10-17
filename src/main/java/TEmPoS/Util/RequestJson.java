@@ -20,13 +20,11 @@ public class RequestJson {
         BufferedReader reader = request.getReader();
         String line;
         while ((line = reader.readLine()) != null) {
-            System.out.println("I AM PRINTING THE INPUT LINE " + line);
             buffer.append(line);
         }
         String data = buffer.toString();
 
         reader.close();
-        System.out.println(" data is: " + data);
         try{
             output = new JSONObject(data);
         }catch(Exception e){
