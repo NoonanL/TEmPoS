@@ -48,6 +48,6 @@ public class ValidationFilterTest {
 //        for(Iterator it = testJson.keys(); ((Iterator) it).hasNext();){
 //            System.out.println(it.next());
 //        }
-       ValidationFilter test = new ValidationFilter(required,testJson);
+       //ValidationFilter test = new ValidationFilter(required,testJson);
     }
 }

@@ -1,5 +1,6 @@
 package TEmPoS.Servlet.User;
 
+import TEmPoS.Util.Logger;
 import TEmPoS.Util.RequestJson;
 import TEmPoS.Util.ValidationFilter;
 import TEmPoS.db.H2User;
@@ -40,41 +41,55 @@ public class CreateUserServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        //read from request
-        RequestJson requestParser = new RequestJson();
-        JSONObject input = requestParser.parse(request);
-        JSONObject responseJson = new JSONObject();
-
-        ValidationFilter inputChecker = new ValidationFilter(requiredParams, input);
-
-        if(inputChecker.isValid()) {
-
-            String requestUser = input.getString("requestUser");
-            String newUsername = input.getString("username");
-            String password = input.getString("password");
-            String adminStatus = input.getString("isAdmin");
-            //System.out.println("Creating new user with username " + newUsername + ", admin status " + adminStatus + ".");
-
-
-            if (h2User.isAdmin(requestUser)) {
-                if (h2User.register(newUsername, password, adminStatus)) {
-                    responseJson.put("response", "OK");
-                    responseJson.put("error", "None.");
-                } else {
-                    responseJson.put("response", "false");
-                    responseJson.put("error", "Error creating user.");
-                }
-            }
+        /**
+         * Check request is authorised
+         */
+        if (!ValidationFilter.authorizedRequest(request)) {
+            System.out.println("Unauthorised user request from " + request.getRemoteAddr());
+            Logger.request("Unauthorised Request: " + request.getSession());
+            response.sendError((HttpServletResponse.SC_UNAUTHORIZED));
         } else {
-            responseJson.put("response", "false");
-            responseJson.put("error", "Missing required fields.");
+
+            /**
+             * Check input is valid
+             * Must successfully convert to JSON
+             * Must contain required Parameters
+             */
+            JSONObject input = ValidationFilter.isValid(request, requiredParams);
+            JSONObject responseJson = new JSONObject();
+
+            /**
+             * If Verified input is not null:
+             */
+            if (input != null) {
+
+                String requestUser = input.getString("requestUser");
+                String newUsername = input.getString("username");
+                String password = input.getString("password");
+                String adminStatus = input.getString("isAdmin");
+                //System.out.println("Creating new user with username " + newUsername + ", admin status " + adminStatus + ".");
+
+
+                if (h2User.isAdmin(requestUser)) {
+                    if (h2User.register(newUsername, password, adminStatus)) {
+                        responseJson.put("response", "OK");
+                        responseJson.put("error", "None.");
+                    } else {
+                        responseJson.put("response", "false");
+                        responseJson.put("error", "Error creating user.");
+                    }
+                }
+            } else {
+                responseJson.put("response", "false");
+                responseJson.put("error", "Missing required fields.");
+            }
+
+
+            response.setContentType("application/json");
+            PrintWriter out = response.getWriter();
+            out.print(responseJson);
+            out.flush();
         }
-
-
-        response.setContentType("application/json");
-        PrintWriter out = response.getWriter();
-        out.print(responseJson);
-        out.flush();
     }
 
 }

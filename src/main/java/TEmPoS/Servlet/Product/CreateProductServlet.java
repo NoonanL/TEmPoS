@@ -2,6 +2,7 @@ package TEmPoS.Servlet.Product;
 
 import TEmPoS.Model.Product;
 import TEmPoS.Servlet.Customer.CreateCustomerServlet;
+import TEmPoS.Util.Logger;
 import TEmPoS.Util.RequestJson;
 import TEmPoS.Util.ValidationFilter;
 import TEmPoS.db.H2Products;
@@ -49,56 +50,70 @@ public class CreateProductServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        //read from request
-        RequestJson requestParser = new RequestJson();
-        JSONObject input = requestParser.parse(request);
-        JSONObject responseJson = new JSONObject();
 
-        ValidationFilter inputChecker = new ValidationFilter(requiredParams, input);
+        /**
+         * Check request is authorised
+         */
+        if (!ValidationFilter.authorizedRequest(request)) {
+            System.out.println("Unauthorised user request from " + request.getRemoteAddr());
+            Logger.request("Unauthorised Request: " + request.getSession());
+            response.sendError((HttpServletResponse.SC_UNAUTHORIZED));
+        } else {
 
-        if(inputChecker.isValid()) {
+            /**
+             * Check input is valid
+             * Must successfully convert to JSON
+             * Must contain required Parameters
+             */
+            JSONObject input = ValidationFilter.isValid(request, requiredParams);
+            JSONObject responseJson = new JSONObject();
 
-            Product newProduct = new Product();
+            /**
+             * If Verified input is not null:
+             */
+            if (input != null) {
 
-            newProduct.setSKU(input.getString("SKU"));
-            newProduct.setName(input.getString("name"));
-            newProduct.setRRP(input.getDouble("RRP"));
-            newProduct.setCost(input.getDouble("cost"));
-            newProduct.setDepartment(input.getString("department"));
-            newProduct.setBrand(input.getString("brand"));
-            newProduct.setDescription(input.getString("description"));
+                Product newProduct = new Product();
 
-            String requestUser = input.getString("requestUser");
+                newProduct.setSKU(input.getString("SKU"));
+                newProduct.setName(input.getString("name"));
+                newProduct.setRRP(input.getDouble("RRP"));
+                newProduct.setCost(input.getDouble("cost"));
+                newProduct.setDepartment(input.getString("department"));
+                newProduct.setBrand(input.getString("brand"));
+                newProduct.setDescription(input.getString("description"));
 
-            if (h2User.isRegistered(requestUser)) {
+                String requestUser = input.getString("requestUser");
 
-                try {
-                    if (h2Products.existingSku(newProduct.getSKU())) {
-                        responseJson.put("response", "false");
-                        responseJson.put("error", "SKU Not Unique.");
-                    } else {
-                        if (h2Products.createProduct(newProduct)) {
-                            responseJson.put("response", "OK");
-                            responseJson.put("error", "None.");
-                        } else {
-                            //System.out.println("Error creating product");
+                if (h2User.isRegistered(requestUser)) {
+
+                    try {
+                        if (h2Products.existingSku(newProduct.getSKU())) {
                             responseJson.put("response", "false");
-                            responseJson.put("error", "Failed to create new product.");
+                            responseJson.put("error", "SKU Not Unique.");
+                        } else {
+                            if (h2Products.createProduct(newProduct)) {
+                                responseJson.put("response", "OK");
+                                responseJson.put("error", "None.");
+                            } else {
+                                //System.out.println("Error creating product");
+                                responseJson.put("response", "false");
+                                responseJson.put("error", "Failed to create new product.");
+                            }
                         }
+                    } catch (SQLException e) {
+                        e.printStackTrace();
                     }
-                } catch (SQLException e) {
-                    e.printStackTrace();
                 }
+            } else {
+                responseJson.put("response", "false");
+                responseJson.put("error", "Missing required fields.");
             }
-        }else{
-            responseJson.put("response", "false");
-            responseJson.put("error", "Missing required fields.");
+
+            response.setContentType("application/json");
+            PrintWriter out = response.getWriter();
+            out.print(responseJson);
+            out.flush();
         }
-
-        response.setContentType("application/json");
-        PrintWriter out = response.getWriter();
-        out.print(responseJson);
-        out.flush();
     }
-
 }

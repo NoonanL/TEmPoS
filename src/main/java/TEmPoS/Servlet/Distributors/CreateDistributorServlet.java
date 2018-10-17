@@ -1,6 +1,7 @@
 package TEmPoS.Servlet.Distributors;
 
 import TEmPoS.Model.Brand;
+import TEmPoS.Util.Logger;
 import TEmPoS.Util.RequestJson;
 import TEmPoS.Util.ValidationFilter;
 import TEmPoS.db.H2Brands;
@@ -42,38 +43,51 @@ public class CreateDistributorServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        //read from request
-        RequestJson requestParser = new RequestJson();
-        JSONObject input = requestParser.parse(request);
-        JSONObject responseJson = new JSONObject();
 
-        ValidationFilter inputChecker = new ValidationFilter(requiredParams, input);
+        /**
+         * Check request is authorised
+         */
+        if (!ValidationFilter.authorizedRequest(request)) {
+            System.out.println("Unauthorised user request from " + request.getRemoteAddr());
+            Logger.request("Unauthorised Request: " + request.getSession());
+            response.sendError((HttpServletResponse.SC_UNAUTHORIZED));
+        } else {
 
-        if(inputChecker.isValid()) {
+            /**
+             * Check input is valid
+             * Must successfully convert to JSON
+             * Must contain required Parameters
+             */
+            JSONObject input = ValidationFilter.isValid(request, requiredParams);
+            JSONObject responseJson = new JSONObject();
 
-            String requestUser = input.getString("requestUser");
+            /**
+             * If Verified input is not null:
+             */
+            if (input != null) {
 
-            if (h2User.isRegistered(requestUser)) {
+                String requestUser = input.getString("requestUser");
 
-                if (h2Distributors.createDistributor(input.getString("distributor"))) {
-                    responseJson.put("response", "OK");
-                    responseJson.put("error", "None.");
-                } else {
-                    //System.out.println("Error creating product");
-                    responseJson.put("response", "false");
-                    responseJson.put("error", "Failed to create new distributor.");
+                if (h2User.isRegistered(requestUser)) {
+
+                    if (h2Distributors.createDistributor(input.getString("distributor"))) {
+                        responseJson.put("response", "OK");
+                        responseJson.put("error", "None.");
+                    } else {
+                        //System.out.println("Error creating product");
+                        responseJson.put("response", "false");
+                        responseJson.put("error", "Failed to create new distributor.");
+                    }
                 }
+            } else {
+                responseJson.put("response", "false");
+                responseJson.put("error", "Missing required fields.");
             }
-        }else{
-            responseJson.put("response", "false");
-            responseJson.put("error", "Missing required fields.");
+
+            response.setContentType("application/json");
+            PrintWriter out = response.getWriter();
+            out.print(responseJson);
+            out.flush();
         }
-
-        response.setContentType("application/json");
-        PrintWriter out = response.getWriter();
-        out.print(responseJson);
-        out.flush();
     }
-
-
 }

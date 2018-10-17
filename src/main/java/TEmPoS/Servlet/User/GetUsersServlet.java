@@ -42,7 +42,7 @@ public class GetUsersServlet extends HttpServlet {
 
         ValidationFilter inputChecker = new ValidationFilter(requiredParams, input);
 
-        if(inputChecker.isValid()) {
+        if(inputChecker.isValid(request,requiredParams)!=null) {
 
             String requestUser = input.getString("requestUser");
 

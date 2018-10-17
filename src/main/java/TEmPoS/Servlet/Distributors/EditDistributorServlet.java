@@ -2,6 +2,7 @@ package TEmPoS.Servlet.Distributors;
 
 import TEmPoS.Model.Brand;
 import TEmPoS.Model.Distributor;
+import TEmPoS.Util.Logger;
 import TEmPoS.Util.RequestJson;
 import TEmPoS.Util.ValidationFilter;
 import TEmPoS.db.H2Distributors;
@@ -43,63 +44,74 @@ public class EditDistributorServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        //read from request
-        RequestJson requestParser = new RequestJson();
-        JSONObject input = requestParser.parse(request);
-        JSONObject responseJson = new JSONObject();
-        String oldVal = "";
+        /**
+         * Check request is authorised
+         */
+        if (!ValidationFilter.authorizedRequest(request)) {
+            System.out.println("Unauthorised user request from " + request.getRemoteAddr());
+            Logger.request("Unauthorised Request: " + request.getSession());
+            response.sendError((HttpServletResponse.SC_UNAUTHORIZED));
+        } else {
 
-        ValidationFilter inputChecker = new ValidationFilter(requiredParams, input);
+            /**
+             * Check input is valid
+             * Must successfully convert to JSON
+             * Must contain required Parameters
+             */
+            JSONObject input = ValidationFilter.isValid(request, requiredParams);
+            JSONObject responseJson = new JSONObject();
+            String oldVal = "";
+            /**
+             * If Verified input is not null:
+             */
+            if (input != null) {
+                String id = input.getString("id");
+                String requestUser = input.getString("requestUser");
 
-        if(inputChecker.isValid()) {
+                JSONObject oldValJson = h2Distributors.getDistributor(Integer.parseInt(id));
+                for (Iterator it = oldValJson.keys(); it.hasNext(); ) {
+                    String json = it.next().toString();
+                    if (!json.equals("connection") && !json.equals("error") && !json.equals("response")) {
+                        JSONObject userJson = (oldValJson.getJSONObject(json));
+                        oldVal = userJson.getString("name");
 
-            String id = input.getString("id");
-            String requestUser = input.getString("requestUser");
-
-            JSONObject oldValJson = h2Distributors.getDistributor(Integer.parseInt(id));
-            for (Iterator it = oldValJson.keys(); it.hasNext(); ) {
-                String json = it.next().toString();
-                if(!json.equals("connection") && !json.equals("error") && !json.equals("response")) {
-                    JSONObject userJson = (oldValJson.getJSONObject(json));
-                    oldVal = userJson.getString("name");
-
-                }
-            }
-            //System.out.println("Old value is " + oldVal + ", and new value will be " + newVal + ".");
-
-            Distributor distributor = new Distributor();
-            distributor.setId(id);
-            distributor.setName(input.getString("distributor"));
-
-            if (h2User.isRegistered(requestUser)) {
-                try {
-                    if (h2Distributors.existingDistributor(distributor.getName(), "distributor")) {
-                        responseJson.put("response", "false");
-                        responseJson.put("error", "Distributor already exists!");
-                    } else {
-                        if (h2Distributors.editDistributor(distributor) && h2Distributors.propagate(oldVal, distributor)) {
-                            //System.out.println("New user created.");
-                            responseJson.put("response", "OK");
-                            responseJson.put("error", "None.");
-                        } else {
-                            //System.out.println("Error creating user");
-                            responseJson.put("response", "false");
-                            responseJson.put("error", "Error editing Distributor.");
-                        }
                     }
-                } catch (SQLException e) {
-                    e.printStackTrace();
                 }
+                //System.out.println("Old value is " + oldVal + ", and new value will be " + newVal + ".");
+
+                Distributor distributor = new Distributor();
+                distributor.setId(id);
+                distributor.setName(input.getString("distributor"));
+
+                if (h2User.isRegistered(requestUser)) {
+                    try {
+                        if (h2Distributors.existingDistributor(distributor.getName(), "distributor")) {
+                            responseJson.put("response", "false");
+                            responseJson.put("error", "Distributor already exists!");
+                        } else {
+                            if (h2Distributors.editDistributor(distributor) && h2Distributors.propagate(oldVal, distributor)) {
+                                //System.out.println("New user created.");
+                                responseJson.put("response", "OK");
+                                responseJson.put("error", "None.");
+                            } else {
+                                //System.out.println("Error creating user");
+                                responseJson.put("response", "false");
+                                responseJson.put("error", "Error editing Distributor.");
+                            }
+                        }
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
+                }
+            } else {
+                responseJson.put("response", "false");
+                responseJson.put("error", "Missing required fields.");
             }
-        }else{
-            responseJson.put("response", "false");
-            responseJson.put("error", "Missing required fields.");
+
+            response.setContentType("application/json");
+            PrintWriter out = response.getWriter();
+            out.print(responseJson);
+            out.flush();
         }
-
-        response.setContentType("application/json");
-        PrintWriter out = response.getWriter();
-        out.print(responseJson);
-        out.flush();
     }
-
 }

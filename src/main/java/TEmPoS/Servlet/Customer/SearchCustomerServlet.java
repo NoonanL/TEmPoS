@@ -1,5 +1,6 @@
 package TEmPoS.Servlet.Customer;
 
+import TEmPoS.Util.Logger;
 import TEmPoS.Util.RequestJson;
 import TEmPoS.Util.ValidationFilter;
 import TEmPoS.db.H2Customer;
@@ -39,26 +40,40 @@ public class SearchCustomerServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        //read from request
-        RequestJson requestParser = new RequestJson();
-        JSONObject input = requestParser.parse(request);
-        JSONObject responseJson = new JSONObject();
 
-        ValidationFilter inputChecker = new ValidationFilter(requiredParams, input);
+        /**
+         * Check request is authorised
+         */
+        if (!ValidationFilter.authorizedRequest(request)) {
+            System.out.println("Unauthorised user request from " + request.getRemoteAddr());
+            Logger.request("Unauthorised Request: " + request.getSession());
+            response.sendError((HttpServletResponse.SC_UNAUTHORIZED));
+        } else {
 
-        if (inputChecker.isValid()) {
+            /**
+             * Check input is valid
+             * Must successfully convert to JSON
+             * Must contain required Parameters
+             */
+            JSONObject input = ValidationFilter.isValid(request, requiredParams);
+            JSONObject responseJson = new JSONObject();
 
-            String requestUser = input.getString("requestUser");
-            String searchString = input.getString("searchString");
+            /**
+             * If Verified input is not null:
+             */
+            if (input != null) {
+
+                String requestUser = input.getString("requestUser");
+                String searchString = input.getString("searchString");
 
 
-            if (h2User.isRegistered(requestUser)) {
-                responseJson = h2Customer.searchCustomers(searchString);
-                responseJson.put("response", "OK.");
-                responseJson.put("error", "None.");
-            }
+                if (h2User.isRegistered(requestUser)) {
+                    responseJson = h2Customer.searchCustomers(searchString);
+                    responseJson.put("response", "OK.");
+                    responseJson.put("error", "None.");
+                }
 
-        }else{
+            } else {
                 responseJson.put("response", "false");
                 responseJson.put("error", "Missing required fields.");
             }
@@ -68,5 +83,5 @@ public class SearchCustomerServlet extends HttpServlet {
             out.print(responseJson);
             out.flush();
         }
-
+    }
 }

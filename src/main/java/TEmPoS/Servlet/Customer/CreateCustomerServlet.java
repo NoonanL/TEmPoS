@@ -1,6 +1,7 @@
 package TEmPoS.Servlet.Customer;
 
 import TEmPoS.Model.Customer;
+import TEmPoS.Util.Logger;
 import TEmPoS.Util.RequestJson;
 import TEmPoS.Util.ValidationFilter;
 import TEmPoS.db.H2Customer;
@@ -24,9 +25,10 @@ public class CreateCustomerServlet extends HttpServlet {
     private H2User h2User;
     private Map<String, String> requiredParams = new HashMap<>();
 
-    public CreateCustomerServlet(){}
+    public CreateCustomerServlet() {
+    }
 
-    public CreateCustomerServlet(H2Customer h2Customer, H2User h2User){
+    public CreateCustomerServlet(H2Customer h2Customer, H2User h2User) {
         this.h2Customer = h2Customer;
         this.h2User = h2User;
 
@@ -52,52 +54,64 @@ public class CreateCustomerServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        //read from request
-        RequestJson requestParser = new RequestJson();
+        /**
+         * Check request is authorised
+         */
+        if (!ValidationFilter.authorizedRequest(request)) {
+            System.out.println("Unauthorised user request from " + request.getRemoteAddr());
+            Logger.request("Unauthorised Request: " + request.getSession());
+            response.sendError((HttpServletResponse.SC_UNAUTHORIZED));
+        } else {
 
-        JSONObject input = requestParser.parse(request);
-        JSONObject responseJson = new JSONObject();
+            /**
+             * Check input is valid
+             * Must successfully convert to JSON
+             * Must contain required Parameters
+             */
+            JSONObject input = ValidationFilter.isValid(request, requiredParams);
+            JSONObject responseJson = new JSONObject();
 
-        ValidationFilter inputChecker = new ValidationFilter(requiredParams, input);
+            /**
+             * If Verified input is not null:
+             */
+            if (input != null) {
 
-        if(inputChecker.isValid()){
+                String requestUser = input.getString("requestUser");
 
-            String requestUser = input.getString("requestUser");
+                if (h2User.isRegistered(requestUser)) {
 
-            if(h2User.isRegistered(requestUser)) {
+                    Customer newCustomer = new Customer();
+                    newCustomer.setTitle(input.getString("title"));
+                    newCustomer.setFirstname(input.getString("firstname"));
+                    newCustomer.setSurname(input.getString("surname"));
+                    newCustomer.setMarketingStatus(input.getString("marketingStatus"));
+                    newCustomer.setEmail(input.getString("email"));
+                    newCustomer.setCity(input.getString("city"));
+                    newCustomer.setPostcode(input.getString("postcode"));
+                    newCustomer.setTown(input.getString("town"));
+                    newCustomer.setStreet(input.getString("street"));
+                    newCustomer.setMobile(input.getString("mobile"));
+                    newCustomer.setCountry(input.getString("country"));
 
-                Customer newCustomer = new Customer();
-                newCustomer.setTitle(input.getString("title"));
-                newCustomer.setFirstname(input.getString("firstname"));
-                newCustomer.setSurname(input.getString("surname"));
-                newCustomer.setMarketingStatus(input.getString("marketingStatus"));
-                newCustomer.setEmail(input.getString("email"));
-                newCustomer.setCity(input.getString("city"));
-                newCustomer.setPostcode(input.getString("postcode"));
-                newCustomer.setTown(input.getString("town"));
-                newCustomer.setStreet(input.getString("street"));
-                newCustomer.setMobile(input.getString("mobile"));
-                newCustomer.setCountry(input.getString("country"));
-
-                if (h2Customer.createCustomer(newCustomer)) {
-                    responseJson.put("response", "OK");
-                    responseJson.put("error", "None.");
-                } else {
-                    responseJson.put("response", "false");
-                    responseJson.put("error", "Failed to create new customer.");
+                    if (h2Customer.createCustomer(newCustomer)) {
+                        responseJson.put("response", "OK");
+                        responseJson.put("error", "None.");
+                    } else {
+                        responseJson.put("response", "false");
+                        responseJson.put("error", "Failed to create new customer.");
+                    }
                 }
+            } else {
+                responseJson.put("response", "false");
+                responseJson.put("error", "Missing required fields.");
             }
-        }else{
-            responseJson.put("response", "false");
-            responseJson.put("error", "Missing required fields.");
+
+
+            response.setContentType("application/json");
+            PrintWriter out = response.getWriter();
+            out.print(responseJson);
+            out.flush();
         }
 
-
-
-        response.setContentType("application/json");
-        PrintWriter out = response.getWriter();
-        out.print(responseJson);
-        out.flush();
     }
-
-    }
+}

@@ -13,16 +13,26 @@ public class RequestJson {
 
     public JSONObject parse(HttpServletRequest request) throws IOException {
 
+        JSONObject output = null;
+
         // Read from request
         StringBuilder buffer = new StringBuilder();
         BufferedReader reader = request.getReader();
         String line;
         while ((line = reader.readLine()) != null) {
+            System.out.println("I AM PRINTING THE INPUT LINE " + line);
             buffer.append(line);
         }
         String data = buffer.toString();
 
-        return new JSONObject(data);
+        reader.close();
+        System.out.println(" data is: " + data);
+        try{
+            output = new JSONObject(data);
+        }catch(Exception e){
+            System.out.println("Error parsing json in requestJson.parse");
+        }
+        return output;
 
 
     }

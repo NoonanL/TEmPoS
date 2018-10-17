@@ -1,6 +1,7 @@
 package TEmPoS.Servlet.Product;
 
 import TEmPoS.Model.Product;
+import TEmPoS.Util.Logger;
 import TEmPoS.Util.RequestJson;
 import TEmPoS.Util.ValidationFilter;
 import TEmPoS.db.H2Products;
@@ -46,50 +47,64 @@ public class EditProductServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        //read from request
-        RequestJson requestParser = new RequestJson();
-        JSONObject input = requestParser.parse(request);
-        JSONObject responseJson = new JSONObject();
+        /**
+         * Check request is authorised
+         */
+        if (!ValidationFilter.authorizedRequest(request)) {
+            System.out.println("Unauthorised user request from " + request.getRemoteAddr());
+            Logger.request("Unauthorised Request: " + request.getSession());
+            response.sendError((HttpServletResponse.SC_UNAUTHORIZED));
+        } else {
 
-        ValidationFilter inputChecker = new ValidationFilter(requiredParams, input);
+            /**
+             * Check input is valid
+             * Must successfully convert to JSON
+             * Must contain required Parameters
+             */
+            JSONObject input = ValidationFilter.isValid(request, requiredParams);
+            JSONObject responseJson = new JSONObject();
 
-        if(inputChecker.isValid()) {
+            /**
+             * If Verified input is not null:
+             */
+            if (input != null) {
 
-            Product newProduct = new Product();
-            newProduct.setSKU(input.getString("SKU"));
-            newProduct.setName(input.getString("name"));
-            newProduct.setRRP(input.getDouble("RRP"));
-            newProduct.setCost(input.getDouble("cost"));
-            newProduct.setDepartment(input.getString("department"));
-            newProduct.setBrand(input.getString("brand"));
-            newProduct.setDescription(input.getString("description"));
+                Product newProduct = new Product();
+                newProduct.setSKU(input.getString("SKU"));
+                newProduct.setName(input.getString("name"));
+                newProduct.setRRP(input.getDouble("RRP"));
+                newProduct.setCost(input.getDouble("cost"));
+                newProduct.setDepartment(input.getString("department"));
+                newProduct.setBrand(input.getString("brand"));
+                newProduct.setDescription(input.getString("description"));
 
-            String requestUser = input.getString("requestUser");
-            String targerProductId = input.getString("id");
-            int editId = Integer.parseInt(targerProductId);
+                String requestUser = input.getString("requestUser");
+                String targerProductId = input.getString("id");
+                int editId = Integer.parseInt(targerProductId);
 
 
-            if (h2User.isRegistered(requestUser)) {
+                if (h2User.isRegistered(requestUser)) {
 
-                if (h2Products.editProduct(editId, newProduct)) {
-                    responseJson.put("response", "OK");
-                    responseJson.put("error", "None.");
-                } else {
-                    //System.out.println("Error creating product");
-                    responseJson.put("response", "false");
-                    responseJson.put("error", "Failed to edit product.");
+                    if (h2Products.editProduct(editId, newProduct)) {
+                        responseJson.put("response", "OK");
+                        responseJson.put("error", "None.");
+                    } else {
+                        //System.out.println("Error creating product");
+                        responseJson.put("response", "false");
+                        responseJson.put("error", "Failed to edit product.");
+                    }
+
                 }
-
+            } else {
+                responseJson.put("response", "false");
+                responseJson.put("error", "Missing required fields.");
             }
-        }else{
-            responseJson.put("response", "false");
-            responseJson.put("error", "Missing required fields.");
+
+
+            response.setContentType("application/json");
+            PrintWriter out = response.getWriter();
+            out.print(responseJson);
+            out.flush();
         }
-
-
-        response.setContentType("application/json");
-        PrintWriter out = response.getWriter();
-        out.print(responseJson);
-        out.flush();
     }
 }
