@@ -16,17 +16,17 @@ import TEmPoS.Servlet.Distributors.DeleteDistributorServlet;
 import TEmPoS.Servlet.Distributors.EditDistributorServlet;
 import TEmPoS.Servlet.Distributors.GetDistributorsServlet;
 import TEmPoS.Servlet.Product.*;
+import TEmPoS.Servlet.PurchaseOrder.CreatePurchaseOrderServlet;
+import TEmPoS.Servlet.PurchaseOrder.DeletePurchaseOrderServlet;
+import TEmPoS.Servlet.PurchaseOrder.EditPurchaseOrderServlet;
+import TEmPoS.Servlet.PurchaseOrder.GetPurchaseOrdersServlet;
 import TEmPoS.Servlet.Stock.*;
 import TEmPoS.Servlet.User.*;
-import TEmPoS.Util.Logger;
 import TEmPoS.db.*;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.DefaultServlet;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
-
-import javax.servlet.http.HttpSession;
-import java.util.ArrayList;
 
 public class Runner {
 
@@ -38,6 +38,7 @@ public class Runner {
     private H2Brands brandsDB;
     private H2Distributors distributorsDB;
     private H2Stock stockDB;
+    private H2PurchaseOrder purchaseOrderDB;
     private static final int PORT = 9001;
 
     private Runner() {
@@ -50,6 +51,7 @@ public class Runner {
         brandsDB = new H2Brands(new ConnectionSupplier(ConnectionSupplier.FILE));
         distributorsDB = new H2Distributors(new ConnectionSupplier(ConnectionSupplier.FILE));
         stockDB = new H2Stock(new ConnectionSupplier(ConnectionSupplier.FILE));
+        purchaseOrderDB = new H2PurchaseOrder(new ConnectionSupplier(ConnectionSupplier.FILE));
 
     }
 
@@ -194,6 +196,19 @@ public class Runner {
 
         GetDepartmentsServlet getDepartmentsServlet = new GetDepartmentsServlet(departmentsDB,userDB);
         handler.addServlet(new ServletHolder(getDepartmentsServlet), "/getDepartmentsServlet");
+
+        //PURCHASE ORDER SERVLETS
+        CreatePurchaseOrderServlet createPurchaseOrderServlet = new CreatePurchaseOrderServlet(purchaseOrderDB,userDB);
+        handler.addServlet(new ServletHolder(createPurchaseOrderServlet), "/createPurchaseOrderServlet");
+
+        DeletePurchaseOrderServlet deletePurchaseOrderServlet = new DeletePurchaseOrderServlet(purchaseOrderDB,userDB);
+        handler.addServlet(new ServletHolder(deletePurchaseOrderServlet), "/deletePurchaseOrderServlet");
+
+        EditPurchaseOrderServlet editPurchaseOrderServlet = new EditPurchaseOrderServlet(purchaseOrderDB,userDB);
+        handler.addServlet(new ServletHolder(editPurchaseOrderServlet), "/editPurchaseOrderServlet");
+
+        GetPurchaseOrdersServlet getPurchaseOrdersServlet = new GetPurchaseOrdersServlet(purchaseOrderDB,userDB);
+        handler.addServlet(new ServletHolder(getPurchaseOrdersServlet), "/getPurchaseOrdersServlet");
 
 
 

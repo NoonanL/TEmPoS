@@ -361,6 +361,42 @@
         <url-pattern>/getDepartmentsServlet</url-pattern>
     </servlet-mapping>
 
+    <!--PURCHASE ORDER SERVLETS-->
+    <servlet>
+        <servlet-name>CreatePurchaseOrderServlet</servlet-name>
+        <servlet-class>TEmPoS.Servlet.PurchaseOrder.CreatePurchaseOrderServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CreatePurchaseOrderServlet</servlet-name>
+        <url-pattern>/createPurchaseOrderServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeletePurchaseOrderServlet</servlet-name>
+        <servlet-class>TEmPoS.Servlet.PurchaseOrder.DeletePurchaseOrderServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeletePurchaseOrderServlet</servlet-name>
+        <url-pattern>/deletePurchaseOrderServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>EditPurchaseOrderServlet</servlet-name>
+        <servlet-class>TEmPoS.Servlet.PurchaseOrder.EditPurchaseOrderServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EditPurchaseOrderServlet</servlet-name>
+        <url-pattern>/editPurchaseOrderServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>GetPurchaseOrdersServlet</servlet-name>
+        <servlet-class>TEmPoS.Servlet.PurchaseOrder.GetPurchaseOrdersServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetPurchaseOrdersServlet</servlet-name>
+        <url-pattern>/getPurchaseOrdersServlet</url-pattern>
+    </servlet-mapping>
 
 
 

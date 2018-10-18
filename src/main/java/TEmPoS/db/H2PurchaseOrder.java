@@ -78,6 +78,23 @@ public class H2PurchaseOrder extends H2Base {
         return brandList;
     }
 
+    public boolean editPurchaseOrder(PurchaseOrder purchaseOrder) throws SQLException {
+        String query = "UPDATE purchaseOrders SET productId =?, SKU =?, quantity =?, branchId =?, status =? WHERE id=?";
+        try (PreparedStatement ps = getConnection().prepareStatement(query)) {
+            ps.setString(1, purchaseOrder.getProductId());
+            ps.setString(2, purchaseOrder.getSKU());
+            ps.setInt(3, purchaseOrder.getQuantity());
+            ps.setString(4, purchaseOrder.getBranchId());
+            ps.setString(5, purchaseOrder.getStatus());
+            ps.setInt(6, Integer.parseInt(purchaseOrder.getId()));
+            ps.execute();
+            return true;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
     public boolean existingOrder(String orderUID) throws SQLException{
         final String GET_ORDER_QUERY = "SELECT * FROM purchaseOrders WHERE UID=?";
         try (PreparedStatement ps = getConnection().prepareStatement(GET_ORDER_QUERY)) {
