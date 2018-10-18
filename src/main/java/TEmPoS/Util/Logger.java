@@ -4,6 +4,8 @@ import javax.servlet.http.HttpSession;
 import javax.servlet.http.HttpSessionEvent;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Logger {

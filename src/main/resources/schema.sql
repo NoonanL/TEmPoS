@@ -61,3 +61,13 @@ CREATE TABLE IF NOT EXISTS distributors (
   id         int AUTO_INCREMENT PRIMARY KEY,
   distributor VARCHAR(64) NOT NULL UNIQUE
 );
+
+CREATE TABLE IF NOT EXISTS purchaseOrders (
+  id int AUTO_INCREMENT PRIMARY KEY,
+  productId int,
+  SKU VARCHAR(32),
+  quantity int,
+  branchId VARCHAR(32),
+  status VARCHAR(32),
+  UID VARCHAR(64)
+);

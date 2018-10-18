@@ -28,7 +28,8 @@ public class RequestJson {
         try{
             output = new JSONObject(data);
         }catch(Exception e){
-            System.out.println("Error parsing json in requestJson.parse");
+            System.out.println("Error parsing json in requestJson.parse: " + e);
+            System.out.println(data);
         }
         return output;
 
