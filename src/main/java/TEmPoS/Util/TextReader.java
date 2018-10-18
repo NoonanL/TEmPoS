@@ -9,7 +9,6 @@ public class TextReader {
     private TextReader() {}
 
 
-
     public static ArrayList<String> getValidIpList() {
         ArrayList<String> validIpList = new ArrayList<>();
         try{
@@ -18,15 +17,14 @@ public class TextReader {
 
             String st;
             while ((st = br.readLine()) != null){
-                System.out.println("Accepting Traffic from the following IP addresses: " + st);
                 validIpList.add(st);
             }
         }catch(IOException e){
             System.out.println("Error parsing IP list: " + e);
         }
+        System.out.println("Accepting Traffic from the following IP addresses: " + validIpList.toString());
         return validIpList;
     }
-
 
 }
 

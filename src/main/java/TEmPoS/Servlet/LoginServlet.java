@@ -64,11 +64,11 @@ public class LoginServlet extends HttpServlet{
 
                 if (h2User.login(username, password)) {
                     responseJson.put("auth", "OK");
+
                     HttpSession session = request.getSession();
-                    //System.out.println("User session: " + session.getId());
                     session.setAttribute("user", username);
                     session.setAttribute("mySession", session.getId());
-                    //setting session to expiry in 30 mins
+                    //setting session expiry
                     session.setMaxInactiveInterval(30 * 1);
                     Cookie userName = new Cookie("user", username);
                     userName.setMaxAge(30 * 1);
