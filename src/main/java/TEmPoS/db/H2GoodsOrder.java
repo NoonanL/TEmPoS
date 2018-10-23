@@ -37,11 +37,29 @@ public class H2GoodsOrder extends H2Base{
     }
 
     public boolean createGoodsOrder(GoodsOrder goodsOrder) throws SQLException {
-        String query = "INSERT into goodsOrder (UID, productId, quantity) VALUES(?,?,?)";
+        String query = "INSERT into goodsOrder (UID, productId, quantity, status) VALUES(?,?,?,?)";
         try (PreparedStatement ps = getConnection().prepareStatement(query)) {
             ps.setString(1, goodsOrder.getUID());
-            ps.setInt(2, goodsOrder.getProductId());
-            ps.setInt(3, goodsOrder.getQuantity());
+            ps.setString(2, goodsOrder.getProductId());
+            ps.setString(3, goodsOrder.getQuantity());
+            ps.setString(4, goodsOrder.getStatus());
+            ps.execute();
+            return true;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    public boolean editGoodsOrder(GoodsOrder goodsOrder){
+        //System.out.println("Got to function");
+        String query = "UPDATE goodsOrder SET productId =?, quantity=?, status=? WHERE id=?";
+        try (PreparedStatement ps = getConnection().prepareStatement(query)) {
+            ps.setString(1, goodsOrder.getProductId());
+            ps.setString(2, goodsOrder.getQuantity());
+            ps.setString(3, goodsOrder.getStatus());
+            System.out.println(goodsOrder.getId());
+            ps.setInt(4, Integer.parseInt(goodsOrder.getId()));
             ps.execute();
             return true;
         } catch (SQLException e) {
@@ -62,15 +80,29 @@ public class H2GoodsOrder extends H2Base{
         return goodsOrders;
     }
 
+    public JSONObject getGoodsOrderByUid(String UID){
+        final String GET_ORDER_BY_UID_QUERY = "SELECT * FROM goodsOrder WHERE UID=?";
+        JSONObject poList;
+        try (PreparedStatement ps = getConnection().prepareStatement(GET_ORDER_BY_UID_QUERY)){
+            ps.setString(1, UID);
+            ResultSet rs = ps.executeQuery();
+            poList = parseOrders(rs);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return poList;
+    }
+
 
     private JSONObject parseOrders(ResultSet rs) throws SQLException {
         JSONObject orderList = new JSONObject();
         while (rs.next()) {
             GoodsOrder goodsOrder = new GoodsOrder();
-            goodsOrder.setId(rs.getInt(1));
+            goodsOrder.setId(rs.getString(1));
             goodsOrder.setUID(rs.getString(2));
-            goodsOrder.setProductId(rs.getInt(3));
-            goodsOrder.setQuantity(rs.getInt(4));
+            goodsOrder.setProductId(rs.getString(3));
+            goodsOrder.setQuantity(rs.getString(4));
+            goodsOrder.setStatus(rs.getString(5));
             orderList.put(String.valueOf(goodsOrder.getId()) , goodsOrder.toJson());
         }
         return orderList;

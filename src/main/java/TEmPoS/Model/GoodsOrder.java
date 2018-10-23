@@ -7,23 +7,25 @@ import java.util.Map;
 
 public class GoodsOrder {
 
-    private int id;
+    private String id;
     private String UID;
-    private int productId;
-    private int quantity;
+    private String productId;
+    private String quantity;
+    private String status;
 
     public GoodsOrder(){
-        this.id = 0;
+        this.id = "";
         this.UID = "";
-        this.productId = 0;
-        this.quantity = 0;
+        this.productId = "";
+        this.quantity = "";
+        this.status = "";
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -35,30 +37,41 @@ public class GoodsOrder {
         this.UID = UID;
     }
 
-    public int getProductId() {
+    public String getProductId() {
         return productId;
     }
 
-    public void setProductId(int productId) {
+    public void setProductId(String productId) {
         this.productId = productId;
     }
 
-    public int getQuantity() {
+    public String getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(int quantity) {
+    public void setQuantity(String quantity) {
         this.quantity = quantity;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public JSONObject toJson(){
         JSONObject json;
         Map<String, String> goodsOrder = new LinkedHashMap<>();
-        goodsOrder.put("id", String.valueOf(this.getId()));
+        goodsOrder.put("id", this.getId());
         goodsOrder.put("UID" , this.getUID());
-        goodsOrder.put("productId", String.valueOf(this.getProductId()));
-        goodsOrder.put("quantty" , String.valueOf(this.getQuantity()));
+        goodsOrder.put("productId", this.getProductId());
+        goodsOrder.put("quantity" , this.getQuantity());
+        goodsOrder.put("status" , this.getStatus());
         json = new JSONObject(goodsOrder);
         return json;
     }
+
+
 }

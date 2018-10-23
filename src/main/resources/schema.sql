@@ -72,6 +72,7 @@ CREATE TABLE IF NOT EXISTS purchaseOrders (
 CREATE TABLE IF NOT EXISTS goodsOrder (
   id int AUTO_INCREMENT PRIMARY KEY,
   UID VARCHAR(64),
-  productId int,
-  quantity int
-)
+  productId VARCHAR(64),
+  quantity VARCHAR(64),
+  status VARCHAR(32)
+);

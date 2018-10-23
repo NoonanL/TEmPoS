@@ -42,6 +42,7 @@ public class Runner {
     private H2Distributors distributorsDB;
     private H2Stock stockDB;
     private H2PurchaseOrder purchaseOrderDB;
+    private H2GoodsOrder goodsOrderDB;
     private static final int PORT = 9001;
     public static ArrayList<String> ipWhiteList;
 
@@ -56,6 +57,7 @@ public class Runner {
         distributorsDB = new H2Distributors(new ConnectionSupplier(ConnectionSupplier.FILE));
         stockDB = new H2Stock(new ConnectionSupplier(ConnectionSupplier.FILE));
         purchaseOrderDB = new H2PurchaseOrder(new ConnectionSupplier(ConnectionSupplier.FILE));
+        goodsOrderDB = new H2GoodsOrder(new ConnectionSupplier(ConnectionSupplier.FILE));
         ipWhiteList = TextReader.getValidIpList();
     }
 
