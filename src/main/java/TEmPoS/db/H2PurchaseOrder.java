@@ -8,9 +8,6 @@ import org.slf4j.LoggerFactory;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 
 public class H2PurchaseOrder extends H2Base {
 
@@ -39,7 +36,7 @@ public class H2PurchaseOrder extends H2Base {
     }
 
     public boolean createPurchaseOrder(PurchaseOrder purchaseOrder) throws SQLException {
-        String query = "INSERT into purchaseOrders (products, branchId, status, UID) VALUES(?,?,?,?)";
+        String query = "INSERT into purchaseOrders (branchId, status, UID) VALUES(?,?,?)";
         try (PreparedStatement ps = getConnection().prepareStatement(query)) {
             ps.setString(1, purchaseOrder.getBranchId());
             ps.setString(2, purchaseOrder.getStatus());
@@ -64,11 +61,11 @@ public class H2PurchaseOrder extends H2Base {
         return purchaseOrders;
     }
 
-    public JSONObject getPurchaseOrderByUID(int UID){
+    public JSONObject getPurchaseOrderByUID(String UID){
         final String GET_ORDER_BY_UID_QUERY = "SELECT * FROM purchaseOrders WHERE UID=?";
         JSONObject poList;
         try (PreparedStatement ps = getConnection().prepareStatement(GET_ORDER_BY_UID_QUERY)){
-            ps.setInt(1, UID);
+            ps.setString(1, UID);
             ResultSet rs = ps.executeQuery();
             poList = parseOrders(rs);
         } catch (SQLException e) {
@@ -77,20 +74,19 @@ public class H2PurchaseOrder extends H2Base {
         return poList;
     }
 
-//    public boolean editPurchaseOrder(PurchaseOrder purchaseOrder) throws SQLException {
-//        String query = "UPDATE purchaseOrders SET products =?, branchId =?, status =? WHERE id=?";
-//        try (PreparedStatement ps = getConnection().prepareStatement(query)) {
-//            ps.setString(1, purchaseOrder.productsAsJson().toString());
-//            ps.setString(2, purchaseOrder.getBranchId());
-//            ps.setString(3, purchaseOrder.getStatus());
-//            ps.setInt(4, Integer.parseInt(purchaseOrder.getId()));
-//            ps.execute();
-//            return true;
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//            return false;
-//        }
-//    }
+    public boolean editPurchaseOrder(PurchaseOrder purchaseOrder) throws SQLException {
+        String query = "UPDATE purchaseOrders SET branchId =?, status =? WHERE id=?";
+        try (PreparedStatement ps = getConnection().prepareStatement(query)) {
+            ps.setString(1, purchaseOrder.getBranchId());
+            ps.setString(2, purchaseOrder.getStatus());
+            ps.setInt(3, Integer.parseInt(purchaseOrder.getId()));
+            ps.execute();
+            return true;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
 
     public boolean existingOrder(String orderUID) throws SQLException{
         final String GET_ORDER_QUERY = "SELECT * FROM purchaseOrders WHERE UID=?";
@@ -107,8 +103,8 @@ public class H2PurchaseOrder extends H2Base {
             PurchaseOrder purchaseOrder = new PurchaseOrder();
             purchaseOrder.setId(rs.getString(1));
             purchaseOrder.setBranchId(rs.getString(2));
-            purchaseOrder.setStatus(rs.getString(4));
-            purchaseOrder.setUID(rs.getString(5));
+            purchaseOrder.setStatus(rs.getString(3));
+            purchaseOrder.setUID(rs.getString(4));
             orderList.put(purchaseOrder.getId() , purchaseOrder.toJson());
         }
         return orderList;

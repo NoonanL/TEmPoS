@@ -27,15 +27,10 @@ public class H2PurchaseOrderTest {
     public void setUp() throws Exception {
         db = new H2PurchaseOrder(new ConnectionSupplier(ConnectionSupplier.FILE));
 
-        Map<String, String> productsMap = new HashMap<>();
-        productsMap.put("123", "5");
-        productsMap.put("456", "1");
-
-
         testPO.setUID("123");
         testPO.setStatus("Pending");
         testPO.setBranchId("Test Branch");
-        testPO.setProducts(productsMap);
+
     }
 
     @After
@@ -75,16 +70,36 @@ public class H2PurchaseOrderTest {
         System.out.println("=====================================");
         System.out.println("Testing get purchase Order by Id");
         System.out.println("=====================================");
-        System.out.println(db.getPurchaseOrderByUID(123).toString());
+        System.out.println(db.getPurchaseOrderByUID("123").toString());
 
     }
 
     @Test
-    public void editPurchaseOrder() {
+    public void editPurchaseOrder() throws SQLException {
+        testPO.setId("1");
+        testPO.setStatus("Complete");
+        System.out.println("=====================================");
+        System.out.println("Testing edit purchase Order");
+        System.out.println("=====================================");
+        if(db.editPurchaseOrder(testPO)){
+            System.out.println("Edit purchase order success");
+            System.out.println(db.getPurchaseOrderByUID(testPO.getUID()));
+        }else{
+            System.out.println("Edit purchase order failed");
+        }
+
     }
 
     @Test
-    public void existingOrder() {
+    public void existingOrder() throws SQLException {
+        System.out.println("=====================================");
+        System.out.println("Testing existing purchase Order");
+        System.out.println("=====================================");
+        if(db.existingOrder("123")){
+            System.out.println("Success, order already exists");
+        }else{
+            System.out.println("Failed.");
+        }
     }
 
 
