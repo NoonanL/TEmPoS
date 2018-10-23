@@ -127,6 +127,7 @@ public class Product {
         product.put("description", this.getDescription());
         product.put("quantity", String.valueOf(this.getQuantity()));
         json = new JSONObject(product);
+        //System.out.println(json);
         return json;
     }
 

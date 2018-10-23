@@ -24,6 +24,8 @@ public class dbUtils {
     private H2Distributors h2Distributors;
     private H2Departments departmentsDB;
     private H2Stock stockDB;
+    private H2PurchaseOrder purchaseOrderDB;
+    private H2GoodsOrder goodsOrderDB;
 
 
     @Before
@@ -36,6 +38,8 @@ public class dbUtils {
         h2Distributors = new H2Distributors(new ConnectionSupplier(ConnectionSupplier.FILE));
         departmentsDB = new H2Departments(new ConnectionSupplier(ConnectionSupplier.FILE));
         stockDB = new H2Stock(new ConnectionSupplier(ConnectionSupplier.FILE));
+        purchaseOrderDB = new H2PurchaseOrder(new ConnectionSupplier(ConnectionSupplier.FILE));
+        goodsOrderDB = new H2GoodsOrder(new ConnectionSupplier(ConnectionSupplier.FILE));
     }
 
     @After
@@ -136,7 +140,31 @@ public class dbUtils {
         System.out.println("Deleting stock table");
         System.out.println("=====================================");
         if(stockDB.deleteTable()){
-            System.out.println("stock table deleted");
+            System.out.println("stock ta ble deleted");
+        }else{
+            System.out.println("Failed to delete table");
+        }
+    }
+
+    @Test
+    public void deletePurchaseOrders(){
+        System.out.println("=====================================");
+        System.out.println("Deleting Purchase Orders table");
+        System.out.println("=====================================");
+        if(purchaseOrderDB.deleteTable()){
+            System.out.println("purchase order table deleted");
+        }else{
+            System.out.println("Failed to delete table");
+        }
+    }
+
+    @Test
+    public void deleteGoodsOrderTable(){
+        System.out.println("=====================================");
+        System.out.println("Deleting Goods Orders table");
+        System.out.println("=====================================");
+        if(goodsOrderDB.deleteTable()){
+            System.out.println("Goods order table deleted");
         }else{
             System.out.println("Failed to delete table");
         }

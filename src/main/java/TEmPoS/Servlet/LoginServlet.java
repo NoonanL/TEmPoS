@@ -70,9 +70,9 @@ public class LoginServlet extends HttpServlet{
                     session.setAttribute("mySession", session.getId());
                     //setting session expiry
                     session.setMaxInactiveInterval(30 * 1);
-                    Cookie userName = new Cookie("user", username);
-                    userName.setMaxAge(30 * 1);
-                    response.addCookie(userName);
+                    Cookie sessionId = new Cookie("session", session.getId());
+                    sessionId.setMaxAge(30 * 1);
+                    response.addCookie(sessionId);
                     Logger.login("User logged in: " + session.getAttribute("user").toString() + " " + session.getAttribute("mySession").toString());
 
                 } else {

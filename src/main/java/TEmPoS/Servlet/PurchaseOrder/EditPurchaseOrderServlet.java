@@ -48,74 +48,74 @@ public class EditPurchaseOrderServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-
-        /**
-         * Check request is authorised
-         */
-        if (!ValidationFilter.authorizedRequest(request)) {
-            System.out.println("Unauthorised user request from " + request.getRemoteAddr());
-            Logger.request("Unauthorised Request: " + request.getSession());
-            response.sendError((HttpServletResponse.SC_UNAUTHORIZED));
-        } else {
-
-            /**
-             * Check input is valid
-             * Must successfully convert to JSON
-             * Must contain required Parameters
-             */
-            JSONObject input = ValidationFilter.isValid(request, requiredParams);
-            JSONObject responseJson = new JSONObject();
-
-            /**
-             * If Verified input is not null:
-             */
-            if (input != null) {
-                String oldVal = "";
-                String requestUser = input.getString("requestUser");
-
-                JSONObject oldValJson = h2PurchaseOrder.getPurchaseOrderByUID(Integer.parseInt(input.getString("id")));
-                for (Iterator it = oldValJson.keys(); it.hasNext(); ) {
-                    String json = it.next().toString();
-                    if (!json.equals("connection") && !json.equals("error") && !json.equals("response")) {
-                        JSONObject userJson = (oldValJson.getJSONObject(json));
-                        oldVal = userJson.getString("id");
-
-                    }
-                }
-                //System.out.println("Old value is " + oldVal + ", and new value will be " + newVal + ".");
-
-                PurchaseOrder newPurchaseOrder = new PurchaseOrder();
-                newPurchaseOrder.setId(input.getString("id"));
-                newPurchaseOrder.setProductId(input.getString("productId"));
-                newPurchaseOrder.setSKU(input.getString("SKU"));
-                newPurchaseOrder.setQuantity(Integer.parseInt(input.getString("quantity")));
-                newPurchaseOrder.setBranchId(input.getString("branchId"));
-                newPurchaseOrder.setStatus(input.getString("status"));
-
-                if (h2User.isRegistered(requestUser)) {
-                    try {
-                        if (h2PurchaseOrder.editPurchaseOrder(newPurchaseOrder)) {
-                            responseJson.put("response", "OK");
-                            responseJson.put("error", "None.");
-                        } else {
-                            //System.out.println("Error creating user");
-                            responseJson.put("response", "false");
-                            responseJson.put("error", "Error editing purchase order.");
-                        }
-
-                    } catch (SQLException e) {
-                        e.printStackTrace();
-                    }
-                }
-            } else {
-                responseJson.put("response", "false");
-                responseJson.put("error", "Missing required fields.");
-            }
-
-            response.setContentType("application/json");
-            PrintWriter out = response.getWriter();
-            out.print(responseJson);
-            out.flush();
-        }
+//
+//        /**
+//         * Check request is authorised
+//         */
+//        if (!ValidationFilter.authorizedRequest(request)) {
+//            System.out.println("Unauthorised user request from " + request.getRemoteAddr());
+//            Logger.request("Unauthorised Request: " + request.getSession());
+//            response.sendError((HttpServletResponse.SC_UNAUTHORIZED));
+//        } else {
+//
+//            /**
+//             * Check input is valid
+//             * Must successfully convert to JSON
+//             * Must contain required Parameters
+//             */
+//            JSONObject input = ValidationFilter.isValid(request, requiredParams);
+//            JSONObject responseJson = new JSONObject();
+//
+//            /**
+//             * If Verified input is not null:
+//             */
+//            if (input != null) {
+//                String oldVal = "";
+//                String requestUser = input.getString("requestUser");
+//
+//                JSONObject oldValJson = h2PurchaseOrder.getPurchaseOrderByUID(Integer.parseInt(input.getString("id")));
+//                for (Iterator it = oldValJson.keys(); it.hasNext(); ) {
+//                    String json = it.next().toString();
+//                    if (!json.equals("connection") && !json.equals("error") && !json.equals("response")) {
+//                        JSONObject userJson = (oldValJson.getJSONObject(json));
+//                        oldVal = userJson.getString("id");
+//
+//                    }
+//                }
+//                //System.out.println("Old value is " + oldVal + ", and new value will be " + newVal + ".");
+//
+//                PurchaseOrder newPurchaseOrder = new PurchaseOrder();
+//                newPurchaseOrder.setId(input.getString("id"));
+////                newPurchaseOrder.setProductId(input.getString("productId"));
+////                newPurchaseOrder.setSKU(input.getString("SKU"));
+////                newPurchaseOrder.setQuantity(Integer.parseInt(input.getString("quantity")));
+//                newPurchaseOrder.setBranchId(input.getString("branchId"));
+//                newPurchaseOrder.setStatus(input.getString("status"));
+//
+//                if (h2User.isRegistered(requestUser)) {
+//                    try {
+//                        if (h2PurchaseOrder.editPurchaseOrder(newPurchaseOrder)) {
+//                            responseJson.put("response", "OK");
+//                            responseJson.put("error", "None.");
+//                        } else {
+//                            //System.out.println("Error creating user");
+//                            responseJson.put("response", "false");
+//                            responseJson.put("error", "Error editing purchase order.");
+//                        }
+//
+//                    } catch (SQLException e) {
+//                        e.printStackTrace();
+//                    }
+//                }
+//            } else {
+//                responseJson.put("response", "false");
+//                responseJson.put("error", "Missing required fields.");
+//            }
+//
+//            response.setContentType("application/json");
+//            PrintWriter out = response.getWriter();
+//            out.print(responseJson);
+//            out.flush();
+//        }
     }
 }

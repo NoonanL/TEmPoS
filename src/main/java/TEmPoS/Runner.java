@@ -22,11 +22,14 @@ import TEmPoS.Servlet.PurchaseOrder.EditPurchaseOrderServlet;
 import TEmPoS.Servlet.PurchaseOrder.GetPurchaseOrdersServlet;
 import TEmPoS.Servlet.Stock.*;
 import TEmPoS.Servlet.User.*;
+import TEmPoS.Util.TextReader;
 import TEmPoS.db.*;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.DefaultServlet;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
+
+import java.util.ArrayList;
 
 public class Runner {
 
@@ -40,6 +43,7 @@ public class Runner {
     private H2Stock stockDB;
     private H2PurchaseOrder purchaseOrderDB;
     private static final int PORT = 9001;
+    public static ArrayList<String> ipWhiteList;
 
     private Runner() {
 
@@ -52,8 +56,9 @@ public class Runner {
         distributorsDB = new H2Distributors(new ConnectionSupplier(ConnectionSupplier.FILE));
         stockDB = new H2Stock(new ConnectionSupplier(ConnectionSupplier.FILE));
         purchaseOrderDB = new H2PurchaseOrder(new ConnectionSupplier(ConnectionSupplier.FILE));
-
+        ipWhiteList = TextReader.getValidIpList();
     }
+
 
     private void start() throws Exception {
 

@@ -1,11 +1,15 @@
 package TEmPoS.Util;
 
+import TEmPoS.Runner;
 import org.json.JSONObject;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 
 public class ValidationFilter {
@@ -26,7 +30,8 @@ public class ValidationFilter {
 
     public static boolean authorizedRequest(HttpServletRequest request) {
 
-        ArrayList<String> ipWhitelist = TextReader.getValidIpList();
+
+        ArrayList<String> ipWhitelist = Runner.ipWhiteList;
 
         if (!ipWhitelist.contains(request.getRemoteAddr())) {
             //System.out.println("Rejected IP");
@@ -35,10 +40,22 @@ public class ValidationFilter {
             //System.out.println("IP Accepted");
             String secret = request.getHeader("secret");
             if(secret.equals("I am the server's secret!")){
+
+                //Map<String, List<String>> headers = request.getHeaders();
+                //Cookie cookie[] = request.getCookies();
+
+               // for(Cookie s: cookie){
+                    //System.out.println(s.getValue());
+                    //if(s.)
+                    //cookieVals.addAll(Arrays.asList(splitline));
+                //}
+
                 return true;
             }else{
                 return false;
             }
+
+
 
         }
 

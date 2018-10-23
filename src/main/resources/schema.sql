@@ -64,10 +64,14 @@ CREATE TABLE IF NOT EXISTS distributors (
 
 CREATE TABLE IF NOT EXISTS purchaseOrders (
   id int AUTO_INCREMENT PRIMARY KEY,
-  productId int,
-  SKU VARCHAR(32),
-  quantity int,
   branchId VARCHAR(32),
   status VARCHAR(32),
   UID VARCHAR(64)
 );
+
+CREATE TABLE IF NOT EXISTS goodsOrder (
+  id int AUTO_INCREMENT PRIMARY KEY,
+  UID VARCHAR(64),
+  productId int,
+  quantity int
+)
