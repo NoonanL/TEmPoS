@@ -32,6 +32,7 @@ public class CreateGoodsOrderServlet extends HttpServlet {
 
         requiredParams.put("UID", "String");
         requiredParams.put("productId", "String");
+        requiredParams.put("quantity", "String");
         requiredParams.put("status", "String");
         requiredParams.put("requestUser", "String");
     }
@@ -69,15 +70,15 @@ public class CreateGoodsOrderServlet extends HttpServlet {
                 newGoodsOrder.setProductId(input.getString("productId"));
                 newGoodsOrder.setUID(input.getString("UID"));
                 newGoodsOrder.setStatus(input.getString("status"));
-
+                newGoodsOrder.setQuantity(input.getString("quantity"));
                 String requestUser = input.getString("requestUser");
 
                 if (h2User.isRegistered(requestUser)) {
                     try {
-                        if (h2GoodsOrder.existingOrder(newGoodsOrder.getUID())) {
-                            responseJson.put("response", "false");
-                            responseJson.put("error", "Goods Order not unique.");
-                        } else {
+//                        if (h2GoodsOrder.existingOrder(newGoodsOrder.getUID())) {
+//                            responseJson.put("response", "false");
+//                            responseJson.put("error", "Goods Order not unique.");
+//                        } else {
                             if (h2GoodsOrder.createGoodsOrder(newGoodsOrder)) {
                                 responseJson.put("response", "OK");
                                 responseJson.put("error", "None.");
@@ -85,7 +86,7 @@ public class CreateGoodsOrderServlet extends HttpServlet {
                                 responseJson.put("response", "false");
                                 responseJson.put("error", "Failed to create new goods order.");
                             }
-                        }
+                       // }
                     } catch (SQLException e) {
                         e.printStackTrace();
                     }

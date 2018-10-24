@@ -27,7 +27,7 @@ public class H2PurchaseOrderTest {
     public void setUp() throws Exception {
         db = new H2PurchaseOrder(new ConnectionSupplier(ConnectionSupplier.FILE));
 
-        testPO.setUID("123");
+        testPO.setUID("f0d007ea-7ec3-4c46-94dd-2d851ed25a18");
         testPO.setStatus("Pending");
         testPO.setBranchId("Test Branch");
 

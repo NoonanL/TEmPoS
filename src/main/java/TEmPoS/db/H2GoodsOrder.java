@@ -102,6 +102,23 @@ public class H2GoodsOrder extends H2Base{
         }
     }
 
+    /**
+     * deletes a customer record by their id
+     * @param id the id of the customer to delete
+     * @return boolean for success/failure
+     */
+    public boolean deleteGoodsOrderById(int id) {
+        final String DELETE_ORDER_QUERY = "DELETE FROM goodsOrder WHERE id=?";
+        try (PreparedStatement ps = getConnection().prepareStatement(DELETE_ORDER_QUERY)) {
+            ps.setInt(1, id);
+            ps.execute();
+            return true;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
 
     private JSONObject parseOrders(ResultSet rs) throws SQLException {
         JSONObject orderList = new JSONObject();

@@ -399,5 +399,43 @@
     </servlet-mapping>
 
 
+    <!--GOODS ORDER SERVLETS-->
+    <servlet>
+        <servlet-name>CreateGoodsOrderServlet</servlet-name>
+        <servlet-class>TEmPoS.Servlet.GoodsOrder.CreateGoodsOrderServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CreateGoodsOrderServlet</servlet-name>
+        <url-pattern>/createGoodsOrderServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>EditGoodsOrderServlet</servlet-name>
+        <servlet-class>TEmPoS.Servlet.GoodsOrder.EditGoodsOrderServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EditGoodsOrderServlet</servlet-name>
+        <url-pattern>/editGoodsOrderServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>GetGoodsOrderServlet</servlet-name>
+        <servlet-class>TEmPoS.Servlet.GoodsOrder.GetGoodsOrderServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetGoodsOrderServlet</servlet-name>
+        <url-pattern>/getGoodsOrderServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeleteGoodsOrderServlet</servlet-name>
+        <servlet-class>TEmPoS.Servlet.GoodsOrder.DeleteGoodsOrderServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteGoodsOrderServlet</servlet-name>
+        <url-pattern>/deleteGoodsOrderServlet</url-pattern>
+    </servlet-mapping>
+
+
 
 </web-app>

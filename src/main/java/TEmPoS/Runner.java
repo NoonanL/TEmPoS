@@ -15,6 +15,10 @@ import TEmPoS.Servlet.Distributors.CreateDistributorServlet;
 import TEmPoS.Servlet.Distributors.DeleteDistributorServlet;
 import TEmPoS.Servlet.Distributors.EditDistributorServlet;
 import TEmPoS.Servlet.Distributors.GetDistributorsServlet;
+import TEmPoS.Servlet.GoodsOrder.CreateGoodsOrderServlet;
+import TEmPoS.Servlet.GoodsOrder.DeleteGoodsOrderServlet;
+import TEmPoS.Servlet.GoodsOrder.EditGoodsOrderServlet;
+import TEmPoS.Servlet.GoodsOrder.GetGoodsOrderServlet;
 import TEmPoS.Servlet.Product.*;
 import TEmPoS.Servlet.PurchaseOrder.CreatePurchaseOrderServlet;
 import TEmPoS.Servlet.PurchaseOrder.DeletePurchaseOrderServlet;
@@ -218,6 +222,18 @@ public class Runner {
         handler.addServlet(new ServletHolder(getPurchaseOrdersServlet), "/getPurchaseOrdersServlet");
 
 
+        //GOODS ORDER SERVLETS
+        CreateGoodsOrderServlet createGoodsOrderServlet = new CreateGoodsOrderServlet(goodsOrderDB,userDB);
+        handler.addServlet(new ServletHolder(createGoodsOrderServlet), "/createGoodsOrderServlet");
+
+        GetGoodsOrderServlet getGoodsOrderServlet = new GetGoodsOrderServlet(goodsOrderDB,userDB);
+        handler.addServlet(new ServletHolder(getGoodsOrderServlet), "/getGoodsOrderServlet");
+
+        EditGoodsOrderServlet editGoodsOrderServlet = new EditGoodsOrderServlet(goodsOrderDB,userDB);
+        handler.addServlet(new ServletHolder(editGoodsOrderServlet), "/editGoodsOrderServlet");
+
+        DeleteGoodsOrderServlet deleteGoodsOrderServlet = new DeleteGoodsOrderServlet(goodsOrderDB,userDB);
+        handler.addServlet(new ServletHolder(deleteGoodsOrderServlet), "/deleteGoodsOrderServlet");
 
         /*
         sets default servlet path.

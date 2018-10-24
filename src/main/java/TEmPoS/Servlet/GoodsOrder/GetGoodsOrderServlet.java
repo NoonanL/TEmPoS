@@ -26,7 +26,7 @@ public class GetGoodsOrderServlet extends HttpServlet {
     public GetGoodsOrderServlet(H2GoodsOrder h2GoodsOrder, H2User h2User){
         this.h2GoodsOrder = h2GoodsOrder;
         this.h2User = h2User;
-
+        requiredParams.put("UID", "String");
         requiredParams.put("requestUser", "String");
     }
 
@@ -61,7 +61,7 @@ public class GetGoodsOrderServlet extends HttpServlet {
                 String requestUser = input.getString("requestUser");
 
                 if (h2User.isRegistered(requestUser)) {
-                    responseJson = h2GoodsOrder.getGoodsOrders();
+                    responseJson = h2GoodsOrder.getGoodsOrderByUid(input.getString("UID"));
                     responseJson.put("response", "OK");
                     responseJson.put("error", "None.");
                 }
