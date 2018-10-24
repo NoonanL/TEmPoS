@@ -93,6 +93,15 @@ public class H2GoodsOrder extends H2Base{
         return poList;
     }
 
+    public boolean existingOrder(String orderUID) throws SQLException{
+        final String GET_ORDER_QUERY = "SELECT * FROM goodsOrder WHERE UID=?";
+        try (PreparedStatement ps = getConnection().prepareStatement(GET_ORDER_QUERY)) {
+            ps.setString(1, orderUID);
+            ResultSet rs = ps.executeQuery();
+            return rs.next();
+        }
+    }
+
 
     private JSONObject parseOrders(ResultSet rs) throws SQLException {
         JSONObject orderList = new JSONObject();
