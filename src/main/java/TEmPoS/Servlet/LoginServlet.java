@@ -1,9 +1,12 @@
 package TEmPoS.Servlet;
 
-import TEmPoS.Util.Logger;
+
+import TEmPoS.Runner;
 import TEmPoS.Util.ValidationFilter;
 import TEmPoS.db.H2User;
 import org.json.JSONObject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
@@ -15,6 +18,7 @@ public class LoginServlet extends HttpServlet{
 
     private H2User h2User;
     private Map<String, String> requiredParams = new HashMap<>();
+    private static final Logger logger = LoggerFactory.getLogger(LoginServlet.class);
 
     public LoginServlet() {
     }
@@ -34,14 +38,17 @@ public class LoginServlet extends HttpServlet{
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-
+        logger.info("User attempting to login.");
         /**
          * Check request is authorised
          */
         if (!ValidationFilter.authorizedRequest(request)) {
             System.out.println("Unauthorised user request from " + request.getRemoteAddr());
-            Logger.request("Unauthorised Request: " + request.getSession());
-            response.sendError((HttpServletResponse.SC_UNAUTHORIZED));
+            //Logger.request("Unauthorised Request: " + request.getSession());
+            //response.sendError((HttpServletResponse.SC_UNAUTHORIZED));
+            JSONObject responseJson = new JSONObject();
+            responseJson.put("auth", "false");
+            responseJson.put("response", "false");
         }
 
         else {
@@ -58,7 +65,6 @@ public class LoginServlet extends HttpServlet{
              * If Verified input is not null:
              */
             if (input != null) {
-
                 String username = input.getString("username");
                 String password = input.getString("password");
 
@@ -73,9 +79,11 @@ public class LoginServlet extends HttpServlet{
                     Cookie sessionId = new Cookie("session", session.getId());
                     sessionId.setMaxAge(30 * 1);
                     response.addCookie(sessionId);
-                    Logger.login("User logged in: " + session.getAttribute("user").toString() + " " + session.getAttribute("mySession").toString());
+                    System.out.println(responseJson);
+                    //Logger.login("User logged in: " + session.getAttribute("user").toString() + " " + session.getAttribute("mySession").toString());
 
                 } else {
+                    System.out.println(responseJson);
                     responseJson.put("auth", "false");
                 }
 
@@ -83,7 +91,6 @@ public class LoginServlet extends HttpServlet{
                 responseJson.put("response", "false");
                 responseJson.put("error", "Missing required fields.");
             }
-
 
             response.setContentType("application/json");
             PrintWriter out = response.getWriter();

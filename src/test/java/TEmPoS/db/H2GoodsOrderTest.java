@@ -80,11 +80,11 @@ public class H2GoodsOrderTest {
 
     @Test
     public void getGoodsOrders() {
-
         System.out.println("=====================================");
         System.out.println("Testing get all goods Order");
         System.out.println("=====================================");
         System.out.println(db.getGoodsOrders());
+
 
 
     }

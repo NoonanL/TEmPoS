@@ -32,6 +32,8 @@ import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.DefaultServlet;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 
@@ -50,6 +52,8 @@ public class Runner {
     private static final int PORT = 9001;
     public static ArrayList<String> ipWhiteList;
 
+//    private static final Logger logger = LoggerFactory.getLogger(Runner.class);
+
     private Runner() {
 
         userDB = new H2User(new ConnectionSupplier(ConnectionSupplier.FILE));
@@ -67,6 +71,12 @@ public class Runner {
 
 
     private void start() throws Exception {
+
+//        logger.debug("Server started - Testing Debug!");
+//        logger.error("Error test Yo");
+
+//        Logger rollingFileLogger = LoggerFactory.getLogger("rollingFileLogger");
+//        rollingFileLogger.info("Testing rolling file logger");
 
         Server server = new Server(PORT);
 

@@ -1,0 +1,32 @@
+<configuration>
+
+    <!--<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">-->
+        <!--<encoder>-->
+            <!--<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n</pattern>-->
+        <!--</encoder>-->
+    <!--</appender>-->
+    <!--&lt;!&ndash;<root level="debug">&ndash;&gt;-->
+        <!--<appender-ref ref="STDOUT" />-->
+    <!--</root>-->
+
+    <appender name="ROLLING" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>mylog.txt</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <!-- rollover daily -->
+            <fileNamePattern>TEmPoS-%d{yyyy-MM-dd}.%i.txt</fileNamePattern>
+            <!-- each file should be at most 100MB, keep 60 days worth of history, but at most 20GB -->
+            <maxFileSize>100MB</maxFileSize>
+            <maxHistory>60</maxHistory>
+            <totalSizeCap>20GB</totalSizeCap>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%msg%n</pattern>
+        </encoder>
+    </appender>
+
+
+    <root level="DEBUG">
+        <appender-ref ref="ROLLING" />
+    </root>
+
+</configuration>

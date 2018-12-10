@@ -72,7 +72,7 @@ public class GetCustomersServlet extends HttpServlet {
                 responseJson.put("response", "false");
                 responseJson.put("error", "Missing required fields.");
             }
-            System.out.println("attempt made and response is " + responseJson);
+            //System.out.println("attempt made and response is " + responseJson);
             response.setContentType("application/json");
             PrintWriter out = response.getWriter();
             out.print(responseJson);
