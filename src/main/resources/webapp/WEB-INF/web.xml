@@ -436,6 +436,16 @@
         <url-pattern>/deleteGoodsOrderServlet</url-pattern>
     </servlet-mapping>
 
+    <!--TRANSACTION SERVLETS-->
+    <servlet>
+        <servlet-name>CreateTransactionServlet</servlet-name>
+        <servlet-class>TEmPoS.Servlet.Transaction.CreateTransactionServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CreateTransactionServlet</servlet-name>
+        <url-pattern>/createTransactionServlet</url-pattern>
+    </servlet-mapping>
+
 
 
 </web-app>

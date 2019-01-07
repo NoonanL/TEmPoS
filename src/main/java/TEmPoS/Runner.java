@@ -25,6 +25,7 @@ import TEmPoS.Servlet.PurchaseOrder.DeletePurchaseOrderServlet;
 import TEmPoS.Servlet.PurchaseOrder.EditPurchaseOrderServlet;
 import TEmPoS.Servlet.PurchaseOrder.GetPurchaseOrdersServlet;
 import TEmPoS.Servlet.Stock.*;
+import TEmPoS.Servlet.Transaction.CreateTransactionServlet;
 import TEmPoS.Servlet.User.*;
 import TEmPoS.Util.TextReader;
 import TEmPoS.db.*;
@@ -49,6 +50,7 @@ public class Runner {
     private H2Stock stockDB;
     private H2PurchaseOrder purchaseOrderDB;
     private H2GoodsOrder goodsOrderDB;
+    private H2Transactions transactionsDB;
     private static final int PORT = 9001;
     public static ArrayList<String> ipWhiteList;
 
@@ -66,6 +68,7 @@ public class Runner {
         stockDB = new H2Stock(new ConnectionSupplier(ConnectionSupplier.FILE));
         purchaseOrderDB = new H2PurchaseOrder(new ConnectionSupplier(ConnectionSupplier.FILE));
         goodsOrderDB = new H2GoodsOrder(new ConnectionSupplier(ConnectionSupplier.FILE));
+        transactionsDB = new H2Transactions(new ConnectionSupplier(ConnectionSupplier.FILE));
         ipWhiteList = TextReader.getValidIpList();
     }
 
@@ -244,6 +247,11 @@ public class Runner {
 
         DeleteGoodsOrderServlet deleteGoodsOrderServlet = new DeleteGoodsOrderServlet(goodsOrderDB,userDB);
         handler.addServlet(new ServletHolder(deleteGoodsOrderServlet), "/deleteGoodsOrderServlet");
+
+        //TRANSACTION SERVLETS
+        CreateTransactionServlet createTransactionServlet = new CreateTransactionServlet(transactionsDB,userDB);
+        handler.addServlet(new ServletHolder(createTransactionServlet), "/createTransactionServlet");
+
 
         /*
         sets default servlet path.
