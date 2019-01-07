@@ -19154,3 +19154,475 @@ org.eclipse.jetty.server.session.HouseKeeper@35ef1869[interval=600000, ownschedu
 org.eclipse.jetty.server.session.SessionHandler715521683==dftMaxIdleSec=-1 scavenging sessions
 org.eclipse.jetty.server.session.SessionHandler715521683==dftMaxIdleSec=-1 scavenging session ids []
 org.eclipse.jetty.server.session.DefaultSessionCache@30ee2816[evict=-1,removeUnloadable=false,saveOnCreate=false,saveOnInactiveEvict=false] checking expiration on []
+Logging to Logger[org.eclipse.jetty.util.log] via org.eclipse.jetty.util.log.Slf4jLog
+Logging initialized @421ms to org.eclipse.jetty.util.log.Slf4jLog
+org.eclipse.jetty.server.Server@365c30cc[9.4.9.v20180320] added {QueuedThreadPool[qtp1313532469]@4e4aea35{STOPPED,8<=0<=200,i=0,q=0},AUTO}
+HttpConnectionFactory@226a82c4[HTTP/1.1] added {HttpConfiguration@731f8236{32768/8192,8192/8192,https://:0,[]},POJO}
+ServerConnector@2b4a2ec7{null,[]}{0.0.0.0:0} added {org.eclipse.jetty.server.Server@365c30cc[9.4.9.v20180320],UNMANAGED}
+ServerConnector@2b4a2ec7{null,[]}{0.0.0.0:0} added {QueuedThreadPool[qtp1313532469]@4e4aea35{STOPPED,8<=0<=200,i=0,q=0},AUTO}
+ServerConnector@2b4a2ec7{null,[]}{0.0.0.0:0} added {org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@1b68b9a4,AUTO}
+ServerConnector@2b4a2ec7{null,[]}{0.0.0.0:0} added {org.eclipse.jetty.io.ArrayByteBufferPool@564718df,POJO}
+ServerConnector@2b4a2ec7{null,[http/1.1]}{0.0.0.0:0} added {HttpConnectionFactory@226a82c4[HTTP/1.1],AUTO}
+ServerConnector@2b4a2ec7{HTTP/1.1,[http/1.1]}{0.0.0.0:0} added HttpConnectionFactory@226a82c4[HTTP/1.1]
+ServerConnector@2b4a2ec7{HTTP/1.1,[http/1.1]}{0.0.0.0:0} added {SelectorManager@ServerConnector@2b4a2ec7{HTTP/1.1,[http/1.1]}{0.0.0.0:0},MANAGED}
+org.eclipse.jetty.server.Server@365c30cc[9.4.9.v20180320] added {ServerConnector@2b4a2ec7{HTTP/1.1,[http/1.1]}{0.0.0.0:9001},AUTO}
+Adding Decorator: org.eclipse.jetty.util.DeprecationWarning@214b199c
+org.eclipse.jetty.server.Server@365c30cc[9.4.9.v20180320] added {o.e.j.s.ServletContextHandler@12d3a4e9{/,null,UNAVAILABLE},MANAGED}
+o.e.j.s.ServletContextHandler@12d3a4e9{/,null,UNAVAILABLE} added {org.eclipse.jetty.server.session.SessionHandler1197365356==dftMaxIdleSec=-1,MANAGED}
+org.eclipse.jetty.server.session.SessionHandler1197365356==dftMaxIdleSec=-1 added {org.eclipse.jetty.servlet.ServletHandler@15761df8,MANAGED}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {TEmPoS.Servlet.LoginServlet-7ff95560@12862e2e==TEmPoS.Servlet.LoginServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {[/loginServlet]=>TEmPoS.Servlet.LoginServlet-7ff95560,POJO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {TEmPoS.Servlet.User.IsAdminServlet-290d210d@7149f497==TEmPoS.Servlet.User.IsAdminServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {[/isAdminServlet]=>TEmPoS.Servlet.User.IsAdminServlet-290d210d,POJO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {TEmPoS.Servlet.User.CreateUserServlet-1d76aeea@f6d05785==TEmPoS.Servlet.User.CreateUserServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {[/createUserServlet]=>TEmPoS.Servlet.User.CreateUserServlet-1d76aeea,POJO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {TEmPoS.Servlet.User.GetUsersServlet-78dd667e@ae7e7d2d==TEmPoS.Servlet.User.GetUsersServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {[/getUsersServlet]=>TEmPoS.Servlet.User.GetUsersServlet-78dd667e,POJO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {TEmPoS.Servlet.User.DeleteUserServlet-10db82ae@df65c07d==TEmPoS.Servlet.User.DeleteUserServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {[/deleteUserServlet]=>TEmPoS.Servlet.User.DeleteUserServlet-10db82ae,POJO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {TEmPoS.Servlet.User.EditUserServlet-501edcf1@2b80af5a==TEmPoS.Servlet.User.EditUserServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {[/editUserServlet]=>TEmPoS.Servlet.User.EditUserServlet-501edcf1,POJO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {TEmPoS.Servlet.Customer.CreateCustomerServlet-78b729e6@b05f7c21==TEmPoS.Servlet.Customer.CreateCustomerServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {[/createCustomerServlet]=>TEmPoS.Servlet.Customer.CreateCustomerServlet-78b729e6,POJO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {TEmPoS.Servlet.Customer.DeleteCustomerServlet-6b4a4e18@cb005d3==TEmPoS.Servlet.Customer.DeleteCustomerServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {[/deleteCustomerServlet]=>TEmPoS.Servlet.Customer.DeleteCustomerServlet-6b4a4e18,POJO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {TEmPoS.Servlet.Customer.EditCustomerServlet-27c86f2d@92d0885d==TEmPoS.Servlet.Customer.EditCustomerServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {[/editCustomerServlet]=>TEmPoS.Servlet.Customer.EditCustomerServlet-27c86f2d,POJO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {TEmPoS.Servlet.Customer.GetCustomersServlet-197d671@bf4274e3==TEmPoS.Servlet.Customer.GetCustomersServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {[/getCustomersServlet]=>TEmPoS.Servlet.Customer.GetCustomersServlet-197d671,POJO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {TEmPoS.Servlet.Customer.SearchCustomerServlet-402e37bc@ec26a433==TEmPoS.Servlet.Customer.SearchCustomerServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {[/searchCustomerServlet]=>TEmPoS.Servlet.Customer.SearchCustomerServlet-402e37bc,POJO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {TEmPoS.Servlet.Configuration.BranchesServlet-79ad8b2f@ad4cddf2==TEmPoS.Servlet.Configuration.BranchesServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {[/branchesServlet]=>TEmPoS.Servlet.Configuration.BranchesServlet-79ad8b2f,POJO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {TEmPoS.Servlet.Product.CreateProductServlet-1df82230@ccc73c3f==TEmPoS.Servlet.Product.CreateProductServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {[/createProductServlet]=>TEmPoS.Servlet.Product.CreateProductServlet-1df82230,POJO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {TEmPoS.Servlet.Product.DeleteProductServlet-22635ba0@14d32067==TEmPoS.Servlet.Product.DeleteProductServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {[/deleteProductServlet]=>TEmPoS.Servlet.Product.DeleteProductServlet-22635ba0,POJO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {TEmPoS.Servlet.Product.EditProductServlet-13c10b87@20cebe30==TEmPoS.Servlet.Product.EditProductServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {[/editProductServlet]=>TEmPoS.Servlet.Product.EditProductServlet-13c10b87,POJO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {TEmPoS.Servlet.Product.GetProductsServlet-6a01e23@6ec7fa36==TEmPoS.Servlet.Product.GetProductsServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {[/getProductsServlet]=>TEmPoS.Servlet.Product.GetProductsServlet-6a01e23,POJO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {TEmPoS.Servlet.Product.SearchProductsServlet-5a955565@7b657759==TEmPoS.Servlet.Product.SearchProductsServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {[/searchProductsServlet]=>TEmPoS.Servlet.Product.SearchProductsServlet-5a955565,POJO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {TEmPoS.Servlet.Product.GetProductByIdServlet-6293abcc@f39fc628==TEmPoS.Servlet.Product.GetProductByIdServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {[/getProductByIdServlet]=>TEmPoS.Servlet.Product.GetProductByIdServlet-6293abcc,POJO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {TEmPoS.Servlet.Stock.CreateStockServlet-7995092a@fc591841==TEmPoS.Servlet.Stock.CreateStockServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {[/createStockServlet]=>TEmPoS.Servlet.Stock.CreateStockServlet-7995092a,POJO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {TEmPoS.Servlet.Stock.GetStockServlet-7fc2413d@f36fd58b==TEmPoS.Servlet.Stock.GetStockServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {[/getStockServlet]=>TEmPoS.Servlet.Stock.GetStockServlet-7fc2413d,POJO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {TEmPoS.Servlet.Stock.IncrementStockServlet-f8c1ddd@cda2c75e==TEmPoS.Servlet.Stock.IncrementStockServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {[/incrementStockServlet]=>TEmPoS.Servlet.Stock.IncrementStockServlet-f8c1ddd,POJO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {TEmPoS.Servlet.Stock.DecrementStockServlet-70be0a2b@b70ee41f==TEmPoS.Servlet.Stock.DecrementStockServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {[/decrementStockServlet]=>TEmPoS.Servlet.Stock.DecrementStockServlet-70be0a2b,POJO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {TEmPoS.Servlet.Stock.EditStockServlet-2133814f@f56d6e47==TEmPoS.Servlet.Stock.EditStockServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {[/editStockServlet]=>TEmPoS.Servlet.Stock.EditStockServlet-2133814f,POJO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {TEmPoS.Servlet.Stock.GetStockByBranchServlet-4c15e7fd@e266037b==TEmPoS.Servlet.Stock.GetStockByBranchServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {[/getStockByBranchServlet]=>TEmPoS.Servlet.Stock.GetStockByBranchServlet-4c15e7fd,POJO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {TEmPoS.Servlet.Brands.CreateBrandServlet-23986957@21eb4cd5==TEmPoS.Servlet.Brands.CreateBrandServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {[/createBrandServlet]=>TEmPoS.Servlet.Brands.CreateBrandServlet-23986957,POJO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {TEmPoS.Servlet.Brands.DeleteBrandServlet-23f7d05d@1d5c3f6e==TEmPoS.Servlet.Brands.DeleteBrandServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {[/deleteBrandServlet]=>TEmPoS.Servlet.Brands.DeleteBrandServlet-23f7d05d,POJO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {TEmPoS.Servlet.Brands.EditBrandServlet-1e730495@8afec252==TEmPoS.Servlet.Brands.EditBrandServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {[/editBrandServlet]=>TEmPoS.Servlet.Brands.EditBrandServlet-1e730495,POJO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {TEmPoS.Servlet.Brands.GetBrandsServlet-7d3a22a9@28518c3a==TEmPoS.Servlet.Brands.GetBrandsServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {[/getBrandsServlet]=>TEmPoS.Servlet.Brands.GetBrandsServlet-7d3a22a9,POJO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {TEmPoS.Servlet.Distributors.CreateDistributorServlet-1d082e88@1a1e89de==TEmPoS.Servlet.Distributors.CreateDistributorServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {[/createDistributorServlet]=>TEmPoS.Servlet.Distributors.CreateDistributorServlet-1d082e88,POJO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {TEmPoS.Servlet.Distributors.DeleteDistributorServlet-60704c@d9439643==TEmPoS.Servlet.Distributors.DeleteDistributorServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {[/deleteDistributorServlet]=>TEmPoS.Servlet.Distributors.DeleteDistributorServlet-60704c,POJO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {TEmPoS.Servlet.Distributors.EditDistributorServlet-6b19b79@ad7ac76e==TEmPoS.Servlet.Distributors.EditDistributorServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {[/editDistributorServlet]=>TEmPoS.Servlet.Distributors.EditDistributorServlet-6b19b79,POJO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {TEmPoS.Servlet.Distributors.GetDistributorsServlet-2a32de6c@39f6e023==TEmPoS.Servlet.Distributors.GetDistributorsServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {[/getDistributorsServlet]=>TEmPoS.Servlet.Distributors.GetDistributorsServlet-2a32de6c,POJO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {TEmPoS.Servlet.Departments.CreateDepartmentServlet-7692d9cc@3c7d13cf==TEmPoS.Servlet.Departments.CreateDepartmentServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {[/createDepartmentServlet]=>TEmPoS.Servlet.Departments.CreateDepartmentServlet-7692d9cc,POJO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {TEmPoS.Servlet.Departments.DeleteDepartmentServlet-75f32542@76ae8c7d==TEmPoS.Servlet.Departments.DeleteDepartmentServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {[/deleteDepartmentServlet]=>TEmPoS.Servlet.Departments.DeleteDepartmentServlet-75f32542,POJO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {TEmPoS.Servlet.Departments.EditDepartmentServlet-7f1302d6@c7e94f75==TEmPoS.Servlet.Departments.EditDepartmentServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {[/editDepartmentServlet]=>TEmPoS.Servlet.Departments.EditDepartmentServlet-7f1302d6,POJO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {TEmPoS.Servlet.Departments.GetDepartmentsServlet-43ee72e6@3830e84a==TEmPoS.Servlet.Departments.GetDepartmentsServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {[/getDepartmentsServlet]=>TEmPoS.Servlet.Departments.GetDepartmentsServlet-43ee72e6,POJO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {TEmPoS.Servlet.PurchaseOrder.CreatePurchaseOrderServlet-23529fee@19276dc4==TEmPoS.Servlet.PurchaseOrder.CreatePurchaseOrderServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {[/createPurchaseOrderServlet]=>TEmPoS.Servlet.PurchaseOrder.CreatePurchaseOrderServlet-23529fee,POJO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {TEmPoS.Servlet.PurchaseOrder.DeletePurchaseOrderServlet-4fe767f3@a2d788dc==TEmPoS.Servlet.PurchaseOrder.DeletePurchaseOrderServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {[/deletePurchaseOrderServlet]=>TEmPoS.Servlet.PurchaseOrder.DeletePurchaseOrderServlet-4fe767f3,POJO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {TEmPoS.Servlet.PurchaseOrder.EditPurchaseOrderServlet-2805c96b@7f8a2818==TEmPoS.Servlet.PurchaseOrder.EditPurchaseOrderServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {[/editPurchaseOrderServlet]=>TEmPoS.Servlet.PurchaseOrder.EditPurchaseOrderServlet-2805c96b,POJO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {TEmPoS.Servlet.PurchaseOrder.GetPurchaseOrdersServlet-184cf7cf@ea97cf4e==TEmPoS.Servlet.PurchaseOrder.GetPurchaseOrdersServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {[/getPurchaseOrdersServlet]=>TEmPoS.Servlet.PurchaseOrder.GetPurchaseOrdersServlet-184cf7cf,POJO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {TEmPoS.Servlet.GoodsOrder.CreateGoodsOrderServlet-2fd6b6c7@327f3141==TEmPoS.Servlet.GoodsOrder.CreateGoodsOrderServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {[/createGoodsOrderServlet]=>TEmPoS.Servlet.GoodsOrder.CreateGoodsOrderServlet-2fd6b6c7,POJO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {TEmPoS.Servlet.GoodsOrder.GetGoodsOrderServlet-5bfa9431@a83ba5c0==TEmPoS.Servlet.GoodsOrder.GetGoodsOrderServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {[/getGoodsOrderServlet]=>TEmPoS.Servlet.GoodsOrder.GetGoodsOrderServlet-5bfa9431,POJO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {TEmPoS.Servlet.GoodsOrder.EditGoodsOrderServlet-5db250b4@4528680d==TEmPoS.Servlet.GoodsOrder.EditGoodsOrderServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {[/editGoodsOrderServlet]=>TEmPoS.Servlet.GoodsOrder.EditGoodsOrderServlet-5db250b4,POJO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {TEmPoS.Servlet.GoodsOrder.DeleteGoodsOrderServlet-223f3642@45030e96==TEmPoS.Servlet.GoodsOrder.DeleteGoodsOrderServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {[/deleteGoodsOrderServlet]=>TEmPoS.Servlet.GoodsOrder.DeleteGoodsOrderServlet-223f3642,POJO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {TEmPoS.Servlet.Transaction.CreateTransactionServlet-38c5cc4c@91cd6b81==TEmPoS.Servlet.Transaction.CreateTransactionServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {[/createTransactionServlet]=>TEmPoS.Servlet.Transaction.CreateTransactionServlet-38c5cc4c,POJO}
+HttpField encoders loaded: [org.eclipse.jetty.http.Http1FieldPreEncoder@229d10bd, org.eclipse.jetty.http2.hpack.HpackFieldPreEncoder@47542153]
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {org.eclipse.jetty.servlet.DefaultServlet-65466a6a@39b3ff36==org.eclipse.jetty.servlet.DefaultServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@15761df8 added {[/]=>org.eclipse.jetty.servlet.DefaultServlet-65466a6a,POJO}
+starting org.eclipse.jetty.server.Server@365c30cc[9.4.9.v20180320]
+org.eclipse.jetty.server.Server@365c30cc[9.4.9.v20180320] added {org.eclipse.jetty.server.handler.ErrorHandler@4386f16,AUTO}
+jetty-9.4.9.v20180320; built: 2018-03-20T12:21:10Z; git: 1f8159b1e4a42d3f79997021ea1609f2fbac6de5; jvm 1.8.0_191-b12
+starting org.eclipse.jetty.server.Server@365c30cc[9.4.9.v20180320]
+starting QueuedThreadPool[qtp1313532469]@4e4aea35{STOPPED,8<=0<=200,i=0,q=0}
+ReservedThreadExecutor@35047d03{s=0/8,p=0}
+QueuedThreadPool[qtp1313532469]@4e4aea35{STARTING,8<=0<=200,i=0,q=0} added {ReservedThreadExecutor@35047d03{s=0/8,p=0},AUTO}
+starting ReservedThreadExecutor@35047d03{s=0/8,p=0}
+STARTED @541ms ReservedThreadExecutor@35047d03{s=0/8,p=0}
+STARTED @541ms QueuedThreadPool[qtp1313532469]@4e4aea35{STARTED,8<=8<=200,i=3,q=0}
+starting o.e.j.s.ServletContextHandler@12d3a4e9{/,null,UNAVAILABLE}
+starting o.e.j.s.ServletContextHandler@12d3a4e9{/,null,STARTING}
+starting org.eclipse.jetty.server.session.SessionHandler1197365356==dftMaxIdleSec=-1
+org.eclipse.jetty.server.session.SessionHandler1197365356==dftMaxIdleSec=-1 added {org.eclipse.jetty.server.session.DefaultSessionCache@6a28ffa4[evict=-1,removeUnloadable=false,saveOnCreate=false,saveOnInactiveEvict=false],AUTO}
+org.eclipse.jetty.server.session.DefaultSessionCache@6a28ffa4[evict=-1,removeUnloadable=false,saveOnCreate=false,saveOnInactiveEvict=false] added {org.eclipse.jetty.server.session.NullSessionDataStore@635eaaf1[passivating=false,graceSec=3600],AUTO}
+starting org.eclipse.jetty.server.session.DefaultSessionIdManager@1139b2f3[worker=null]
+DefaultSessionIdManager workerName=node0
+No SessionScavenger set, using defaults
+org.eclipse.jetty.server.session.DefaultSessionIdManager@1139b2f3[worker=node0] added {org.eclipse.jetty.server.session.HouseKeeper@28eaa59a[interval=600000, ownscheduler=false],MANAGED}
+starting org.eclipse.jetty.server.session.HouseKeeper@28eaa59a[interval=600000, ownscheduler=false]
+starting org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@3427b02d
+STARTED @564ms org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@3427b02d
+Using own scheduler for scavenging
+Scavenging every 600000ms
+STARTED @565ms org.eclipse.jetty.server.session.HouseKeeper@28eaa59a[interval=600000, ownscheduler=true]
+STARTED @565ms org.eclipse.jetty.server.session.DefaultSessionIdManager@1139b2f3[worker=node0]
+org.eclipse.jetty.server.Server@365c30cc[9.4.9.v20180320] added {org.eclipse.jetty.server.session.DefaultSessionIdManager@1139b2f3[worker=node0],MANAGED}
+org.eclipse.jetty.server.session.SessionHandler1197365356==dftMaxIdleSec=-1 added {org.eclipse.jetty.server.session.DefaultSessionIdManager@1139b2f3[worker=node0],UNMANAGED}
+starting org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@708f5957
+STARTED @566ms org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@708f5957
+starting org.eclipse.jetty.server.session.SessionHandler1197365356==dftMaxIdleSec=-1
+starting org.eclipse.jetty.servlet.ServletHandler@15761df8
+Path=/createStockServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.Stock.CreateStockServlet-7995092a[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/createStockServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.Stock.CreateStockServlet-7995092a@fc591841==TEmPoS.Servlet.Stock.CreateStockServlet,jsp=null,order=-1,inst=true] to PathMappings[size=1]
+Path=/createBrandServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.Brands.CreateBrandServlet-23986957[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/createBrandServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.Brands.CreateBrandServlet-23986957@21eb4cd5==TEmPoS.Servlet.Brands.CreateBrandServlet,jsp=null,order=-1,inst=true] to PathMappings[size=2]
+Path=/getDistributorsServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.Distributors.GetDistributorsServlet-2a32de6c[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/getDistributorsServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.Distributors.GetDistributorsServlet-2a32de6c@39f6e023==TEmPoS.Servlet.Distributors.GetDistributorsServlet,jsp=null,order=-1,inst=true] to PathMappings[size=3]
+Path=/createCustomerServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.Customer.CreateCustomerServlet-78b729e6[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/createCustomerServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.Customer.CreateCustomerServlet-78b729e6@b05f7c21==TEmPoS.Servlet.Customer.CreateCustomerServlet,jsp=null,order=-1,inst=true] to PathMappings[size=4]
+Path=/editStockServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.Stock.EditStockServlet-2133814f[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/editStockServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.Stock.EditStockServlet-2133814f@f56d6e47==TEmPoS.Servlet.Stock.EditStockServlet,jsp=null,order=-1,inst=true] to PathMappings[size=5]
+Path=/getProductsServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.Product.GetProductsServlet-6a01e23[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/getProductsServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.Product.GetProductsServlet-6a01e23@6ec7fa36==TEmPoS.Servlet.Product.GetProductsServlet,jsp=null,order=-1,inst=true] to PathMappings[size=6]
+Path=/editCustomerServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.Customer.EditCustomerServlet-27c86f2d[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/editCustomerServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.Customer.EditCustomerServlet-27c86f2d@92d0885d==TEmPoS.Servlet.Customer.EditCustomerServlet,jsp=null,order=-1,inst=true] to PathMappings[size=7]
+Path=/editBrandServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.Brands.EditBrandServlet-1e730495[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/editBrandServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.Brands.EditBrandServlet-1e730495@8afec252==TEmPoS.Servlet.Brands.EditBrandServlet,jsp=null,order=-1,inst=true] to PathMappings[size=8]
+Path=/loginServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.LoginServlet-7ff95560[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/loginServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.LoginServlet-7ff95560@12862e2e==TEmPoS.Servlet.LoginServlet,jsp=null,order=-1,inst=true] to PathMappings[size=9]
+Path=/isAdminServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.User.IsAdminServlet-290d210d[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/isAdminServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.User.IsAdminServlet-290d210d@7149f497==TEmPoS.Servlet.User.IsAdminServlet,jsp=null,order=-1,inst=true] to PathMappings[size=10]
+Path=/getStockByBranchServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.Stock.GetStockByBranchServlet-4c15e7fd[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/getStockByBranchServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.Stock.GetStockByBranchServlet-4c15e7fd@e266037b==TEmPoS.Servlet.Stock.GetStockByBranchServlet,jsp=null,order=-1,inst=true] to PathMappings[size=11]
+Path=/createProductServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.Product.CreateProductServlet-1df82230[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/createProductServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.Product.CreateProductServlet-1df82230@ccc73c3f==TEmPoS.Servlet.Product.CreateProductServlet,jsp=null,order=-1,inst=true] to PathMappings[size=12]
+Path=/createTransactionServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.Transaction.CreateTransactionServlet-38c5cc4c[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/createTransactionServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.Transaction.CreateTransactionServlet-38c5cc4c@91cd6b81==TEmPoS.Servlet.Transaction.CreateTransactionServlet,jsp=null,order=-1,inst=true] to PathMappings[size=13]
+Path=/createDistributorServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.Distributors.CreateDistributorServlet-1d082e88[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/createDistributorServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.Distributors.CreateDistributorServlet-1d082e88@1a1e89de==TEmPoS.Servlet.Distributors.CreateDistributorServlet,jsp=null,order=-1,inst=true] to PathMappings[size=14]
+Path=/getGoodsOrderServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.GoodsOrder.GetGoodsOrderServlet-5bfa9431[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/getGoodsOrderServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.GoodsOrder.GetGoodsOrderServlet-5bfa9431@a83ba5c0==TEmPoS.Servlet.GoodsOrder.GetGoodsOrderServlet,jsp=null,order=-1,inst=true] to PathMappings[size=15]
+Path=/searchCustomerServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.Customer.SearchCustomerServlet-402e37bc[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/searchCustomerServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.Customer.SearchCustomerServlet-402e37bc@ec26a433==TEmPoS.Servlet.Customer.SearchCustomerServlet,jsp=null,order=-1,inst=true] to PathMappings[size=16]
+Path=/searchProductsServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.Product.SearchProductsServlet-5a955565[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/searchProductsServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.Product.SearchProductsServlet-5a955565@7b657759==TEmPoS.Servlet.Product.SearchProductsServlet,jsp=null,order=-1,inst=true] to PathMappings[size=17]
+Path=/getPurchaseOrdersServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.PurchaseOrder.GetPurchaseOrdersServlet-184cf7cf[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/getPurchaseOrdersServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.PurchaseOrder.GetPurchaseOrdersServlet-184cf7cf@ea97cf4e==TEmPoS.Servlet.PurchaseOrder.GetPurchaseOrdersServlet,jsp=null,order=-1,inst=true] to PathMappings[size=18]
+Path=/deleteBrandServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.Brands.DeleteBrandServlet-23f7d05d[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/deleteBrandServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.Brands.DeleteBrandServlet-23f7d05d@1d5c3f6e==TEmPoS.Servlet.Brands.DeleteBrandServlet,jsp=null,order=-1,inst=true] to PathMappings[size=19]
+Path=/deleteProductServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.Product.DeleteProductServlet-22635ba0[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/deleteProductServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.Product.DeleteProductServlet-22635ba0@14d32067==TEmPoS.Servlet.Product.DeleteProductServlet,jsp=null,order=-1,inst=true] to PathMappings[size=20]
+Path=/getDepartmentsServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.Departments.GetDepartmentsServlet-43ee72e6[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/getDepartmentsServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.Departments.GetDepartmentsServlet-43ee72e6@3830e84a==TEmPoS.Servlet.Departments.GetDepartmentsServlet,jsp=null,order=-1,inst=true] to PathMappings[size=21]
+Path=/deletePurchaseOrderServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.PurchaseOrder.DeletePurchaseOrderServlet-4fe767f3[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/deletePurchaseOrderServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.PurchaseOrder.DeletePurchaseOrderServlet-4fe767f3@a2d788dc==TEmPoS.Servlet.PurchaseOrder.DeletePurchaseOrderServlet,jsp=null,order=-1,inst=true] to PathMappings[size=22]
+Path=/editPurchaseOrderServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.PurchaseOrder.EditPurchaseOrderServlet-2805c96b[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/editPurchaseOrderServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.PurchaseOrder.EditPurchaseOrderServlet-2805c96b@7f8a2818==TEmPoS.Servlet.PurchaseOrder.EditPurchaseOrderServlet,jsp=null,order=-1,inst=true] to PathMappings[size=23]
+Path=/deleteDistributorServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.Distributors.DeleteDistributorServlet-60704c[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/deleteDistributorServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.Distributors.DeleteDistributorServlet-60704c@d9439643==TEmPoS.Servlet.Distributors.DeleteDistributorServlet,jsp=null,order=-1,inst=true] to PathMappings[size=24]
+Path=/createUserServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.User.CreateUserServlet-1d76aeea[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/createUserServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.User.CreateUserServlet-1d76aeea@f6d05785==TEmPoS.Servlet.User.CreateUserServlet,jsp=null,order=-1,inst=true] to PathMappings[size=25]
+Path=/incrementStockServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.Stock.IncrementStockServlet-f8c1ddd[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/incrementStockServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.Stock.IncrementStockServlet-f8c1ddd@cda2c75e==TEmPoS.Servlet.Stock.IncrementStockServlet,jsp=null,order=-1,inst=true] to PathMappings[size=26]
+Path=/deleteUserServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.User.DeleteUserServlet-10db82ae[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/deleteUserServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.User.DeleteUserServlet-10db82ae@df65c07d==TEmPoS.Servlet.User.DeleteUserServlet,jsp=null,order=-1,inst=true] to PathMappings[size=27]
+Path=/editUserServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.User.EditUserServlet-501edcf1[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/editUserServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.User.EditUserServlet-501edcf1@2b80af5a==TEmPoS.Servlet.User.EditUserServlet,jsp=null,order=-1,inst=true] to PathMappings[size=28]
+Path=/getStockServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.Stock.GetStockServlet-7fc2413d[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/getStockServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.Stock.GetStockServlet-7fc2413d@f36fd58b==TEmPoS.Servlet.Stock.GetStockServlet,jsp=null,order=-1,inst=true] to PathMappings[size=29]
+Path=/editDistributorServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.Distributors.EditDistributorServlet-6b19b79[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/editDistributorServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.Distributors.EditDistributorServlet-6b19b79@ad7ac76e==TEmPoS.Servlet.Distributors.EditDistributorServlet,jsp=null,order=-1,inst=true] to PathMappings[size=30]
+Path=/editGoodsOrderServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.GoodsOrder.EditGoodsOrderServlet-5db250b4[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/editGoodsOrderServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.GoodsOrder.EditGoodsOrderServlet-5db250b4@4528680d==TEmPoS.Servlet.GoodsOrder.EditGoodsOrderServlet,jsp=null,order=-1,inst=true] to PathMappings[size=31]
+Path=/branchesServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.Configuration.BranchesServlet-79ad8b2f[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/branchesServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.Configuration.BranchesServlet-79ad8b2f@ad4cddf2==TEmPoS.Servlet.Configuration.BranchesServlet,jsp=null,order=-1,inst=true] to PathMappings[size=32]
+Path=/createGoodsOrderServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.GoodsOrder.CreateGoodsOrderServlet-2fd6b6c7[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/createGoodsOrderServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.GoodsOrder.CreateGoodsOrderServlet-2fd6b6c7@327f3141==TEmPoS.Servlet.GoodsOrder.CreateGoodsOrderServlet,jsp=null,order=-1,inst=true] to PathMappings[size=33]
+Path=/getCustomersServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.Customer.GetCustomersServlet-197d671[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/getCustomersServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.Customer.GetCustomersServlet-197d671@bf4274e3==TEmPoS.Servlet.Customer.GetCustomersServlet,jsp=null,order=-1,inst=true] to PathMappings[size=34]
+Path=/createDepartmentServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.Departments.CreateDepartmentServlet-7692d9cc[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/createDepartmentServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.Departments.CreateDepartmentServlet-7692d9cc@3c7d13cf==TEmPoS.Servlet.Departments.CreateDepartmentServlet,jsp=null,order=-1,inst=true] to PathMappings[size=35]
+Path=/editProductServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.Product.EditProductServlet-13c10b87[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/editProductServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.Product.EditProductServlet-13c10b87@20cebe30==TEmPoS.Servlet.Product.EditProductServlet,jsp=null,order=-1,inst=true] to PathMappings[size=36]
+Path=/[EMBEDDED:null] mapped to servlet=org.eclipse.jetty.servlet.DefaultServlet-65466a6a[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/",pathDepth=-1,group=DEFAULT],resource=org.eclipse.jetty.servlet.DefaultServlet-65466a6a@39b3ff36==org.eclipse.jetty.servlet.DefaultServlet,jsp=null,order=-1,inst=true] to PathMappings[size=37]
+Path=/editDepartmentServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.Departments.EditDepartmentServlet-7f1302d6[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/editDepartmentServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.Departments.EditDepartmentServlet-7f1302d6@c7e94f75==TEmPoS.Servlet.Departments.EditDepartmentServlet,jsp=null,order=-1,inst=true] to PathMappings[size=38]
+Path=/decrementStockServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.Stock.DecrementStockServlet-70be0a2b[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/decrementStockServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.Stock.DecrementStockServlet-70be0a2b@b70ee41f==TEmPoS.Servlet.Stock.DecrementStockServlet,jsp=null,order=-1,inst=true] to PathMappings[size=39]
+Path=/getProductByIdServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.Product.GetProductByIdServlet-6293abcc[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/getProductByIdServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.Product.GetProductByIdServlet-6293abcc@f39fc628==TEmPoS.Servlet.Product.GetProductByIdServlet,jsp=null,order=-1,inst=true] to PathMappings[size=40]
+Path=/createPurchaseOrderServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.PurchaseOrder.CreatePurchaseOrderServlet-23529fee[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/createPurchaseOrderServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.PurchaseOrder.CreatePurchaseOrderServlet-23529fee@19276dc4==TEmPoS.Servlet.PurchaseOrder.CreatePurchaseOrderServlet,jsp=null,order=-1,inst=true] to PathMappings[size=41]
+Path=/getUsersServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.User.GetUsersServlet-78dd667e[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/getUsersServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.User.GetUsersServlet-78dd667e@ae7e7d2d==TEmPoS.Servlet.User.GetUsersServlet,jsp=null,order=-1,inst=true] to PathMappings[size=42]
+Path=/deleteDepartmentServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.Departments.DeleteDepartmentServlet-75f32542[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/deleteDepartmentServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.Departments.DeleteDepartmentServlet-75f32542@76ae8c7d==TEmPoS.Servlet.Departments.DeleteDepartmentServlet,jsp=null,order=-1,inst=true] to PathMappings[size=43]
+Path=/getBrandsServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.Brands.GetBrandsServlet-7d3a22a9[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/getBrandsServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.Brands.GetBrandsServlet-7d3a22a9@28518c3a==TEmPoS.Servlet.Brands.GetBrandsServlet,jsp=null,order=-1,inst=true] to PathMappings[size=44]
+Path=/deleteGoodsOrderServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.GoodsOrder.DeleteGoodsOrderServlet-223f3642[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/deleteGoodsOrderServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.GoodsOrder.DeleteGoodsOrderServlet-223f3642@45030e96==TEmPoS.Servlet.GoodsOrder.DeleteGoodsOrderServlet,jsp=null,order=-1,inst=true] to PathMappings[size=45]
+Path=/deleteCustomerServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.Customer.DeleteCustomerServlet-6b4a4e18[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/deleteCustomerServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.Customer.DeleteCustomerServlet-6b4a4e18@cb005d3==TEmPoS.Servlet.Customer.DeleteCustomerServlet,jsp=null,order=-1,inst=true] to PathMappings[size=46]
+filterNameMap={}
+pathFilters=null
+servletFilterMap=null
+servletPathMap=PathMappings[size=46]
+servletNameMap={TEmPoS.Servlet.Distributors.CreateDistributorServlet-1d082e88=TEmPoS.Servlet.Distributors.CreateDistributorServlet-1d082e88@1a1e89de==TEmPoS.Servlet.Distributors.CreateDistributorServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.Distributors.DeleteDistributorServlet-60704c=TEmPoS.Servlet.Distributors.DeleteDistributorServlet-60704c@d9439643==TEmPoS.Servlet.Distributors.DeleteDistributorServlet,jsp=null,order=-1,inst=true, org.eclipse.jetty.servlet.DefaultServlet-65466a6a=org.eclipse.jetty.servlet.DefaultServlet-65466a6a@39b3ff36==org.eclipse.jetty.servlet.DefaultServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.PurchaseOrder.DeletePurchaseOrderServlet-4fe767f3=TEmPoS.Servlet.PurchaseOrder.DeletePurchaseOrderServlet-4fe767f3@a2d788dc==TEmPoS.Servlet.PurchaseOrder.DeletePurchaseOrderServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.Transaction.CreateTransactionServlet-38c5cc4c=TEmPoS.Servlet.Transaction.CreateTransactionServlet-38c5cc4c@91cd6b81==TEmPoS.Servlet.Transaction.CreateTransactionServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.Customer.EditCustomerServlet-27c86f2d=TEmPoS.Servlet.Customer.EditCustomerServlet-27c86f2d@92d0885d==TEmPoS.Servlet.Customer.EditCustomerServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.Stock.DecrementStockServlet-70be0a2b=TEmPoS.Servlet.Stock.DecrementStockServlet-70be0a2b@b70ee41f==TEmPoS.Servlet.Stock.DecrementStockServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.PurchaseOrder.EditPurchaseOrderServlet-2805c96b=TEmPoS.Servlet.PurchaseOrder.EditPurchaseOrderServlet-2805c96b@7f8a2818==TEmPoS.Servlet.PurchaseOrder.EditPurchaseOrderServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.User.GetUsersServlet-78dd667e=TEmPoS.Servlet.User.GetUsersServlet-78dd667e@ae7e7d2d==TEmPoS.Servlet.User.GetUsersServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.Departments.DeleteDepartmentServlet-75f32542=TEmPoS.Servlet.Departments.DeleteDepartmentServlet-75f32542@76ae8c7d==TEmPoS.Servlet.Departments.DeleteDepartmentServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.Distributors.EditDistributorServlet-6b19b79=TEmPoS.Servlet.Distributors.EditDistributorServlet-6b19b79@ad7ac76e==TEmPoS.Servlet.Distributors.EditDistributorServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.User.CreateUserServlet-1d76aeea=TEmPoS.Servlet.User.CreateUserServlet-1d76aeea@f6d05785==TEmPoS.Servlet.User.CreateUserServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.Customer.SearchCustomerServlet-402e37bc=TEmPoS.Servlet.Customer.SearchCustomerServlet-402e37bc@ec26a433==TEmPoS.Servlet.Customer.SearchCustomerServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.Distributors.GetDistributorsServlet-2a32de6c=TEmPoS.Servlet.Distributors.GetDistributorsServlet-2a32de6c@39f6e023==TEmPoS.Servlet.Distributors.GetDistributorsServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.GoodsOrder.DeleteGoodsOrderServlet-223f3642=TEmPoS.Servlet.GoodsOrder.DeleteGoodsOrderServlet-223f3642@45030e96==TEmPoS.Servlet.GoodsOrder.DeleteGoodsOrderServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.User.DeleteUserServlet-10db82ae=TEmPoS.Servlet.User.DeleteUserServlet-10db82ae@df65c07d==TEmPoS.Servlet.User.DeleteUserServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.Stock.CreateStockServlet-7995092a=TEmPoS.Servlet.Stock.CreateStockServlet-7995092a@fc591841==TEmPoS.Servlet.Stock.CreateStockServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.PurchaseOrder.GetPurchaseOrdersServlet-184cf7cf=TEmPoS.Servlet.PurchaseOrder.GetPurchaseOrdersServlet-184cf7cf@ea97cf4e==TEmPoS.Servlet.PurchaseOrder.GetPurchaseOrdersServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.User.EditUserServlet-501edcf1=TEmPoS.Servlet.User.EditUserServlet-501edcf1@2b80af5a==TEmPoS.Servlet.User.EditUserServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.Departments.EditDepartmentServlet-7f1302d6=TEmPoS.Servlet.Departments.EditDepartmentServlet-7f1302d6@c7e94f75==TEmPoS.Servlet.Departments.EditDepartmentServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.Stock.GetStockByBranchServlet-4c15e7fd=TEmPoS.Servlet.Stock.GetStockByBranchServlet-4c15e7fd@e266037b==TEmPoS.Servlet.Stock.GetStockByBranchServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.User.IsAdminServlet-290d210d=TEmPoS.Servlet.User.IsAdminServlet-290d210d@7149f497==TEmPoS.Servlet.User.IsAdminServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.Customer.GetCustomersServlet-197d671=TEmPoS.Servlet.Customer.GetCustomersServlet-197d671@bf4274e3==TEmPoS.Servlet.Customer.GetCustomersServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.Customer.DeleteCustomerServlet-6b4a4e18=TEmPoS.Servlet.Customer.DeleteCustomerServlet-6b4a4e18@cb005d3==TEmPoS.Servlet.Customer.DeleteCustomerServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.PurchaseOrder.CreatePurchaseOrderServlet-23529fee=TEmPoS.Servlet.PurchaseOrder.CreatePurchaseOrderServlet-23529fee@19276dc4==TEmPoS.Servlet.PurchaseOrder.CreatePurchaseOrderServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.Stock.GetStockServlet-7fc2413d=TEmPoS.Servlet.Stock.GetStockServlet-7fc2413d@f36fd58b==TEmPoS.Servlet.Stock.GetStockServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.GoodsOrder.EditGoodsOrderServlet-5db250b4=TEmPoS.Servlet.GoodsOrder.EditGoodsOrderServlet-5db250b4@4528680d==TEmPoS.Servlet.GoodsOrder.EditGoodsOrderServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.LoginServlet-7ff95560=TEmPoS.Servlet.LoginServlet-7ff95560@12862e2e==TEmPoS.Servlet.LoginServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.Stock.EditStockServlet-2133814f=TEmPoS.Servlet.Stock.EditStockServlet-2133814f@f56d6e47==TEmPoS.Servlet.Stock.EditStockServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.Brands.GetBrandsServlet-7d3a22a9=TEmPoS.Servlet.Brands.GetBrandsServlet-7d3a22a9@28518c3a==TEmPoS.Servlet.Brands.GetBrandsServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.Brands.EditBrandServlet-1e730495=TEmPoS.Servlet.Brands.EditBrandServlet-1e730495@8afec252==TEmPoS.Servlet.Brands.EditBrandServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.Product.GetProductsServlet-6a01e23=TEmPoS.Servlet.Product.GetProductsServlet-6a01e23@6ec7fa36==TEmPoS.Servlet.Product.GetProductsServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.Brands.DeleteBrandServlet-23f7d05d=TEmPoS.Servlet.Brands.DeleteBrandServlet-23f7d05d@1d5c3f6e==TEmPoS.Servlet.Brands.DeleteBrandServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.Departments.CreateDepartmentServlet-7692d9cc=TEmPoS.Servlet.Departments.CreateDepartmentServlet-7692d9cc@3c7d13cf==TEmPoS.Servlet.Departments.CreateDepartmentServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.Product.DeleteProductServlet-22635ba0=TEmPoS.Servlet.Product.DeleteProductServlet-22635ba0@14d32067==TEmPoS.Servlet.Product.DeleteProductServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.Product.GetProductByIdServlet-6293abcc=TEmPoS.Servlet.Product.GetProductByIdServlet-6293abcc@f39fc628==TEmPoS.Servlet.Product.GetProductByIdServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.Product.CreateProductServlet-1df82230=TEmPoS.Servlet.Product.CreateProductServlet-1df82230@ccc73c3f==TEmPoS.Servlet.Product.CreateProductServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.Departments.GetDepartmentsServlet-43ee72e6=TEmPoS.Servlet.Departments.GetDepartmentsServlet-43ee72e6@3830e84a==TEmPoS.Servlet.Departments.GetDepartmentsServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.GoodsOrder.GetGoodsOrderServlet-5bfa9431=TEmPoS.Servlet.GoodsOrder.GetGoodsOrderServlet-5bfa9431@a83ba5c0==TEmPoS.Servlet.GoodsOrder.GetGoodsOrderServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.Product.SearchProductsServlet-5a955565=TEmPoS.Servlet.Product.SearchProductsServlet-5a955565@7b657759==TEmPoS.Servlet.Product.SearchProductsServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.Stock.IncrementStockServlet-f8c1ddd=TEmPoS.Servlet.Stock.IncrementStockServlet-f8c1ddd@cda2c75e==TEmPoS.Servlet.Stock.IncrementStockServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.Customer.CreateCustomerServlet-78b729e6=TEmPoS.Servlet.Customer.CreateCustomerServlet-78b729e6@b05f7c21==TEmPoS.Servlet.Customer.CreateCustomerServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.Configuration.BranchesServlet-79ad8b2f=TEmPoS.Servlet.Configuration.BranchesServlet-79ad8b2f@ad4cddf2==TEmPoS.Servlet.Configuration.BranchesServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.Product.EditProductServlet-13c10b87=TEmPoS.Servlet.Product.EditProductServlet-13c10b87@20cebe30==TEmPoS.Servlet.Product.EditProductServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.Brands.CreateBrandServlet-23986957=TEmPoS.Servlet.Brands.CreateBrandServlet-23986957@21eb4cd5==TEmPoS.Servlet.Brands.CreateBrandServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.GoodsOrder.CreateGoodsOrderServlet-2fd6b6c7=TEmPoS.Servlet.GoodsOrder.CreateGoodsOrderServlet-2fd6b6c7@327f3141==TEmPoS.Servlet.GoodsOrder.CreateGoodsOrderServlet,jsp=null,order=-1,inst=true}
+starting org.eclipse.jetty.servlet.ServletHandler@15761df8
+STARTED @574ms org.eclipse.jetty.servlet.ServletHandler@15761df8
+starting org.eclipse.jetty.server.session.DefaultSessionCache@6a28ffa4[evict=-1,removeUnloadable=false,saveOnCreate=false,saveOnInactiveEvict=false]
+starting org.eclipse.jetty.server.session.NullSessionDataStore@635eaaf1[passivating=false,graceSec=3600]
+STARTED @574ms org.eclipse.jetty.server.session.NullSessionDataStore@635eaaf1[passivating=false,graceSec=3600]
+STARTED @574ms org.eclipse.jetty.server.session.DefaultSessionCache@6a28ffa4[evict=-1,removeUnloadable=false,saveOnCreate=false,saveOnInactiveEvict=false]
+STARTED @574ms org.eclipse.jetty.server.session.SessionHandler1197365356==dftMaxIdleSec=-1
+starting TEmPoS.Servlet.Brands.CreateBrandServlet-23986957@21eb4cd5==TEmPoS.Servlet.Brands.CreateBrandServlet,jsp=null,order=-1,inst=true
+STARTED @575ms TEmPoS.Servlet.Brands.CreateBrandServlet-23986957@21eb4cd5==TEmPoS.Servlet.Brands.CreateBrandServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.Brands.CreateBrandServlet@192d43ce for TEmPoS.Servlet.Brands.CreateBrandServlet-23986957
+starting TEmPoS.Servlet.Brands.DeleteBrandServlet-23f7d05d@1d5c3f6e==TEmPoS.Servlet.Brands.DeleteBrandServlet,jsp=null,order=-1,inst=true
+STARTED @576ms TEmPoS.Servlet.Brands.DeleteBrandServlet-23f7d05d@1d5c3f6e==TEmPoS.Servlet.Brands.DeleteBrandServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.Brands.DeleteBrandServlet@72057ecf for TEmPoS.Servlet.Brands.DeleteBrandServlet-23f7d05d
+starting TEmPoS.Servlet.Brands.EditBrandServlet-1e730495@8afec252==TEmPoS.Servlet.Brands.EditBrandServlet,jsp=null,order=-1,inst=true
+STARTED @576ms TEmPoS.Servlet.Brands.EditBrandServlet-1e730495@8afec252==TEmPoS.Servlet.Brands.EditBrandServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.Brands.EditBrandServlet@1afd44cb for TEmPoS.Servlet.Brands.EditBrandServlet-1e730495
+starting TEmPoS.Servlet.Brands.GetBrandsServlet-7d3a22a9@28518c3a==TEmPoS.Servlet.Brands.GetBrandsServlet,jsp=null,order=-1,inst=true
+STARTED @576ms TEmPoS.Servlet.Brands.GetBrandsServlet-7d3a22a9@28518c3a==TEmPoS.Servlet.Brands.GetBrandsServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.Brands.GetBrandsServlet@6973b51b for TEmPoS.Servlet.Brands.GetBrandsServlet-7d3a22a9
+starting TEmPoS.Servlet.Configuration.BranchesServlet-79ad8b2f@ad4cddf2==TEmPoS.Servlet.Configuration.BranchesServlet,jsp=null,order=-1,inst=true
+STARTED @580ms TEmPoS.Servlet.Configuration.BranchesServlet-79ad8b2f@ad4cddf2==TEmPoS.Servlet.Configuration.BranchesServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.Configuration.BranchesServlet@333291e3 for TEmPoS.Servlet.Configuration.BranchesServlet-79ad8b2f
+starting TEmPoS.Servlet.Customer.CreateCustomerServlet-78b729e6@b05f7c21==TEmPoS.Servlet.Customer.CreateCustomerServlet,jsp=null,order=-1,inst=true
+STARTED @580ms TEmPoS.Servlet.Customer.CreateCustomerServlet-78b729e6@b05f7c21==TEmPoS.Servlet.Customer.CreateCustomerServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.Customer.CreateCustomerServlet@479d31f3 for TEmPoS.Servlet.Customer.CreateCustomerServlet-78b729e6
+starting TEmPoS.Servlet.Customer.DeleteCustomerServlet-6b4a4e18@cb005d3==TEmPoS.Servlet.Customer.DeleteCustomerServlet,jsp=null,order=-1,inst=true
+STARTED @580ms TEmPoS.Servlet.Customer.DeleteCustomerServlet-6b4a4e18@cb005d3==TEmPoS.Servlet.Customer.DeleteCustomerServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.Customer.DeleteCustomerServlet@40ef3420 for TEmPoS.Servlet.Customer.DeleteCustomerServlet-6b4a4e18
+starting TEmPoS.Servlet.Customer.EditCustomerServlet-27c86f2d@92d0885d==TEmPoS.Servlet.Customer.EditCustomerServlet,jsp=null,order=-1,inst=true
+STARTED @580ms TEmPoS.Servlet.Customer.EditCustomerServlet-27c86f2d@92d0885d==TEmPoS.Servlet.Customer.EditCustomerServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.Customer.EditCustomerServlet@498d318c for TEmPoS.Servlet.Customer.EditCustomerServlet-27c86f2d
+starting TEmPoS.Servlet.Customer.GetCustomersServlet-197d671@bf4274e3==TEmPoS.Servlet.Customer.GetCustomersServlet,jsp=null,order=-1,inst=true
+STARTED @580ms TEmPoS.Servlet.Customer.GetCustomersServlet-197d671@bf4274e3==TEmPoS.Servlet.Customer.GetCustomersServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.Customer.GetCustomersServlet@6e171cd7 for TEmPoS.Servlet.Customer.GetCustomersServlet-197d671
+starting TEmPoS.Servlet.Customer.SearchCustomerServlet-402e37bc@ec26a433==TEmPoS.Servlet.Customer.SearchCustomerServlet,jsp=null,order=-1,inst=true
+STARTED @580ms TEmPoS.Servlet.Customer.SearchCustomerServlet-402e37bc@ec26a433==TEmPoS.Servlet.Customer.SearchCustomerServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.Customer.SearchCustomerServlet@402bba4f for TEmPoS.Servlet.Customer.SearchCustomerServlet-402e37bc
+starting TEmPoS.Servlet.Departments.CreateDepartmentServlet-7692d9cc@3c7d13cf==TEmPoS.Servlet.Departments.CreateDepartmentServlet,jsp=null,order=-1,inst=true
+STARTED @581ms TEmPoS.Servlet.Departments.CreateDepartmentServlet-7692d9cc@3c7d13cf==TEmPoS.Servlet.Departments.CreateDepartmentServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.Departments.CreateDepartmentServlet@795cd85e for TEmPoS.Servlet.Departments.CreateDepartmentServlet-7692d9cc
+starting TEmPoS.Servlet.Departments.DeleteDepartmentServlet-75f32542@76ae8c7d==TEmPoS.Servlet.Departments.DeleteDepartmentServlet,jsp=null,order=-1,inst=true
+STARTED @581ms TEmPoS.Servlet.Departments.DeleteDepartmentServlet-75f32542@76ae8c7d==TEmPoS.Servlet.Departments.DeleteDepartmentServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.Departments.DeleteDepartmentServlet@59fd97a8 for TEmPoS.Servlet.Departments.DeleteDepartmentServlet-75f32542
+starting TEmPoS.Servlet.Departments.EditDepartmentServlet-7f1302d6@c7e94f75==TEmPoS.Servlet.Departments.EditDepartmentServlet,jsp=null,order=-1,inst=true
+STARTED @581ms TEmPoS.Servlet.Departments.EditDepartmentServlet-7f1302d6@c7e94f75==TEmPoS.Servlet.Departments.EditDepartmentServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.Departments.EditDepartmentServlet@f5ac9e4 for TEmPoS.Servlet.Departments.EditDepartmentServlet-7f1302d6
+starting TEmPoS.Servlet.Departments.GetDepartmentsServlet-43ee72e6@3830e84a==TEmPoS.Servlet.Departments.GetDepartmentsServlet,jsp=null,order=-1,inst=true
+STARTED @581ms TEmPoS.Servlet.Departments.GetDepartmentsServlet-43ee72e6@3830e84a==TEmPoS.Servlet.Departments.GetDepartmentsServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.Departments.GetDepartmentsServlet@123ef382 for TEmPoS.Servlet.Departments.GetDepartmentsServlet-43ee72e6
+starting TEmPoS.Servlet.Distributors.CreateDistributorServlet-1d082e88@1a1e89de==TEmPoS.Servlet.Distributors.CreateDistributorServlet,jsp=null,order=-1,inst=true
+STARTED @581ms TEmPoS.Servlet.Distributors.CreateDistributorServlet-1d082e88@1a1e89de==TEmPoS.Servlet.Distributors.CreateDistributorServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.Distributors.CreateDistributorServlet@dbf57b3 for TEmPoS.Servlet.Distributors.CreateDistributorServlet-1d082e88
+starting TEmPoS.Servlet.Distributors.DeleteDistributorServlet-60704c@d9439643==TEmPoS.Servlet.Distributors.DeleteDistributorServlet,jsp=null,order=-1,inst=true
+STARTED @581ms TEmPoS.Servlet.Distributors.DeleteDistributorServlet-60704c@d9439643==TEmPoS.Servlet.Distributors.DeleteDistributorServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.Distributors.DeleteDistributorServlet@384ad17b for TEmPoS.Servlet.Distributors.DeleteDistributorServlet-60704c
+starting TEmPoS.Servlet.Distributors.EditDistributorServlet-6b19b79@ad7ac76e==TEmPoS.Servlet.Distributors.EditDistributorServlet,jsp=null,order=-1,inst=true
+STARTED @581ms TEmPoS.Servlet.Distributors.EditDistributorServlet-6b19b79@ad7ac76e==TEmPoS.Servlet.Distributors.EditDistributorServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.Distributors.EditDistributorServlet@61862a7f for TEmPoS.Servlet.Distributors.EditDistributorServlet-6b19b79
+starting TEmPoS.Servlet.Distributors.GetDistributorsServlet-2a32de6c@39f6e023==TEmPoS.Servlet.Distributors.GetDistributorsServlet,jsp=null,order=-1,inst=true
+STARTED @581ms TEmPoS.Servlet.Distributors.GetDistributorsServlet-2a32de6c@39f6e023==TEmPoS.Servlet.Distributors.GetDistributorsServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.Distributors.GetDistributorsServlet@441772e for TEmPoS.Servlet.Distributors.GetDistributorsServlet-2a32de6c
+starting TEmPoS.Servlet.GoodsOrder.CreateGoodsOrderServlet-2fd6b6c7@327f3141==TEmPoS.Servlet.GoodsOrder.CreateGoodsOrderServlet,jsp=null,order=-1,inst=true
+STARTED @581ms TEmPoS.Servlet.GoodsOrder.CreateGoodsOrderServlet-2fd6b6c7@327f3141==TEmPoS.Servlet.GoodsOrder.CreateGoodsOrderServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.GoodsOrder.CreateGoodsOrderServlet@7334aada for TEmPoS.Servlet.GoodsOrder.CreateGoodsOrderServlet-2fd6b6c7
+starting TEmPoS.Servlet.GoodsOrder.DeleteGoodsOrderServlet-223f3642@45030e96==TEmPoS.Servlet.GoodsOrder.DeleteGoodsOrderServlet,jsp=null,order=-1,inst=true
+STARTED @581ms TEmPoS.Servlet.GoodsOrder.DeleteGoodsOrderServlet-223f3642@45030e96==TEmPoS.Servlet.GoodsOrder.DeleteGoodsOrderServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.GoodsOrder.DeleteGoodsOrderServlet@1d9b7cce for TEmPoS.Servlet.GoodsOrder.DeleteGoodsOrderServlet-223f3642
+starting TEmPoS.Servlet.GoodsOrder.EditGoodsOrderServlet-5db250b4@4528680d==TEmPoS.Servlet.GoodsOrder.EditGoodsOrderServlet,jsp=null,order=-1,inst=true
+STARTED @581ms TEmPoS.Servlet.GoodsOrder.EditGoodsOrderServlet-5db250b4@4528680d==TEmPoS.Servlet.GoodsOrder.EditGoodsOrderServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.GoodsOrder.EditGoodsOrderServlet@4d9e68d0 for TEmPoS.Servlet.GoodsOrder.EditGoodsOrderServlet-5db250b4
+starting TEmPoS.Servlet.GoodsOrder.GetGoodsOrderServlet-5bfa9431@a83ba5c0==TEmPoS.Servlet.GoodsOrder.GetGoodsOrderServlet,jsp=null,order=-1,inst=true
+STARTED @582ms TEmPoS.Servlet.GoodsOrder.GetGoodsOrderServlet-5bfa9431@a83ba5c0==TEmPoS.Servlet.GoodsOrder.GetGoodsOrderServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.GoodsOrder.GetGoodsOrderServlet@42e99e4a for TEmPoS.Servlet.GoodsOrder.GetGoodsOrderServlet-5bfa9431
+starting TEmPoS.Servlet.LoginServlet-7ff95560@12862e2e==TEmPoS.Servlet.LoginServlet,jsp=null,order=-1,inst=true
+STARTED @582ms TEmPoS.Servlet.LoginServlet-7ff95560@12862e2e==TEmPoS.Servlet.LoginServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.LoginServlet@14dd9eb7 for TEmPoS.Servlet.LoginServlet-7ff95560
+starting TEmPoS.Servlet.Product.CreateProductServlet-1df82230@ccc73c3f==TEmPoS.Servlet.Product.CreateProductServlet,jsp=null,order=-1,inst=true
+STARTED @582ms TEmPoS.Servlet.Product.CreateProductServlet-1df82230@ccc73c3f==TEmPoS.Servlet.Product.CreateProductServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.Product.CreateProductServlet@52e6fdee for TEmPoS.Servlet.Product.CreateProductServlet-1df82230
+starting TEmPoS.Servlet.Product.DeleteProductServlet-22635ba0@14d32067==TEmPoS.Servlet.Product.DeleteProductServlet,jsp=null,order=-1,inst=true
+STARTED @582ms TEmPoS.Servlet.Product.DeleteProductServlet-22635ba0@14d32067==TEmPoS.Servlet.Product.DeleteProductServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.Product.DeleteProductServlet@6c80d78a for TEmPoS.Servlet.Product.DeleteProductServlet-22635ba0
+starting TEmPoS.Servlet.Product.EditProductServlet-13c10b87@20cebe30==TEmPoS.Servlet.Product.EditProductServlet,jsp=null,order=-1,inst=true
+STARTED @582ms TEmPoS.Servlet.Product.EditProductServlet-13c10b87@20cebe30==TEmPoS.Servlet.Product.EditProductServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.Product.EditProductServlet@62150f9e for TEmPoS.Servlet.Product.EditProductServlet-13c10b87
+starting TEmPoS.Servlet.Product.GetProductByIdServlet-6293abcc@f39fc628==TEmPoS.Servlet.Product.GetProductByIdServlet,jsp=null,order=-1,inst=true
+STARTED @582ms TEmPoS.Servlet.Product.GetProductByIdServlet-6293abcc@f39fc628==TEmPoS.Servlet.Product.GetProductByIdServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.Product.GetProductByIdServlet@1a451d4d for TEmPoS.Servlet.Product.GetProductByIdServlet-6293abcc
+starting TEmPoS.Servlet.Product.GetProductsServlet-6a01e23@6ec7fa36==TEmPoS.Servlet.Product.GetProductsServlet,jsp=null,order=-1,inst=true
+STARTED @582ms TEmPoS.Servlet.Product.GetProductsServlet-6a01e23@6ec7fa36==TEmPoS.Servlet.Product.GetProductsServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.Product.GetProductsServlet@7fa98a66 for TEmPoS.Servlet.Product.GetProductsServlet-6a01e23
+starting TEmPoS.Servlet.Product.SearchProductsServlet-5a955565@7b657759==TEmPoS.Servlet.Product.SearchProductsServlet,jsp=null,order=-1,inst=true
+STARTED @582ms TEmPoS.Servlet.Product.SearchProductsServlet-5a955565@7b657759==TEmPoS.Servlet.Product.SearchProductsServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.Product.SearchProductsServlet@15ff3e9e for TEmPoS.Servlet.Product.SearchProductsServlet-5a955565
+starting TEmPoS.Servlet.PurchaseOrder.CreatePurchaseOrderServlet-23529fee@19276dc4==TEmPoS.Servlet.PurchaseOrder.CreatePurchaseOrderServlet,jsp=null,order=-1,inst=true
+STARTED @582ms TEmPoS.Servlet.PurchaseOrder.CreatePurchaseOrderServlet-23529fee@19276dc4==TEmPoS.Servlet.PurchaseOrder.CreatePurchaseOrderServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.PurchaseOrder.CreatePurchaseOrderServlet@5fdcaa40 for TEmPoS.Servlet.PurchaseOrder.CreatePurchaseOrderServlet-23529fee
+starting TEmPoS.Servlet.PurchaseOrder.DeletePurchaseOrderServlet-4fe767f3@a2d788dc==TEmPoS.Servlet.PurchaseOrder.DeletePurchaseOrderServlet,jsp=null,order=-1,inst=true
+STARTED @582ms TEmPoS.Servlet.PurchaseOrder.DeletePurchaseOrderServlet-4fe767f3@a2d788dc==TEmPoS.Servlet.PurchaseOrder.DeletePurchaseOrderServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.PurchaseOrder.DeletePurchaseOrderServlet@6dc17b83 for TEmPoS.Servlet.PurchaseOrder.DeletePurchaseOrderServlet-4fe767f3
+starting TEmPoS.Servlet.PurchaseOrder.EditPurchaseOrderServlet-2805c96b@7f8a2818==TEmPoS.Servlet.PurchaseOrder.EditPurchaseOrderServlet,jsp=null,order=-1,inst=true
+STARTED @582ms TEmPoS.Servlet.PurchaseOrder.EditPurchaseOrderServlet-2805c96b@7f8a2818==TEmPoS.Servlet.PurchaseOrder.EditPurchaseOrderServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.PurchaseOrder.EditPurchaseOrderServlet@5e0826e7 for TEmPoS.Servlet.PurchaseOrder.EditPurchaseOrderServlet-2805c96b
+starting TEmPoS.Servlet.PurchaseOrder.GetPurchaseOrdersServlet-184cf7cf@ea97cf4e==TEmPoS.Servlet.PurchaseOrder.GetPurchaseOrdersServlet,jsp=null,order=-1,inst=true
+STARTED @583ms TEmPoS.Servlet.PurchaseOrder.GetPurchaseOrdersServlet-184cf7cf@ea97cf4e==TEmPoS.Servlet.PurchaseOrder.GetPurchaseOrdersServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.PurchaseOrder.GetPurchaseOrdersServlet@32eff876 for TEmPoS.Servlet.PurchaseOrder.GetPurchaseOrdersServlet-184cf7cf
+starting TEmPoS.Servlet.Stock.CreateStockServlet-7995092a@fc591841==TEmPoS.Servlet.Stock.CreateStockServlet,jsp=null,order=-1,inst=true
+STARTED @583ms TEmPoS.Servlet.Stock.CreateStockServlet-7995092a@fc591841==TEmPoS.Servlet.Stock.CreateStockServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.Stock.CreateStockServlet@8dbdac1 for TEmPoS.Servlet.Stock.CreateStockServlet-7995092a
+starting TEmPoS.Servlet.Stock.DecrementStockServlet-70be0a2b@b70ee41f==TEmPoS.Servlet.Stock.DecrementStockServlet,jsp=null,order=-1,inst=true
+STARTED @583ms TEmPoS.Servlet.Stock.DecrementStockServlet-70be0a2b@b70ee41f==TEmPoS.Servlet.Stock.DecrementStockServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.Stock.DecrementStockServlet@6e20b53a for TEmPoS.Servlet.Stock.DecrementStockServlet-70be0a2b
+starting TEmPoS.Servlet.Stock.EditStockServlet-2133814f@f56d6e47==TEmPoS.Servlet.Stock.EditStockServlet,jsp=null,order=-1,inst=true
+STARTED @583ms TEmPoS.Servlet.Stock.EditStockServlet-2133814f@f56d6e47==TEmPoS.Servlet.Stock.EditStockServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.Stock.EditStockServlet@71809907 for TEmPoS.Servlet.Stock.EditStockServlet-2133814f
+starting TEmPoS.Servlet.Stock.GetStockByBranchServlet-4c15e7fd@e266037b==TEmPoS.Servlet.Stock.GetStockByBranchServlet,jsp=null,order=-1,inst=true
+STARTED @583ms TEmPoS.Servlet.Stock.GetStockByBranchServlet-4c15e7fd@e266037b==TEmPoS.Servlet.Stock.GetStockByBranchServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.Stock.GetStockByBranchServlet@3ce1e309 for TEmPoS.Servlet.Stock.GetStockByBranchServlet-4c15e7fd
+starting TEmPoS.Servlet.Stock.GetStockServlet-7fc2413d@f36fd58b==TEmPoS.Servlet.Stock.GetStockServlet,jsp=null,order=-1,inst=true
+STARTED @583ms TEmPoS.Servlet.Stock.GetStockServlet-7fc2413d@f36fd58b==TEmPoS.Servlet.Stock.GetStockServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.Stock.GetStockServlet@6aba2b86 for TEmPoS.Servlet.Stock.GetStockServlet-7fc2413d
+starting TEmPoS.Servlet.Stock.IncrementStockServlet-f8c1ddd@cda2c75e==TEmPoS.Servlet.Stock.IncrementStockServlet,jsp=null,order=-1,inst=true
+STARTED @583ms TEmPoS.Servlet.Stock.IncrementStockServlet-f8c1ddd@cda2c75e==TEmPoS.Servlet.Stock.IncrementStockServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.Stock.IncrementStockServlet@158da8e for TEmPoS.Servlet.Stock.IncrementStockServlet-f8c1ddd
+starting TEmPoS.Servlet.Transaction.CreateTransactionServlet-38c5cc4c@91cd6b81==TEmPoS.Servlet.Transaction.CreateTransactionServlet,jsp=null,order=-1,inst=true
+STARTED @583ms TEmPoS.Servlet.Transaction.CreateTransactionServlet-38c5cc4c@91cd6b81==TEmPoS.Servlet.Transaction.CreateTransactionServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.Transaction.CreateTransactionServlet@74e52303 for TEmPoS.Servlet.Transaction.CreateTransactionServlet-38c5cc4c
+starting TEmPoS.Servlet.User.CreateUserServlet-1d76aeea@f6d05785==TEmPoS.Servlet.User.CreateUserServlet,jsp=null,order=-1,inst=true
+STARTED @583ms TEmPoS.Servlet.User.CreateUserServlet-1d76aeea@f6d05785==TEmPoS.Servlet.User.CreateUserServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.User.CreateUserServlet@47af7f3d for TEmPoS.Servlet.User.CreateUserServlet-1d76aeea
+starting TEmPoS.Servlet.User.DeleteUserServlet-10db82ae@df65c07d==TEmPoS.Servlet.User.DeleteUserServlet,jsp=null,order=-1,inst=true
+STARTED @583ms TEmPoS.Servlet.User.DeleteUserServlet-10db82ae@df65c07d==TEmPoS.Servlet.User.DeleteUserServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.User.DeleteUserServlet@7c729a55 for TEmPoS.Servlet.User.DeleteUserServlet-10db82ae
+starting TEmPoS.Servlet.User.EditUserServlet-501edcf1@2b80af5a==TEmPoS.Servlet.User.EditUserServlet,jsp=null,order=-1,inst=true
+STARTED @584ms TEmPoS.Servlet.User.EditUserServlet-501edcf1@2b80af5a==TEmPoS.Servlet.User.EditUserServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.User.EditUserServlet@3bb9a3ff for TEmPoS.Servlet.User.EditUserServlet-501edcf1
+starting TEmPoS.Servlet.User.GetUsersServlet-78dd667e@ae7e7d2d==TEmPoS.Servlet.User.GetUsersServlet,jsp=null,order=-1,inst=true
+STARTED @584ms TEmPoS.Servlet.User.GetUsersServlet-78dd667e@ae7e7d2d==TEmPoS.Servlet.User.GetUsersServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.User.GetUsersServlet@661972b0 for TEmPoS.Servlet.User.GetUsersServlet-78dd667e
+starting TEmPoS.Servlet.User.IsAdminServlet-290d210d@7149f497==TEmPoS.Servlet.User.IsAdminServlet,jsp=null,order=-1,inst=true
+STARTED @584ms TEmPoS.Servlet.User.IsAdminServlet-290d210d@7149f497==TEmPoS.Servlet.User.IsAdminServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.User.IsAdminServlet@5af3afd9 for TEmPoS.Servlet.User.IsAdminServlet-290d210d
+starting org.eclipse.jetty.servlet.DefaultServlet-65466a6a@39b3ff36==org.eclipse.jetty.servlet.DefaultServlet,jsp=null,order=-1,inst=true
+STARTED @584ms org.eclipse.jetty.servlet.DefaultServlet-65466a6a@39b3ff36==org.eclipse.jetty.servlet.DefaultServlet,jsp=null,order=-1,inst=true
+Servlet.init org.eclipse.jetty.servlet.DefaultServlet@323b36e0 for org.eclipse.jetty.servlet.DefaultServlet-65466a6a
+resource base = file:///C:/Users/LiamN/Dropbox%20(Personal)/Honours%20Project/Code/Development/TEmPoS/TEmPoS/src/main/resources/webapp
+Started o.e.j.s.ServletContextHandler@12d3a4e9{/,null,AVAILABLE}
+STARTED @593ms o.e.j.s.ServletContextHandler@12d3a4e9{/,null,AVAILABLE}
+starting org.eclipse.jetty.server.handler.ErrorHandler@4386f16
+starting org.eclipse.jetty.server.handler.ErrorHandler@4386f16
+STARTED @593ms org.eclipse.jetty.server.handler.ErrorHandler@4386f16
+starting ServerConnector@2b4a2ec7{HTTP/1.1,[http/1.1]}{0.0.0.0:9001}
+ServerConnector@2b4a2ec7{HTTP/1.1,[http/1.1]}{0.0.0.0:9001} added {sun.nio.ch.ServerSocketChannelImpl[/0:0:0:0:0:0:0:0:9001],POJO}
+starting org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@1b68b9a4
+STARTED @595ms org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@1b68b9a4
+starting HttpConnectionFactory@226a82c4[HTTP/1.1]
+STARTED @595ms HttpConnectionFactory@226a82c4[HTTP/1.1]
+starting SelectorManager@ServerConnector@2b4a2ec7{HTTP/1.1,[http/1.1]}{0.0.0.0:9001}
+EatWhatYouKill@222545dc/SelectorProducer@16d04d3d/IDLE/p=false/QueuedThreadPool[qtp1313532469]@4e4aea35{STARTED,8<=8<=200,i=8,q=0}[pc=0,pic=0,pec=0,epc=0]@2019-01-07T20:44:53.64Z added {SelectorProducer@16d04d3d,POJO}
+EatWhatYouKill@222545dc/SelectorProducer@16d04d3d/IDLE/p=false/QueuedThreadPool[qtp1313532469]@4e4aea35{STARTED,8<=8<=200,i=8,q=0}[pc=0,pic=0,pec=0,epc=0]@2019-01-07T20:44:53.642Z added {QueuedThreadPool[qtp1313532469]@4e4aea35{STARTED,8<=8<=200,i=8,q=0},UNMANAGED}
+EatWhatYouKill@222545dc/SelectorProducer@16d04d3d/IDLE/p=false/QueuedThreadPool[qtp1313532469]@4e4aea35{STARTED,8<=8<=200,i=8,q=0}[pc=0,pic=0,pec=0,epc=0]@2019-01-07T20:44:53.642Z created
+org.eclipse.jetty.io.ManagedSelector@1283bb96 id=0 keys=-1 selected=-1 updates=0 added {EatWhatYouKill@222545dc/SelectorProducer@16d04d3d/IDLE/p=false/QueuedThreadPool[qtp1313532469]@4e4aea35{STARTED,8<=8<=200,i=8,q=0}[pc=0,pic=0,pec=0,epc=0]@2019-01-07T20:44:53.643Z,MANAGED}
+SelectorManager@ServerConnector@2b4a2ec7{HTTP/1.1,[http/1.1]}{0.0.0.0:9001} added {org.eclipse.jetty.io.ManagedSelector@1283bb96 id=0 keys=-1 selected=-1 updates=0,AUTO}
+EatWhatYouKill@74f0ea28/SelectorProducer@f6efaab/IDLE/p=false/QueuedThreadPool[qtp1313532469]@4e4aea35{STARTED,8<=8<=200,i=8,q=0}[pc=0,pic=0,pec=0,epc=0]@2019-01-07T20:44:53.643Z added {SelectorProducer@f6efaab,POJO}
+EatWhatYouKill@74f0ea28/SelectorProducer@f6efaab/IDLE/p=false/QueuedThreadPool[qtp1313532469]@4e4aea35{STARTED,8<=8<=200,i=8,q=0}[pc=0,pic=0,pec=0,epc=0]@2019-01-07T20:44:53.643Z added {QueuedThreadPool[qtp1313532469]@4e4aea35{STARTED,8<=8<=200,i=8,q=0},UNMANAGED}
+EatWhatYouKill@74f0ea28/SelectorProducer@f6efaab/IDLE/p=false/QueuedThreadPool[qtp1313532469]@4e4aea35{STARTED,8<=8<=200,i=8,q=0}[pc=0,pic=0,pec=0,epc=0]@2019-01-07T20:44:53.643Z created
+org.eclipse.jetty.io.ManagedSelector@3c19aaa5 id=1 keys=-1 selected=-1 updates=0 added {EatWhatYouKill@74f0ea28/SelectorProducer@f6efaab/IDLE/p=false/QueuedThreadPool[qtp1313532469]@4e4aea35{STARTED,8<=8<=200,i=8,q=0}[pc=0,pic=0,pec=0,epc=0]@2019-01-07T20:44:53.643Z,MANAGED}
+SelectorManager@ServerConnector@2b4a2ec7{HTTP/1.1,[http/1.1]}{0.0.0.0:9001} added {org.eclipse.jetty.io.ManagedSelector@3c19aaa5 id=1 keys=-1 selected=-1 updates=0,AUTO}
+EatWhatYouKill@3349e9bb/SelectorProducer@409bf450/IDLE/p=false/QueuedThreadPool[qtp1313532469]@4e4aea35{STARTED,8<=8<=200,i=8,q=0}[pc=0,pic=0,pec=0,epc=0]@2019-01-07T20:44:53.643Z added {SelectorProducer@409bf450,POJO}
+EatWhatYouKill@3349e9bb/SelectorProducer@409bf450/IDLE/p=false/QueuedThreadPool[qtp1313532469]@4e4aea35{STARTED,8<=8<=200,i=8,q=0}[pc=0,pic=0,pec=0,epc=0]@2019-01-07T20:44:53.643Z added {QueuedThreadPool[qtp1313532469]@4e4aea35{STARTED,8<=8<=200,i=8,q=0},UNMANAGED}
+EatWhatYouKill@3349e9bb/SelectorProducer@409bf450/IDLE/p=false/QueuedThreadPool[qtp1313532469]@4e4aea35{STARTED,8<=8<=200,i=8,q=0}[pc=0,pic=0,pec=0,epc=0]@2019-01-07T20:44:53.643Z created
+org.eclipse.jetty.io.ManagedSelector@38d8f54a id=2 keys=-1 selected=-1 updates=0 added {EatWhatYouKill@3349e9bb/SelectorProducer@409bf450/IDLE/p=false/QueuedThreadPool[qtp1313532469]@4e4aea35{STARTED,8<=8<=200,i=8,q=0}[pc=0,pic=0,pec=0,epc=0]@2019-01-07T20:44:53.644Z,MANAGED}
+SelectorManager@ServerConnector@2b4a2ec7{HTTP/1.1,[http/1.1]}{0.0.0.0:9001} added {org.eclipse.jetty.io.ManagedSelector@38d8f54a id=2 keys=-1 selected=-1 updates=0,AUTO}
+EatWhatYouKill@49e53c76/SelectorProducer@351d00c0/IDLE/p=false/QueuedThreadPool[qtp1313532469]@4e4aea35{STARTED,8<=8<=200,i=8,q=0}[pc=0,pic=0,pec=0,epc=0]@2019-01-07T20:44:53.644Z added {SelectorProducer@351d00c0,POJO}
+EatWhatYouKill@49e53c76/SelectorProducer@351d00c0/IDLE/p=false/QueuedThreadPool[qtp1313532469]@4e4aea35{STARTED,8<=8<=200,i=8,q=0}[pc=0,pic=0,pec=0,epc=0]@2019-01-07T20:44:53.644Z added {QueuedThreadPool[qtp1313532469]@4e4aea35{STARTED,8<=8<=200,i=8,q=0},UNMANAGED}
+EatWhatYouKill@49e53c76/SelectorProducer@351d00c0/IDLE/p=false/QueuedThreadPool[qtp1313532469]@4e4aea35{STARTED,8<=8<=200,i=8,q=0}[pc=0,pic=0,pec=0,epc=0]@2019-01-07T20:44:53.644Z created
+org.eclipse.jetty.io.ManagedSelector@2a3b5b47 id=3 keys=-1 selected=-1 updates=0 added {EatWhatYouKill@49e53c76/SelectorProducer@351d00c0/IDLE/p=false/QueuedThreadPool[qtp1313532469]@4e4aea35{STARTED,8<=8<=200,i=8,q=0}[pc=0,pic=0,pec=0,epc=0]@2019-01-07T20:44:53.644Z,MANAGED}
+SelectorManager@ServerConnector@2b4a2ec7{HTTP/1.1,[http/1.1]}{0.0.0.0:9001} added {org.eclipse.jetty.io.ManagedSelector@2a3b5b47 id=3 keys=-1 selected=-1 updates=0,AUTO}
+starting org.eclipse.jetty.io.ManagedSelector@1283bb96 id=0 keys=-1 selected=-1 updates=0
+starting EatWhatYouKill@222545dc/SelectorProducer@16d04d3d/IDLE/p=false/QueuedThreadPool[qtp1313532469]@4e4aea35{STARTED,8<=8<=200,i=8,q=0}[pc=0,pic=0,pec=0,epc=0]@2019-01-07T20:44:53.644Z
+STARTED @612ms EatWhatYouKill@222545dc/SelectorProducer@16d04d3d/IDLE/p=false/QueuedThreadPool[qtp1313532469]@4e4aea35{STARTED,8<=8<=200,i=8,q=0}[pc=0,pic=0,pec=0,epc=0]@2019-01-07T20:44:53.644Z
+queue org.eclipse.jetty.io.ManagedSelector$$Lambda$28/311239812@7cc0cdad
+run org.eclipse.jetty.io.ManagedSelector$$Lambda$28/311239812@7cc0cdad
+EatWhatYouKill@222545dc/SelectorProducer@16d04d3d/IDLE/p=false/QueuedThreadPool[qtp1313532469]@4e4aea35{STARTED,8<=8<=200,i=7,q=0}[pc=0,pic=0,pec=0,epc=0]@2019-01-07T20:44:53.693Z tryProduce false
+Queued change org.eclipse.jetty.io.ManagedSelector$$Lambda$29/1764696127@48f2bd5b on org.eclipse.jetty.io.ManagedSelector@1283bb96 id=0 keys=0 selected=0 updates=0
+STARTED @662ms org.eclipse.jetty.io.ManagedSelector@1283bb96 id=0 keys=0 selected=0 updates=1
+starting org.eclipse.jetty.io.ManagedSelector@3c19aaa5 id=1 keys=-1 selected=-1 updates=0
+starting EatWhatYouKill@74f0ea28/SelectorProducer@f6efaab/IDLE/p=false/QueuedThreadPool[qtp1313532469]@4e4aea35{STARTED,8<=8<=200,i=7,q=0}[pc=0,pic=0,pec=0,epc=0]@2019-01-07T20:44:53.693Z
+STARTED @662ms EatWhatYouKill@74f0ea28/SelectorProducer@f6efaab/IDLE/p=false/QueuedThreadPool[qtp1313532469]@4e4aea35{STARTED,8<=8<=200,i=7,q=0}[pc=0,pic=0,pec=0,epc=0]@2019-01-07T20:44:53.694Z
+queue org.eclipse.jetty.io.ManagedSelector$$Lambda$28/311239812@7b2bbc3
+Queued change org.eclipse.jetty.io.ManagedSelector$$Lambda$29/1764696127@a1153bc on org.eclipse.jetty.io.ManagedSelector@3c19aaa5 id=1 keys=0 selected=0 updates=0
+run org.eclipse.jetty.io.ManagedSelector$$Lambda$28/311239812@7b2bbc3
+STARTED @663ms org.eclipse.jetty.io.ManagedSelector@3c19aaa5 id=1 keys=0 selected=0 updates=1
+starting org.eclipse.jetty.io.ManagedSelector@38d8f54a id=2 keys=-1 selected=-1 updates=0
+updateable 1
+EatWhatYouKill@74f0ea28/SelectorProducer@f6efaab/IDLE/p=false/QueuedThreadPool[qtp1313532469]@4e4aea35{STARTED,8<=8<=200,i=6,q=0}[pc=0,pic=0,pec=0,epc=0]@2019-01-07T20:44:53.694Z tryProduce false
+starting EatWhatYouKill@3349e9bb/SelectorProducer@409bf450/IDLE/p=false/QueuedThreadPool[qtp1313532469]@4e4aea35{STARTED,8<=8<=200,i=6,q=0}[pc=0,pic=0,pec=0,epc=0]@2019-01-07T20:44:53.694Z
+updateable 1
+update org.eclipse.jetty.io.ManagedSelector$$Lambda$29/1764696127@a1153bc
+update org.eclipse.jetty.io.ManagedSelector$$Lambda$29/1764696127@48f2bd5b
+updates 0
+STARTED @663ms EatWhatYouKill@3349e9bb/SelectorProducer@409bf450/IDLE/p=false/QueuedThreadPool[qtp1313532469]@4e4aea35{STARTED,8<=8<=200,i=6,q=0}[pc=0,pic=0,pec=0,epc=0]@2019-01-07T20:44:53.694Z
+updates 0
+Selector sun.nio.ch.WindowsSelectorImpl@55852f06 waiting on select
+Selector sun.nio.ch.WindowsSelectorImpl@1c5fd6fb waiting on select
+queue org.eclipse.jetty.io.ManagedSelector$$Lambda$28/311239812@1aafa419
+Queued change org.eclipse.jetty.io.ManagedSelector$$Lambda$29/1764696127@47eaca72 on org.eclipse.jetty.io.ManagedSelector@38d8f54a id=2 keys=0 selected=0 updates=0
+run org.eclipse.jetty.io.ManagedSelector$$Lambda$28/311239812@1aafa419
+STARTED @663ms org.eclipse.jetty.io.ManagedSelector@38d8f54a id=2 keys=0 selected=0 updates=1
+starting org.eclipse.jetty.io.ManagedSelector@2a3b5b47 id=3 keys=-1 selected=-1 updates=0
+EatWhatYouKill@3349e9bb/SelectorProducer@409bf450/IDLE/p=false/QueuedThreadPool[qtp1313532469]@4e4aea35{STARTED,8<=8<=200,i=5,q=0}[pc=0,pic=0,pec=0,epc=0]@2019-01-07T20:44:53.695Z tryProduce false
+updateable 1
+starting EatWhatYouKill@49e53c76/SelectorProducer@351d00c0/IDLE/p=false/QueuedThreadPool[qtp1313532469]@4e4aea35{STARTED,8<=8<=200,i=5,q=0}[pc=0,pic=0,pec=0,epc=0]@2019-01-07T20:44:53.695Z
+update org.eclipse.jetty.io.ManagedSelector$$Lambda$29/1764696127@47eaca72
+updates 0
+Selector sun.nio.ch.WindowsSelectorImpl@7520efed waiting on select
+STARTED @663ms EatWhatYouKill@49e53c76/SelectorProducer@351d00c0/IDLE/p=false/QueuedThreadPool[qtp1313532469]@4e4aea35{STARTED,8<=8<=200,i=5,q=0}[pc=0,pic=0,pec=0,epc=0]@2019-01-07T20:44:53.695Z
+queue org.eclipse.jetty.io.ManagedSelector$$Lambda$28/311239812@55141def
+Queued change org.eclipse.jetty.io.ManagedSelector$$Lambda$29/1764696127@55182842 on org.eclipse.jetty.io.ManagedSelector@2a3b5b47 id=3 keys=0 selected=0 updates=0
+run org.eclipse.jetty.io.ManagedSelector$$Lambda$28/311239812@55141def
+STARTED @664ms org.eclipse.jetty.io.ManagedSelector@2a3b5b47 id=3 keys=0 selected=0 updates=1
+STARTED @664ms SelectorManager@ServerConnector@2b4a2ec7{HTTP/1.1,[http/1.1]}{0.0.0.0:9001}
+EatWhatYouKill@49e53c76/SelectorProducer@351d00c0/IDLE/p=false/QueuedThreadPool[qtp1313532469]@4e4aea35{STARTED,8<=8<=200,i=4,q=0}[pc=0,pic=0,pec=0,epc=0]@2019-01-07T20:44:53.695Z tryProduce false
+updateable 1
+update org.eclipse.jetty.io.ManagedSelector$$Lambda$29/1764696127@55182842
+updates 0
+Selector sun.nio.ch.WindowsSelectorImpl@5f9f9ee8 waiting on select
+ServerConnector@2b4a2ec7{HTTP/1.1,[http/1.1]}{0.0.0.0:9001} added {acceptor-0@5656be13,POJO}
+queue acceptor-0@5656be13
+Started ServerConnector@2b4a2ec7{HTTP/1.1,[http/1.1]}{0.0.0.0:9001}
+run acceptor-0@5656be13
+STARTED @664ms ServerConnector@2b4a2ec7{HTTP/1.1,[http/1.1]}{0.0.0.0:9001}
+Started @664ms
+STARTED @664ms org.eclipse.jetty.server.Server@365c30cc[9.4.9.v20180320]

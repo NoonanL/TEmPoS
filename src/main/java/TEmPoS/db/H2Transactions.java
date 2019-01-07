@@ -13,7 +13,7 @@ import java.sql.SQLException;
 public class H2Transactions extends H2Base {
 
     @SuppressWarnings("unused")
-    private static final Logger LOG = LoggerFactory.getLogger(H2Customer.class);
+    private static final Logger LOG = LoggerFactory.getLogger(H2Transactions.class);
 
 
     /**
@@ -38,10 +38,12 @@ public class H2Transactions extends H2Base {
 
 
     public boolean createTransaction(Transaction transaction) {
-        String query = "INSERT into transactions ( customerId, productId) VALUES (?, ?)";
+        String query = "INSERT into transactions (customerId, productId) VALUES (?, ?)";
+        //System.out.println(transaction.getProductId());
         try (PreparedStatement ps = getConnection().prepareStatement(query)) {
             ps.setString(1, transaction.getCustomerId());
             ps.setString(2, transaction.getProductId());
+            ps.execute();
             return true;
         } catch (SQLException e) {
             e.printStackTrace();
@@ -54,6 +56,7 @@ public class H2Transactions extends H2Base {
         JSONObject transactionList;
         try (PreparedStatement ps = getConnection().prepareStatement(GET_TRANSACTION_QUERY)){
             ResultSet rs = ps.executeQuery();
+            //System.out.println(rs);
             transactionList = parseTransactions(rs);
             //System.out.println(customerList);
         } catch (SQLException e) {
@@ -70,7 +73,7 @@ public class H2Transactions extends H2Base {
             newTransaction.setId(rs.getString(1));
             newTransaction.setCustomerId(rs.getString(2));
             newTransaction.setProductId(rs.getString(3));
-
+           // System.out.println("transaction: " + newTransaction.getCustomerId() + "," + newTransaction.getProductId() );
 
             transactionList.append("transactions" , newTransaction.toJson());
         }

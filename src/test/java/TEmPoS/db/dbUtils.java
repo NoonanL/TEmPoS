@@ -26,6 +26,7 @@ public class dbUtils {
     private H2Stock stockDB;
     private H2PurchaseOrder purchaseOrderDB;
     private H2GoodsOrder goodsOrderDB;
+    private H2Transactions transactionsDB;
 
 
     @Before
@@ -40,6 +41,7 @@ public class dbUtils {
         stockDB = new H2Stock(new ConnectionSupplier(ConnectionSupplier.FILE));
         purchaseOrderDB = new H2PurchaseOrder(new ConnectionSupplier(ConnectionSupplier.FILE));
         goodsOrderDB = new H2GoodsOrder(new ConnectionSupplier(ConnectionSupplier.FILE));
+        transactionsDB = new H2Transactions(new ConnectionSupplier(ConnectionSupplier.FILE));
     }
 
     @After
@@ -165,6 +167,18 @@ public class dbUtils {
         System.out.println("=====================================");
         if(goodsOrderDB.deleteTable()){
             System.out.println("Goods order table deleted");
+        }else{
+            System.out.println("Failed to delete table");
+        }
+    }
+
+    @Test
+    public void deleteTransactionsTable(){
+        System.out.println("=====================================");
+        System.out.println("Deleting Transactions table");
+        System.out.println("=====================================");
+        if(transactionsDB.deleteTable()){
+            System.out.println("Transactions table deleted");
         }else{
             System.out.println("Failed to delete table");
         }
