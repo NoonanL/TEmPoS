@@ -189,6 +189,7 @@ public class H2Customer extends H2Base {
         try (PreparedStatement ps = getConnection().prepareStatement(GET_USER_QUERY)){
             ResultSet rs = ps.executeQuery();
             customerList = parseCustomers(rs);
+            //System.out.println(customerList);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -218,7 +219,7 @@ public class H2Customer extends H2Base {
             newCustomer.setEmail(rs.getString(11));
             newCustomer.setMarketingStatus(rs.getString(12));
 
-            customerList.put(newCustomer.getId() , newCustomer.toJson());
+            customerList.append("customers" , newCustomer.toJson());
         }
         return customerList;
     }

@@ -141,7 +141,7 @@ public class H2Products extends H2Base {
             newProduct.setDepartment(rs.getString(6));
             newProduct.setBrand(rs.getString(7));
             newProduct.setDescription(rs.getString(8));
-            productList.put(newProduct.getId() , newProduct.toJson());
+            productList.append("products" , newProduct.toJson());
         }
         return productList;
     }

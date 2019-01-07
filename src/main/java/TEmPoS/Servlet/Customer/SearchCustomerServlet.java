@@ -69,8 +69,8 @@ public class SearchCustomerServlet extends HttpServlet {
 
                 if (h2User.isRegistered(requestUser)) {
                     responseJson = h2Customer.searchCustomers(searchString);
-                    responseJson.put("response", "OK.");
-                    responseJson.put("error", "None.");
+                    responseJson.put("response", "OK");
+                    responseJson.put("error", "None");
                 }
 
             } else {

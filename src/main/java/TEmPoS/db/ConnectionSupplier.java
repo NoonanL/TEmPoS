@@ -12,7 +12,7 @@ public class ConnectionSupplier {
      * On deployment server might make sense to just have this as the root.
      */
     public static final String MEMORY = "jdbc:h2:mem:TEmPoSdb";
-    public static final String FILE = "jdbc:h2:~/Dropbox/Honours Project/Code/Development/TEmPoS/TEmPoSdb";
+    public static final String FILE = "jdbc:h2:~/\\Dropbox (Personal)\\Honours Project\\Code\\Development\\TEmPoS/TEmPoSdb";
 
         private final String db;
 

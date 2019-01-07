@@ -45,7 +45,7 @@ public class LoginServlet extends HttpServlet{
         if (!ValidationFilter.authorizedRequest(request)) {
             System.out.println("Unauthorised user request from " + request.getRemoteAddr());
             //Logger.request("Unauthorised Request: " + request.getSession());
-            //response.sendError((HttpServletResponse.SC_UNAUTHORIZED));
+            response.sendError((HttpServletResponse.SC_UNAUTHORIZED));
             JSONObject responseJson = new JSONObject();
             responseJson.put("auth", "false");
             responseJson.put("response", "false");
@@ -79,11 +79,11 @@ public class LoginServlet extends HttpServlet{
                     Cookie sessionId = new Cookie("session", session.getId());
                     sessionId.setMaxAge(30 * 1);
                     response.addCookie(sessionId);
-                    System.out.println(responseJson);
+                    //System.out.println(responseJson);
                     //Logger.login("User logged in: " + session.getAttribute("user").toString() + " " + session.getAttribute("mySession").toString());
 
                 } else {
-                    System.out.println(responseJson);
+                    //System.out.println(responseJson);
                     responseJson.put("auth", "false");
                 }
 

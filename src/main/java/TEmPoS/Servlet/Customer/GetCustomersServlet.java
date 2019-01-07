@@ -45,7 +45,7 @@ public class GetCustomersServlet extends HttpServlet {
          */
         if (!ValidationFilter.authorizedRequest(request)) {
             System.out.println("Unauthorised user request from " + request.getRemoteAddr());
-            Logger.request("Unauthorised Request: " + request.getSession());
+            //Logger.request("Unauthorised Request: " + request.getSession());
             response.sendError((HttpServletResponse.SC_UNAUTHORIZED));
         } else {
 
@@ -64,8 +64,9 @@ public class GetCustomersServlet extends HttpServlet {
                 String requestUser = input.getString("requestUser");
 
                 if (h2User.isRegistered(requestUser)) {
+                    //System.out.println("Response being sent");
                     responseJson = h2Customer.getCustomers();
-                    responseJson.put("response", "OK.");
+                    responseJson.put("response", "OK");
                     responseJson.put("error", "None.");
                 }
             } else {
