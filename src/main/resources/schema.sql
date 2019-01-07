@@ -18,12 +18,6 @@ CREATE TABLE IF NOT EXISTS users (
   hash VARCHAR(255),
   isAdmin VARCHAR(32));
 
-CREATE TABLE IF NOT EXISTS transactions (
-  id int AUTO_INCREMENT PRIMARY KEY,
-  FOREIGN KEY (id) REFERENCES customers(id),
-  FOREIGN KEY (id) REFERENCES users(id),
-  value VARCHAR(32));
-
 CREATE TABLE IF NOT EXISTS branchList (
   id int AUTO_INCREMENT PRIMARY KEY,
   branch VARCHAR(32));
@@ -75,4 +69,10 @@ CREATE TABLE IF NOT EXISTS goodsOrder (
   productId VARCHAR(64),
   quantity VARCHAR(64),
   status VARCHAR(32)
+);
+
+CREATE TABLE IF NOT EXISTS transactions (
+  id int AUTO_INCREMENT PRIMARY KEY,
+  customerId VARCHAR(64) NOT NULL,
+  productId VARCHAR(64) NOT NULL
 );
