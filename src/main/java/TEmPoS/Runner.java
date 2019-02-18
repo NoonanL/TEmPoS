@@ -1,5 +1,6 @@
 package TEmPoS;
 
+import TEmPoS.MQTT.Subscriber;
 import TEmPoS.Servlet.*;
 import TEmPoS.Servlet.Brands.CreateBrandServlet;
 import TEmPoS.Servlet.Brands.DeleteBrandServlet;
@@ -26,6 +27,7 @@ import TEmPoS.Servlet.PurchaseOrder.EditPurchaseOrderServlet;
 import TEmPoS.Servlet.PurchaseOrder.GetPurchaseOrdersServlet;
 import TEmPoS.Servlet.Stock.*;
 import TEmPoS.Servlet.Transaction.CreateTransactionServlet;
+import TEmPoS.Servlet.Transaction.GetTransactionsServlet;
 import TEmPoS.Servlet.User.*;
 import TEmPoS.Util.TextReader;
 import TEmPoS.db.*;
@@ -33,8 +35,7 @@ import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.DefaultServlet;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
 
 import java.util.ArrayList;
 
@@ -252,6 +253,9 @@ public class Runner {
         CreateTransactionServlet createTransactionServlet = new CreateTransactionServlet(transactionsDB,userDB);
         handler.addServlet(new ServletHolder(createTransactionServlet), "/createTransactionServlet");
 
+        GetTransactionsServlet getTransactionsServlet = new GetTransactionsServlet(transactionsDB,userDB);
+        handler.addServlet(new ServletHolder(getTransactionsServlet), "/getTransactionsServlet");
+
 
         /*
         sets default servlet path.
@@ -259,6 +263,11 @@ public class Runner {
         DefaultServlet ds = new DefaultServlet();
         handler.addServlet(new ServletHolder(ds), "/");
 
+        /**
+         * Start MQTT Listener:
+         *
+         */
+        Subscriber testSub = new Subscriber();
 
         /*
         starts server

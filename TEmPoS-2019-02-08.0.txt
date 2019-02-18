@@ -1,0 +1,12 @@
+org.eclipse.jetty.server.session.Session$SessionInactivityTimeout@2b2ba786 idle timeout check, elapsed: 82789628 ms, remaining: -82759628 ms
+org.eclipse.jetty.server.session.Session$SessionInactivityTimeout@2b2ba786 idle timeout expired
+Timer expired for session node0plfys7pmlp6szot4io2jookr2
+Inspecting session node0plfys7pmlp6szot4io2jookr2, valid=true
+Testing expiry on session node0plfys7pmlp6szot4io2jookr2: expires at 1549375931875 now 1549650605489 maxIdle 30000
+Session node0plfys7pmlp6szot4io2jookr2 is candidate for expiry
+org.eclipse.jetty.server.session.Session$SessionInactivityTimeout@45adb724 idle timeout check, elapsed: 95322382 ms, remaining: -95292382 ms
+org.eclipse.jetty.server.session.Session$SessionInactivityTimeout@45adb724 idle timeout expired
+Timer expired for session node01z1h8bfqoj36c6vauzsx4xhn0
+Inspecting session node01z1h8bfqoj36c6vauzsx4xhn0, valid=true
+Testing expiry on session node01z1h8bfqoj36c6vauzsx4xhn0: expires at 1549375786704 now 1549663143665 maxIdle 30000
+Session node01z1h8bfqoj36c6vauzsx4xhn0 is candidate for expiry
