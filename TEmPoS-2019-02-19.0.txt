@@ -1,0 +1,1031 @@
+Logging to Logger[org.eclipse.jetty.util.log] via org.eclipse.jetty.util.log.Slf4jLog
+Logging initialized @2214ms to org.eclipse.jetty.util.log.Slf4jLog
+org.eclipse.jetty.server.Server@1a947fe[9.4.9.v20180320] added {QueuedThreadPool[qtp6041804]@5c30cc{STOPPED,8<=0<=200,i=0,q=0},AUTO}
+HttpConnectionFactory@1826d77[HTTP/1.1] added {HttpConfiguration@1009542{32768/8192,8192/8192,https://:0,[]},POJO}
+ServerConnector@12e5f00{null,[]}{0.0.0.0:0} added {org.eclipse.jetty.server.Server@1a947fe[9.4.9.v20180320],UNMANAGED}
+ServerConnector@12e5f00{null,[]}{0.0.0.0:0} added {QueuedThreadPool[qtp6041804]@5c30cc{STOPPED,8<=0<=200,i=0,q=0},AUTO}
+ServerConnector@12e5f00{null,[]}{0.0.0.0:0} added {org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@a664f2,AUTO}
+ServerConnector@12e5f00{null,[]}{0.0.0.0:0} added {org.eclipse.jetty.io.ArrayByteBufferPool@40b76e,POJO}
+ServerConnector@12e5f00{null,[http/1.1]}{0.0.0.0:0} added {HttpConnectionFactory@1826d77[HTTP/1.1],AUTO}
+ServerConnector@12e5f00{HTTP/1.1,[http/1.1]}{0.0.0.0:0} added HttpConnectionFactory@1826d77[HTTP/1.1]
+ServerConnector@12e5f00{HTTP/1.1,[http/1.1]}{0.0.0.0:0} added {SelectorManager@ServerConnector@12e5f00{HTTP/1.1,[http/1.1]}{0.0.0.0:0},MANAGED}
+org.eclipse.jetty.server.Server@1a947fe[9.4.9.v20180320] added {ServerConnector@12e5f00{HTTP/1.1,[http/1.1]}{0.0.0.0:9001},AUTO}
+Adding Decorator: org.eclipse.jetty.util.DeprecationWarning@e0fea4
+org.eclipse.jetty.server.Server@1a947fe[9.4.9.v20180320] added {o.e.j.s.ServletContextHandler@120ba90{/,null,UNAVAILABLE},MANAGED}
+o.e.j.s.ServletContextHandler@120ba90{/,null,UNAVAILABLE} added {org.eclipse.jetty.server.session.SessionHandler31391039==dftMaxIdleSec=-1,MANAGED}
+org.eclipse.jetty.server.session.SessionHandler31391039==dftMaxIdleSec=-1 added {org.eclipse.jetty.servlet.ServletHandler@a3cd93,MANAGED}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {TEmPoS.Servlet.LoginServlet-730495@e2a276e==TEmPoS.Servlet.LoginServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {[/loginServlet]=>TEmPoS.Servlet.LoginServlet-730495,POJO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {TEmPoS.Servlet.User.IsAdminServlet-32de6c@7c1206f6==TEmPoS.Servlet.User.IsAdminServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {[/isAdminServlet]=>TEmPoS.Servlet.User.IsAdminServlet-32de6c,POJO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {TEmPoS.Servlet.User.CreateUserServlet-92d9cc@24029f21==TEmPoS.Servlet.User.CreateUserServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {[/createUserServlet]=>TEmPoS.Servlet.User.CreateUserServlet-92d9cc,POJO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {TEmPoS.Servlet.User.GetUsersServlet-1f32542@fb2b1501==TEmPoS.Servlet.User.GetUsersServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {[/getUsersServlet]=>TEmPoS.Servlet.User.GetUsersServlet-1f32542,POJO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {TEmPoS.Servlet.User.DeleteUserServlet-11302d6@8a416aa5==TEmPoS.Servlet.User.DeleteUserServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {[/deleteUserServlet]=>TEmPoS.Servlet.User.DeleteUserServlet-11302d6,POJO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {TEmPoS.Servlet.User.EditUserServlet-1ee72e6@f27551c==TEmPoS.Servlet.User.EditUserServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {[/editUserServlet]=>TEmPoS.Servlet.User.EditUserServlet-1ee72e6,POJO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {TEmPoS.Servlet.Customer.CreateCustomerServlet-1529fee@6df53668==TEmPoS.Servlet.Customer.CreateCustomerServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {[/createCustomerServlet]=>TEmPoS.Servlet.Customer.CreateCustomerServlet-1529fee,POJO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {TEmPoS.Servlet.Customer.DeleteCustomerServlet-1e767f3@4771828f==TEmPoS.Servlet.Customer.DeleteCustomerServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {[/deleteCustomerServlet]=>TEmPoS.Servlet.Customer.DeleteCustomerServlet-1e767f3,POJO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {TEmPoS.Servlet.Customer.EditCustomerServlet-5c96b@41bc0c36==TEmPoS.Servlet.Customer.EditCustomerServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {[/editCustomerServlet]=>TEmPoS.Servlet.Customer.EditCustomerServlet-5c96b,POJO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {TEmPoS.Servlet.Customer.GetCustomersServlet-4cf7cf@eca64c3b==TEmPoS.Servlet.Customer.GetCustomersServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {[/getCustomersServlet]=>TEmPoS.Servlet.Customer.GetCustomersServlet-4cf7cf,POJO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {TEmPoS.Servlet.Customer.SearchCustomerServlet-1d6b6c7@7fce020c==TEmPoS.Servlet.Customer.SearchCustomerServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {[/searchCustomerServlet]=>TEmPoS.Servlet.Customer.SearchCustomerServlet-1d6b6c7,POJO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {TEmPoS.Servlet.Configuration.BranchesServlet-1fa9431@256c50b6==TEmPoS.Servlet.Configuration.BranchesServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {[/branchesServlet]=>TEmPoS.Servlet.Configuration.BranchesServlet-1fa9431,POJO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {TEmPoS.Servlet.Product.CreateProductServlet-1b250b4@3a21afd1==TEmPoS.Servlet.Product.CreateProductServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {[/createProductServlet]=>TEmPoS.Servlet.Product.CreateProductServlet-1b250b4,POJO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {TEmPoS.Servlet.Product.DeleteProductServlet-3f3642@618e1f22==TEmPoS.Servlet.Product.DeleteProductServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {[/deleteProductServlet]=>TEmPoS.Servlet.Product.DeleteProductServlet-3f3642,POJO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {TEmPoS.Servlet.Product.EditProductServlet-c5cc4c@143409b0==TEmPoS.Servlet.Product.EditProductServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {[/editProductServlet]=>TEmPoS.Servlet.Product.EditProductServlet-c5cc4c,POJO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {TEmPoS.Servlet.Product.GetProductsServlet-1918c79@22183852==TEmPoS.Servlet.Product.GetProductsServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {[/getProductsServlet]=>TEmPoS.Servlet.Product.GetProductsServlet-1918c79,POJO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {TEmPoS.Servlet.Product.SearchProductsServlet-e94dcf@2f103119==TEmPoS.Servlet.Product.SearchProductsServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {[/searchProductsServlet]=>TEmPoS.Servlet.Product.SearchProductsServlet-e94dcf,POJO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {TEmPoS.Servlet.Product.GetProductByIdServlet-13fe9b6@be3e3db==TEmPoS.Servlet.Product.GetProductByIdServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {[/getProductByIdServlet]=>TEmPoS.Servlet.Product.GetProductByIdServlet-13fe9b6,POJO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {TEmPoS.Servlet.Stock.CreateStockServlet-18ee631@d9c21c2==TEmPoS.Servlet.Stock.CreateStockServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {[/createStockServlet]=>TEmPoS.Servlet.Stock.CreateStockServlet-18ee631,POJO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {TEmPoS.Servlet.Stock.GetStockServlet-c756bd@d9955bd6==TEmPoS.Servlet.Stock.GetStockServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {[/getStockServlet]=>TEmPoS.Servlet.Stock.GetStockServlet-c756bd,POJO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {TEmPoS.Servlet.Stock.IncrementStockServlet-72f59f@5b44867d==TEmPoS.Servlet.Stock.IncrementStockServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {[/incrementStockServlet]=>TEmPoS.Servlet.Stock.IncrementStockServlet-72f59f,POJO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {TEmPoS.Servlet.Stock.DecrementStockServlet-dcc9fe@f2d115d6==TEmPoS.Servlet.Stock.DecrementStockServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {[/decrementStockServlet]=>TEmPoS.Servlet.Stock.DecrementStockServlet-dcc9fe,POJO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {TEmPoS.Servlet.Stock.EditStockServlet-2114ba@5b5b691e==TEmPoS.Servlet.Stock.EditStockServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {[/editStockServlet]=>TEmPoS.Servlet.Stock.EditStockServlet-2114ba,POJO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {TEmPoS.Servlet.Stock.GetStockByBranchServlet-e7dcfd@3947ca27==TEmPoS.Servlet.Stock.GetStockByBranchServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {[/getStockByBranchServlet]=>TEmPoS.Servlet.Stock.GetStockByBranchServlet-e7dcfd,POJO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {TEmPoS.Servlet.Brands.CreateBrandServlet-1121db3@8e9499a6==TEmPoS.Servlet.Brands.CreateBrandServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {[/createBrandServlet]=>TEmPoS.Servlet.Brands.CreateBrandServlet-1121db3,POJO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {TEmPoS.Servlet.Brands.DeleteBrandServlet-107a0d6@e571fc98==TEmPoS.Servlet.Brands.DeleteBrandServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {[/deleteBrandServlet]=>TEmPoS.Servlet.Brands.DeleteBrandServlet-107a0d6,POJO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {TEmPoS.Servlet.Brands.EditBrandServlet-1a9e7c8@16a1ad4e==TEmPoS.Servlet.Brands.EditBrandServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {[/editBrandServlet]=>TEmPoS.Servlet.Brands.EditBrandServlet-1a9e7c8,POJO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {TEmPoS.Servlet.Brands.GetBrandsServlet-101d134@29003659==TEmPoS.Servlet.Brands.GetBrandsServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {[/getBrandsServlet]=>TEmPoS.Servlet.Brands.GetBrandsServlet-101d134,POJO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {TEmPoS.Servlet.Distributors.CreateDistributorServlet-d3bc22@3769a620==TEmPoS.Servlet.Distributors.CreateDistributorServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {[/createDistributorServlet]=>TEmPoS.Servlet.Distributors.CreateDistributorServlet-d3bc22,POJO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {TEmPoS.Servlet.Distributors.DeleteDistributorServlet-d4bf7e@280f37e3==TEmPoS.Servlet.Distributors.DeleteDistributorServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {[/deleteDistributorServlet]=>TEmPoS.Servlet.Distributors.DeleteDistributorServlet-d4bf7e,POJO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {TEmPoS.Servlet.Distributors.EditDistributorServlet-1d9d4b@2ebd310e==TEmPoS.Servlet.Distributors.EditDistributorServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {[/editDistributorServlet]=>TEmPoS.Servlet.Distributors.EditDistributorServlet-1d9d4b,POJO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {TEmPoS.Servlet.Distributors.GetDistributorsServlet-1227d8d@3aa850e3==TEmPoS.Servlet.Distributors.GetDistributorsServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {[/getDistributorsServlet]=>TEmPoS.Servlet.Distributors.GetDistributorsServlet-1227d8d,POJO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {TEmPoS.Servlet.Departments.CreateDepartmentServlet-19ec67@3a7fca9==TEmPoS.Servlet.Departments.CreateDepartmentServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {[/createDepartmentServlet]=>TEmPoS.Servlet.Departments.CreateDepartmentServlet-19ec67,POJO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {TEmPoS.Servlet.Departments.DeleteDepartmentServlet-1018215@4fa3075f==TEmPoS.Servlet.Departments.DeleteDepartmentServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {[/deleteDepartmentServlet]=>TEmPoS.Servlet.Departments.DeleteDepartmentServlet-1018215,POJO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {TEmPoS.Servlet.Departments.EditDepartmentServlet-1d6b83b@7bad2938==TEmPoS.Servlet.Departments.EditDepartmentServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {[/editDepartmentServlet]=>TEmPoS.Servlet.Departments.EditDepartmentServlet-1d6b83b,POJO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {TEmPoS.Servlet.Departments.GetDepartmentsServlet-1706f19@45e8eb23==TEmPoS.Servlet.Departments.GetDepartmentsServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {[/getDepartmentsServlet]=>TEmPoS.Servlet.Departments.GetDepartmentsServlet-1706f19,POJO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {TEmPoS.Servlet.PurchaseOrder.CreatePurchaseOrderServlet-b7c004@5b4b363f==TEmPoS.Servlet.PurchaseOrder.CreatePurchaseOrderServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {[/createPurchaseOrderServlet]=>TEmPoS.Servlet.PurchaseOrder.CreatePurchaseOrderServlet-b7c004,POJO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {TEmPoS.Servlet.PurchaseOrder.DeletePurchaseOrderServlet-1efed2d@22ec6079==TEmPoS.Servlet.PurchaseOrder.DeletePurchaseOrderServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {[/deletePurchaseOrderServlet]=>TEmPoS.Servlet.PurchaseOrder.DeletePurchaseOrderServlet-1efed2d,POJO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {TEmPoS.Servlet.PurchaseOrder.EditPurchaseOrderServlet-128854b@aca52697==TEmPoS.Servlet.PurchaseOrder.EditPurchaseOrderServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {[/editPurchaseOrderServlet]=>TEmPoS.Servlet.PurchaseOrder.EditPurchaseOrderServlet-128854b,POJO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {TEmPoS.Servlet.PurchaseOrder.GetPurchaseOrdersServlet-1ae2fd0@5d1a451==TEmPoS.Servlet.PurchaseOrder.GetPurchaseOrdersServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {[/getPurchaseOrdersServlet]=>TEmPoS.Servlet.PurchaseOrder.GetPurchaseOrdersServlet-1ae2fd0,POJO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {TEmPoS.Servlet.GoodsOrder.CreateGoodsOrderServlet-1176cc1@b1e058df==TEmPoS.Servlet.GoodsOrder.CreateGoodsOrderServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {[/createGoodsOrderServlet]=>TEmPoS.Servlet.GoodsOrder.CreateGoodsOrderServlet-1176cc1,POJO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {TEmPoS.Servlet.GoodsOrder.GetGoodsOrderServlet-1177a4b@2e22b730==TEmPoS.Servlet.GoodsOrder.GetGoodsOrderServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {[/getGoodsOrderServlet]=>TEmPoS.Servlet.GoodsOrder.GetGoodsOrderServlet-1177a4b,POJO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {TEmPoS.Servlet.GoodsOrder.EditGoodsOrderServlet-78a03f@eef249e4==TEmPoS.Servlet.GoodsOrder.EditGoodsOrderServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {[/editGoodsOrderServlet]=>TEmPoS.Servlet.GoodsOrder.EditGoodsOrderServlet-78a03f,POJO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {TEmPoS.Servlet.GoodsOrder.DeleteGoodsOrderServlet-7ed70f@6d42ad79==TEmPoS.Servlet.GoodsOrder.DeleteGoodsOrderServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {[/deleteGoodsOrderServlet]=>TEmPoS.Servlet.GoodsOrder.DeleteGoodsOrderServlet-7ed70f,POJO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {TEmPoS.Servlet.Transaction.CreateTransactionServlet-1dd025@482725bd==TEmPoS.Servlet.Transaction.CreateTransactionServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {[/createTransactionServlet]=>TEmPoS.Servlet.Transaction.CreateTransactionServlet-1dd025,POJO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {TEmPoS.Servlet.Transaction.GetTransactionsServlet-4c278f@a46154c6==TEmPoS.Servlet.Transaction.GetTransactionsServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {[/getTransactionsServlet]=>TEmPoS.Servlet.Transaction.GetTransactionsServlet-4c278f,POJO}
+HttpField encoders loaded: [org.eclipse.jetty.http.Http1FieldPreEncoder@aab498, org.eclipse.jetty.http2.hpack.HpackFieldPreEncoder@1dd6264]
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {org.eclipse.jetty.servlet.DefaultServlet-1e7aac8@32be3c39==org.eclipse.jetty.servlet.DefaultServlet,jsp=null,order=-1,inst=true,AUTO}
+org.eclipse.jetty.servlet.ServletHandler@a3cd93 added {[/]=>org.eclipse.jetty.servlet.DefaultServlet-1e7aac8,POJO}
+starting org.eclipse.jetty.server.Server@1a947fe[9.4.9.v20180320]
+org.eclipse.jetty.server.Server@1a947fe[9.4.9.v20180320] added {org.eclipse.jetty.server.handler.ErrorHandler@e1e309,AUTO}
+jetty-9.4.9.v20180320; built: 2018-03-20T12:21:10Z; git: 1f8159b1e4a42d3f79997021ea1609f2fbac6de5; jvm 1.8.0_73-b02
+starting org.eclipse.jetty.server.Server@1a947fe[9.4.9.v20180320]
+starting QueuedThreadPool[qtp6041804]@5c30cc{STOPPED,8<=0<=200,i=0,q=0}
+ReservedThreadExecutor@1f116cc{s=0/4,p=0}
+QueuedThreadPool[qtp6041804]@5c30cc{STARTING,8<=0<=200,i=0,q=0} added {ReservedThreadExecutor@1f116cc{s=0/4,p=0},AUTO}
+starting ReservedThreadExecutor@1f116cc{s=0/4,p=0}
+STARTED @5486ms ReservedThreadExecutor@1f116cc{s=0/4,p=0}
+STARTED @5488ms QueuedThreadPool[qtp6041804]@5c30cc{STARTED,8<=8<=200,i=0,q=0}
+starting o.e.j.s.ServletContextHandler@120ba90{/,null,UNAVAILABLE}
+starting o.e.j.s.ServletContextHandler@120ba90{/,null,STARTING}
+starting org.eclipse.jetty.server.session.SessionHandler31391039==dftMaxIdleSec=-1
+org.eclipse.jetty.server.session.SessionHandler31391039==dftMaxIdleSec=-1 added {org.eclipse.jetty.server.session.DefaultSessionCache@10eb4b4[evict=-1,removeUnloadable=false,saveOnCreate=false,saveOnInactiveEvict=false],AUTO}
+org.eclipse.jetty.server.session.DefaultSessionCache@10eb4b4[evict=-1,removeUnloadable=false,saveOnCreate=false,saveOnInactiveEvict=false] added {org.eclipse.jetty.server.session.NullSessionDataStore@3191a6[passivating=false,graceSec=3600],AUTO}
+starting org.eclipse.jetty.server.session.DefaultSessionIdManager@69db50[worker=null]
+DefaultSessionIdManager workerName=node0
+No SessionScavenger set, using defaults
+org.eclipse.jetty.server.session.DefaultSessionIdManager@69db50[worker=node0] added {org.eclipse.jetty.server.session.HouseKeeper@3b5b47[interval=600000, ownscheduler=false],MANAGED}
+starting org.eclipse.jetty.server.session.HouseKeeper@3b5b47[interval=600000, ownscheduler=false]
+starting org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@1b699ef
+STARTED @5554ms org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@1b699ef
+Using own scheduler for scavenging
+Scavenging every 660000ms
+STARTED @5556ms org.eclipse.jetty.server.session.HouseKeeper@3b5b47[interval=660000, ownscheduler=true]
+STARTED @5556ms org.eclipse.jetty.server.session.DefaultSessionIdManager@69db50[worker=node0]
+org.eclipse.jetty.server.Server@1a947fe[9.4.9.v20180320] added {org.eclipse.jetty.server.session.DefaultSessionIdManager@69db50[worker=node0],MANAGED}
+org.eclipse.jetty.server.session.SessionHandler31391039==dftMaxIdleSec=-1 added {org.eclipse.jetty.server.session.DefaultSessionIdManager@69db50[worker=node0],UNMANAGED}
+starting org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@13ac989
+STARTED @5557ms org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@13ac989
+starting org.eclipse.jetty.server.session.SessionHandler31391039==dftMaxIdleSec=-1
+starting org.eclipse.jetty.servlet.ServletHandler@a3cd93
+Path=/createStockServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.Stock.CreateStockServlet-18ee631[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/createStockServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.Stock.CreateStockServlet-18ee631@d9c21c2==TEmPoS.Servlet.Stock.CreateStockServlet,jsp=null,order=-1,inst=true] to PathMappings[size=1]
+Path=/createBrandServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.Brands.CreateBrandServlet-1121db3[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/createBrandServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.Brands.CreateBrandServlet-1121db3@8e9499a6==TEmPoS.Servlet.Brands.CreateBrandServlet,jsp=null,order=-1,inst=true] to PathMappings[size=2]
+Path=/getDistributorsServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.Distributors.GetDistributorsServlet-1227d8d[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/getDistributorsServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.Distributors.GetDistributorsServlet-1227d8d@3aa850e3==TEmPoS.Servlet.Distributors.GetDistributorsServlet,jsp=null,order=-1,inst=true] to PathMappings[size=3]
+Path=/createCustomerServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.Customer.CreateCustomerServlet-1529fee[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/createCustomerServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.Customer.CreateCustomerServlet-1529fee@6df53668==TEmPoS.Servlet.Customer.CreateCustomerServlet,jsp=null,order=-1,inst=true] to PathMappings[size=4]
+Path=/editStockServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.Stock.EditStockServlet-2114ba[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/editStockServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.Stock.EditStockServlet-2114ba@5b5b691e==TEmPoS.Servlet.Stock.EditStockServlet,jsp=null,order=-1,inst=true] to PathMappings[size=5]
+Path=/getProductsServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.Product.GetProductsServlet-1918c79[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/getProductsServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.Product.GetProductsServlet-1918c79@22183852==TEmPoS.Servlet.Product.GetProductsServlet,jsp=null,order=-1,inst=true] to PathMappings[size=6]
+Path=/editCustomerServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.Customer.EditCustomerServlet-5c96b[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/editCustomerServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.Customer.EditCustomerServlet-5c96b@41bc0c36==TEmPoS.Servlet.Customer.EditCustomerServlet,jsp=null,order=-1,inst=true] to PathMappings[size=7]
+Path=/editBrandServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.Brands.EditBrandServlet-1a9e7c8[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/editBrandServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.Brands.EditBrandServlet-1a9e7c8@16a1ad4e==TEmPoS.Servlet.Brands.EditBrandServlet,jsp=null,order=-1,inst=true] to PathMappings[size=8]
+Path=/loginServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.LoginServlet-730495[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/loginServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.LoginServlet-730495@e2a276e==TEmPoS.Servlet.LoginServlet,jsp=null,order=-1,inst=true] to PathMappings[size=9]
+Path=/isAdminServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.User.IsAdminServlet-32de6c[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/isAdminServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.User.IsAdminServlet-32de6c@7c1206f6==TEmPoS.Servlet.User.IsAdminServlet,jsp=null,order=-1,inst=true] to PathMappings[size=10]
+Path=/getStockByBranchServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.Stock.GetStockByBranchServlet-e7dcfd[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/getStockByBranchServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.Stock.GetStockByBranchServlet-e7dcfd@3947ca27==TEmPoS.Servlet.Stock.GetStockByBranchServlet,jsp=null,order=-1,inst=true] to PathMappings[size=11]
+Path=/createProductServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.Product.CreateProductServlet-1b250b4[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/createProductServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.Product.CreateProductServlet-1b250b4@3a21afd1==TEmPoS.Servlet.Product.CreateProductServlet,jsp=null,order=-1,inst=true] to PathMappings[size=12]
+Path=/createTransactionServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.Transaction.CreateTransactionServlet-1dd025[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/createTransactionServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.Transaction.CreateTransactionServlet-1dd025@482725bd==TEmPoS.Servlet.Transaction.CreateTransactionServlet,jsp=null,order=-1,inst=true] to PathMappings[size=13]
+Path=/createDistributorServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.Distributors.CreateDistributorServlet-d3bc22[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/createDistributorServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.Distributors.CreateDistributorServlet-d3bc22@3769a620==TEmPoS.Servlet.Distributors.CreateDistributorServlet,jsp=null,order=-1,inst=true] to PathMappings[size=14]
+Path=/getGoodsOrderServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.GoodsOrder.GetGoodsOrderServlet-1177a4b[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/getGoodsOrderServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.GoodsOrder.GetGoodsOrderServlet-1177a4b@2e22b730==TEmPoS.Servlet.GoodsOrder.GetGoodsOrderServlet,jsp=null,order=-1,inst=true] to PathMappings[size=15]
+Path=/searchCustomerServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.Customer.SearchCustomerServlet-1d6b6c7[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/searchCustomerServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.Customer.SearchCustomerServlet-1d6b6c7@7fce020c==TEmPoS.Servlet.Customer.SearchCustomerServlet,jsp=null,order=-1,inst=true] to PathMappings[size=16]
+Path=/searchProductsServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.Product.SearchProductsServlet-e94dcf[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/searchProductsServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.Product.SearchProductsServlet-e94dcf@2f103119==TEmPoS.Servlet.Product.SearchProductsServlet,jsp=null,order=-1,inst=true] to PathMappings[size=17]
+Path=/getTransactionsServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.Transaction.GetTransactionsServlet-4c278f[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/getTransactionsServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.Transaction.GetTransactionsServlet-4c278f@a46154c6==TEmPoS.Servlet.Transaction.GetTransactionsServlet,jsp=null,order=-1,inst=true] to PathMappings[size=18]
+Path=/getPurchaseOrdersServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.PurchaseOrder.GetPurchaseOrdersServlet-1ae2fd0[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/getPurchaseOrdersServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.PurchaseOrder.GetPurchaseOrdersServlet-1ae2fd0@5d1a451==TEmPoS.Servlet.PurchaseOrder.GetPurchaseOrdersServlet,jsp=null,order=-1,inst=true] to PathMappings[size=19]
+Path=/deleteBrandServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.Brands.DeleteBrandServlet-107a0d6[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/deleteBrandServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.Brands.DeleteBrandServlet-107a0d6@e571fc98==TEmPoS.Servlet.Brands.DeleteBrandServlet,jsp=null,order=-1,inst=true] to PathMappings[size=20]
+Path=/deleteProductServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.Product.DeleteProductServlet-3f3642[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/deleteProductServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.Product.DeleteProductServlet-3f3642@618e1f22==TEmPoS.Servlet.Product.DeleteProductServlet,jsp=null,order=-1,inst=true] to PathMappings[size=21]
+Path=/getDepartmentsServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.Departments.GetDepartmentsServlet-1706f19[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/getDepartmentsServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.Departments.GetDepartmentsServlet-1706f19@45e8eb23==TEmPoS.Servlet.Departments.GetDepartmentsServlet,jsp=null,order=-1,inst=true] to PathMappings[size=22]
+Path=/deletePurchaseOrderServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.PurchaseOrder.DeletePurchaseOrderServlet-1efed2d[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/deletePurchaseOrderServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.PurchaseOrder.DeletePurchaseOrderServlet-1efed2d@22ec6079==TEmPoS.Servlet.PurchaseOrder.DeletePurchaseOrderServlet,jsp=null,order=-1,inst=true] to PathMappings[size=23]
+Path=/editPurchaseOrderServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.PurchaseOrder.EditPurchaseOrderServlet-128854b[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/editPurchaseOrderServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.PurchaseOrder.EditPurchaseOrderServlet-128854b@aca52697==TEmPoS.Servlet.PurchaseOrder.EditPurchaseOrderServlet,jsp=null,order=-1,inst=true] to PathMappings[size=24]
+Path=/deleteDistributorServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.Distributors.DeleteDistributorServlet-d4bf7e[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/deleteDistributorServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.Distributors.DeleteDistributorServlet-d4bf7e@280f37e3==TEmPoS.Servlet.Distributors.DeleteDistributorServlet,jsp=null,order=-1,inst=true] to PathMappings[size=25]
+Path=/createUserServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.User.CreateUserServlet-92d9cc[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/createUserServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.User.CreateUserServlet-92d9cc@24029f21==TEmPoS.Servlet.User.CreateUserServlet,jsp=null,order=-1,inst=true] to PathMappings[size=26]
+Path=/incrementStockServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.Stock.IncrementStockServlet-72f59f[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/incrementStockServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.Stock.IncrementStockServlet-72f59f@5b44867d==TEmPoS.Servlet.Stock.IncrementStockServlet,jsp=null,order=-1,inst=true] to PathMappings[size=27]
+Path=/deleteUserServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.User.DeleteUserServlet-11302d6[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/deleteUserServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.User.DeleteUserServlet-11302d6@8a416aa5==TEmPoS.Servlet.User.DeleteUserServlet,jsp=null,order=-1,inst=true] to PathMappings[size=28]
+Path=/editUserServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.User.EditUserServlet-1ee72e6[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/editUserServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.User.EditUserServlet-1ee72e6@f27551c==TEmPoS.Servlet.User.EditUserServlet,jsp=null,order=-1,inst=true] to PathMappings[size=29]
+Path=/getStockServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.Stock.GetStockServlet-c756bd[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/getStockServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.Stock.GetStockServlet-c756bd@d9955bd6==TEmPoS.Servlet.Stock.GetStockServlet,jsp=null,order=-1,inst=true] to PathMappings[size=30]
+Path=/editDistributorServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.Distributors.EditDistributorServlet-1d9d4b[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/editDistributorServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.Distributors.EditDistributorServlet-1d9d4b@2ebd310e==TEmPoS.Servlet.Distributors.EditDistributorServlet,jsp=null,order=-1,inst=true] to PathMappings[size=31]
+Path=/editGoodsOrderServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.GoodsOrder.EditGoodsOrderServlet-78a03f[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/editGoodsOrderServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.GoodsOrder.EditGoodsOrderServlet-78a03f@eef249e4==TEmPoS.Servlet.GoodsOrder.EditGoodsOrderServlet,jsp=null,order=-1,inst=true] to PathMappings[size=32]
+Path=/branchesServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.Configuration.BranchesServlet-1fa9431[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/branchesServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.Configuration.BranchesServlet-1fa9431@256c50b6==TEmPoS.Servlet.Configuration.BranchesServlet,jsp=null,order=-1,inst=true] to PathMappings[size=33]
+Path=/createGoodsOrderServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.GoodsOrder.CreateGoodsOrderServlet-1176cc1[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/createGoodsOrderServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.GoodsOrder.CreateGoodsOrderServlet-1176cc1@b1e058df==TEmPoS.Servlet.GoodsOrder.CreateGoodsOrderServlet,jsp=null,order=-1,inst=true] to PathMappings[size=34]
+Path=/getCustomersServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.Customer.GetCustomersServlet-4cf7cf[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/getCustomersServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.Customer.GetCustomersServlet-4cf7cf@eca64c3b==TEmPoS.Servlet.Customer.GetCustomersServlet,jsp=null,order=-1,inst=true] to PathMappings[size=35]
+Path=/createDepartmentServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.Departments.CreateDepartmentServlet-19ec67[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/createDepartmentServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.Departments.CreateDepartmentServlet-19ec67@3a7fca9==TEmPoS.Servlet.Departments.CreateDepartmentServlet,jsp=null,order=-1,inst=true] to PathMappings[size=36]
+Path=/editProductServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.Product.EditProductServlet-c5cc4c[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/editProductServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.Product.EditProductServlet-c5cc4c@143409b0==TEmPoS.Servlet.Product.EditProductServlet,jsp=null,order=-1,inst=true] to PathMappings[size=37]
+Path=/[EMBEDDED:null] mapped to servlet=org.eclipse.jetty.servlet.DefaultServlet-1e7aac8[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/",pathDepth=-1,group=DEFAULT],resource=org.eclipse.jetty.servlet.DefaultServlet-1e7aac8@32be3c39==org.eclipse.jetty.servlet.DefaultServlet,jsp=null,order=-1,inst=true] to PathMappings[size=38]
+Path=/editDepartmentServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.Departments.EditDepartmentServlet-1d6b83b[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/editDepartmentServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.Departments.EditDepartmentServlet-1d6b83b@7bad2938==TEmPoS.Servlet.Departments.EditDepartmentServlet,jsp=null,order=-1,inst=true] to PathMappings[size=39]
+Path=/decrementStockServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.Stock.DecrementStockServlet-dcc9fe[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/decrementStockServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.Stock.DecrementStockServlet-dcc9fe@f2d115d6==TEmPoS.Servlet.Stock.DecrementStockServlet,jsp=null,order=-1,inst=true] to PathMappings[size=40]
+Path=/getProductByIdServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.Product.GetProductByIdServlet-13fe9b6[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/getProductByIdServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.Product.GetProductByIdServlet-13fe9b6@be3e3db==TEmPoS.Servlet.Product.GetProductByIdServlet,jsp=null,order=-1,inst=true] to PathMappings[size=41]
+Path=/createPurchaseOrderServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.PurchaseOrder.CreatePurchaseOrderServlet-b7c004[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/createPurchaseOrderServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.PurchaseOrder.CreatePurchaseOrderServlet-b7c004@5b4b363f==TEmPoS.Servlet.PurchaseOrder.CreatePurchaseOrderServlet,jsp=null,order=-1,inst=true] to PathMappings[size=42]
+Path=/getUsersServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.User.GetUsersServlet-1f32542[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/getUsersServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.User.GetUsersServlet-1f32542@fb2b1501==TEmPoS.Servlet.User.GetUsersServlet,jsp=null,order=-1,inst=true] to PathMappings[size=43]
+Path=/deleteDepartmentServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.Departments.DeleteDepartmentServlet-1018215[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/deleteDepartmentServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.Departments.DeleteDepartmentServlet-1018215@4fa3075f==TEmPoS.Servlet.Departments.DeleteDepartmentServlet,jsp=null,order=-1,inst=true] to PathMappings[size=44]
+Path=/getBrandsServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.Brands.GetBrandsServlet-101d134[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/getBrandsServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.Brands.GetBrandsServlet-101d134@29003659==TEmPoS.Servlet.Brands.GetBrandsServlet,jsp=null,order=-1,inst=true] to PathMappings[size=45]
+Path=/deleteGoodsOrderServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.GoodsOrder.DeleteGoodsOrderServlet-7ed70f[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/deleteGoodsOrderServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.GoodsOrder.DeleteGoodsOrderServlet-7ed70f@6d42ad79==TEmPoS.Servlet.GoodsOrder.DeleteGoodsOrderServlet,jsp=null,order=-1,inst=true] to PathMappings[size=46]
+Path=/deleteCustomerServlet[EMBEDDED:null] mapped to servlet=TEmPoS.Servlet.Customer.DeleteCustomerServlet-1e767f3[EMBEDDED:null]
+Added MappedResource[pathSpec=ServletPathSpec["/deleteCustomerServlet",pathDepth=1,group=EXACT],resource=TEmPoS.Servlet.Customer.DeleteCustomerServlet-1e767f3@4771828f==TEmPoS.Servlet.Customer.DeleteCustomerServlet,jsp=null,order=-1,inst=true] to PathMappings[size=47]
+filterNameMap={}
+pathFilters=null
+servletFilterMap=null
+servletPathMap=PathMappings[size=47]
+servletNameMap={TEmPoS.Servlet.PurchaseOrder.GetPurchaseOrdersServlet-1ae2fd0=TEmPoS.Servlet.PurchaseOrder.GetPurchaseOrdersServlet-1ae2fd0@5d1a451==TEmPoS.Servlet.PurchaseOrder.GetPurchaseOrdersServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.Customer.SearchCustomerServlet-1d6b6c7=TEmPoS.Servlet.Customer.SearchCustomerServlet-1d6b6c7@7fce020c==TEmPoS.Servlet.Customer.SearchCustomerServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.Stock.GetStockServlet-c756bd=TEmPoS.Servlet.Stock.GetStockServlet-c756bd@d9955bd6==TEmPoS.Servlet.Stock.GetStockServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.LoginServlet-730495=TEmPoS.Servlet.LoginServlet-730495@e2a276e==TEmPoS.Servlet.LoginServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.Product.EditProductServlet-c5cc4c=TEmPoS.Servlet.Product.EditProductServlet-c5cc4c@143409b0==TEmPoS.Servlet.Product.EditProductServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.Stock.EditStockServlet-2114ba=TEmPoS.Servlet.Stock.EditStockServlet-2114ba@5b5b691e==TEmPoS.Servlet.Stock.EditStockServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.Stock.DecrementStockServlet-dcc9fe=TEmPoS.Servlet.Stock.DecrementStockServlet-dcc9fe@f2d115d6==TEmPoS.Servlet.Stock.DecrementStockServlet,jsp=null,order=-1,inst=true, org.eclipse.jetty.servlet.DefaultServlet-1e7aac8=org.eclipse.jetty.servlet.DefaultServlet-1e7aac8@32be3c39==org.eclipse.jetty.servlet.DefaultServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.Product.SearchProductsServlet-e94dcf=TEmPoS.Servlet.Product.SearchProductsServlet-e94dcf@2f103119==TEmPoS.Servlet.Product.SearchProductsServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.Distributors.CreateDistributorServlet-d3bc22=TEmPoS.Servlet.Distributors.CreateDistributorServlet-d3bc22@3769a620==TEmPoS.Servlet.Distributors.CreateDistributorServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.Customer.EditCustomerServlet-5c96b=TEmPoS.Servlet.Customer.EditCustomerServlet-5c96b@41bc0c36==TEmPoS.Servlet.Customer.EditCustomerServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.Product.GetProductsServlet-1918c79=TEmPoS.Servlet.Product.GetProductsServlet-1918c79@22183852==TEmPoS.Servlet.Product.GetProductsServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.Distributors.GetDistributorsServlet-1227d8d=TEmPoS.Servlet.Distributors.GetDistributorsServlet-1227d8d@3aa850e3==TEmPoS.Servlet.Distributors.GetDistributorsServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.Departments.GetDepartmentsServlet-1706f19=TEmPoS.Servlet.Departments.GetDepartmentsServlet-1706f19@45e8eb23==TEmPoS.Servlet.Departments.GetDepartmentsServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.Departments.CreateDepartmentServlet-19ec67=TEmPoS.Servlet.Departments.CreateDepartmentServlet-19ec67@3a7fca9==TEmPoS.Servlet.Departments.CreateDepartmentServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.GoodsOrder.GetGoodsOrderServlet-1177a4b=TEmPoS.Servlet.GoodsOrder.GetGoodsOrderServlet-1177a4b@2e22b730==TEmPoS.Servlet.GoodsOrder.GetGoodsOrderServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.Departments.EditDepartmentServlet-1d6b83b=TEmPoS.Servlet.Departments.EditDepartmentServlet-1d6b83b@7bad2938==TEmPoS.Servlet.Departments.EditDepartmentServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.PurchaseOrder.DeletePurchaseOrderServlet-1efed2d=TEmPoS.Servlet.PurchaseOrder.DeletePurchaseOrderServlet-1efed2d@22ec6079==TEmPoS.Servlet.PurchaseOrder.DeletePurchaseOrderServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.GoodsOrder.EditGoodsOrderServlet-78a03f=TEmPoS.Servlet.GoodsOrder.EditGoodsOrderServlet-78a03f@eef249e4==TEmPoS.Servlet.GoodsOrder.EditGoodsOrderServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.Brands.GetBrandsServlet-101d134=TEmPoS.Servlet.Brands.GetBrandsServlet-101d134@29003659==TEmPoS.Servlet.Brands.GetBrandsServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.Configuration.BranchesServlet-1fa9431=TEmPoS.Servlet.Configuration.BranchesServlet-1fa9431@256c50b6==TEmPoS.Servlet.Configuration.BranchesServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.Transaction.CreateTransactionServlet-1dd025=TEmPoS.Servlet.Transaction.CreateTransactionServlet-1dd025@482725bd==TEmPoS.Servlet.Transaction.CreateTransactionServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.Customer.CreateCustomerServlet-1529fee=TEmPoS.Servlet.Customer.CreateCustomerServlet-1529fee@6df53668==TEmPoS.Servlet.Customer.CreateCustomerServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.Customer.GetCustomersServlet-4cf7cf=TEmPoS.Servlet.Customer.GetCustomersServlet-4cf7cf@eca64c3b==TEmPoS.Servlet.Customer.GetCustomersServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.Stock.CreateStockServlet-18ee631=TEmPoS.Servlet.Stock.CreateStockServlet-18ee631@d9c21c2==TEmPoS.Servlet.Stock.CreateStockServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.Stock.GetStockByBranchServlet-e7dcfd=TEmPoS.Servlet.Stock.GetStockByBranchServlet-e7dcfd@3947ca27==TEmPoS.Servlet.Stock.GetStockByBranchServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.User.CreateUserServlet-92d9cc=TEmPoS.Servlet.User.CreateUserServlet-92d9cc@24029f21==TEmPoS.Servlet.User.CreateUserServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.User.IsAdminServlet-32de6c=TEmPoS.Servlet.User.IsAdminServlet-32de6c@7c1206f6==TEmPoS.Servlet.User.IsAdminServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.User.DeleteUserServlet-11302d6=TEmPoS.Servlet.User.DeleteUserServlet-11302d6@8a416aa5==TEmPoS.Servlet.User.DeleteUserServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.Transaction.GetTransactionsServlet-4c278f=TEmPoS.Servlet.Transaction.GetTransactionsServlet-4c278f@a46154c6==TEmPoS.Servlet.Transaction.GetTransactionsServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.Brands.DeleteBrandServlet-107a0d6=TEmPoS.Servlet.Brands.DeleteBrandServlet-107a0d6@e571fc98==TEmPoS.Servlet.Brands.DeleteBrandServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.User.GetUsersServlet-1f32542=TEmPoS.Servlet.User.GetUsersServlet-1f32542@fb2b1501==TEmPoS.Servlet.User.GetUsersServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.Product.DeleteProductServlet-3f3642=TEmPoS.Servlet.Product.DeleteProductServlet-3f3642@618e1f22==TEmPoS.Servlet.Product.DeleteProductServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.Distributors.DeleteDistributorServlet-d4bf7e=TEmPoS.Servlet.Distributors.DeleteDistributorServlet-d4bf7e@280f37e3==TEmPoS.Servlet.Distributors.DeleteDistributorServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.Brands.EditBrandServlet-1a9e7c8=TEmPoS.Servlet.Brands.EditBrandServlet-1a9e7c8@16a1ad4e==TEmPoS.Servlet.Brands.EditBrandServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.Product.CreateProductServlet-1b250b4=TEmPoS.Servlet.Product.CreateProductServlet-1b250b4@3a21afd1==TEmPoS.Servlet.Product.CreateProductServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.Brands.CreateBrandServlet-1121db3=TEmPoS.Servlet.Brands.CreateBrandServlet-1121db3@8e9499a6==TEmPoS.Servlet.Brands.CreateBrandServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.PurchaseOrder.EditPurchaseOrderServlet-128854b=TEmPoS.Servlet.PurchaseOrder.EditPurchaseOrderServlet-128854b@aca52697==TEmPoS.Servlet.PurchaseOrder.EditPurchaseOrderServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.Distributors.EditDistributorServlet-1d9d4b=TEmPoS.Servlet.Distributors.EditDistributorServlet-1d9d4b@2ebd310e==TEmPoS.Servlet.Distributors.EditDistributorServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.PurchaseOrder.CreatePurchaseOrderServlet-b7c004=TEmPoS.Servlet.PurchaseOrder.CreatePurchaseOrderServlet-b7c004@5b4b363f==TEmPoS.Servlet.PurchaseOrder.CreatePurchaseOrderServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.Product.GetProductByIdServlet-13fe9b6=TEmPoS.Servlet.Product.GetProductByIdServlet-13fe9b6@be3e3db==TEmPoS.Servlet.Product.GetProductByIdServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.Stock.IncrementStockServlet-72f59f=TEmPoS.Servlet.Stock.IncrementStockServlet-72f59f@5b44867d==TEmPoS.Servlet.Stock.IncrementStockServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.User.EditUserServlet-1ee72e6=TEmPoS.Servlet.User.EditUserServlet-1ee72e6@f27551c==TEmPoS.Servlet.User.EditUserServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.GoodsOrder.DeleteGoodsOrderServlet-7ed70f=TEmPoS.Servlet.GoodsOrder.DeleteGoodsOrderServlet-7ed70f@6d42ad79==TEmPoS.Servlet.GoodsOrder.DeleteGoodsOrderServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.Departments.DeleteDepartmentServlet-1018215=TEmPoS.Servlet.Departments.DeleteDepartmentServlet-1018215@4fa3075f==TEmPoS.Servlet.Departments.DeleteDepartmentServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.Customer.DeleteCustomerServlet-1e767f3=TEmPoS.Servlet.Customer.DeleteCustomerServlet-1e767f3@4771828f==TEmPoS.Servlet.Customer.DeleteCustomerServlet,jsp=null,order=-1,inst=true, TEmPoS.Servlet.GoodsOrder.CreateGoodsOrderServlet-1176cc1=TEmPoS.Servlet.GoodsOrder.CreateGoodsOrderServlet-1176cc1@b1e058df==TEmPoS.Servlet.GoodsOrder.CreateGoodsOrderServlet,jsp=null,order=-1,inst=true}
+starting org.eclipse.jetty.servlet.ServletHandler@a3cd93
+STARTED @5640ms org.eclipse.jetty.servlet.ServletHandler@a3cd93
+starting org.eclipse.jetty.server.session.DefaultSessionCache@10eb4b4[evict=-1,removeUnloadable=false,saveOnCreate=false,saveOnInactiveEvict=false]
+starting org.eclipse.jetty.server.session.NullSessionDataStore@3191a6[passivating=false,graceSec=3600]
+STARTED @5640ms org.eclipse.jetty.server.session.NullSessionDataStore@3191a6[passivating=false,graceSec=3600]
+STARTED @5641ms org.eclipse.jetty.server.session.DefaultSessionCache@10eb4b4[evict=-1,removeUnloadable=false,saveOnCreate=false,saveOnInactiveEvict=false]
+STARTED @5641ms org.eclipse.jetty.server.session.SessionHandler31391039==dftMaxIdleSec=-1
+starting TEmPoS.Servlet.Brands.CreateBrandServlet-1121db3@8e9499a6==TEmPoS.Servlet.Brands.CreateBrandServlet,jsp=null,order=-1,inst=true
+STARTED @5644ms TEmPoS.Servlet.Brands.CreateBrandServlet-1121db3@8e9499a6==TEmPoS.Servlet.Brands.CreateBrandServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.Brands.CreateBrandServlet@70d194 for TEmPoS.Servlet.Brands.CreateBrandServlet-1121db3
+starting TEmPoS.Servlet.Brands.DeleteBrandServlet-107a0d6@e571fc98==TEmPoS.Servlet.Brands.DeleteBrandServlet,jsp=null,order=-1,inst=true
+STARTED @5647ms TEmPoS.Servlet.Brands.DeleteBrandServlet-107a0d6@e571fc98==TEmPoS.Servlet.Brands.DeleteBrandServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.Brands.DeleteBrandServlet@15834f2 for TEmPoS.Servlet.Brands.DeleteBrandServlet-107a0d6
+starting TEmPoS.Servlet.Brands.EditBrandServlet-1a9e7c8@16a1ad4e==TEmPoS.Servlet.Brands.EditBrandServlet,jsp=null,order=-1,inst=true
+STARTED @5648ms TEmPoS.Servlet.Brands.EditBrandServlet-1a9e7c8@16a1ad4e==TEmPoS.Servlet.Brands.EditBrandServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.Brands.EditBrandServlet@56be13 for TEmPoS.Servlet.Brands.EditBrandServlet-1a9e7c8
+starting TEmPoS.Servlet.Brands.GetBrandsServlet-101d134@29003659==TEmPoS.Servlet.Brands.GetBrandsServlet,jsp=null,order=-1,inst=true
+STARTED @5654ms TEmPoS.Servlet.Brands.GetBrandsServlet-101d134@29003659==TEmPoS.Servlet.Brands.GetBrandsServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.Brands.GetBrandsServlet@18d6a3 for TEmPoS.Servlet.Brands.GetBrandsServlet-101d134
+starting TEmPoS.Servlet.Configuration.BranchesServlet-1fa9431@256c50b6==TEmPoS.Servlet.Configuration.BranchesServlet,jsp=null,order=-1,inst=true
+STARTED @5657ms TEmPoS.Servlet.Configuration.BranchesServlet-1fa9431@256c50b6==TEmPoS.Servlet.Configuration.BranchesServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.Configuration.BranchesServlet@cd1699 for TEmPoS.Servlet.Configuration.BranchesServlet-1fa9431
+starting TEmPoS.Servlet.Customer.CreateCustomerServlet-1529fee@6df53668==TEmPoS.Servlet.Customer.CreateCustomerServlet,jsp=null,order=-1,inst=true
+STARTED @5657ms TEmPoS.Servlet.Customer.CreateCustomerServlet-1529fee@6df53668==TEmPoS.Servlet.Customer.CreateCustomerServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.Customer.CreateCustomerServlet@1888435 for TEmPoS.Servlet.Customer.CreateCustomerServlet-1529fee
+starting TEmPoS.Servlet.Customer.DeleteCustomerServlet-1e767f3@4771828f==TEmPoS.Servlet.Customer.DeleteCustomerServlet,jsp=null,order=-1,inst=true
+STARTED @5657ms TEmPoS.Servlet.Customer.DeleteCustomerServlet-1e767f3@4771828f==TEmPoS.Servlet.Customer.DeleteCustomerServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.Customer.DeleteCustomerServlet@1a1e9a9 for TEmPoS.Servlet.Customer.DeleteCustomerServlet-1e767f3
+starting TEmPoS.Servlet.Customer.EditCustomerServlet-5c96b@41bc0c36==TEmPoS.Servlet.Customer.EditCustomerServlet,jsp=null,order=-1,inst=true
+STARTED @5658ms TEmPoS.Servlet.Customer.EditCustomerServlet-5c96b@41bc0c36==TEmPoS.Servlet.Customer.EditCustomerServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.Customer.EditCustomerServlet@11d44a3 for TEmPoS.Servlet.Customer.EditCustomerServlet-5c96b
+starting TEmPoS.Servlet.Customer.GetCustomersServlet-4cf7cf@eca64c3b==TEmPoS.Servlet.Customer.GetCustomersServlet,jsp=null,order=-1,inst=true
+STARTED @5658ms TEmPoS.Servlet.Customer.GetCustomersServlet-4cf7cf@eca64c3b==TEmPoS.Servlet.Customer.GetCustomersServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.Customer.GetCustomersServlet@198f307 for TEmPoS.Servlet.Customer.GetCustomersServlet-4cf7cf
+starting TEmPoS.Servlet.Customer.SearchCustomerServlet-1d6b6c7@7fce020c==TEmPoS.Servlet.Customer.SearchCustomerServlet,jsp=null,order=-1,inst=true
+STARTED @5661ms TEmPoS.Servlet.Customer.SearchCustomerServlet-1d6b6c7@7fce020c==TEmPoS.Servlet.Customer.SearchCustomerServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.Customer.SearchCustomerServlet@2796d for TEmPoS.Servlet.Customer.SearchCustomerServlet-1d6b6c7
+starting TEmPoS.Servlet.Departments.CreateDepartmentServlet-19ec67@3a7fca9==TEmPoS.Servlet.Departments.CreateDepartmentServlet,jsp=null,order=-1,inst=true
+STARTED @5662ms TEmPoS.Servlet.Departments.CreateDepartmentServlet-19ec67@3a7fca9==TEmPoS.Servlet.Departments.CreateDepartmentServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.Departments.CreateDepartmentServlet@123d65 for TEmPoS.Servlet.Departments.CreateDepartmentServlet-19ec67
+starting TEmPoS.Servlet.Departments.DeleteDepartmentServlet-1018215@4fa3075f==TEmPoS.Servlet.Departments.DeleteDepartmentServlet,jsp=null,order=-1,inst=true
+STARTED @5662ms TEmPoS.Servlet.Departments.DeleteDepartmentServlet-1018215@4fa3075f==TEmPoS.Servlet.Departments.DeleteDepartmentServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.Departments.DeleteDepartmentServlet@1474f18 for TEmPoS.Servlet.Departments.DeleteDepartmentServlet-1018215
+starting TEmPoS.Servlet.Departments.EditDepartmentServlet-1d6b83b@7bad2938==TEmPoS.Servlet.Departments.EditDepartmentServlet,jsp=null,order=-1,inst=true
+STARTED @5664ms TEmPoS.Servlet.Departments.EditDepartmentServlet-1d6b83b@7bad2938==TEmPoS.Servlet.Departments.EditDepartmentServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.Departments.EditDepartmentServlet@1fb9ffc for TEmPoS.Servlet.Departments.EditDepartmentServlet-1d6b83b
+starting TEmPoS.Servlet.Departments.GetDepartmentsServlet-1706f19@45e8eb23==TEmPoS.Servlet.Departments.GetDepartmentsServlet,jsp=null,order=-1,inst=true
+STARTED @5665ms TEmPoS.Servlet.Departments.GetDepartmentsServlet-1706f19@45e8eb23==TEmPoS.Servlet.Departments.GetDepartmentsServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.Departments.GetDepartmentsServlet@694b3f for TEmPoS.Servlet.Departments.GetDepartmentsServlet-1706f19
+starting TEmPoS.Servlet.Distributors.CreateDistributorServlet-d3bc22@3769a620==TEmPoS.Servlet.Distributors.CreateDistributorServlet,jsp=null,order=-1,inst=true
+STARTED @5665ms TEmPoS.Servlet.Distributors.CreateDistributorServlet-d3bc22@3769a620==TEmPoS.Servlet.Distributors.CreateDistributorServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.Distributors.CreateDistributorServlet@1b5a082 for TEmPoS.Servlet.Distributors.CreateDistributorServlet-d3bc22
+starting TEmPoS.Servlet.Distributors.DeleteDistributorServlet-d4bf7e@280f37e3==TEmPoS.Servlet.Distributors.DeleteDistributorServlet,jsp=null,order=-1,inst=true
+STARTED @5666ms TEmPoS.Servlet.Distributors.DeleteDistributorServlet-d4bf7e@280f37e3==TEmPoS.Servlet.Distributors.DeleteDistributorServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.Distributors.DeleteDistributorServlet@691363 for TEmPoS.Servlet.Distributors.DeleteDistributorServlet-d4bf7e
+starting TEmPoS.Servlet.Distributors.EditDistributorServlet-1d9d4b@2ebd310e==TEmPoS.Servlet.Distributors.EditDistributorServlet,jsp=null,order=-1,inst=true
+STARTED @5666ms TEmPoS.Servlet.Distributors.EditDistributorServlet-1d9d4b@2ebd310e==TEmPoS.Servlet.Distributors.EditDistributorServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.Distributors.EditDistributorServlet@1d477ed for TEmPoS.Servlet.Distributors.EditDistributorServlet-1d9d4b
+starting TEmPoS.Servlet.Distributors.GetDistributorsServlet-1227d8d@3aa850e3==TEmPoS.Servlet.Distributors.GetDistributorsServlet,jsp=null,order=-1,inst=true
+STARTED @5666ms TEmPoS.Servlet.Distributors.GetDistributorsServlet-1227d8d@3aa850e3==TEmPoS.Servlet.Distributors.GetDistributorsServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.Distributors.GetDistributorsServlet@190fc5b for TEmPoS.Servlet.Distributors.GetDistributorsServlet-1227d8d
+starting TEmPoS.Servlet.GoodsOrder.CreateGoodsOrderServlet-1176cc1@b1e058df==TEmPoS.Servlet.GoodsOrder.CreateGoodsOrderServlet,jsp=null,order=-1,inst=true
+STARTED @5667ms TEmPoS.Servlet.GoodsOrder.CreateGoodsOrderServlet-1176cc1@b1e058df==TEmPoS.Servlet.GoodsOrder.CreateGoodsOrderServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.GoodsOrder.CreateGoodsOrderServlet@197fbdb for TEmPoS.Servlet.GoodsOrder.CreateGoodsOrderServlet-1176cc1
+starting TEmPoS.Servlet.GoodsOrder.DeleteGoodsOrderServlet-7ed70f@6d42ad79==TEmPoS.Servlet.GoodsOrder.DeleteGoodsOrderServlet,jsp=null,order=-1,inst=true
+STARTED @5667ms TEmPoS.Servlet.GoodsOrder.DeleteGoodsOrderServlet-7ed70f@6d42ad79==TEmPoS.Servlet.GoodsOrder.DeleteGoodsOrderServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.GoodsOrder.DeleteGoodsOrderServlet@1d512c1 for TEmPoS.Servlet.GoodsOrder.DeleteGoodsOrderServlet-7ed70f
+starting TEmPoS.Servlet.GoodsOrder.EditGoodsOrderServlet-78a03f@eef249e4==TEmPoS.Servlet.GoodsOrder.EditGoodsOrderServlet,jsp=null,order=-1,inst=true
+STARTED @5667ms TEmPoS.Servlet.GoodsOrder.EditGoodsOrderServlet-78a03f@eef249e4==TEmPoS.Servlet.GoodsOrder.EditGoodsOrderServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.GoodsOrder.EditGoodsOrderServlet@15c6049 for TEmPoS.Servlet.GoodsOrder.EditGoodsOrderServlet-78a03f
+starting TEmPoS.Servlet.GoodsOrder.GetGoodsOrderServlet-1177a4b@2e22b730==TEmPoS.Servlet.GoodsOrder.GetGoodsOrderServlet,jsp=null,order=-1,inst=true
+STARTED @5668ms TEmPoS.Servlet.GoodsOrder.GetGoodsOrderServlet-1177a4b@2e22b730==TEmPoS.Servlet.GoodsOrder.GetGoodsOrderServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.GoodsOrder.GetGoodsOrderServlet@19c2c1d for TEmPoS.Servlet.GoodsOrder.GetGoodsOrderServlet-1177a4b
+starting TEmPoS.Servlet.LoginServlet-730495@e2a276e==TEmPoS.Servlet.LoginServlet,jsp=null,order=-1,inst=true
+STARTED @5668ms TEmPoS.Servlet.LoginServlet-730495@e2a276e==TEmPoS.Servlet.LoginServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.LoginServlet@1e94a96 for TEmPoS.Servlet.LoginServlet-730495
+starting TEmPoS.Servlet.Product.CreateProductServlet-1b250b4@3a21afd1==TEmPoS.Servlet.Product.CreateProductServlet,jsp=null,order=-1,inst=true
+STARTED @5668ms TEmPoS.Servlet.Product.CreateProductServlet-1b250b4@3a21afd1==TEmPoS.Servlet.Product.CreateProductServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.Product.CreateProductServlet@3118b0 for TEmPoS.Servlet.Product.CreateProductServlet-1b250b4
+starting TEmPoS.Servlet.Product.DeleteProductServlet-3f3642@618e1f22==TEmPoS.Servlet.Product.DeleteProductServlet,jsp=null,order=-1,inst=true
+STARTED @5669ms TEmPoS.Servlet.Product.DeleteProductServlet-3f3642@618e1f22==TEmPoS.Servlet.Product.DeleteProductServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.Product.DeleteProductServlet@5d7657 for TEmPoS.Servlet.Product.DeleteProductServlet-3f3642
+starting TEmPoS.Servlet.Product.EditProductServlet-c5cc4c@143409b0==TEmPoS.Servlet.Product.EditProductServlet,jsp=null,order=-1,inst=true
+STARTED @5669ms TEmPoS.Servlet.Product.EditProductServlet-c5cc4c@143409b0==TEmPoS.Servlet.Product.EditProductServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.Product.EditProductServlet@235045 for TEmPoS.Servlet.Product.EditProductServlet-c5cc4c
+starting TEmPoS.Servlet.Product.GetProductByIdServlet-13fe9b6@be3e3db==TEmPoS.Servlet.Product.GetProductByIdServlet,jsp=null,order=-1,inst=true
+STARTED @5670ms TEmPoS.Servlet.Product.GetProductByIdServlet-13fe9b6@be3e3db==TEmPoS.Servlet.Product.GetProductByIdServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.Product.GetProductByIdServlet@18b19ad for TEmPoS.Servlet.Product.GetProductByIdServlet-13fe9b6
+starting TEmPoS.Servlet.Product.GetProductsServlet-1918c79@22183852==TEmPoS.Servlet.Product.GetProductsServlet,jsp=null,order=-1,inst=true
+STARTED @5670ms TEmPoS.Servlet.Product.GetProductsServlet-1918c79@22183852==TEmPoS.Servlet.Product.GetProductsServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.Product.GetProductsServlet@13379b4 for TEmPoS.Servlet.Product.GetProductsServlet-1918c79
+starting TEmPoS.Servlet.Product.SearchProductsServlet-e94dcf@2f103119==TEmPoS.Servlet.Product.SearchProductsServlet,jsp=null,order=-1,inst=true
+STARTED @5671ms TEmPoS.Servlet.Product.SearchProductsServlet-e94dcf@2f103119==TEmPoS.Servlet.Product.SearchProductsServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.Product.SearchProductsServlet@c15d8b for TEmPoS.Servlet.Product.SearchProductsServlet-e94dcf
+starting TEmPoS.Servlet.PurchaseOrder.CreatePurchaseOrderServlet-b7c004@5b4b363f==TEmPoS.Servlet.PurchaseOrder.CreatePurchaseOrderServlet,jsp=null,order=-1,inst=true
+STARTED @5671ms TEmPoS.Servlet.PurchaseOrder.CreatePurchaseOrderServlet-b7c004@5b4b363f==TEmPoS.Servlet.PurchaseOrder.CreatePurchaseOrderServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.PurchaseOrder.CreatePurchaseOrderServlet@e82ae for TEmPoS.Servlet.PurchaseOrder.CreatePurchaseOrderServlet-b7c004
+starting TEmPoS.Servlet.PurchaseOrder.DeletePurchaseOrderServlet-1efed2d@22ec6079==TEmPoS.Servlet.PurchaseOrder.DeletePurchaseOrderServlet,jsp=null,order=-1,inst=true
+STARTED @5672ms TEmPoS.Servlet.PurchaseOrder.DeletePurchaseOrderServlet-1efed2d@22ec6079==TEmPoS.Servlet.PurchaseOrder.DeletePurchaseOrderServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.PurchaseOrder.DeletePurchaseOrderServlet@171beb3 for TEmPoS.Servlet.PurchaseOrder.DeletePurchaseOrderServlet-1efed2d
+starting TEmPoS.Servlet.PurchaseOrder.EditPurchaseOrderServlet-128854b@aca52697==TEmPoS.Servlet.PurchaseOrder.EditPurchaseOrderServlet,jsp=null,order=-1,inst=true
+STARTED @5672ms TEmPoS.Servlet.PurchaseOrder.EditPurchaseOrderServlet-128854b@aca52697==TEmPoS.Servlet.PurchaseOrder.EditPurchaseOrderServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.PurchaseOrder.EditPurchaseOrderServlet@1399530 for TEmPoS.Servlet.PurchaseOrder.EditPurchaseOrderServlet-128854b
+starting TEmPoS.Servlet.PurchaseOrder.GetPurchaseOrdersServlet-1ae2fd0@5d1a451==TEmPoS.Servlet.PurchaseOrder.GetPurchaseOrdersServlet,jsp=null,order=-1,inst=true
+STARTED @5672ms TEmPoS.Servlet.PurchaseOrder.GetPurchaseOrdersServlet-1ae2fd0@5d1a451==TEmPoS.Servlet.PurchaseOrder.GetPurchaseOrdersServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.PurchaseOrder.GetPurchaseOrdersServlet@12ea799 for TEmPoS.Servlet.PurchaseOrder.GetPurchaseOrdersServlet-1ae2fd0
+starting TEmPoS.Servlet.Stock.CreateStockServlet-18ee631@d9c21c2==TEmPoS.Servlet.Stock.CreateStockServlet,jsp=null,order=-1,inst=true
+STARTED @5673ms TEmPoS.Servlet.Stock.CreateStockServlet-18ee631@d9c21c2==TEmPoS.Servlet.Stock.CreateStockServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.Stock.CreateStockServlet@11f53a0 for TEmPoS.Servlet.Stock.CreateStockServlet-18ee631
+starting TEmPoS.Servlet.Stock.DecrementStockServlet-dcc9fe@f2d115d6==TEmPoS.Servlet.Stock.DecrementStockServlet,jsp=null,order=-1,inst=true
+STARTED @5673ms TEmPoS.Servlet.Stock.DecrementStockServlet-dcc9fe@f2d115d6==TEmPoS.Servlet.Stock.DecrementStockServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.Stock.DecrementStockServlet@171e916 for TEmPoS.Servlet.Stock.DecrementStockServlet-dcc9fe
+starting TEmPoS.Servlet.Stock.EditStockServlet-2114ba@5b5b691e==TEmPoS.Servlet.Stock.EditStockServlet,jsp=null,order=-1,inst=true
+STARTED @5673ms TEmPoS.Servlet.Stock.EditStockServlet-2114ba@5b5b691e==TEmPoS.Servlet.Stock.EditStockServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.Stock.EditStockServlet@fc695d for TEmPoS.Servlet.Stock.EditStockServlet-2114ba
+starting TEmPoS.Servlet.Stock.GetStockByBranchServlet-e7dcfd@3947ca27==TEmPoS.Servlet.Stock.GetStockByBranchServlet,jsp=null,order=-1,inst=true
+STARTED @5674ms TEmPoS.Servlet.Stock.GetStockByBranchServlet-e7dcfd@3947ca27==TEmPoS.Servlet.Stock.GetStockByBranchServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.Stock.GetStockByBranchServlet@701274 for TEmPoS.Servlet.Stock.GetStockByBranchServlet-e7dcfd
+starting TEmPoS.Servlet.Stock.GetStockServlet-c756bd@d9955bd6==TEmPoS.Servlet.Stock.GetStockServlet,jsp=null,order=-1,inst=true
+STARTED @5674ms TEmPoS.Servlet.Stock.GetStockServlet-c756bd@d9955bd6==TEmPoS.Servlet.Stock.GetStockServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.Stock.GetStockServlet@1c9d689 for TEmPoS.Servlet.Stock.GetStockServlet-c756bd
+starting TEmPoS.Servlet.Stock.IncrementStockServlet-72f59f@5b44867d==TEmPoS.Servlet.Stock.IncrementStockServlet,jsp=null,order=-1,inst=true
+STARTED @5674ms TEmPoS.Servlet.Stock.IncrementStockServlet-72f59f@5b44867d==TEmPoS.Servlet.Stock.IncrementStockServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.Stock.IncrementStockServlet@154a4bf for TEmPoS.Servlet.Stock.IncrementStockServlet-72f59f
+starting TEmPoS.Servlet.Transaction.CreateTransactionServlet-1dd025@482725bd==TEmPoS.Servlet.Transaction.CreateTransactionServlet,jsp=null,order=-1,inst=true
+STARTED @5675ms TEmPoS.Servlet.Transaction.CreateTransactionServlet-1dd025@482725bd==TEmPoS.Servlet.Transaction.CreateTransactionServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.Transaction.CreateTransactionServlet@379589 for TEmPoS.Servlet.Transaction.CreateTransactionServlet-1dd025
+starting TEmPoS.Servlet.Transaction.GetTransactionsServlet-4c278f@a46154c6==TEmPoS.Servlet.Transaction.GetTransactionsServlet,jsp=null,order=-1,inst=true
+STARTED @5675ms TEmPoS.Servlet.Transaction.GetTransactionsServlet-4c278f@a46154c6==TEmPoS.Servlet.Transaction.GetTransactionsServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.Transaction.GetTransactionsServlet@fcd809 for TEmPoS.Servlet.Transaction.GetTransactionsServlet-4c278f
+starting TEmPoS.Servlet.User.CreateUserServlet-92d9cc@24029f21==TEmPoS.Servlet.User.CreateUserServlet,jsp=null,order=-1,inst=true
+STARTED @5675ms TEmPoS.Servlet.User.CreateUserServlet-92d9cc@24029f21==TEmPoS.Servlet.User.CreateUserServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.User.CreateUserServlet@15c2241 for TEmPoS.Servlet.User.CreateUserServlet-92d9cc
+starting TEmPoS.Servlet.User.DeleteUserServlet-11302d6@8a416aa5==TEmPoS.Servlet.User.DeleteUserServlet,jsp=null,order=-1,inst=true
+STARTED @5676ms TEmPoS.Servlet.User.DeleteUserServlet-11302d6@8a416aa5==TEmPoS.Servlet.User.DeleteUserServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.User.DeleteUserServlet@1bf0d49 for TEmPoS.Servlet.User.DeleteUserServlet-11302d6
+starting TEmPoS.Servlet.User.EditUserServlet-1ee72e6@f27551c==TEmPoS.Servlet.User.EditUserServlet,jsp=null,order=-1,inst=true
+STARTED @5677ms TEmPoS.Servlet.User.EditUserServlet-1ee72e6@f27551c==TEmPoS.Servlet.User.EditUserServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.User.EditUserServlet@17a5baa for TEmPoS.Servlet.User.EditUserServlet-1ee72e6
+starting TEmPoS.Servlet.User.GetUsersServlet-1f32542@fb2b1501==TEmPoS.Servlet.User.GetUsersServlet,jsp=null,order=-1,inst=true
+STARTED @5677ms TEmPoS.Servlet.User.GetUsersServlet-1f32542@fb2b1501==TEmPoS.Servlet.User.GetUsersServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.User.GetUsersServlet@16aec5c for TEmPoS.Servlet.User.GetUsersServlet-1f32542
+starting TEmPoS.Servlet.User.IsAdminServlet-32de6c@7c1206f6==TEmPoS.Servlet.User.IsAdminServlet,jsp=null,order=-1,inst=true
+STARTED @5678ms TEmPoS.Servlet.User.IsAdminServlet-32de6c@7c1206f6==TEmPoS.Servlet.User.IsAdminServlet,jsp=null,order=-1,inst=true
+Servlet.init TEmPoS.Servlet.User.IsAdminServlet@1d296da for TEmPoS.Servlet.User.IsAdminServlet-32de6c
+starting org.eclipse.jetty.servlet.DefaultServlet-1e7aac8@32be3c39==org.eclipse.jetty.servlet.DefaultServlet,jsp=null,order=-1,inst=true
+STARTED @5679ms org.eclipse.jetty.servlet.DefaultServlet-1e7aac8@32be3c39==org.eclipse.jetty.servlet.DefaultServlet,jsp=null,order=-1,inst=true
+Servlet.init org.eclipse.jetty.servlet.DefaultServlet@7a06ec for org.eclipse.jetty.servlet.DefaultServlet-1e7aac8
+resource base = file:///C:/Users/Liam/Dropbox%20(Personal)/Honours%20Project/Code/Development/TEmPoS/TEmPoS/src/main/resources/webapp
+Started o.e.j.s.ServletContextHandler@120ba90{/,null,AVAILABLE}
+STARTED @5784ms o.e.j.s.ServletContextHandler@120ba90{/,null,AVAILABLE}
+starting org.eclipse.jetty.server.handler.ErrorHandler@e1e309
+starting org.eclipse.jetty.server.handler.ErrorHandler@e1e309
+STARTED @5785ms org.eclipse.jetty.server.handler.ErrorHandler@e1e309
+starting ServerConnector@12e5f00{HTTP/1.1,[http/1.1]}{0.0.0.0:9001}
+ServerConnector@12e5f00{HTTP/1.1,[http/1.1]}{0.0.0.0:9001} added {sun.nio.ch.ServerSocketChannelImpl[/0:0:0:0:0:0:0:0:9001],POJO}
+starting org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@a664f2
+STARTED @5798ms org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@a664f2
+starting HttpConnectionFactory@1826d77[HTTP/1.1]
+STARTED @5798ms HttpConnectionFactory@1826d77[HTTP/1.1]
+starting SelectorManager@ServerConnector@12e5f00{HTTP/1.1,[http/1.1]}{0.0.0.0:9001}
+EatWhatYouKill@a9e4eb/SelectorProducer@1da8e08/IDLE/p=false/QueuedThreadPool[qtp6041804]@5c30cc{STARTED,8<=8<=200,i=8,q=0}[pc=0,pic=0,pec=0,epc=0]@2019-02-19T14:08:55.075Z added {SelectorProducer@1da8e08,POJO}
+EatWhatYouKill@a9e4eb/SelectorProducer@1da8e08/IDLE/p=false/QueuedThreadPool[qtp6041804]@5c30cc{STARTED,8<=8<=200,i=8,q=0}[pc=0,pic=0,pec=0,epc=0]@2019-02-19T14:08:55.086Z added {QueuedThreadPool[qtp6041804]@5c30cc{STARTED,8<=8<=200,i=8,q=0},UNMANAGED}
+EatWhatYouKill@a9e4eb/SelectorProducer@1da8e08/IDLE/p=false/QueuedThreadPool[qtp6041804]@5c30cc{STARTED,8<=8<=200,i=8,q=0}[pc=0,pic=0,pec=0,epc=0]@2019-02-19T14:08:55.086Z created
+org.eclipse.jetty.io.ManagedSelector@19fedbd id=0 keys=-1 selected=-1 updates=0 added {EatWhatYouKill@a9e4eb/SelectorProducer@1da8e08/IDLE/p=false/QueuedThreadPool[qtp6041804]@5c30cc{STARTED,8<=8<=200,i=8,q=0}[pc=0,pic=0,pec=0,epc=0]@2019-02-19T14:08:55.086Z,MANAGED}
+SelectorManager@ServerConnector@12e5f00{HTTP/1.1,[http/1.1]}{0.0.0.0:9001} added {org.eclipse.jetty.io.ManagedSelector@19fedbd id=0 keys=-1 selected=-1 updates=0,AUTO}
+EatWhatYouKill@13ca52e/SelectorProducer@1c7e403/IDLE/p=false/QueuedThreadPool[qtp6041804]@5c30cc{STARTED,8<=8<=200,i=8,q=0}[pc=0,pic=0,pec=0,epc=0]@2019-02-19T14:08:55.087Z added {SelectorProducer@1c7e403,POJO}
+EatWhatYouKill@13ca52e/SelectorProducer@1c7e403/IDLE/p=false/QueuedThreadPool[qtp6041804]@5c30cc{STARTED,8<=8<=200,i=8,q=0}[pc=0,pic=0,pec=0,epc=0]@2019-02-19T14:08:55.087Z added {QueuedThreadPool[qtp6041804]@5c30cc{STARTED,8<=8<=200,i=8,q=0},UNMANAGED}
+EatWhatYouKill@13ca52e/SelectorProducer@1c7e403/IDLE/p=false/QueuedThreadPool[qtp6041804]@5c30cc{STARTED,8<=8<=200,i=8,q=0}[pc=0,pic=0,pec=0,epc=0]@2019-02-19T14:08:55.087Z created
+org.eclipse.jetty.io.ManagedSelector@125bf5b id=1 keys=-1 selected=-1 updates=0 added {EatWhatYouKill@13ca52e/SelectorProducer@1c7e403/IDLE/p=false/QueuedThreadPool[qtp6041804]@5c30cc{STARTED,8<=8<=200,i=8,q=0}[pc=0,pic=0,pec=0,epc=0]@2019-02-19T14:08:55.087Z,MANAGED}
+SelectorManager@ServerConnector@12e5f00{HTTP/1.1,[http/1.1]}{0.0.0.0:9001} added {org.eclipse.jetty.io.ManagedSelector@125bf5b id=1 keys=-1 selected=-1 updates=0,AUTO}
+starting org.eclipse.jetty.io.ManagedSelector@19fedbd id=0 keys=-1 selected=-1 updates=0
+starting EatWhatYouKill@a9e4eb/SelectorProducer@1da8e08/IDLE/p=false/QueuedThreadPool[qtp6041804]@5c30cc{STARTED,8<=8<=200,i=8,q=0}[pc=0,pic=0,pec=0,epc=0]@2019-02-19T14:08:55.088Z
+STARTED @5911ms EatWhatYouKill@a9e4eb/SelectorProducer@1da8e08/IDLE/p=false/QueuedThreadPool[qtp6041804]@5c30cc{STARTED,8<=8<=200,i=8,q=0}[pc=0,pic=0,pec=0,epc=0]@2019-02-19T14:08:55.088Z
+queue org.eclipse.jetty.io.ManagedSelector$$Lambda$28/30543115@1f1baf5
+run org.eclipse.jetty.io.ManagedSelector$$Lambda$28/30543115@1f1baf5
+EatWhatYouKill@a9e4eb/SelectorProducer@1da8e08/IDLE/p=false/QueuedThreadPool[qtp6041804]@5c30cc{STARTED,8<=8<=200,i=7,q=0}[pc=0,pic=0,pec=0,epc=0]@2019-02-19T14:08:55.105Z tryProduce false
+Queued change org.eclipse.jetty.io.ManagedSelector$$Lambda$29/28368043@afe297 on org.eclipse.jetty.io.ManagedSelector@19fedbd id=0 keys=0 selected=0 updates=0
+STARTED @5930ms org.eclipse.jetty.io.ManagedSelector@19fedbd id=0 keys=0 selected=0 updates=1
+starting org.eclipse.jetty.io.ManagedSelector@125bf5b id=1 keys=-1 selected=-1 updates=0
+starting EatWhatYouKill@13ca52e/SelectorProducer@1c7e403/IDLE/p=false/QueuedThreadPool[qtp6041804]@5c30cc{STARTED,8<=8<=200,i=7,q=0}[pc=0,pic=0,pec=0,epc=0]@2019-02-19T14:08:55.107Z
+STARTED @5930ms EatWhatYouKill@13ca52e/SelectorProducer@1c7e403/IDLE/p=false/QueuedThreadPool[qtp6041804]@5c30cc{STARTED,8<=8<=200,i=7,q=0}[pc=0,pic=0,pec=0,epc=0]@2019-02-19T14:08:55.107Z
+queue org.eclipse.jetty.io.ManagedSelector$$Lambda$28/30543115@1f3b89c
+updateable 1
+run org.eclipse.jetty.io.ManagedSelector$$Lambda$28/30543115@1f3b89c
+Queued change org.eclipse.jetty.io.ManagedSelector$$Lambda$29/28368043@1348b5d on org.eclipse.jetty.io.ManagedSelector@125bf5b id=1 keys=0 selected=0 updates=0
+STARTED @5932ms org.eclipse.jetty.io.ManagedSelector@125bf5b id=1 keys=0 selected=0 updates=1
+STARTED @5932ms SelectorManager@ServerConnector@12e5f00{HTTP/1.1,[http/1.1]}{0.0.0.0:9001}
+EatWhatYouKill@13ca52e/SelectorProducer@1c7e403/IDLE/p=false/QueuedThreadPool[qtp6041804]@5c30cc{STARTED,8<=8<=200,i=6,q=0}[pc=0,pic=0,pec=0,epc=0]@2019-02-19T14:08:55.109Z tryProduce false
+updateable 1
+update org.eclipse.jetty.io.ManagedSelector$$Lambda$29/28368043@1348b5d
+update org.eclipse.jetty.io.ManagedSelector$$Lambda$29/28368043@afe297
+updates 0
+updates 0
+Selector sun.nio.ch.WindowsSelectorImpl@1c8fac9 waiting on select
+Selector sun.nio.ch.WindowsSelectorImpl@89477b waiting on select
+ServerConnector@12e5f00{HTTP/1.1,[http/1.1]}{0.0.0.0:9001} added {acceptor-0@1c9d8e2,POJO}
+queue acceptor-0@1c9d8e2
+run acceptor-0@1c9d8e2
+Started ServerConnector@12e5f00{HTTP/1.1,[http/1.1]}{0.0.0.0:9001}
+STARTED @5934ms ServerConnector@12e5f00{HTTP/1.1,[http/1.1]}{0.0.0.0:9001}
+Started @5935ms
+STARTED @5935ms org.eclipse.jetty.server.Server@1a947fe[9.4.9.v20180320]
+Queued change org.eclipse.jetty.io.ManagedSelector$Accept@29f537 on org.eclipse.jetty.io.ManagedSelector@125bf5b id=1 keys=0 selected=0 updates=0
+Selector sun.nio.ch.WindowsSelectorImpl@1c8fac9 woken up from select, 0/0 selected
+Selector sun.nio.ch.WindowsSelectorImpl@1c8fac9 processing 0 keys, 1 updates
+updateable 1
+update org.eclipse.jetty.io.ManagedSelector$Accept@29f537
+queue org.eclipse.jetty.io.ManagedSelector$Accept@29f537
+updates 0
+run org.eclipse.jetty.io.ManagedSelector$Accept@29f537
+Selector sun.nio.ch.WindowsSelectorImpl@1c8fac9 waiting on select
+SocketChannelEndPoint@7e9917{/192.168.1.245:51901<->/192.168.1.245:9001,OPEN,fill=-,flush=-,to=51/30000}{io=0/0,kio=0,kro=0}-><null> idle timeout check, elapsed: 48 ms, remaining: 29952 ms
+new HttpChannelOverHttp@fae42d{r=0,c=false,a=IDLE,uri=null,age=0} -> SocketChannelEndPoint@7e9917{/192.168.1.245:51901<->/192.168.1.245:9001,OPEN,fill=-,flush=-,to=491/30000}{io=0/0,kio=0,kro=0}-><null>,null,HttpChannelState@c0b446{s=IDLE a=NOT_ASYNC i=true r=IDLE w=false}
+New HTTP Connection HttpConnection@35c17[p=HttpParser{s=START,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=0,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@7e9917{/192.168.1.245:51901<->/192.168.1.245:9001,OPEN,fill=-,flush=-,to=545/30000}{io=0/0,kio=0,kro=0}-><null>
+onOpen SocketChannelEndPoint@7e9917{/192.168.1.245:51901<->/192.168.1.245:9001,OPEN,fill=-,flush=-,to=551/30000}{io=0/0,kio=0,kro=0}->HttpConnection@35c17[p=HttpParser{s=START,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=0,c=false,a=IDLE,uri=null,age=0}
+onOpen HttpConnection@35c17[p=HttpParser{s=START,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=0,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@7e9917{/192.168.1.245:51901<->/192.168.1.245:9001,OPEN,fill=-,flush=-,to=555/30000}{io=0/0,kio=0,kro=0}->HttpConnection@35c17[p=HttpParser{s=START,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=0,c=false,a=IDLE,uri=null,age=0}
+fillInterested HttpConnection@35c17[p=HttpParser{s=START,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=0,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@7e9917{/192.168.1.245:51901<->/192.168.1.245:9001,OPEN,fill=-,flush=-,to=581/30000}{io=0/0,kio=0,kro=0}->HttpConnection@35c17[p=HttpParser{s=START,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=0,c=false,a=IDLE,uri=null,age=0}
+interested FillInterest@fd6df2{AC.ReadCB@35c17{HttpConnection@35c17[p=HttpParser{s=START,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=0,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@7e9917{/192.168.1.245:51901<->/192.168.1.245:9001,OPEN,fill=FI,flush=-,to=1/30000}{io=0/0,kio=0,kro=0}->HttpConnection@35c17[p=HttpParser{s=START,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=0,c=false,a=IDLE,uri=null,age=0}}}
+changeInterests p=false 0->1 for SocketChannelEndPoint@7e9917{/192.168.1.245:51901<->/192.168.1.245:9001,OPEN,fill=FI,flush=-,to=3/30000}{io=0/1,kio=0,kro=0}->HttpConnection@35c17[p=HttpParser{s=START,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=0,c=false,a=IDLE,uri=null,age=0}
+Queued change org.eclipse.jetty.io.ChannelEndPoint$1@114a347 on org.eclipse.jetty.io.ManagedSelector@125bf5b id=1 keys=1 selected=0 updates=0
+Selector sun.nio.ch.WindowsSelectorImpl@1c8fac9 woken up from select, 0/1 selected
+Selector sun.nio.ch.WindowsSelectorImpl@1c8fac9 processing 0 keys, 1 updates
+updateable 1
+update org.eclipse.jetty.io.ChannelEndPoint$1@114a347
+Created SocketChannelEndPoint@7e9917{/192.168.1.245:51901<->/192.168.1.245:9001,OPEN,fill=FI,flush=-,to=4/30000}{io=0/1,kio=0,kro=0}->HttpConnection@35c17[p=HttpParser{s=START,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=0,c=false,a=IDLE,uri=null,age=0}
+ran org.eclipse.jetty.io.ManagedSelector$Accept@29f537
+Key interests updated 0 -> 1 on SocketChannelEndPoint@7e9917{/192.168.1.245:51901<->/192.168.1.245:9001,OPEN,fill=FI,flush=-,to=5/30000}{io=1/1,kio=1,kro=0}->HttpConnection@35c17[p=HttpParser{s=START,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=0,c=false,a=IDLE,uri=null,age=0}
+updates 0
+Selector sun.nio.ch.WindowsSelectorImpl@1c8fac9 waiting on select
+Selector sun.nio.ch.WindowsSelectorImpl@1c8fac9 woken up from select, 1/1 selected
+Selector sun.nio.ch.WindowsSelectorImpl@1c8fac9 processing 1 keys, 0 updates
+selected 1 sun.nio.ch.SelectionKeyImpl@13091b9 SocketChannelEndPoint@7e9917{/192.168.1.245:51901<->/192.168.1.245:9001,OPEN,fill=FI,flush=-,to=6/30000}{io=1/1,kio=1,kro=1}->HttpConnection@35c17[p=HttpParser{s=START,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=0,c=false,a=IDLE,uri=null,age=0} 
+onSelected 1->0 r=true w=false for SocketChannelEndPoint@7e9917{/192.168.1.245:51901<->/192.168.1.245:9001,OPEN,fill=FI,flush=-,to=8/30000}{io=1/0,kio=1,kro=1}->HttpConnection@35c17[p=HttpParser{s=START,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=0,c=false,a=IDLE,uri=null,age=0}
+task CEP:SocketChannelEndPoint@7e9917{/192.168.1.245:51901<->/192.168.1.245:9001,OPEN,fill=FI,flush=-,to=10/30000}{io=1/0,kio=1,kro=1}->HttpConnection@35c17[p=HttpParser{s=START,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=0,c=false,a=IDLE,uri=null,age=0}:runFillable:BLOCKING
+ReservedThreadExecutor@1f116cc{s=0/4,p=0} tryExecute EatWhatYouKill@13ca52e/SelectorProducer@1c7e403/PRODUCING/p=false/QueuedThreadPool[qtp6041804]@5c30cc{STARTED,8<=8<=200,i=5,q=0}[pc=0,pic=0,pec=0,epc=0]@2019-02-19T14:12:50.591Z
+ReservedThreadExecutor@1f116cc{s=0/4,p=1} startReservedThread p=1
+queue ReservedThreadExecutor@1f116cc{s=0/4,p=1}@19ea88f
+EatWhatYouKill@13ca52e/SelectorProducer@1c7e403/PRODUCING/p=false/QueuedThreadPool[qtp6041804]@5c30cc{STARTED,8<=8<=200,i=5,q=1}[pc=0,pic=0,pec=0,epc=0]@2019-02-19T14:12:50.595Z m=PRODUCE_EXECUTE_CONSUME t=CEP:SocketChannelEndPoint@7e9917{/192.168.1.245:51901<->/192.168.1.245:9001,OPEN,fill=FI,flush=-,to=15/30000}{io=1/0,kio=1,kro=1}->HttpConnection@35c17[p=HttpParser{s=START,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=0,c=false,a=IDLE,uri=null,age=0}:runFillable:BLOCKING/BLOCKING
+run ReservedThreadExecutor@1f116cc{s=0/4,p=1}@19ea88f
+ReservedThreadExecutor@1f116cc{s=1/4,p=1}@19ea88f started
+queue CEP:SocketChannelEndPoint@7e9917{/192.168.1.245:51901<->/192.168.1.245:9001,OPEN,fill=FI,flush=-,to=17/30000}{io=1/0,kio=1,kro=1}->HttpConnection@35c17[p=HttpParser{s=START,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=0,c=false,a=IDLE,uri=null,age=0}:runFillable:BLOCKING
+updateable 0
+updates 0
+ReservedThreadExecutor@1f116cc{s=1/4,p=0}@19ea88f waiting
+Key interests updated 1 -> 0 on SocketChannelEndPoint@7e9917{/192.168.1.245:51901<->/192.168.1.245:9001,OPEN,fill=FI,flush=-,to=18/30000}{io=0/0,kio=0,kro=1}->HttpConnection@35c17[p=HttpParser{s=START,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=0,c=false,a=IDLE,uri=null,age=0}
+Selector sun.nio.ch.WindowsSelectorImpl@1c8fac9 waiting on select
+run CEP:SocketChannelEndPoint@7e9917{/192.168.1.245:51901<->/192.168.1.245:9001,OPEN,fill=FI,flush=-,to=18/30000}{io=0/0,kio=0,kro=1}->HttpConnection@35c17[p=HttpParser{s=START,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=0,c=false,a=IDLE,uri=null,age=0}:runFillable:BLOCKING
+fillable FillInterest@fd6df2{AC.ReadCB@35c17{HttpConnection@35c17[p=HttpParser{s=START,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=0,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@7e9917{/192.168.1.245:51901<->/192.168.1.245:9001,OPEN,fill=FI,flush=-,to=21/30000}{io=0/0,kio=0,kro=1}->HttpConnection@35c17[p=HttpParser{s=START,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=0,c=false,a=IDLE,uri=null,age=0}}}
+HttpConnection@35c17[p=HttpParser{s=START,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=0,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@7e9917{/192.168.1.245:51901<->/192.168.1.245:9001,OPEN,fill=-,flush=-,to=25/30000}{io=0/0,kio=0,kro=1}->HttpConnection@35c17[p=HttpParser{s=START,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=0,c=false,a=IDLE,uri=null,age=0} onFillable enter HttpChannelState@c0b446{s=IDLE a=NOT_ASYNC i=true r=IDLE w=false} null
+filled 288 SocketChannelEndPoint@7e9917{/192.168.1.245:51901<->/192.168.1.245:9001,OPEN,fill=-,flush=-,to=29/30000}{io=0/0,kio=0,kro=1}->HttpConnection@35c17[p=HttpParser{s=START,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=0,c=false,a=IDLE,uri=null,age=0}
+HttpConnection@35c17[p=HttpParser{s=START,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=0,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@7e9917{/192.168.1.245:51901<->/192.168.1.245:9001,OPEN,fill=-,flush=-,to=17/30000}{io=0/0,kio=0,kro=1}->HttpConnection@35c17[p=HttpParser{s=START,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=0,c=false,a=IDLE,uri=null,age=0} filled 288 HeapByteBuffer@ee61ab[p=0,l=288,c=8192,r=288]={<<<POST /loginServle...,"password":""}>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+HttpConnection@35c17[p=HttpParser{s=START,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=0,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@7e9917{/192.168.1.245:51901<->/192.168.1.245:9001,OPEN,fill=-,flush=-,to=22/30000}{io=0/0,kio=0,kro=1}->HttpConnection@35c17[p=HttpParser{s=START,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=0,c=false,a=IDLE,uri=null,age=0} parse HeapByteBuffer@ee61ab[p=0,l=288,c=8192,r=288]={<<<POST /loginServle...,"password":""}>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} {}
+parseNext s=START HeapByteBuffer@ee61ab[p=0,l=288,c=8192,r=288]={<<<POST /loginServle...,"password":""}>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+START --> SPACE1
+SPACE1 --> URI
+URI --> SPACE2
+SPACE2 --> REQUEST_VERSION
+REQUEST_VERSION --> HEADER
+HEADER:null --> VALUE
+HEADER:null --> IN_VALUE
+HEADER:null --> FIELD
+HEADER:null --> IN_NAME
+HEADER:null --> VALUE
+HEADER:null --> IN_VALUE
+HEADER:null --> FIELD
+HEADER:Content-Type: application/json; charset=UTF-8 --> IN_VALUE
+HEADER:Content-Type: application/json; charset=UTF-8 --> FIELD
+HEADER:null --> VALUE
+HEADER:null --> IN_VALUE
+HEADER:null --> FIELD
+HEADER:null --> VALUE
+HEADER:null --> IN_VALUE
+HEADER:null --> FIELD
+HEADER:Connection: keep-alive --> IN_VALUE
+HEADER:Connection: keep-alive --> FIELD
+HEADER:Accept-Encoding: gzip --> IN_VALUE
+HEADER:Accept-Encoding: gzip --> FIELD
+HEADER:null --> VALUE
+HEADER:null --> IN_VALUE
+HEADER:null --> FIELD
+HEADER --> CONTENT
+REQUEST for //192.168.1.245:9001/loginServlet on HttpChannelOverHttp@fae42d{r=1,c=false,a=IDLE,uri=//192.168.1.245:9001/loginServlet,age=7}
+POST //192.168.1.245:9001/loginServlet HTTP/1.1
+Accept: application/json
+secret: I am the server's secret!
+Content-Type: application/json; charset=UTF-8
+Content-Length: 29
+Host: 192.168.1.245:9001
+Connection: keep-alive
+Accept-Encoding: gzip
+User-Agent: okhttp/3.12.1
+
+
+HttpConnection@35c17[p=HttpParser{s=CONTENT,0 of 29},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=1,c=false,a=IDLE,uri=//192.168.1.245:9001/loginServlet,age=10}<-SocketChannelEndPoint@7e9917{/192.168.1.245:51901<->/192.168.1.245:9001,OPEN,fill=-,flush=-,to=201/30000}{io=0/0,kio=0,kro=1}->HttpConnection@35c17[p=HttpParser{s=CONTENT,0 of 29},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=1,c=false,a=IDLE,uri=//192.168.1.245:9001/loginServlet,age=10} parsed true HttpParser{s=CONTENT,0 of 29}
+HttpChannelOverHttp@fae42d{r=1,c=false,a=IDLE,uri=//192.168.1.245:9001/loginServlet,age=10} handle //192.168.1.245:9001/loginServlet 
+handling HttpChannelState@c0b446{s=IDLE a=NOT_ASYNC i=true r=IDLE w=false}
+HttpChannelOverHttp@fae42d{r=1,c=false,a=DISPATCHED,uri=//192.168.1.245:9001/loginServlet,age=14} action DISPATCH
+REQUEST POST /loginServlet on HttpChannelOverHttp@fae42d{r=1,c=false,a=DISPATCHED,uri=//192.168.1.245:9001/loginServlet,age=19}
+scope null||/loginServlet @ o.e.j.s.ServletContextHandler@120ba90{/,null,AVAILABLE}
+context=||/loginServlet @ o.e.j.s.ServletContextHandler@120ba90{/,null,AVAILABLE}
+sessionHandler=org.eclipse.jetty.server.session.SessionHandler31391039==dftMaxIdleSec=-1
+session=null
+servlet |/loginServlet|null -> TEmPoS.Servlet.LoginServlet-730495@e2a276e==TEmPoS.Servlet.LoginServlet,jsp=null,order=-1,inst=true
+chain=null
+User attempting to login.
+HttpConnection@35c17[p=HttpParser{s=CONTENT,0 of 29},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=1,c=false,a=DISPATCHED,uri=//192.168.1.245:9001/loginServlet,age=164}<-SocketChannelEndPoint@7e9917{/192.168.1.245:51901<->/192.168.1.245:9001,OPEN,fill=-,flush=-,to=355/30000}{io=0/0,kio=0,kro=1}->HttpConnection@35c17[p=HttpParser{s=CONTENT,0 of 29},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=1,c=false,a=DISPATCHED,uri=//192.168.1.245:9001/loginServlet,age=165} parse HeapByteBuffer@ee61ab[p=259,l=288,c=8192,r=29]={POST /loginServle...http/3.12.1\r\n\r\n<<<{"username":"","password":""}>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} {}
+parseNext s=CONTENT HeapByteBuffer@ee61ab[p=259,l=288,c=8192,r=29]={POST /loginServle...http/3.12.1\r\n\r\n<<<{"username":"","password":""}>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+HttpChannelOverHttp@fae42d{r=1,c=false,a=DISPATCHED,uri=//192.168.1.245:9001/loginServlet,age=166} onContent Content@7c2ddf{HeapByteBufferR@13274f1[p=259,l=288,c=8192,r=29]={POST /loginServle...http/3.12.1\r\n\r\n<<<{"username":"","password":""}>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}}
+HttpInputOverHTTP@101e215[c=0,q=0,[0]=null,s=STREAM] addContent Content@7c2ddf{HeapByteBufferR@13274f1[p=259,l=288,c=8192,r=29]={POST /loginServle...http/3.12.1\r\n\r\n<<<{"username":"","password":""}>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}}
+CONTENT --> END
+HttpChannelOverHttp@fae42d{r=1,c=false,a=DISPATCHED,uri=//192.168.1.245:9001/loginServlet,age=169} onContentComplete
+HttpChannelOverHttp@fae42d{r=1,c=false,a=DISPATCHED,uri=//192.168.1.245:9001/loginServlet,age=171} onRequestComplete
+HttpInputOverHTTP@101e215[c=0,q=1,[0]=EOF,s=STREAM] addContent EOF
+HttpConnection@35c17[p=HttpParser{s=END,29 of 29},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=1,c=false,a=DISPATCHED,uri=//192.168.1.245:9001/loginServlet,age=173}<-SocketChannelEndPoint@7e9917{/192.168.1.245:51901<->/192.168.1.245:9001,OPEN,fill=-,flush=-,to=364/30000}{io=0/0,kio=0,kro=1}->HttpConnection@35c17[p=HttpParser{s=END,29 of 29},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=1,c=false,a=DISPATCHED,uri=//192.168.1.245:9001/loginServlet,age=173} parsed false HttpParser{s=END,29 of 29}
+HttpInputOverHTTP@101e215[c=29,q=1,[0]=EOF,s=STREAM] read 29 from Content@7c2ddf{HeapByteBufferR@13274f1[p=288,l=288,c=8192,r=0]={POST /loginServle...,"password":""}<<<>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}}
+releaseRequestBuffer HttpConnection@35c17[p=HttpParser{s=END,29 of 29},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=1,c=false,a=DISPATCHED,uri=//192.168.1.245:9001/loginServlet,age=176}<-SocketChannelEndPoint@7e9917{/192.168.1.245:51901<->/192.168.1.245:9001,OPEN,fill=-,flush=-,to=367/30000}{io=0/0,kio=0,kro=1}->HttpConnection@35c17[p=HttpParser{s=END,29 of 29},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=1,c=false,a=DISPATCHED,uri=//192.168.1.245:9001/loginServlet,age=176}
+onEof HttpChannelState@c0b446{s=DISPATCHED a=NOT_ASYNC i=true r=IDLE w=false}
+onEof HttpChannelState@c0b446{s=DISPATCHED a=NOT_ASYNC i=true r=READY w=false}
+sendResponse info=null content=DirectByteBuffer@f428b[p=0,l=16,c=32768,r=16]={<<<{"auth":"false"}>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} complete=false committing=true callback=Blocker@11a27c6{null}
+COMMIT for /loginServlet on HttpChannelOverHttp@fae42d{r=1,c=true,a=DISPATCHED,uri=//192.168.1.245:9001/loginServlet,age=350}
+200 null HTTP/1.1
+Date: Tue, 19 Feb 2019 14:12:50 GMT
+Content-Type: application/json
+
+
+org.eclipse.jetty.server.HttpConnection$SendCallback@3bd845[PROCESSING][i=HTTP/1.1{s=200,h=2,cl=-1},cb=org.eclipse.jetty.server.HttpChannel$CommitCallback@1f4b8bc] generate: NEED_HEADER (null,[p=0,l=16,c=32768,r=16],false)@START
+generateHeaders HTTP/1.1{s=200,h=2,cl=-1} last=false content=DirectByteBuffer@f428b[p=0,l=16,c=32768,r=16]={<<<{"auth":"false"}>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+Date: Tue, 19 Feb 2019 14:12:50 GMT
+Content-Type: application/json
+
+
+CHUNKED_CONTENT
+org.eclipse.jetty.server.HttpConnection$SendCallback@3bd845[PROCESSING][i=HTTP/1.1{s=200,h=2,cl=-1},cb=org.eclipse.jetty.server.HttpChannel$CommitCallback@1f4b8bc] generate: FLUSH ([p=0,l=152,c=8192,r=152],[p=0,l=16,c=32768,r=16],false)@COMMITTED
+write: WriteFlusher@119f451{IDLE}->null [HeapByteBuffer@ee61ab[p=0,l=152,c=8192,r=152]={<<<HTTP/1.1 200 OK\r\n...180320)\r\n\r\n10\r\n>>> 29\r\nHost: 192.16...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00},DirectByteBuffer@f428b[p=0,l=16,c=32768,r=16]={<<<{"auth":"false"}>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}]
+update WriteFlusher@119f451{WRITING}->null:IDLE-->WRITING
+flushed 168 SocketChannelEndPoint@7e9917{/192.168.1.245:51901<->/192.168.1.245:9001,OPEN,fill=-,flush=W,to=573/30000}{io=0/0,kio=0,kro=1}->HttpConnection@35c17[p=HttpParser{s=END,29 of 29},g=HttpGenerator@35e7a5{s=COMMITTED}]=>HttpChannelOverHttp@fae42d{r=1,c=true,a=DISPATCHED,uri=//192.168.1.245:9001/loginServlet,age=382}
+Flushed=true written=168 remaining=0 WriteFlusher@119f451{WRITING}->null
+update WriteFlusher@119f451{IDLE}->null:WRITING-->IDLE
+org.eclipse.jetty.server.HttpConnection$SendCallback@3bd845[PROCESSING][i=HTTP/1.1{s=200,h=2,cl=-1},cb=org.eclipse.jetty.server.HttpChannel$CommitCallback@1f4b8bc] generate: DONE ([p=152,l=152,c=8192,r=0],[p=16,l=16,c=32768,r=0],false)@COMMITTED
+FinalSession=null old_session_manager=null this=org.eclipse.jetty.server.session.SessionHandler31391039==dftMaxIdleSec=-1
+handled=true async=false committed=true on HttpChannelOverHttp@fae42d{r=1,c=true,a=DISPATCHED,uri=//192.168.1.245:9001/loginServlet,age=384}
+unhandle HttpChannelState@c0b446{s=DISPATCHED a=NOT_ASYNC i=true r=READY w=false}
+HttpChannelOverHttp@fae42d{r=1,c=true,a=COMPLETING,uri=//192.168.1.245:9001/loginServlet,age=386} action COMPLETE
+sendResponse info=null content=HeapByteBuffer@a79410[p=0,l=0,c=0,r=0]={<<<>>>} complete=true committing=false callback=Blocker@11a27c6{null}
+org.eclipse.jetty.server.HttpConnection$SendCallback@3bd845[PROCESSING][i=null,cb=org.eclipse.jetty.server.HttpChannel$ContentCallback@13e5cff] generate: CONTINUE (null,[p=0,l=0,c=0,r=0],true)@COMPLETING
+org.eclipse.jetty.server.HttpConnection$SendCallback@3bd845[PROCESSING][i=null,cb=org.eclipse.jetty.server.HttpChannel$ContentCallback@13e5cff] generate: NEED_CHUNK (null,[p=0,l=0,c=0,r=0],true)@COMPLETING
+org.eclipse.jetty.server.HttpConnection$SendCallback@3bd845[PROCESSING][i=null,cb=org.eclipse.jetty.server.HttpChannel$ContentCallback@13e5cff] generate: FLUSH (null,[p=0,l=0,c=0,r=0],true)@COMPLETING
+write: WriteFlusher@119f451{IDLE}->null [HeapByteBuffer@11b58dc[p=0,l=7,c=1024,r=7]={<<<\r\n0\r\n\r\n>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}]
+update WriteFlusher@119f451{WRITING}->null:IDLE-->WRITING
+flushed 7 SocketChannelEndPoint@7e9917{/192.168.1.245:51901<->/192.168.1.245:9001,OPEN,fill=-,flush=W,to=5/30000}{io=0/0,kio=0,kro=1}->HttpConnection@35c17[p=HttpParser{s=END,29 of 29},g=HttpGenerator@35e7a5{s=COMPLETING}]=>HttpChannelOverHttp@fae42d{r=1,c=true,a=COMPLETING,uri=//192.168.1.245:9001/loginServlet,age=388}
+Flushed=true written=7 remaining=0 WriteFlusher@119f451{WRITING}->null
+update WriteFlusher@119f451{IDLE}->null:WRITING-->IDLE
+org.eclipse.jetty.server.HttpConnection$SendCallback@3bd845[PROCESSING][i=null,cb=org.eclipse.jetty.server.HttpChannel$ContentCallback@13e5cff] generate: DONE (null,[p=0,l=0,c=0,r=0],true)@END
+onComplete HttpChannelState@c0b446{s=COMPLETING a=NOT_ASYNC i=false r=READY w=false}
+COMPLETE for /loginServlet written=16
+onEof HttpChannelState@c0b446{s=COMPLETED a=NOT_ASYNC i=false r=READY w=false}
+recycle HttpChannelState@c0b446{s=COMPLETED a=NOT_ASYNC i=false r=READY w=false}
+reset HttpParser{s=END,29 of 29}
+END --> START
+HttpChannelOverHttp@fae42d{r=1,c=false,a=IDLE,uri=null,age=0} handle exit, result COMPLETE
+filled 0 SocketChannelEndPoint@7e9917{/192.168.1.245:51901<->/192.168.1.245:9001,OPEN,fill=-,flush=-,to=15/30000}{io=0/0,kio=0,kro=1}->HttpConnection@35c17[p=HttpParser{s=START,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=1,c=false,a=IDLE,uri=null,age=0}
+filled 0 SocketChannelEndPoint@7e9917{/192.168.1.245:51901<->/192.168.1.245:9001,OPEN,fill=-,flush=-,to=16/30000}{io=0/0,kio=0,kro=1}->HttpConnection@35c17[p=HttpParser{s=START,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=1,c=false,a=IDLE,uri=null,age=0}
+HttpConnection@35c17[p=HttpParser{s=START,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=1,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@7e9917{/192.168.1.245:51901<->/192.168.1.245:9001,OPEN,fill=-,flush=-,to=18/30000}{io=0/0,kio=0,kro=1}->HttpConnection@35c17[p=HttpParser{s=START,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=1,c=false,a=IDLE,uri=null,age=0} filled 0 HeapByteBuffer@ee61ab[p=0,l=0,c=8192,r=0]={<<<>>>HTTP/1.1 200 OK\r\n...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+HttpConnection@35c17[p=HttpParser{s=START,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=1,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@7e9917{/192.168.1.245:51901<->/192.168.1.245:9001,OPEN,fill=-,flush=-,to=21/30000}{io=0/0,kio=0,kro=1}->HttpConnection@35c17[p=HttpParser{s=START,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=1,c=false,a=IDLE,uri=null,age=0} parse HeapByteBuffer@ee61ab[p=0,l=0,c=8192,r=0]={<<<>>>HTTP/1.1 200 OK\r\n...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} {}
+parseNext s=START HeapByteBuffer@ee61ab[p=0,l=0,c=8192,r=0]={<<<>>>HTTP/1.1 200 OK\r\n...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+HttpConnection@35c17[p=HttpParser{s=START,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=1,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@7e9917{/192.168.1.245:51901<->/192.168.1.245:9001,OPEN,fill=-,flush=-,to=22/30000}{io=0/0,kio=0,kro=1}->HttpConnection@35c17[p=HttpParser{s=START,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=1,c=false,a=IDLE,uri=null,age=0} parsed false HttpParser{s=START,0 of -1}
+releaseRequestBuffer HttpConnection@35c17[p=HttpParser{s=START,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=1,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@7e9917{/192.168.1.245:51901<->/192.168.1.245:9001,OPEN,fill=-,flush=-,to=23/30000}{io=0/0,kio=0,kro=1}->HttpConnection@35c17[p=HttpParser{s=START,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=1,c=false,a=IDLE,uri=null,age=0}
+fillInterested HttpConnection@35c17[p=HttpParser{s=START,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=1,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@7e9917{/192.168.1.245:51901<->/192.168.1.245:9001,OPEN,fill=-,flush=-,to=25/30000}{io=0/0,kio=0,kro=1}->HttpConnection@35c17[p=HttpParser{s=START,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=1,c=false,a=IDLE,uri=null,age=0}
+interested FillInterest@fd6df2{AC.ReadCB@35c17{HttpConnection@35c17[p=HttpParser{s=START,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=1,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@7e9917{/192.168.1.245:51901<->/192.168.1.245:9001,OPEN,fill=FI,flush=-,to=0/30000}{io=0/0,kio=0,kro=1}->HttpConnection@35c17[p=HttpParser{s=START,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=1,c=false,a=IDLE,uri=null,age=0}}}
+changeInterests p=false 0->1 for SocketChannelEndPoint@7e9917{/192.168.1.245:51901<->/192.168.1.245:9001,OPEN,fill=FI,flush=-,to=2/30000}{io=0/1,kio=0,kro=1}->HttpConnection@35c17[p=HttpParser{s=START,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=1,c=false,a=IDLE,uri=null,age=0}
+Queued change org.eclipse.jetty.io.ChannelEndPoint$1@114a347 on org.eclipse.jetty.io.ManagedSelector@125bf5b id=1 keys=1 selected=0 updates=0
+Selector sun.nio.ch.WindowsSelectorImpl@1c8fac9 woken up from select, 0/1 selected
+Selector sun.nio.ch.WindowsSelectorImpl@1c8fac9 processing 0 keys, 1 updates
+updateable 1
+update org.eclipse.jetty.io.ChannelEndPoint$1@114a347
+Key interests updated 0 -> 1 on SocketChannelEndPoint@7e9917{/192.168.1.245:51901<->/192.168.1.245:9001,OPEN,fill=FI,flush=-,to=5/30000}{io=1/1,kio=1,kro=1}->HttpConnection@35c17[p=HttpParser{s=START,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=1,c=false,a=IDLE,uri=null,age=0}
+updates 0
+Selector sun.nio.ch.WindowsSelectorImpl@1c8fac9 waiting on select
+HttpConnection@35c17[p=HttpParser{s=START,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=1,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@7e9917{/192.168.1.245:51901<->/192.168.1.245:9001,OPEN,fill=FI,flush=-,to=6/30000}{io=1/1,kio=1,kro=1}->HttpConnection@35c17[p=HttpParser{s=START,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=1,c=false,a=IDLE,uri=null,age=0} onFillable exit HttpChannelState@c0b446{s=IDLE a=NOT_ASYNC i=true r=IDLE w=false} null
+ran CEP:SocketChannelEndPoint@7e9917{/192.168.1.245:51901<->/192.168.1.245:9001,OPEN,fill=FI,flush=-,to=9/30000}{io=1/1,kio=1,kro=1}->HttpConnection@35c17[p=HttpParser{s=START,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=1,c=false,a=IDLE,uri=null,age=0}:runFillable:BLOCKING
+SocketChannelEndPoint@7e9917{/192.168.1.245:51901<->/192.168.1.245:9001,OPEN,fill=FI,flush=-,to=28792/30000}{io=1/1,kio=1,kro=1}->HttpConnection@35c17[p=HttpParser{s=START,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=1,c=false,a=IDLE,uri=null,age=0} idle timeout check, elapsed: 28792 ms, remaining: 1208 ms
+SocketChannelEndPoint@7e9917{/192.168.1.245:51901<->/192.168.1.245:9001,OPEN,fill=FI,flush=-,to=30002/30000}{io=1/1,kio=1,kro=1}->HttpConnection@35c17[p=HttpParser{s=START,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=1,c=false,a=IDLE,uri=null,age=0} idle timeout check, elapsed: 30002 ms, remaining: -2 ms
+SocketChannelEndPoint@7e9917{/192.168.1.245:51901<->/192.168.1.245:9001,OPEN,fill=FI,flush=-,to=30024/30000}{io=1/1,kio=1,kro=1}->HttpConnection@35c17[p=HttpParser{s=START,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=1,c=false,a=IDLE,uri=null,age=0} idle timeout expired
+onFail FillInterest@fd6df2{AC.ReadCB@35c17{HttpConnection@35c17[p=HttpParser{s=START,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=1,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@7e9917{/192.168.1.245:51901<->/192.168.1.245:9001,OPEN,fill=FI,flush=-,to=30032/30000}{io=1/1,kio=1,kro=1}->HttpConnection@35c17[p=HttpParser{s=START,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=1,c=false,a=IDLE,uri=null,age=0}}}
+java.util.concurrent.TimeoutException: Idle timeout expired: 30002/30000 ms
+	at org.eclipse.jetty.io.IdleTimeout.checkIdleTimeout(IdleTimeout.java:166)
+	at org.eclipse.jetty.io.IdleTimeout$1.run(IdleTimeout.java:50)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+close HttpParser{s=START,0 of -1}
+START --> CLOSE
+HttpConnection@35c17[p=HttpParser{s=CLOSE,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=1,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@7e9917{/192.168.1.245:51901<->/192.168.1.245:9001,OPEN,fill=-,flush=-,to=30082/30000}{io=1/1,kio=1,kro=1}->HttpConnection@35c17[p=HttpParser{s=CLOSE,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=1,c=false,a=IDLE,uri=null,age=0} onFillInterestedFailed {}
+shutdownOutput SocketChannelEndPoint@7e9917{/192.168.1.245:51901<->/192.168.1.245:9001,OPEN,fill=-,flush=-,to=30082/30000}{io=1/1,kio=1,kro=1}->HttpConnection@35c17[p=HttpParser{s=CLOSE,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=1,c=false,a=IDLE,uri=null,age=0}
+fillInterested HttpConnection@35c17[p=HttpParser{s=CLOSE,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=1,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@7e9917{/192.168.1.245:51901<->/192.168.1.245:9001,OSHUT,fill=-,flush=-,to=30085/30000}{io=1/1,kio=1,kro=1}->HttpConnection@35c17[p=HttpParser{s=CLOSE,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=1,c=false,a=IDLE,uri=null,age=0}
+interested FillInterest@fd6df2{AC.ReadCB@35c17{HttpConnection@35c17[p=HttpParser{s=CLOSE,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=1,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@7e9917{/192.168.1.245:51901<->/192.168.1.245:9001,OSHUT,fill=FI,flush=-,to=11/30000}{io=1/1,kio=1,kro=1}->HttpConnection@35c17[p=HttpParser{s=CLOSE,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=1,c=false,a=IDLE,uri=null,age=0}}}
+changeInterests p=false 1->1 for SocketChannelEndPoint@7e9917{/192.168.1.245:51901<->/192.168.1.245:9001,OSHUT,fill=FI,flush=-,to=17/30000}{io=1/1,kio=1,kro=1}->HttpConnection@35c17[p=HttpParser{s=CLOSE,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=1,c=false,a=IDLE,uri=null,age=0}
+Queued change org.eclipse.jetty.io.ChannelEndPoint$1@114a347 on org.eclipse.jetty.io.ManagedSelector@125bf5b id=1 keys=1 selected=0 updates=0
+Selector sun.nio.ch.WindowsSelectorImpl@1c8fac9 woken up from select, 0/1 selected
+ignored: WriteFlusher@119f451{IDLE}->null
+java.util.concurrent.TimeoutException: Idle timeout expired: 30002/30000 ms
+	at org.eclipse.jetty.io.IdleTimeout.checkIdleTimeout(IdleTimeout.java:166)
+	at org.eclipse.jetty.io.IdleTimeout$1.run(IdleTimeout.java:50)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Selector sun.nio.ch.WindowsSelectorImpl@1c8fac9 processing 0 keys, 1 updates
+updateable 1
+update org.eclipse.jetty.io.ChannelEndPoint$1@114a347
+Key interests updated 1 -> 1 on SocketChannelEndPoint@7e9917{/192.168.1.245:51901<->/192.168.1.245:9001,OSHUT,fill=FI,flush=-,to=24/30000}{io=1/1,kio=1,kro=1}->HttpConnection@35c17[p=HttpParser{s=CLOSE,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=1,c=false,a=IDLE,uri=null,age=0}
+Ignored idle endpoint SocketChannelEndPoint@7e9917{/192.168.1.245:51901<->/192.168.1.245:9001,OSHUT,fill=FI,flush=-,to=24/30000}{io=1/1,kio=1,kro=1}->HttpConnection@35c17[p=HttpParser{s=CLOSE,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=1,c=false,a=IDLE,uri=null,age=0}
+updates 0
+Selector sun.nio.ch.WindowsSelectorImpl@1c8fac9 waiting on select
+ReservedThreadExecutor@1f116cc{s=1/4,p=0}@19ea88f IDLE
+ReservedThreadExecutor@1f116cc{s=1/4,p=0} tryExecute STOP!
+ReservedThreadExecutor@1f116cc{s=0/4,p=0}@19ea88f offer STOP!
+ReservedThreadExecutor@1f116cc{s=0/4,p=0}@19ea88f task=STOP!
+ReservedThreadExecutor@1f116cc{s=0/4,p=0}@19ea88f Exited
+ran ReservedThreadExecutor@1f116cc{s=0/4,p=0}@19ea88f
+SocketChannelEndPoint@7e9917{/192.168.1.245:51901<->/192.168.1.245:9001,OSHUT,fill=FI,flush=-,to=30014/30000}{io=1/1,kio=1,kro=1}->HttpConnection@35c17[p=HttpParser{s=CLOSE,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=1,c=false,a=IDLE,uri=null,age=0} idle timeout check, elapsed: 30011 ms, remaining: -11 ms
+SocketChannelEndPoint@7e9917{/192.168.1.245:51901<->/192.168.1.245:9001,OSHUT,fill=FI,flush=-,to=30028/30000}{io=1/1,kio=1,kro=1}->HttpConnection@35c17[p=HttpParser{s=CLOSE,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=1,c=false,a=IDLE,uri=null,age=0} idle timeout expired
+onFail FillInterest@fd6df2{AC.ReadCB@35c17{HttpConnection@35c17[p=HttpParser{s=CLOSE,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=1,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@7e9917{/192.168.1.245:51901<->/192.168.1.245:9001,OSHUT,fill=FI,flush=-,to=30079/30000}{io=1/1,kio=1,kro=1}->HttpConnection@35c17[p=HttpParser{s=CLOSE,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=1,c=false,a=IDLE,uri=null,age=0}}}
+java.util.concurrent.TimeoutException: Idle timeout expired: 30011/30000 ms
+	at org.eclipse.jetty.io.IdleTimeout.checkIdleTimeout(IdleTimeout.java:166)
+	at org.eclipse.jetty.io.IdleTimeout$1.run(IdleTimeout.java:50)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+close HttpParser{s=CLOSE,0 of -1}
+CLOSE --> CLOSE
+HttpConnection@35c17[p=HttpParser{s=CLOSE,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=1,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@7e9917{/192.168.1.245:51901<->/192.168.1.245:9001,OSHUT,fill=-,flush=-,to=30097/30000}{io=1/1,kio=1,kro=1}->HttpConnection@35c17[p=HttpParser{s=CLOSE,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=1,c=false,a=IDLE,uri=null,age=0} onFillInterestedFailed {}
+close SocketChannelEndPoint@7e9917{/192.168.1.245:51901<->/192.168.1.245:9001,OSHUT,fill=-,flush=-,to=30099/30000}{io=1/1,kio=1,kro=1}->HttpConnection@35c17[p=HttpParser{s=CLOSE,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=1,c=false,a=IDLE,uri=null,age=0}
+close(null) SocketChannelEndPoint@7e9917{/192.168.1.245:51901<->/192.168.1.245:9001,OSHUT,fill=-,flush=-,to=30100/30000}{io=1/1,kio=1,kro=1}->HttpConnection@35c17[p=HttpParser{s=CLOSE,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=1,c=false,a=IDLE,uri=null,age=0}
+doClose SocketChannelEndPoint@7e9917{/192.168.1.245:51901<->/192.168.1.245:9001,CLOSED,fill=-,flush=-,to=30104/30000}{io=1/1,kio=1,kro=1}->HttpConnection@35c17[p=HttpParser{s=CLOSE,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=1,c=false,a=IDLE,uri=null,age=0}
+ignored: WriteFlusher@119f451{IDLE}->null
+java.nio.channels.ClosedChannelException: null
+	at org.eclipse.jetty.io.WriteFlusher.onClose(WriteFlusher.java:532)
+	at org.eclipse.jetty.io.AbstractEndPoint.onClose(AbstractEndPoint.java:353)
+	at org.eclipse.jetty.io.ChannelEndPoint.onClose(ChannelEndPoint.java:216)
+	at org.eclipse.jetty.io.AbstractEndPoint.doOnClose(AbstractEndPoint.java:225)
+	at org.eclipse.jetty.io.AbstractEndPoint.close(AbstractEndPoint.java:192)
+	at org.eclipse.jetty.io.AbstractEndPoint.close(AbstractEndPoint.java:175)
+	at org.eclipse.jetty.io.AbstractConnection.onFillInterestedFailed(AbstractConnection.java:174)
+	at org.eclipse.jetty.server.HttpConnection.onFillInterestedFailed(HttpConnection.java:494)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.failed(AbstractConnection.java:287)
+	at org.eclipse.jetty.io.FillInterest.onFail(FillInterest.java:134)
+	at org.eclipse.jetty.io.AbstractEndPoint.onIdleExpired(AbstractEndPoint.java:406)
+	at org.eclipse.jetty.io.IdleTimeout.checkIdleTimeout(IdleTimeout.java:166)
+	at org.eclipse.jetty.io.IdleTimeout$1.run(IdleTimeout.java:50)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+onClose FillInterest@fd6df2{null}
+queue org.eclipse.jetty.io.ManagedSelector$DestroyEndPoint@1906d96
+ignored: WriteFlusher@119f451{IDLE}->null
+java.util.concurrent.TimeoutException: Idle timeout expired: 30011/30000 ms
+	at org.eclipse.jetty.io.IdleTimeout.checkIdleTimeout(IdleTimeout.java:166)
+	at org.eclipse.jetty.io.IdleTimeout$1.run(IdleTimeout.java:50)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+run org.eclipse.jetty.io.ManagedSelector$DestroyEndPoint@1906d96
+Ignored idle endpoint SocketChannelEndPoint@7e9917{/192.168.1.245:51901<->/192.168.1.245:9001,CLOSED,fill=-,flush=-,to=30255/30000}{io=1/1,kio=-1,kro=-1}->HttpConnection@35c17[p=HttpParser{s=CLOSE,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=1,c=false,a=IDLE,uri=null,age=0}
+Destroyed SocketChannelEndPoint@7e9917{/192.168.1.245:51901<->/192.168.1.245:9001,CLOSED,fill=-,flush=-,to=5/30000}{io=1/1,kio=-1,kro=-1}->HttpConnection@35c17[p=HttpParser{s=CLOSE,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=1,c=false,a=IDLE,uri=null,age=0}
+onClose HttpConnection@35c17[p=HttpParser{s=CLOSE,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=1,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@7e9917{/192.168.1.245:51901<->/192.168.1.245:9001,CLOSED,fill=-,flush=-,to=10/30000}{io=1/1,kio=-1,kro=-1}->HttpConnection@35c17[p=HttpParser{s=CLOSE,0 of -1},g=HttpGenerator@35e7a5{s=START}]=>HttpChannelOverHttp@fae42d{r=1,c=false,a=IDLE,uri=null,age=0}
+ran org.eclipse.jetty.io.ManagedSelector$DestroyEndPoint@1906d96
+Selector sun.nio.ch.WindowsSelectorImpl@1c8fac9 woken up from select, 0/0 selected
+Selector sun.nio.ch.WindowsSelectorImpl@1c8fac9 processing 0 keys, 0 updates
+updateable 0
+updates 0
+Selector sun.nio.ch.WindowsSelectorImpl@1c8fac9 waiting on select
+Queued change org.eclipse.jetty.io.ManagedSelector$Accept@ee0142 on org.eclipse.jetty.io.ManagedSelector@19fedbd id=0 keys=0 selected=0 updates=0
+Selector sun.nio.ch.WindowsSelectorImpl@89477b woken up from select, 0/0 selected
+Selector sun.nio.ch.WindowsSelectorImpl@89477b processing 0 keys, 1 updates
+updateable 1
+update org.eclipse.jetty.io.ManagedSelector$Accept@ee0142
+queue org.eclipse.jetty.io.ManagedSelector$Accept@ee0142
+updates 0
+run org.eclipse.jetty.io.ManagedSelector$Accept@ee0142
+Selector sun.nio.ch.WindowsSelectorImpl@89477b waiting on select
+SocketChannelEndPoint@1d15619{/192.168.1.245:52345<->/192.168.1.245:9001,OPEN,fill=-,flush=-,to=1/30000}{io=0/0,kio=0,kro=0}-><null> idle timeout check, elapsed: 1 ms, remaining: 29999 ms
+new HttpChannelOverHttp@b28f7a{r=0,c=false,a=IDLE,uri=null,age=0} -> SocketChannelEndPoint@1d15619{/192.168.1.245:52345<->/192.168.1.245:9001,OPEN,fill=-,flush=-,to=16/30000}{io=0/0,kio=0,kro=0}-><null>,null,HttpChannelState@185fba3{s=IDLE a=NOT_ASYNC i=true r=IDLE w=false}
+New HTTP Connection HttpConnection@181610f[p=HttpParser{s=START,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=0,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@1d15619{/192.168.1.245:52345<->/192.168.1.245:9001,OPEN,fill=-,flush=-,to=32/30000}{io=0/0,kio=0,kro=0}-><null>
+onOpen SocketChannelEndPoint@1d15619{/192.168.1.245:52345<->/192.168.1.245:9001,OPEN,fill=-,flush=-,to=33/30000}{io=0/0,kio=0,kro=0}->HttpConnection@181610f[p=HttpParser{s=START,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=0,c=false,a=IDLE,uri=null,age=0}
+onOpen HttpConnection@181610f[p=HttpParser{s=START,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=0,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@1d15619{/192.168.1.245:52345<->/192.168.1.245:9001,OPEN,fill=-,flush=-,to=34/30000}{io=0/0,kio=0,kro=0}->HttpConnection@181610f[p=HttpParser{s=START,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=0,c=false,a=IDLE,uri=null,age=0}
+fillInterested HttpConnection@181610f[p=HttpParser{s=START,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=0,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@1d15619{/192.168.1.245:52345<->/192.168.1.245:9001,OPEN,fill=-,flush=-,to=35/30000}{io=0/0,kio=0,kro=0}->HttpConnection@181610f[p=HttpParser{s=START,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=0,c=false,a=IDLE,uri=null,age=0}
+interested FillInterest@540e47{AC.ReadCB@181610f{HttpConnection@181610f[p=HttpParser{s=START,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=0,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@1d15619{/192.168.1.245:52345<->/192.168.1.245:9001,OPEN,fill=FI,flush=-,to=1/30000}{io=0/0,kio=0,kro=0}->HttpConnection@181610f[p=HttpParser{s=START,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=0,c=false,a=IDLE,uri=null,age=0}}}
+changeInterests p=false 0->1 for SocketChannelEndPoint@1d15619{/192.168.1.245:52345<->/192.168.1.245:9001,OPEN,fill=FI,flush=-,to=1/30000}{io=0/1,kio=0,kro=0}->HttpConnection@181610f[p=HttpParser{s=START,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=0,c=false,a=IDLE,uri=null,age=0}
+Queued change org.eclipse.jetty.io.ChannelEndPoint$1@58b48d on org.eclipse.jetty.io.ManagedSelector@19fedbd id=0 keys=1 selected=0 updates=0
+Selector sun.nio.ch.WindowsSelectorImpl@89477b woken up from select, 0/1 selected
+Selector sun.nio.ch.WindowsSelectorImpl@89477b processing 0 keys, 1 updates
+Created SocketChannelEndPoint@1d15619{/192.168.1.245:52345<->/192.168.1.245:9001,OPEN,fill=FI,flush=-,to=2/30000}{io=0/1,kio=0,kro=0}->HttpConnection@181610f[p=HttpParser{s=START,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=0,c=false,a=IDLE,uri=null,age=0}
+updateable 1
+ran org.eclipse.jetty.io.ManagedSelector$Accept@ee0142
+update org.eclipse.jetty.io.ChannelEndPoint$1@58b48d
+Key interests updated 0 -> 1 on SocketChannelEndPoint@1d15619{/192.168.1.245:52345<->/192.168.1.245:9001,OPEN,fill=FI,flush=-,to=33/30000}{io=1/1,kio=1,kro=0}->HttpConnection@181610f[p=HttpParser{s=START,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=0,c=false,a=IDLE,uri=null,age=0}
+updates 0
+Selector sun.nio.ch.WindowsSelectorImpl@89477b waiting on select
+Selector sun.nio.ch.WindowsSelectorImpl@89477b woken up from select, 1/1 selected
+Selector sun.nio.ch.WindowsSelectorImpl@89477b processing 1 keys, 0 updates
+selected 1 sun.nio.ch.SelectionKeyImpl@ce32ca SocketChannelEndPoint@1d15619{/192.168.1.245:52345<->/192.168.1.245:9001,OPEN,fill=FI,flush=-,to=35/30000}{io=1/1,kio=1,kro=1}->HttpConnection@181610f[p=HttpParser{s=START,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=0,c=false,a=IDLE,uri=null,age=0} 
+onSelected 1->0 r=true w=false for SocketChannelEndPoint@1d15619{/192.168.1.245:52345<->/192.168.1.245:9001,OPEN,fill=FI,flush=-,to=35/30000}{io=1/0,kio=1,kro=1}->HttpConnection@181610f[p=HttpParser{s=START,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=0,c=false,a=IDLE,uri=null,age=0}
+task CEP:SocketChannelEndPoint@1d15619{/192.168.1.245:52345<->/192.168.1.245:9001,OPEN,fill=FI,flush=-,to=36/30000}{io=1/0,kio=1,kro=1}->HttpConnection@181610f[p=HttpParser{s=START,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=0,c=false,a=IDLE,uri=null,age=0}:runFillable:BLOCKING
+ReservedThreadExecutor@1f116cc{s=0/4,p=0} tryExecute EatWhatYouKill@a9e4eb/SelectorProducer@1da8e08/PRODUCING/p=false/QueuedThreadPool[qtp6041804]@5c30cc{STARTED,8<=8<=200,i=5,q=0}[pc=0,pic=0,pec=0,epc=0]@2019-02-19T14:17:15.634Z
+ReservedThreadExecutor@1f116cc{s=0/4,p=1} startReservedThread p=1
+queue ReservedThreadExecutor@1f116cc{s=0/4,p=1}@807fcc
+run ReservedThreadExecutor@1f116cc{s=0/4,p=1}@807fcc
+ReservedThreadExecutor@1f116cc{s=1/4,p=1}@807fcc started
+ReservedThreadExecutor@1f116cc{s=1/4,p=0}@807fcc waiting
+EatWhatYouKill@a9e4eb/SelectorProducer@1da8e08/PRODUCING/p=false/QueuedThreadPool[qtp6041804]@5c30cc{STARTED,8<=8<=200,i=4,q=0}[pc=0,pic=0,pec=0,epc=0]@2019-02-19T14:17:15.642Z m=PRODUCE_EXECUTE_CONSUME t=CEP:SocketChannelEndPoint@1d15619{/192.168.1.245:52345<->/192.168.1.245:9001,OPEN,fill=FI,flush=-,to=53/30000}{io=1/0,kio=1,kro=1}->HttpConnection@181610f[p=HttpParser{s=START,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=0,c=false,a=IDLE,uri=null,age=0}:runFillable:BLOCKING/BLOCKING
+queue CEP:SocketChannelEndPoint@1d15619{/192.168.1.245:52345<->/192.168.1.245:9001,OPEN,fill=FI,flush=-,to=58/30000}{io=1/0,kio=1,kro=1}->HttpConnection@181610f[p=HttpParser{s=START,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=0,c=false,a=IDLE,uri=null,age=0}:runFillable:BLOCKING
+updateable 0
+updates 0
+Key interests updated 1 -> 0 on SocketChannelEndPoint@1d15619{/192.168.1.245:52345<->/192.168.1.245:9001,OPEN,fill=FI,flush=-,to=63/30000}{io=0/0,kio=0,kro=1}->HttpConnection@181610f[p=HttpParser{s=START,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=0,c=false,a=IDLE,uri=null,age=0}
+Selector sun.nio.ch.WindowsSelectorImpl@89477b waiting on select
+run CEP:SocketChannelEndPoint@1d15619{/192.168.1.245:52345<->/192.168.1.245:9001,OPEN,fill=FI,flush=-,to=63/30000}{io=0/0,kio=0,kro=1}->HttpConnection@181610f[p=HttpParser{s=START,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=0,c=false,a=IDLE,uri=null,age=0}:runFillable:BLOCKING
+fillable FillInterest@540e47{AC.ReadCB@181610f{HttpConnection@181610f[p=HttpParser{s=START,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=0,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@1d15619{/192.168.1.245:52345<->/192.168.1.245:9001,OPEN,fill=FI,flush=-,to=65/30000}{io=0/0,kio=0,kro=1}->HttpConnection@181610f[p=HttpParser{s=START,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=0,c=false,a=IDLE,uri=null,age=0}}}
+HttpConnection@181610f[p=HttpParser{s=START,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=0,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@1d15619{/192.168.1.245:52345<->/192.168.1.245:9001,OPEN,fill=-,flush=-,to=67/30000}{io=0/0,kio=0,kro=1}->HttpConnection@181610f[p=HttpParser{s=START,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=0,c=false,a=IDLE,uri=null,age=0} onFillable enter HttpChannelState@185fba3{s=IDLE a=NOT_ASYNC i=true r=IDLE w=false} null
+filled 288 SocketChannelEndPoint@1d15619{/192.168.1.245:52345<->/192.168.1.245:9001,OPEN,fill=-,flush=-,to=71/30000}{io=0/0,kio=0,kro=1}->HttpConnection@181610f[p=HttpParser{s=START,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=0,c=false,a=IDLE,uri=null,age=0}
+HttpConnection@181610f[p=HttpParser{s=START,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=0,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@1d15619{/192.168.1.245:52345<->/192.168.1.245:9001,OPEN,fill=-,flush=-,to=4/30000}{io=0/0,kio=0,kro=1}->HttpConnection@181610f[p=HttpParser{s=START,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=0,c=false,a=IDLE,uri=null,age=0} filled 288 HeapByteBuffer@ee61ab[p=0,l=288,c=8192,r=288]={<<<POST /loginServle...,"password":""}>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+HttpConnection@181610f[p=HttpParser{s=START,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=0,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@1d15619{/192.168.1.245:52345<->/192.168.1.245:9001,OPEN,fill=-,flush=-,to=5/30000}{io=0/0,kio=0,kro=1}->HttpConnection@181610f[p=HttpParser{s=START,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=0,c=false,a=IDLE,uri=null,age=0} parse HeapByteBuffer@ee61ab[p=0,l=288,c=8192,r=288]={<<<POST /loginServle...,"password":""}>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} {}
+parseNext s=START HeapByteBuffer@ee61ab[p=0,l=288,c=8192,r=288]={<<<POST /loginServle...,"password":""}>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+START --> SPACE1
+SPACE1 --> URI
+URI --> SPACE2
+SPACE2 --> REQUEST_VERSION
+REQUEST_VERSION --> HEADER
+HEADER:null --> VALUE
+HEADER:null --> IN_VALUE
+HEADER:null --> FIELD
+HEADER:null --> IN_NAME
+HEADER:null --> VALUE
+HEADER:null --> IN_VALUE
+HEADER:null --> FIELD
+HEADER:Content-Type: application/json; charset=UTF-8 --> IN_VALUE
+HEADER:Content-Type: application/json; charset=UTF-8 --> FIELD
+HEADER:null --> VALUE
+HEADER:null --> IN_VALUE
+HEADER:null --> FIELD
+HEADER:null --> VALUE
+HEADER:null --> IN_VALUE
+HEADER:null --> FIELD
+HEADER:Connection: keep-alive --> IN_VALUE
+HEADER:Connection: keep-alive --> FIELD
+HEADER:Accept-Encoding: gzip --> IN_VALUE
+HEADER:Accept-Encoding: gzip --> FIELD
+HEADER:null --> VALUE
+HEADER:null --> IN_VALUE
+HEADER:null --> FIELD
+HEADER --> CONTENT
+REQUEST for //192.168.1.245:9001/loginServlet on HttpChannelOverHttp@b28f7a{r=1,c=false,a=IDLE,uri=//192.168.1.245:9001/loginServlet,age=9}
+POST //192.168.1.245:9001/loginServlet HTTP/1.1
+Accept: application/json
+secret: I am the server's secret!
+Content-Type: application/json; charset=UTF-8
+Content-Length: 29
+Host: 192.168.1.245:9001
+Connection: keep-alive
+Accept-Encoding: gzip
+User-Agent: okhttp/3.12.1
+
+
+HttpConnection@181610f[p=HttpParser{s=CONTENT,0 of 29},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=1,c=false,a=IDLE,uri=//192.168.1.245:9001/loginServlet,age=11}<-SocketChannelEndPoint@1d15619{/192.168.1.245:52345<->/192.168.1.245:9001,OPEN,fill=-,flush=-,to=66/30000}{io=0/0,kio=0,kro=1}->HttpConnection@181610f[p=HttpParser{s=CONTENT,0 of 29},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=1,c=false,a=IDLE,uri=//192.168.1.245:9001/loginServlet,age=12} parsed true HttpParser{s=CONTENT,0 of 29}
+HttpChannelOverHttp@b28f7a{r=1,c=false,a=IDLE,uri=//192.168.1.245:9001/loginServlet,age=14} handle //192.168.1.245:9001/loginServlet 
+handling HttpChannelState@185fba3{s=IDLE a=NOT_ASYNC i=true r=IDLE w=false}
+HttpChannelOverHttp@b28f7a{r=1,c=false,a=DISPATCHED,uri=//192.168.1.245:9001/loginServlet,age=16} action DISPATCH
+REQUEST POST /loginServlet on HttpChannelOverHttp@b28f7a{r=1,c=false,a=DISPATCHED,uri=//192.168.1.245:9001/loginServlet,age=16}
+scope null||/loginServlet @ o.e.j.s.ServletContextHandler@120ba90{/,null,AVAILABLE}
+context=||/loginServlet @ o.e.j.s.ServletContextHandler@120ba90{/,null,AVAILABLE}
+sessionHandler=org.eclipse.jetty.server.session.SessionHandler31391039==dftMaxIdleSec=-1
+session=null
+servlet |/loginServlet|null -> TEmPoS.Servlet.LoginServlet-730495@e2a276e==TEmPoS.Servlet.LoginServlet,jsp=null,order=-1,inst=true
+chain=null
+User attempting to login.
+HttpConnection@181610f[p=HttpParser{s=CONTENT,0 of 29},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=1,c=false,a=DISPATCHED,uri=//192.168.1.245:9001/loginServlet,age=37}<-SocketChannelEndPoint@1d15619{/192.168.1.245:52345<->/192.168.1.245:9001,OPEN,fill=-,flush=-,to=91/30000}{io=0/0,kio=0,kro=1}->HttpConnection@181610f[p=HttpParser{s=CONTENT,0 of 29},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=1,c=false,a=DISPATCHED,uri=//192.168.1.245:9001/loginServlet,age=39} parse HeapByteBuffer@ee61ab[p=259,l=288,c=8192,r=29]={POST /loginServle...http/3.12.1\r\n\r\n<<<{"username":"","password":""}>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} {}
+parseNext s=CONTENT HeapByteBuffer@ee61ab[p=259,l=288,c=8192,r=29]={POST /loginServle...http/3.12.1\r\n\r\n<<<{"username":"","password":""}>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+HttpChannelOverHttp@b28f7a{r=1,c=false,a=DISPATCHED,uri=//192.168.1.245:9001/loginServlet,age=39} onContent Content@61e3bb{HeapByteBufferR@1600052[p=259,l=288,c=8192,r=29]={POST /loginServle...http/3.12.1\r\n\r\n<<<{"username":"","password":""}>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}}
+HttpInputOverHTTP@604f57[c=0,q=0,[0]=null,s=STREAM] addContent Content@61e3bb{HeapByteBufferR@1600052[p=259,l=288,c=8192,r=29]={POST /loginServle...http/3.12.1\r\n\r\n<<<{"username":"","password":""}>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}}
+CONTENT --> END
+HttpChannelOverHttp@b28f7a{r=1,c=false,a=DISPATCHED,uri=//192.168.1.245:9001/loginServlet,age=46} onContentComplete
+HttpChannelOverHttp@b28f7a{r=1,c=false,a=DISPATCHED,uri=//192.168.1.245:9001/loginServlet,age=46} onRequestComplete
+HttpInputOverHTTP@604f57[c=0,q=1,[0]=EOF,s=STREAM] addContent EOF
+HttpConnection@181610f[p=HttpParser{s=END,29 of 29},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=1,c=false,a=DISPATCHED,uri=//192.168.1.245:9001/loginServlet,age=48}<-SocketChannelEndPoint@1d15619{/192.168.1.245:52345<->/192.168.1.245:9001,OPEN,fill=-,flush=-,to=102/30000}{io=0/0,kio=0,kro=1}->HttpConnection@181610f[p=HttpParser{s=END,29 of 29},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=1,c=false,a=DISPATCHED,uri=//192.168.1.245:9001/loginServlet,age=49} parsed false HttpParser{s=END,29 of 29}
+HttpInputOverHTTP@604f57[c=29,q=1,[0]=EOF,s=STREAM] read 29 from Content@61e3bb{HeapByteBufferR@1600052[p=288,l=288,c=8192,r=0]={POST /loginServle...,"password":""}<<<>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}}
+releaseRequestBuffer HttpConnection@181610f[p=HttpParser{s=END,29 of 29},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=1,c=false,a=DISPATCHED,uri=//192.168.1.245:9001/loginServlet,age=50}<-SocketChannelEndPoint@1d15619{/192.168.1.245:52345<->/192.168.1.245:9001,OPEN,fill=-,flush=-,to=104/30000}{io=0/0,kio=0,kro=1}->HttpConnection@181610f[p=HttpParser{s=END,29 of 29},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=1,c=false,a=DISPATCHED,uri=//192.168.1.245:9001/loginServlet,age=50}
+onEof HttpChannelState@185fba3{s=DISPATCHED a=NOT_ASYNC i=true r=IDLE w=false}
+onEof HttpChannelState@185fba3{s=DISPATCHED a=NOT_ASYNC i=true r=READY w=false}
+sendResponse info=null content=DirectByteBuffer@f428b[p=0,l=16,c=32768,r=16]={<<<{"auth":"false"}>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} complete=false committing=true callback=Blocker@2cd44f{null}
+COMMIT for /loginServlet on HttpChannelOverHttp@b28f7a{r=1,c=true,a=DISPATCHED,uri=//192.168.1.245:9001/loginServlet,age=77}
+200 null HTTP/1.1
+Date: Tue, 19 Feb 2019 14:17:15 GMT
+Content-Type: application/json
+
+
+org.eclipse.jetty.server.HttpConnection$SendCallback@1df878a[PROCESSING][i=HTTP/1.1{s=200,h=2,cl=-1},cb=org.eclipse.jetty.server.HttpChannel$CommitCallback@1870f3] generate: NEED_HEADER (null,[p=0,l=16,c=32768,r=16],false)@START
+generateHeaders HTTP/1.1{s=200,h=2,cl=-1} last=false content=DirectByteBuffer@f428b[p=0,l=16,c=32768,r=16]={<<<{"auth":"false"}>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+Date: Tue, 19 Feb 2019 14:17:15 GMT
+Content-Type: application/json
+
+
+CHUNKED_CONTENT
+org.eclipse.jetty.server.HttpConnection$SendCallback@1df878a[PROCESSING][i=HTTP/1.1{s=200,h=2,cl=-1},cb=org.eclipse.jetty.server.HttpChannel$CommitCallback@1870f3] generate: FLUSH ([p=0,l=152,c=8192,r=152],[p=0,l=16,c=32768,r=16],false)@COMMITTED
+write: WriteFlusher@408c50{IDLE}->null [HeapByteBuffer@ee61ab[p=0,l=152,c=8192,r=152]={<<<HTTP/1.1 200 OK\r\n...180320)\r\n\r\n10\r\n>>> 29\r\nHost: 192.16...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00},DirectByteBuffer@f428b[p=0,l=16,c=32768,r=16]={<<<{"auth":"false"}>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}]
+update WriteFlusher@408c50{WRITING}->null:IDLE-->WRITING
+flushed 168 SocketChannelEndPoint@1d15619{/192.168.1.245:52345<->/192.168.1.245:9001,OPEN,fill=-,flush=W,to=139/30000}{io=0/0,kio=0,kro=1}->HttpConnection@181610f[p=HttpParser{s=END,29 of 29},g=HttpGenerator@d790b8{s=COMMITTED}]=>HttpChannelOverHttp@b28f7a{r=1,c=true,a=DISPATCHED,uri=//192.168.1.245:9001/loginServlet,age=86}
+Flushed=true written=168 remaining=0 WriteFlusher@408c50{WRITING}->null
+update WriteFlusher@408c50{IDLE}->null:WRITING-->IDLE
+org.eclipse.jetty.server.HttpConnection$SendCallback@1df878a[PROCESSING][i=HTTP/1.1{s=200,h=2,cl=-1},cb=org.eclipse.jetty.server.HttpChannel$CommitCallback@1870f3] generate: DONE ([p=152,l=152,c=8192,r=0],[p=16,l=16,c=32768,r=0],false)@COMMITTED
+FinalSession=null old_session_manager=null this=org.eclipse.jetty.server.session.SessionHandler31391039==dftMaxIdleSec=-1
+handled=true async=false committed=true on HttpChannelOverHttp@b28f7a{r=1,c=true,a=DISPATCHED,uri=//192.168.1.245:9001/loginServlet,age=89}
+unhandle HttpChannelState@185fba3{s=DISPATCHED a=NOT_ASYNC i=true r=READY w=false}
+HttpChannelOverHttp@b28f7a{r=1,c=true,a=COMPLETING,uri=//192.168.1.245:9001/loginServlet,age=90} action COMPLETE
+sendResponse info=null content=HeapByteBuffer@a79410[p=0,l=0,c=0,r=0]={<<<>>>} complete=true committing=false callback=Blocker@2cd44f{null}
+org.eclipse.jetty.server.HttpConnection$SendCallback@1df878a[PROCESSING][i=null,cb=org.eclipse.jetty.server.HttpChannel$ContentCallback@ab7fb] generate: CONTINUE (null,[p=0,l=0,c=0,r=0],true)@COMPLETING
+org.eclipse.jetty.server.HttpConnection$SendCallback@1df878a[PROCESSING][i=null,cb=org.eclipse.jetty.server.HttpChannel$ContentCallback@ab7fb] generate: NEED_CHUNK (null,[p=0,l=0,c=0,r=0],true)@COMPLETING
+org.eclipse.jetty.server.HttpConnection$SendCallback@1df878a[PROCESSING][i=null,cb=org.eclipse.jetty.server.HttpChannel$ContentCallback@ab7fb] generate: FLUSH (null,[p=0,l=0,c=0,r=0],true)@COMPLETING
+write: WriteFlusher@408c50{IDLE}->null [HeapByteBuffer@11b58dc[p=0,l=7,c=1024,r=7]={<<<\r\n0\r\n\r\n>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}]
+update WriteFlusher@408c50{WRITING}->null:IDLE-->WRITING
+flushed 7 SocketChannelEndPoint@1d15619{/192.168.1.245:52345<->/192.168.1.245:9001,OPEN,fill=-,flush=W,to=4/30000}{io=0/0,kio=0,kro=1}->HttpConnection@181610f[p=HttpParser{s=END,29 of 29},g=HttpGenerator@d790b8{s=COMPLETING}]=>HttpChannelOverHttp@b28f7a{r=1,c=true,a=COMPLETING,uri=//192.168.1.245:9001/loginServlet,age=92}
+Flushed=true written=7 remaining=0 WriteFlusher@408c50{WRITING}->null
+update WriteFlusher@408c50{IDLE}->null:WRITING-->IDLE
+org.eclipse.jetty.server.HttpConnection$SendCallback@1df878a[PROCESSING][i=null,cb=org.eclipse.jetty.server.HttpChannel$ContentCallback@ab7fb] generate: DONE (null,[p=0,l=0,c=0,r=0],true)@END
+onComplete HttpChannelState@185fba3{s=COMPLETING a=NOT_ASYNC i=false r=READY w=false}
+COMPLETE for /loginServlet written=16
+onEof HttpChannelState@185fba3{s=COMPLETED a=NOT_ASYNC i=false r=READY w=false}
+recycle HttpChannelState@185fba3{s=COMPLETED a=NOT_ASYNC i=false r=READY w=false}
+reset HttpParser{s=END,29 of 29}
+END --> START
+HttpChannelOverHttp@b28f7a{r=1,c=false,a=IDLE,uri=null,age=0} handle exit, result COMPLETE
+filled 0 SocketChannelEndPoint@1d15619{/192.168.1.245:52345<->/192.168.1.245:9001,OPEN,fill=-,flush=-,to=4/30000}{io=0/0,kio=0,kro=1}->HttpConnection@181610f[p=HttpParser{s=START,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=1,c=false,a=IDLE,uri=null,age=0}
+filled 0 SocketChannelEndPoint@1d15619{/192.168.1.245:52345<->/192.168.1.245:9001,OPEN,fill=-,flush=-,to=5/30000}{io=0/0,kio=0,kro=1}->HttpConnection@181610f[p=HttpParser{s=START,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=1,c=false,a=IDLE,uri=null,age=0}
+HttpConnection@181610f[p=HttpParser{s=START,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=1,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@1d15619{/192.168.1.245:52345<->/192.168.1.245:9001,OPEN,fill=-,flush=-,to=6/30000}{io=0/0,kio=0,kro=1}->HttpConnection@181610f[p=HttpParser{s=START,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=1,c=false,a=IDLE,uri=null,age=0} filled 0 HeapByteBuffer@ee61ab[p=0,l=0,c=8192,r=0]={<<<>>>HTTP/1.1 200 OK\r\n...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+HttpConnection@181610f[p=HttpParser{s=START,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=1,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@1d15619{/192.168.1.245:52345<->/192.168.1.245:9001,OPEN,fill=-,flush=-,to=10/30000}{io=0/0,kio=0,kro=1}->HttpConnection@181610f[p=HttpParser{s=START,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=1,c=false,a=IDLE,uri=null,age=0} parse HeapByteBuffer@ee61ab[p=0,l=0,c=8192,r=0]={<<<>>>HTTP/1.1 200 OK\r\n...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} {}
+parseNext s=START HeapByteBuffer@ee61ab[p=0,l=0,c=8192,r=0]={<<<>>>HTTP/1.1 200 OK\r\n...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+HttpConnection@181610f[p=HttpParser{s=START,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=1,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@1d15619{/192.168.1.245:52345<->/192.168.1.245:9001,OPEN,fill=-,flush=-,to=15/30000}{io=0/0,kio=0,kro=1}->HttpConnection@181610f[p=HttpParser{s=START,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=1,c=false,a=IDLE,uri=null,age=0} parsed false HttpParser{s=START,0 of -1}
+releaseRequestBuffer HttpConnection@181610f[p=HttpParser{s=START,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=1,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@1d15619{/192.168.1.245:52345<->/192.168.1.245:9001,OPEN,fill=-,flush=-,to=17/30000}{io=0/0,kio=0,kro=1}->HttpConnection@181610f[p=HttpParser{s=START,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=1,c=false,a=IDLE,uri=null,age=0}
+fillInterested HttpConnection@181610f[p=HttpParser{s=START,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=1,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@1d15619{/192.168.1.245:52345<->/192.168.1.245:9001,OPEN,fill=-,flush=-,to=28/30000}{io=0/0,kio=0,kro=1}->HttpConnection@181610f[p=HttpParser{s=START,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=1,c=false,a=IDLE,uri=null,age=0}
+interested FillInterest@540e47{AC.ReadCB@181610f{HttpConnection@181610f[p=HttpParser{s=START,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=1,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@1d15619{/192.168.1.245:52345<->/192.168.1.245:9001,OPEN,fill=FI,flush=-,to=1/30000}{io=0/0,kio=0,kro=1}->HttpConnection@181610f[p=HttpParser{s=START,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=1,c=false,a=IDLE,uri=null,age=0}}}
+changeInterests p=false 0->1 for SocketChannelEndPoint@1d15619{/192.168.1.245:52345<->/192.168.1.245:9001,OPEN,fill=FI,flush=-,to=2/30000}{io=0/1,kio=0,kro=1}->HttpConnection@181610f[p=HttpParser{s=START,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=1,c=false,a=IDLE,uri=null,age=0}
+Queued change org.eclipse.jetty.io.ChannelEndPoint$1@58b48d on org.eclipse.jetty.io.ManagedSelector@19fedbd id=0 keys=1 selected=0 updates=0
+Selector sun.nio.ch.WindowsSelectorImpl@89477b woken up from select, 0/1 selected
+Selector sun.nio.ch.WindowsSelectorImpl@89477b processing 0 keys, 1 updates
+updateable 1
+update org.eclipse.jetty.io.ChannelEndPoint$1@58b48d
+HttpConnection@181610f[p=HttpParser{s=START,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=1,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@1d15619{/192.168.1.245:52345<->/192.168.1.245:9001,OPEN,fill=FI,flush=-,to=4/30000}{io=0/1,kio=0,kro=1}->HttpConnection@181610f[p=HttpParser{s=START,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=1,c=false,a=IDLE,uri=null,age=0} onFillable exit HttpChannelState@185fba3{s=IDLE a=NOT_ASYNC i=true r=IDLE w=false} null
+Key interests updated 0 -> 1 on SocketChannelEndPoint@1d15619{/192.168.1.245:52345<->/192.168.1.245:9001,OPEN,fill=FI,flush=-,to=4/30000}{io=1/1,kio=1,kro=1}->HttpConnection@181610f[p=HttpParser{s=START,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=1,c=false,a=IDLE,uri=null,age=0}
+updates 0
+Selector sun.nio.ch.WindowsSelectorImpl@89477b waiting on select
+ran CEP:SocketChannelEndPoint@1d15619{/192.168.1.245:52345<->/192.168.1.245:9001,OPEN,fill=FI,flush=-,to=6/30000}{io=1/1,kio=1,kro=1}->HttpConnection@181610f[p=HttpParser{s=START,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=1,c=false,a=IDLE,uri=null,age=0}:runFillable:BLOCKING
+SocketChannelEndPoint@1d15619{/192.168.1.245:52345<->/192.168.1.245:9001,OPEN,fill=FI,flush=-,to=29722/30000}{io=1/1,kio=1,kro=1}->HttpConnection@181610f[p=HttpParser{s=START,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=1,c=false,a=IDLE,uri=null,age=0} idle timeout check, elapsed: 29721 ms, remaining: 279 ms
+SocketChannelEndPoint@1d15619{/192.168.1.245:52345<->/192.168.1.245:9001,OPEN,fill=FI,flush=-,to=30007/30000}{io=1/1,kio=1,kro=1}->HttpConnection@181610f[p=HttpParser{s=START,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=1,c=false,a=IDLE,uri=null,age=0} idle timeout check, elapsed: 30007 ms, remaining: -7 ms
+SocketChannelEndPoint@1d15619{/192.168.1.245:52345<->/192.168.1.245:9001,OPEN,fill=FI,flush=-,to=30008/30000}{io=1/1,kio=1,kro=1}->HttpConnection@181610f[p=HttpParser{s=START,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=1,c=false,a=IDLE,uri=null,age=0} idle timeout expired
+onFail FillInterest@540e47{AC.ReadCB@181610f{HttpConnection@181610f[p=HttpParser{s=START,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=1,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@1d15619{/192.168.1.245:52345<->/192.168.1.245:9001,OPEN,fill=FI,flush=-,to=30010/30000}{io=1/1,kio=1,kro=1}->HttpConnection@181610f[p=HttpParser{s=START,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=1,c=false,a=IDLE,uri=null,age=0}}}
+java.util.concurrent.TimeoutException: Idle timeout expired: 30007/30000 ms
+	at org.eclipse.jetty.io.IdleTimeout.checkIdleTimeout(IdleTimeout.java:166)
+	at org.eclipse.jetty.io.IdleTimeout$1.run(IdleTimeout.java:50)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+close HttpParser{s=START,0 of -1}
+START --> CLOSE
+HttpConnection@181610f[p=HttpParser{s=CLOSE,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=1,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@1d15619{/192.168.1.245:52345<->/192.168.1.245:9001,OPEN,fill=-,flush=-,to=30052/30000}{io=1/1,kio=1,kro=1}->HttpConnection@181610f[p=HttpParser{s=CLOSE,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=1,c=false,a=IDLE,uri=null,age=0} onFillInterestedFailed {}
+shutdownOutput SocketChannelEndPoint@1d15619{/192.168.1.245:52345<->/192.168.1.245:9001,OPEN,fill=-,flush=-,to=30054/30000}{io=1/1,kio=1,kro=1}->HttpConnection@181610f[p=HttpParser{s=CLOSE,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=1,c=false,a=IDLE,uri=null,age=0}
+fillInterested HttpConnection@181610f[p=HttpParser{s=CLOSE,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=1,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@1d15619{/192.168.1.245:52345<->/192.168.1.245:9001,OSHUT,fill=-,flush=-,to=30057/30000}{io=1/1,kio=1,kro=1}->HttpConnection@181610f[p=HttpParser{s=CLOSE,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=1,c=false,a=IDLE,uri=null,age=0}
+interested FillInterest@540e47{AC.ReadCB@181610f{HttpConnection@181610f[p=HttpParser{s=CLOSE,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=1,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@1d15619{/192.168.1.245:52345<->/192.168.1.245:9001,OSHUT,fill=FI,flush=-,to=0/30000}{io=1/1,kio=1,kro=1}->HttpConnection@181610f[p=HttpParser{s=CLOSE,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=1,c=false,a=IDLE,uri=null,age=0}}}
+changeInterests p=false 1->1 for SocketChannelEndPoint@1d15619{/192.168.1.245:52345<->/192.168.1.245:9001,OSHUT,fill=FI,flush=-,to=2/30000}{io=1/1,kio=1,kro=1}->HttpConnection@181610f[p=HttpParser{s=CLOSE,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=1,c=false,a=IDLE,uri=null,age=0}
+Queued change org.eclipse.jetty.io.ChannelEndPoint$1@58b48d on org.eclipse.jetty.io.ManagedSelector@19fedbd id=0 keys=1 selected=0 updates=0
+Selector sun.nio.ch.WindowsSelectorImpl@89477b woken up from select, 0/1 selected
+Selector sun.nio.ch.WindowsSelectorImpl@89477b processing 0 keys, 1 updates
+updateable 1
+update org.eclipse.jetty.io.ChannelEndPoint$1@58b48d
+ignored: WriteFlusher@408c50{IDLE}->null
+java.util.concurrent.TimeoutException: Idle timeout expired: 30007/30000 ms
+	at org.eclipse.jetty.io.IdleTimeout.checkIdleTimeout(IdleTimeout.java:166)
+	at org.eclipse.jetty.io.IdleTimeout$1.run(IdleTimeout.java:50)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Key interests updated 1 -> 1 on SocketChannelEndPoint@1d15619{/192.168.1.245:52345<->/192.168.1.245:9001,OSHUT,fill=FI,flush=-,to=4/30000}{io=1/1,kio=1,kro=1}->HttpConnection@181610f[p=HttpParser{s=CLOSE,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=1,c=false,a=IDLE,uri=null,age=0}
+updates 0
+Selector sun.nio.ch.WindowsSelectorImpl@89477b waiting on select
+Ignored idle endpoint SocketChannelEndPoint@1d15619{/192.168.1.245:52345<->/192.168.1.245:9001,OSHUT,fill=FI,flush=-,to=5/30000}{io=1/1,kio=1,kro=1}->HttpConnection@181610f[p=HttpParser{s=CLOSE,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=1,c=false,a=IDLE,uri=null,age=0}
+ReservedThreadExecutor@1f116cc{s=1/4,p=0}@807fcc IDLE
+ReservedThreadExecutor@1f116cc{s=1/4,p=0} tryExecute STOP!
+ReservedThreadExecutor@1f116cc{s=0/4,p=0}@807fcc offer STOP!
+ReservedThreadExecutor@1f116cc{s=0/4,p=0}@807fcc task=STOP!
+ReservedThreadExecutor@1f116cc{s=0/4,p=0}@807fcc Exited
+ran ReservedThreadExecutor@1f116cc{s=0/4,p=0}@807fcc
+SocketChannelEndPoint@1d15619{/192.168.1.245:52345<->/192.168.1.245:9001,OSHUT,fill=FI,flush=-,to=30001/30000}{io=1/1,kio=1,kro=1}->HttpConnection@181610f[p=HttpParser{s=CLOSE,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=1,c=false,a=IDLE,uri=null,age=0} idle timeout check, elapsed: 30001 ms, remaining: -1 ms
+SocketChannelEndPoint@1d15619{/192.168.1.245:52345<->/192.168.1.245:9001,OSHUT,fill=FI,flush=-,to=30015/30000}{io=1/1,kio=1,kro=1}->HttpConnection@181610f[p=HttpParser{s=CLOSE,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=1,c=false,a=IDLE,uri=null,age=0} idle timeout expired
+onFail FillInterest@540e47{AC.ReadCB@181610f{HttpConnection@181610f[p=HttpParser{s=CLOSE,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=1,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@1d15619{/192.168.1.245:52345<->/192.168.1.245:9001,OSHUT,fill=FI,flush=-,to=30017/30000}{io=1/1,kio=1,kro=1}->HttpConnection@181610f[p=HttpParser{s=CLOSE,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=1,c=false,a=IDLE,uri=null,age=0}}}
+java.util.concurrent.TimeoutException: Idle timeout expired: 30001/30000 ms
+	at org.eclipse.jetty.io.IdleTimeout.checkIdleTimeout(IdleTimeout.java:166)
+	at org.eclipse.jetty.io.IdleTimeout$1.run(IdleTimeout.java:50)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+close HttpParser{s=CLOSE,0 of -1}
+CLOSE --> CLOSE
+HttpConnection@181610f[p=HttpParser{s=CLOSE,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=1,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@1d15619{/192.168.1.245:52345<->/192.168.1.245:9001,OSHUT,fill=-,flush=-,to=30018/30000}{io=1/1,kio=1,kro=1}->HttpConnection@181610f[p=HttpParser{s=CLOSE,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=1,c=false,a=IDLE,uri=null,age=0} onFillInterestedFailed {}
+close SocketChannelEndPoint@1d15619{/192.168.1.245:52345<->/192.168.1.245:9001,OSHUT,fill=-,flush=-,to=30019/30000}{io=1/1,kio=1,kro=1}->HttpConnection@181610f[p=HttpParser{s=CLOSE,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=1,c=false,a=IDLE,uri=null,age=0}
+close(null) SocketChannelEndPoint@1d15619{/192.168.1.245:52345<->/192.168.1.245:9001,OSHUT,fill=-,flush=-,to=30019/30000}{io=1/1,kio=1,kro=1}->HttpConnection@181610f[p=HttpParser{s=CLOSE,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=1,c=false,a=IDLE,uri=null,age=0}
+doClose SocketChannelEndPoint@1d15619{/192.168.1.245:52345<->/192.168.1.245:9001,CLOSED,fill=-,flush=-,to=30020/30000}{io=1/1,kio=1,kro=1}->HttpConnection@181610f[p=HttpParser{s=CLOSE,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=1,c=false,a=IDLE,uri=null,age=0}
+ignored: WriteFlusher@408c50{IDLE}->null
+java.nio.channels.ClosedChannelException: null
+	at org.eclipse.jetty.io.WriteFlusher.onClose(WriteFlusher.java:532)
+	at org.eclipse.jetty.io.AbstractEndPoint.onClose(AbstractEndPoint.java:353)
+	at org.eclipse.jetty.io.ChannelEndPoint.onClose(ChannelEndPoint.java:216)
+	at org.eclipse.jetty.io.AbstractEndPoint.doOnClose(AbstractEndPoint.java:225)
+	at org.eclipse.jetty.io.AbstractEndPoint.close(AbstractEndPoint.java:192)
+	at org.eclipse.jetty.io.AbstractEndPoint.close(AbstractEndPoint.java:175)
+	at org.eclipse.jetty.io.AbstractConnection.onFillInterestedFailed(AbstractConnection.java:174)
+	at org.eclipse.jetty.server.HttpConnection.onFillInterestedFailed(HttpConnection.java:494)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.failed(AbstractConnection.java:287)
+	at org.eclipse.jetty.io.FillInterest.onFail(FillInterest.java:134)
+	at org.eclipse.jetty.io.AbstractEndPoint.onIdleExpired(AbstractEndPoint.java:406)
+	at org.eclipse.jetty.io.IdleTimeout.checkIdleTimeout(IdleTimeout.java:166)
+	at org.eclipse.jetty.io.IdleTimeout$1.run(IdleTimeout.java:50)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+onClose FillInterest@540e47{null}
+queue org.eclipse.jetty.io.ManagedSelector$DestroyEndPoint@be4495
+ignored: WriteFlusher@408c50{IDLE}->null
+java.util.concurrent.TimeoutException: Idle timeout expired: 30001/30000 ms
+	at org.eclipse.jetty.io.IdleTimeout.checkIdleTimeout(IdleTimeout.java:166)
+	at org.eclipse.jetty.io.IdleTimeout$1.run(IdleTimeout.java:50)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+run org.eclipse.jetty.io.ManagedSelector$DestroyEndPoint@be4495
+Destroyed SocketChannelEndPoint@1d15619{/192.168.1.245:52345<->/192.168.1.245:9001,CLOSED,fill=-,flush=-,to=30048/30000}{io=1/1,kio=-1,kro=-1}->HttpConnection@181610f[p=HttpParser{s=CLOSE,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=1,c=false,a=IDLE,uri=null,age=0}
+Ignored idle endpoint SocketChannelEndPoint@1d15619{/192.168.1.245:52345<->/192.168.1.245:9001,CLOSED,fill=-,flush=-,to=30048/30000}{io=1/1,kio=-1,kro=-1}->HttpConnection@181610f[p=HttpParser{s=CLOSE,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=1,c=false,a=IDLE,uri=null,age=0}
+onClose HttpConnection@181610f[p=HttpParser{s=CLOSE,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=1,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@1d15619{/192.168.1.245:52345<->/192.168.1.245:9001,CLOSED,fill=-,flush=-,to=30050/30000}{io=1/1,kio=-1,kro=-1}->HttpConnection@181610f[p=HttpParser{s=CLOSE,0 of -1},g=HttpGenerator@d790b8{s=START}]=>HttpChannelOverHttp@b28f7a{r=1,c=false,a=IDLE,uri=null,age=0}
+ran org.eclipse.jetty.io.ManagedSelector$DestroyEndPoint@be4495
+Selector sun.nio.ch.WindowsSelectorImpl@89477b woken up from select, 0/0 selected
+Selector sun.nio.ch.WindowsSelectorImpl@89477b processing 0 keys, 0 updates
+updateable 0
+updates 0
+Selector sun.nio.ch.WindowsSelectorImpl@89477b waiting on select
+org.eclipse.jetty.server.session.HouseKeeper@3b5b47[interval=660000, ownscheduler=true] scavenging sessions
+org.eclipse.jetty.server.session.SessionHandler31391039==dftMaxIdleSec=-1 scavenging sessions
+org.eclipse.jetty.server.session.SessionHandler31391039==dftMaxIdleSec=-1 scavenging session ids []
+org.eclipse.jetty.server.session.DefaultSessionCache@10eb4b4[evict=-1,removeUnloadable=false,saveOnCreate=false,saveOnInactiveEvict=false] checking expiration on []
+org.eclipse.jetty.server.session.HouseKeeper@3b5b47[interval=660000, ownscheduler=true] scavenging sessions
+org.eclipse.jetty.server.session.SessionHandler31391039==dftMaxIdleSec=-1 scavenging sessions
+org.eclipse.jetty.server.session.SessionHandler31391039==dftMaxIdleSec=-1 scavenging session ids []
+org.eclipse.jetty.server.session.DefaultSessionCache@10eb4b4[evict=-1,removeUnloadable=false,saveOnCreate=false,saveOnInactiveEvict=false] checking expiration on []

@@ -267,7 +267,8 @@ public class Runner {
          * Start MQTT Listener:
          *
          */
-        Subscriber testSub = new Subscriber();
+        Subscriber testSub = new Subscriber("Test", "TEmPoS_Server_Test", "debug");
+        Subscriber transactionSub = new Subscriber("Transactions", "TEmPoS_Server_Transactions", "transaction", transactionsDB, userDB);
 
         /*
         starts server
