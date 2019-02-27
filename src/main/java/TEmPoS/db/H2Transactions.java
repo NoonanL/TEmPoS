@@ -77,7 +77,7 @@ public class H2Transactions extends H2Base {
             newTransaction.setCustomerName(rs.getString(3));
             newTransaction.setProductId(rs.getString(4));
             newTransaction.setProductName(rs.getString(5));
-           System.out.println("transaction: " + newTransaction.getCustomerId() + " , " + newTransaction.getProductId() + " , " + newTransaction.getCustomerName() + " , " + newTransaction.getProductName() );
+          // System.out.println("transaction: " + newTransaction.getCustomerId() + " , " + newTransaction.getProductId() + " , " + newTransaction.getCustomerName() + " , " + newTransaction.getProductName() );
 
             transactionList.append("transactions" , newTransaction.toJson());
         }
