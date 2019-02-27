@@ -1,5 +1,6 @@
 package TEmPoS;
 
+import TEmPoS.MQTT.Publisher;
 import TEmPoS.MQTT.Subscriber;
 import TEmPoS.Servlet.*;
 import TEmPoS.Servlet.Brands.CreateBrandServlet;
@@ -35,6 +36,7 @@ import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.DefaultServlet;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
+import org.eclipse.paho.client.mqttv3.MqttException;
 
 
 import java.util.ArrayList;
@@ -54,10 +56,11 @@ public class Runner {
     private H2Transactions transactionsDB;
     private static final int PORT = 9001;
     public static ArrayList<String> ipWhiteList;
+    public Publisher testPublisher;
 
 //    private static final Logger logger = LoggerFactory.getLogger(Runner.class);
 
-    private Runner() {
+    private Runner() throws MqttException {
 
         userDB = new H2User(new ConnectionSupplier(ConnectionSupplier.FILE));
         customerDB = new H2Customer(new ConnectionSupplier(ConnectionSupplier.FILE));
@@ -71,6 +74,7 @@ public class Runner {
         goodsOrderDB = new H2GoodsOrder(new ConnectionSupplier(ConnectionSupplier.FILE));
         transactionsDB = new H2Transactions(new ConnectionSupplier(ConnectionSupplier.FILE));
         ipWhiteList = TextReader.getValidIpList();
+        testPublisher = new Publisher();
     }
 
 
@@ -271,8 +275,10 @@ public class Runner {
          *
          */
         System.out.println("MQTT Subscribers starting up...");
+        Publisher publisher = new Publisher();
         Subscriber testSub = new Subscriber("Test", "TEmPoS_Server_Test", "debug");
-        Subscriber transactionSub = new Subscriber("Transactions", "TEmPoS_Server_Transactions", "transaction", transactionsDB, userDB);
+        Subscriber transactionSub = new Subscriber("Transactions", "TEmPoS_Server_Transactions", "transaction", transactionsDB, userDB, publisher);
+       // Publisher publisher = new Publisher();
 
         /*
         starts server

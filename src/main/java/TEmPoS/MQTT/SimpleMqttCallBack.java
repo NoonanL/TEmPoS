@@ -11,7 +11,7 @@ public class SimpleMqttCallBack implements MqttCallback {
     }
 
     public void messageArrived(String s, MqttMessage mqttMessage) throws Exception {
-       // System.out.println("Message received:\t"+ new String(mqttMessage.getPayload()) );
+       System.out.println("Message received:\t"+ new String(mqttMessage.getPayload()) );
 
         //get json from message
         //parse json into key value pairs
@@ -20,6 +20,7 @@ public class SimpleMqttCallBack implements MqttCallback {
     }
 
     public void deliveryComplete(IMqttDeliveryToken iMqttDeliveryToken) {
+        System.out.println("Message delivered from server to broker!");
     }
 
 }

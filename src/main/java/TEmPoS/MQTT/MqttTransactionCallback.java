@@ -5,6 +5,7 @@ import TEmPoS.db.H2Transactions;
 import TEmPoS.db.H2User;
 import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken;
 import org.eclipse.paho.client.mqttv3.MqttCallback;
+import org.eclipse.paho.client.mqttv3.MqttException;
 import org.eclipse.paho.client.mqttv3.MqttMessage;
 import org.json.JSONObject;
 
@@ -12,10 +13,13 @@ public class MqttTransactionCallback implements MqttCallback {
 
     private H2Transactions h2Transactions;
     private H2User h2User;
+    private Publisher publisher;
 
-    MqttTransactionCallback(H2Transactions h2Transactions, H2User h2User){
+    MqttTransactionCallback(H2Transactions h2Transactions, H2User h2User, Publisher publisher){
         this.h2Transactions = h2Transactions;
         this.h2User = h2User;
+        this.publisher = publisher;
+
     }
 
     public void connectionLost(Throwable throwable) {
@@ -23,7 +27,7 @@ public class MqttTransactionCallback implements MqttCallback {
 
     }
 
-    public void messageArrived(String s, MqttMessage mqttMessage) throws Exception {
+    public void messageArrived(String s, MqttMessage mqttMessage) throws MqttException {
 
         //get json from message
         String request = new String(mqttMessage.getPayload());
@@ -47,11 +51,13 @@ public class MqttTransactionCallback implements MqttCallback {
 
             //if process transaction returns true:
             if (h2Transactions.createTransaction(newTransaction)) {
-                System.out.println("Transaction Message (id: " + newTransaction.getId() + ") recieved and processed!");
+                System.out.println("Transaction Message recieved and processed!");
+
+                publisher.publish("update", "I am a message");
+
+
+
             }
-
-            // process transaction
-
         }
     }
 
