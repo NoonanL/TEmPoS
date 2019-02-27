@@ -115,7 +115,7 @@ public class H2Customer extends H2Base {
      * @param id the id to fetch
      * @return a json objecting representing a customer
      */
-    JSONObject getCustomerById(int id){
+    public JSONObject getCustomerById(int id){
         final String GET_USER_QUERY = "SELECT * FROM customers WHERE id=?";
         Customer customer = new Customer();
         try (PreparedStatement ps = getConnection().prepareStatement(GET_USER_QUERY)){

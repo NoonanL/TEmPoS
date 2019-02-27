@@ -132,6 +132,9 @@ public class Runner {
         SearchCustomerServlet searchCustomerServlet = new SearchCustomerServlet(customerDB,userDB);
         handler.addServlet(new ServletHolder(searchCustomerServlet), "/searchCustomerServlet");
 
+        GetCustomerByIdServlet getCustomerByIdServlet = new GetCustomerByIdServlet(customerDB,userDB);
+        handler.addServlet(new ServletHolder(getCustomerByIdServlet), "/getCustomerByIdServlet");
+
 
         //CONFIGURATION SERVLETS
 

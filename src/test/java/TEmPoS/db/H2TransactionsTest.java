@@ -24,7 +24,9 @@ public class H2TransactionsTest {
         this.db = new H2Transactions(new ConnectionSupplier(ConnectionSupplier.FILE));
 
         this.newTransaction.setCustomerId("12345");
+        this.newTransaction.setCustomerName("TestName");
         this.newTransaction.setProductId("Test Product");
+        this.newTransaction.setProductName("Test Product Name");
 
     }
 

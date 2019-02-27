@@ -1,5 +1,6 @@
 package TEmPoS.Model;
 
+import TEmPoS.db.H2Customer;
 import org.json.JSONObject;
 
 import java.util.LinkedHashMap;
@@ -9,7 +10,12 @@ public class Transaction {
 
     private String id;
     private String customerId;
+    private String customerName;
     private String productId;
+    private String productName;
+
+    public Transaction() {
+    }
 
     public String getId() {
         return id;
@@ -41,10 +47,27 @@ public class Transaction {
 
         transaction.put("id", this.getId());
         transaction.put("customerId", this.getCustomerId());
+        transaction.put("customerName", this.getCustomerName());
         transaction.put("productId" , this.getProductId());
+        transaction.put("productName", this.getProductName());
 
         json = new JSONObject(transaction);
         return json;
     }
 
+    public String getCustomerName() {
+        return customerName;
+    }
+
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
+    }
+
+    public String getProductName() {
+        return productName;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
 }

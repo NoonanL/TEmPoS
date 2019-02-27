@@ -74,5 +74,7 @@ CREATE TABLE IF NOT EXISTS goodsOrder (
 CREATE TABLE IF NOT EXISTS transactions (
   id int AUTO_INCREMENT PRIMARY KEY,
   customerId VARCHAR(64) NOT NULL,
-  productId VARCHAR(64) NOT NULL
+  customerName VARCHAR(64) NOT NULL,
+  productId VARCHAR(64) NOT NULL,
+  productName VARCHAR(64) NOT NULL
 );

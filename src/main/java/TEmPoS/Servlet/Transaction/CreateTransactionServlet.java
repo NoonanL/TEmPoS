@@ -68,7 +68,9 @@ public class CreateTransactionServlet extends HttpServlet {
 
                     Transaction newTransaction = new Transaction();
                     newTransaction.setCustomerId(input.getString("customerId"));
+                    newTransaction.setCustomerName(input.getString("customerName"));
                     newTransaction.setProductId(input.getString("productId"));
+                    newTransaction.setProductName(input.getString("productName"));
 
                     if (h2Transactions.createTransaction(newTransaction)) {
                         responseJson.put("response", "OK");

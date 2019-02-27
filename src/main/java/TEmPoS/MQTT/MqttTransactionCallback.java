@@ -27,7 +27,7 @@ public class MqttTransactionCallback implements MqttCallback {
 
         //get json from message
         String request = new String(mqttMessage.getPayload());
-        //System.out.println("Message received:\t"+ new String(mqttMessage.getPayload()) );
+        System.out.println("Message received:\t"+ new String(mqttMessage.getPayload()) );
 
         //parse json into key value pairs
         JSONObject input = new JSONObject(request);
@@ -41,7 +41,9 @@ public class MqttTransactionCallback implements MqttCallback {
             //attempt process transaction
             Transaction newTransaction = new Transaction();
             newTransaction.setCustomerId(input.getString("customerId"));
+            newTransaction.setCustomerName(input.getString("customerName"));
             newTransaction.setProductId(input.getString("productId"));
+            newTransaction.setProductName(input.getString("productName"));
 
             //if process transaction returns true:
             if (h2Transactions.createTransaction(newTransaction)) {

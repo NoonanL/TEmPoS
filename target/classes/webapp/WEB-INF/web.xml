@@ -112,6 +112,15 @@
     </servlet-mapping>
 
     <servlet>
+        <servlet-name>GetCustomerByIdServlet</servlet-name>
+        <servlet-class>TEmPoS.Servlet.Customer.GetCustomerByIdServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetCustomerByIdServlet</servlet-name>
+        <url-pattern>/getCustomerByIdServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
         <servlet-name>SearchCustomerServlet</servlet-name>
         <servlet-class>TEmPoS.Servlet.Customer.SearchCustomerServlet</servlet-class>
     </servlet>
