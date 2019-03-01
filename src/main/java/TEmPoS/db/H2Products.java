@@ -146,6 +146,28 @@ public class H2Products extends H2Base {
         return productList;
     }
 
+    public Product returnProductById(int id) throws SQLException {
+        final String GET_PRODUCT_QUERY = "SELECT * FROM products WHERE id=?";
+        //String details = null;
+        Product newProduct = new Product();
+        try (PreparedStatement ps = getConnection().prepareStatement(GET_PRODUCT_QUERY)){
+            ps.setInt(1, id);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                newProduct.setId(rs.getString(1));
+                newProduct.setSKU(rs.getString(2));
+                newProduct.setName(rs.getString(3));
+                newProduct.setRRP(rs.getDouble(4));
+                newProduct.setCost(rs.getDouble(5));
+                newProduct.setDepartment(rs.getString(6));
+                newProduct.setBrand(rs.getString(7));
+                newProduct.setDescription(rs.getString(8));}
+            return newProduct;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     public boolean existingSku(String sku) throws SQLException {
         final String GET_SKU_QUERY = "SELECT * FROM products WHERE SKU=?";
         try (PreparedStatement ps = getConnection().prepareStatement(GET_SKU_QUERY)) {

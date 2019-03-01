@@ -38,13 +38,14 @@ public class H2Transactions extends H2Base {
 
 
     public boolean createTransaction(Transaction transaction) {
-        String query = "INSERT into transactions (customerId, customerName, productId, productName) VALUES (?, ?, ?, ?)";
+        String query = "INSERT into transactions (customerId, customerName, productId, productName, quantity) VALUES (?, ?, ?, ?, ?)";
         //System.out.println(transaction.getProductId());
         try (PreparedStatement ps = getConnection().prepareStatement(query)) {
             ps.setString(1, transaction.getCustomerId());
             ps.setString(2, transaction.getCustomerName());
             ps.setString(3, transaction.getProductId());
             ps.setString(4, transaction.getProductName());
+            ps.setString(5, transaction.getQuantity());
             ps.execute();
             return true;
         } catch (SQLException e) {
@@ -77,6 +78,7 @@ public class H2Transactions extends H2Base {
             newTransaction.setCustomerName(rs.getString(3));
             newTransaction.setProductId(rs.getString(4));
             newTransaction.setProductName(rs.getString(5));
+            newTransaction.setQuantity(rs.getString(6));
           // System.out.println("transaction: " + newTransaction.getCustomerId() + " , " + newTransaction.getProductId() + " , " + newTransaction.getCustomerName() + " , " + newTransaction.getProductName() );
 
             transactionList.append("transactions" , newTransaction.toJson());

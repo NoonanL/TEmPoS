@@ -13,6 +13,7 @@ public class Transaction {
     private String customerName;
     private String productId;
     private String productName;
+    private String quantity;
 
     public Transaction() {
     }
@@ -50,6 +51,7 @@ public class Transaction {
         transaction.put("customerName", this.getCustomerName());
         transaction.put("productId" , this.getProductId());
         transaction.put("productName", this.getProductName());
+        transaction.put("quantity", this.getQuantity());
 
         json = new JSONObject(transaction);
         return json;
@@ -69,5 +71,13 @@ public class Transaction {
 
     public void setProductName(String productName) {
         this.productName = productName;
+    }
+
+    public String getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(String quantity) {
+        this.quantity = quantity;
     }
 }

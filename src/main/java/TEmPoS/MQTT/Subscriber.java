@@ -1,6 +1,7 @@
 package TEmPoS.MQTT;
 
 
+import TEmPoS.db.H2Products;
 import TEmPoS.db.H2Transactions;
 import TEmPoS.db.H2User;
 import org.eclipse.paho.client.mqttv3.MqttClient;
@@ -9,7 +10,7 @@ import org.eclipse.paho.client.mqttv3.MqttException;
 
 public class Subscriber {
 
-    public Subscriber(String topic, String clientId, String type, H2Transactions h2Transactions, H2User h2User, Publisher publisher) throws MqttException {
+    public Subscriber(String topic, String clientId, String type, H2Transactions h2Transactions, H2User h2User, H2Products h2Products, Publisher publisher) throws MqttException {
 
         System.out.println("== START SUBSCRIBER - TOPIC : " + topic + " ==");
 
@@ -28,7 +29,7 @@ public class Subscriber {
 
         //Connect using ConnectionOptions
         client.connect(connOpt);
-        client.setCallback(new MqttTransactionCallback(h2Transactions,h2User, publisher));
+        client.setCallback(new MqttTransactionCallback(h2Transactions,h2User, h2Products, publisher));
 
         //Test subscribe to topic including QoS
         client.subscribe(topic,2);

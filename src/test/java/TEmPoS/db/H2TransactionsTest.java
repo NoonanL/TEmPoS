@@ -27,6 +27,7 @@ public class H2TransactionsTest {
         this.newTransaction.setCustomerName("TestName");
         this.newTransaction.setProductId("Test Product");
         this.newTransaction.setProductName("Test Product Name");
+        this.newTransaction.setQuantity("2");
 
     }
 

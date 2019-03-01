@@ -1,0 +1,16 @@
+org.eclipse.jetty.server.session.HouseKeeper@59662a0b[interval=600000, ownscheduler=true] scavenging sessions
+org.eclipse.jetty.server.session.SessionHandler1990098664==dftMaxIdleSec=-1 scavenging sessions
+org.eclipse.jetty.server.session.SessionHandler1990098664==dftMaxIdleSec=-1 scavenging session ids []
+org.eclipse.jetty.server.session.DefaultSessionCache@2d7275fc[evict=-1,removeUnloadable=false,saveOnCreate=false,saveOnInactiveEvict=false] checking expiration on []
+org.eclipse.jetty.server.session.HouseKeeper@59662a0b[interval=600000, ownscheduler=true] scavenging sessions
+org.eclipse.jetty.server.session.SessionHandler1990098664==dftMaxIdleSec=-1 scavenging sessions
+org.eclipse.jetty.server.session.SessionHandler1990098664==dftMaxIdleSec=-1 scavenging session ids []
+org.eclipse.jetty.server.session.DefaultSessionCache@2d7275fc[evict=-1,removeUnloadable=false,saveOnCreate=false,saveOnInactiveEvict=false] checking expiration on []
+org.eclipse.jetty.server.session.HouseKeeper@59662a0b[interval=600000, ownscheduler=true] scavenging sessions
+org.eclipse.jetty.server.session.SessionHandler1990098664==dftMaxIdleSec=-1 scavenging sessions
+org.eclipse.jetty.server.session.SessionHandler1990098664==dftMaxIdleSec=-1 scavenging session ids []
+org.eclipse.jetty.server.session.DefaultSessionCache@2d7275fc[evict=-1,removeUnloadable=false,saveOnCreate=false,saveOnInactiveEvict=false] checking expiration on []
+org.eclipse.jetty.server.session.HouseKeeper@59662a0b[interval=600000, ownscheduler=true] scavenging sessions
+org.eclipse.jetty.server.session.SessionHandler1990098664==dftMaxIdleSec=-1 scavenging sessions
+org.eclipse.jetty.server.session.SessionHandler1990098664==dftMaxIdleSec=-1 scavenging session ids []
+org.eclipse.jetty.server.session.DefaultSessionCache@2d7275fc[evict=-1,removeUnloadable=false,saveOnCreate=false,saveOnInactiveEvict=false] checking expiration on []

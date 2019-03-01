@@ -76,5 +76,6 @@ CREATE TABLE IF NOT EXISTS transactions (
   customerId VARCHAR(64) NOT NULL,
   customerName VARCHAR(64) NOT NULL,
   productId VARCHAR(64) NOT NULL,
-  productName VARCHAR(64) NOT NULL
+  productName VARCHAR(64) NOT NULL,
+  quantity VARCHAR(64) NOT NULL
 );
