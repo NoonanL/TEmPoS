@@ -22,7 +22,7 @@ public class MqttTransactionCallback implements MqttCallback {
     private H2Products h2Products;
     private Publisher publisher;
 
-    MqttTransactionCallback(H2Transactions h2Transactions, H2User h2User, H2Products h2Products, Publisher publisher){
+    MqttTransactionCallback(H2Transactions h2Transactions, H2User h2User, H2Products h2Products){
         this.h2Transactions = h2Transactions;
         this.h2User = h2User;
         this.publisher = publisher;
@@ -71,7 +71,7 @@ public class MqttTransactionCallback implements MqttCallback {
                newTransaction.setQuantity(item.getString("quantity"));
 
                if (h2Transactions.createTransaction(newTransaction)) {
-                   System.out.println("Transaction Message recieved and processed!");
+                   System.out.println("Transaction Message received from client " + newTransaction.getCustomerName() + " for x"  + newTransaction.getQuantity() + " " + newTransaction.getProductName() + ". -Transaction Processed.");
 //
                }
            }

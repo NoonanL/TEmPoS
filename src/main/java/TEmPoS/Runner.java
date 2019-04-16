@@ -275,9 +275,9 @@ public class Runner {
          *
          */
         System.out.println("MQTT Subscribers starting up...");
-        Publisher publisher = new Publisher();
-        Subscriber testSub = new Subscriber("Test", "TEmPoS_Server_Test", "debug");
-        Subscriber transactionSub = new Subscriber("Transactions", "TEmPoS_Server_Transactions", "transaction", transactionsDB, userDB, productsDB, publisher);
+        //Publisher publisher = new Publisher();
+        //Subscriber testSub = new Subscriber("Test", "TEmPoS_Server_Test", "debug");
+        Subscriber transactionSub = new Subscriber("Transactions", "TEmPoS_Server_Transactions", "transaction", transactionsDB, userDB, productsDB);
        // Publisher publisher = new Publisher();
 
         /*

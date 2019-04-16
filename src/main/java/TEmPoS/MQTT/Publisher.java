@@ -7,9 +7,9 @@ public class Publisher {
    private MqttClient client;
 
     public Publisher() throws MqttException {
-
-       this.client = new MqttClient("tcp://192.168.1.192:1883", "I am a test client");
-       client.connect();
+//
+//       this.client = new MqttClient("tcp://192.168.1.192:1883", "I am a test client");
+//       client.connect();
 
 
     }

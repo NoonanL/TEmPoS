@@ -1,4 +1,0 @@
-org.eclipse.jetty.server.session.HouseKeeper@3d51f06e[interval=600000, ownscheduler=true] scavenging sessions
-org.eclipse.jetty.server.session.SessionHandler1653986196==dftMaxIdleSec=-1 scavenging sessions
-org.eclipse.jetty.server.session.SessionHandler1653986196==dftMaxIdleSec=-1 scavenging session ids []
-org.eclipse.jetty.server.session.DefaultSessionCache@63355449[evict=-1,removeUnloadable=false,saveOnCreate=false,saveOnInactiveEvict=false] checking expiration on []

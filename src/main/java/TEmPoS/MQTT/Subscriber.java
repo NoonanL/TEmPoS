@@ -10,7 +10,7 @@ import org.eclipse.paho.client.mqttv3.MqttException;
 
 public class Subscriber {
 
-    public Subscriber(String topic, String clientId, String type, H2Transactions h2Transactions, H2User h2User, H2Products h2Products, Publisher publisher) throws MqttException {
+    public Subscriber(String topic, String clientId, String type, H2Transactions h2Transactions, H2User h2User, H2Products h2Products) throws MqttException {
 
         System.out.println("== START SUBSCRIBER - TOPIC : " + topic + " ==");
 
@@ -22,14 +22,14 @@ public class Subscriber {
         MqttConnectOptions connOpt = new MqttConnectOptions();
         connOpt.setAutomaticReconnect(true);
         String test = clientId + " has disconnected unexpectedly!";
-        connOpt.setWill("Debug", test.getBytes(), 2,true);
-        connOpt.setCleanSession(true);
+        connOpt.setWill("Debug", test.getBytes(), 2,false);
+        connOpt.setCleanSession(false);
         //connOpt.setUserName(username);
         //connOpt.setPassword(password.toCharArray());
 
         //Connect using ConnectionOptions
         client.connect(connOpt);
-        client.setCallback(new MqttTransactionCallback(h2Transactions,h2User, h2Products, publisher));
+        client.setCallback(new MqttTransactionCallback(h2Transactions,h2User, h2Products));
 
         //Test subscribe to topic including QoS
         client.subscribe(topic,2);
@@ -48,8 +48,8 @@ public class Subscriber {
         MqttConnectOptions connOpt = new MqttConnectOptions();
         connOpt.setAutomaticReconnect(true);
         String test = clientId + " has disconnected unexpectedly!";
-        connOpt.setWill("Debug", test.getBytes(), 2,true);
-        connOpt.setCleanSession(true);
+        connOpt.setWill("Debug", test.getBytes(), 2,false);
+        connOpt.setCleanSession(false);
         //connOpt.setUserName(username);
         //connOpt.setPassword(password.toCharArray());
 

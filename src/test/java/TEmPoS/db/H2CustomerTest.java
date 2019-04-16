@@ -26,14 +26,14 @@ public class H2CustomerTest {
         db = new H2Customer(new ConnectionSupplier(ConnectionSupplier.FILE));
 
         testCustomer.setTitle("Mr");
-        testCustomer.setFirstname("Testy");
+        testCustomer.setFirstname("Test");
         testCustomer.setSurname("Testerson");
-        testCustomer.setStreet("69 Boner Avenue");
-        testCustomer.setTown("Humpsville");
+        testCustomer.setStreet("42 Debug Avenue");
+        testCustomer.setTown("Testville");
         testCustomer.setPostcode("IV5 7DU");
         testCustomer.setCity("Glasgow");
         testCustomer.setMobile("07807168580");
-        testCustomer.setEmail("happyEndings@naughtybois.com");
+        testCustomer.setEmail("TestPeople@debugging.com");
         testCustomer.setMarketingStatus("True");
 
     }

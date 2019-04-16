@@ -1,0 +1,237 @@
+Queued change org.eclipse.jetty.io.ManagedSelector$Accept@2731c56d on org.eclipse.jetty.io.ManagedSelector@49438269 id=2 keys=0 selected=0 updates=0
+Selector sun.nio.ch.WindowsSelectorImpl@e6d9d73 woken up from select, 0/0 selected
+Selector sun.nio.ch.WindowsSelectorImpl@e6d9d73 processing 0 keys, 1 updates
+updateable 1
+update org.eclipse.jetty.io.ManagedSelector$Accept@2731c56d
+queue org.eclipse.jetty.io.ManagedSelector$Accept@2731c56d
+updates 0
+run org.eclipse.jetty.io.ManagedSelector$Accept@2731c56d
+Selector sun.nio.ch.WindowsSelectorImpl@e6d9d73 waiting on select
+SocketChannelEndPoint@507aed4c{/127.0.0.1:53562<->/127.0.0.1:9001,OPEN,fill=-,flush=-,to=0/30000}{io=0/0,kio=0,kro=0}-><null> idle timeout check, elapsed: 0 ms, remaining: 30000 ms
+new HttpChannelOverHttp@3237b6f9{r=0,c=false,a=IDLE,uri=null,age=0} -> SocketChannelEndPoint@507aed4c{/127.0.0.1:53562<->/127.0.0.1:9001,OPEN,fill=-,flush=-,to=2/30000}{io=0/0,kio=0,kro=0}-><null>,null,HttpChannelState@1750783a{s=IDLE a=NOT_ASYNC i=true r=IDLE w=false}
+New HTTP Connection HttpConnection@68cc201d[p=HttpParser{s=START,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=0,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@507aed4c{/127.0.0.1:53562<->/127.0.0.1:9001,OPEN,fill=-,flush=-,to=2/30000}{io=0/0,kio=0,kro=0}-><null>
+onOpen SocketChannelEndPoint@507aed4c{/127.0.0.1:53562<->/127.0.0.1:9001,OPEN,fill=-,flush=-,to=2/30000}{io=0/0,kio=0,kro=0}->HttpConnection@68cc201d[p=HttpParser{s=START,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=0,c=false,a=IDLE,uri=null,age=0}
+onOpen HttpConnection@68cc201d[p=HttpParser{s=START,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=0,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@507aed4c{/127.0.0.1:53562<->/127.0.0.1:9001,OPEN,fill=-,flush=-,to=2/30000}{io=0/0,kio=0,kro=0}->HttpConnection@68cc201d[p=HttpParser{s=START,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=0,c=false,a=IDLE,uri=null,age=0}
+fillInterested HttpConnection@68cc201d[p=HttpParser{s=START,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=0,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@507aed4c{/127.0.0.1:53562<->/127.0.0.1:9001,OPEN,fill=-,flush=-,to=4/30000}{io=0/0,kio=0,kro=0}->HttpConnection@68cc201d[p=HttpParser{s=START,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=0,c=false,a=IDLE,uri=null,age=0}
+interested FillInterest@605443b9{AC.ReadCB@68cc201d{HttpConnection@68cc201d[p=HttpParser{s=START,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=0,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@507aed4c{/127.0.0.1:53562<->/127.0.0.1:9001,OPEN,fill=FI,flush=-,to=0/30000}{io=0/0,kio=0,kro=0}->HttpConnection@68cc201d[p=HttpParser{s=START,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=0,c=false,a=IDLE,uri=null,age=0}}}
+changeInterests p=false 0->1 for SocketChannelEndPoint@507aed4c{/127.0.0.1:53562<->/127.0.0.1:9001,OPEN,fill=FI,flush=-,to=0/30000}{io=0/1,kio=0,kro=0}->HttpConnection@68cc201d[p=HttpParser{s=START,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=0,c=false,a=IDLE,uri=null,age=0}
+Queued change org.eclipse.jetty.io.ChannelEndPoint$1@74d16621 on org.eclipse.jetty.io.ManagedSelector@49438269 id=2 keys=1 selected=0 updates=0
+Created SocketChannelEndPoint@507aed4c{/127.0.0.1:53562<->/127.0.0.1:9001,OPEN,fill=FI,flush=-,to=0/30000}{io=0/1,kio=0,kro=0}->HttpConnection@68cc201d[p=HttpParser{s=START,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=0,c=false,a=IDLE,uri=null,age=0}
+ran org.eclipse.jetty.io.ManagedSelector$Accept@2731c56d
+Selector sun.nio.ch.WindowsSelectorImpl@e6d9d73 woken up from select, 0/1 selected
+Selector sun.nio.ch.WindowsSelectorImpl@e6d9d73 processing 0 keys, 1 updates
+updateable 1
+update org.eclipse.jetty.io.ChannelEndPoint$1@74d16621
+Key interests updated 0 -> 1 on SocketChannelEndPoint@507aed4c{/127.0.0.1:53562<->/127.0.0.1:9001,OPEN,fill=FI,flush=-,to=0/30000}{io=1/1,kio=1,kro=0}->HttpConnection@68cc201d[p=HttpParser{s=START,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=0,c=false,a=IDLE,uri=null,age=0}
+updates 0
+Selector sun.nio.ch.WindowsSelectorImpl@e6d9d73 waiting on select
+Selector sun.nio.ch.WindowsSelectorImpl@e6d9d73 woken up from select, 1/1 selected
+Selector sun.nio.ch.WindowsSelectorImpl@e6d9d73 processing 1 keys, 0 updates
+selected 1 sun.nio.ch.SelectionKeyImpl@aa62ce SocketChannelEndPoint@507aed4c{/127.0.0.1:53562<->/127.0.0.1:9001,OPEN,fill=FI,flush=-,to=0/30000}{io=1/1,kio=1,kro=1}->HttpConnection@68cc201d[p=HttpParser{s=START,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=0,c=false,a=IDLE,uri=null,age=0} 
+onSelected 1->0 r=true w=false for SocketChannelEndPoint@507aed4c{/127.0.0.1:53562<->/127.0.0.1:9001,OPEN,fill=FI,flush=-,to=6/30000}{io=1/0,kio=1,kro=1}->HttpConnection@68cc201d[p=HttpParser{s=START,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=0,c=false,a=IDLE,uri=null,age=0}
+task CEP:SocketChannelEndPoint@507aed4c{/127.0.0.1:53562<->/127.0.0.1:9001,OPEN,fill=FI,flush=-,to=6/30000}{io=1/0,kio=1,kro=1}->HttpConnection@68cc201d[p=HttpParser{s=START,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=0,c=false,a=IDLE,uri=null,age=0}:runFillable:BLOCKING
+ReservedThreadExecutor@694abbdc{s=0/8,p=0} tryExecute EatWhatYouKill@2cd76f31/SelectorProducer@367ffa75/PRODUCING/p=false/QueuedThreadPool[qtp520022247]@1efee8e7{STARTED,8<=8<=200,i=3,q=0}[pc=0,pic=0,pec=0,epc=0]@2019-04-05T20:29:49.415+01:00
+ReservedThreadExecutor@694abbdc{s=0/8,p=1} startReservedThread p=1
+queue ReservedThreadExecutor@694abbdc{s=0/8,p=1}@495f603
+run ReservedThreadExecutor@694abbdc{s=0/8,p=1}@495f603
+ReservedThreadExecutor@694abbdc{s=1/8,p=1}@495f603 started
+ReservedThreadExecutor@694abbdc{s=1/8,p=0}@495f603 waiting
+EatWhatYouKill@2cd76f31/SelectorProducer@367ffa75/PRODUCING/p=false/QueuedThreadPool[qtp520022247]@1efee8e7{STARTED,8<=8<=200,i=2,q=0}[pc=0,pic=0,pec=0,epc=0]@2019-04-05T20:29:49.415+01:00 m=PRODUCE_EXECUTE_CONSUME t=CEP:SocketChannelEndPoint@507aed4c{/127.0.0.1:53562<->/127.0.0.1:9001,OPEN,fill=FI,flush=-,to=6/30000}{io=1/0,kio=1,kro=1}->HttpConnection@68cc201d[p=HttpParser{s=START,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=0,c=false,a=IDLE,uri=null,age=0}:runFillable:BLOCKING/BLOCKING
+queue CEP:SocketChannelEndPoint@507aed4c{/127.0.0.1:53562<->/127.0.0.1:9001,OPEN,fill=FI,flush=-,to=6/30000}{io=1/0,kio=1,kro=1}->HttpConnection@68cc201d[p=HttpParser{s=START,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=0,c=false,a=IDLE,uri=null,age=0}:runFillable:BLOCKING
+updateable 0
+updates 0
+Key interests updated 1 -> 0 on SocketChannelEndPoint@507aed4c{/127.0.0.1:53562<->/127.0.0.1:9001,OPEN,fill=FI,flush=-,to=6/30000}{io=0/0,kio=0,kro=1}->HttpConnection@68cc201d[p=HttpParser{s=START,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=0,c=false,a=IDLE,uri=null,age=0}
+Selector sun.nio.ch.WindowsSelectorImpl@e6d9d73 waiting on select
+run CEP:SocketChannelEndPoint@507aed4c{/127.0.0.1:53562<->/127.0.0.1:9001,OPEN,fill=FI,flush=-,to=6/30000}{io=0/0,kio=0,kro=1}->HttpConnection@68cc201d[p=HttpParser{s=START,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=0,c=false,a=IDLE,uri=null,age=0}:runFillable:BLOCKING
+fillable FillInterest@605443b9{AC.ReadCB@68cc201d{HttpConnection@68cc201d[p=HttpParser{s=START,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=0,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@507aed4c{/127.0.0.1:53562<->/127.0.0.1:9001,OPEN,fill=FI,flush=-,to=6/30000}{io=0/0,kio=0,kro=1}->HttpConnection@68cc201d[p=HttpParser{s=START,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=0,c=false,a=IDLE,uri=null,age=0}}}
+HttpConnection@68cc201d[p=HttpParser{s=START,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=0,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@507aed4c{/127.0.0.1:53562<->/127.0.0.1:9001,OPEN,fill=-,flush=-,to=10/30000}{io=0/0,kio=0,kro=1}->HttpConnection@68cc201d[p=HttpParser{s=START,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=0,c=false,a=IDLE,uri=null,age=0} onFillable enter HttpChannelState@1750783a{s=IDLE a=NOT_ASYNC i=true r=IDLE w=false} null
+filled 322 SocketChannelEndPoint@507aed4c{/127.0.0.1:53562<->/127.0.0.1:9001,OPEN,fill=-,flush=-,to=10/30000}{io=0/0,kio=0,kro=1}->HttpConnection@68cc201d[p=HttpParser{s=START,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=0,c=false,a=IDLE,uri=null,age=0}
+HttpConnection@68cc201d[p=HttpParser{s=START,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=0,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@507aed4c{/127.0.0.1:53562<->/127.0.0.1:9001,OPEN,fill=-,flush=-,to=0/30000}{io=0/0,kio=0,kro=1}->HttpConnection@68cc201d[p=HttpParser{s=START,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=0,c=false,a=IDLE,uri=null,age=0} filled 322 HeapByteBuffer@3cc1590e[p=0,l=322,c=8192,r=322]={<<<POST /getProducts...tUser":"Liam",}>>>",}Server: Jetty(...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+HttpConnection@68cc201d[p=HttpParser{s=START,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=0,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@507aed4c{/127.0.0.1:53562<->/127.0.0.1:9001,OPEN,fill=-,flush=-,to=0/30000}{io=0/0,kio=0,kro=1}->HttpConnection@68cc201d[p=HttpParser{s=START,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=0,c=false,a=IDLE,uri=null,age=0} parse HeapByteBuffer@3cc1590e[p=0,l=322,c=8192,r=322]={<<<POST /getProducts...tUser":"Liam",}>>>",}Server: Jetty(...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} {}
+parseNext s=START HeapByteBuffer@3cc1590e[p=0,l=322,c=8192,r=322]={<<<POST /getProducts...tUser":"Liam",}>>>",}Server: Jetty(...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+START --> SPACE1
+SPACE1 --> URI
+URI --> SPACE2
+SPACE2 --> REQUEST_VERSION
+REQUEST_VERSION --> HEADER
+HEADER:null --> IN_NAME
+HEADER:null --> VALUE
+HEADER:null --> IN_VALUE
+HEADER:null --> FIELD
+HEADER:null --> VALUE
+HEADER:null --> IN_VALUE
+HEADER:null --> FIELD
+HEADER:null --> VALUE
+HEADER:null --> IN_VALUE
+HEADER:null --> FIELD
+HEADER:null --> VALUE
+HEADER:null --> IN_VALUE
+HEADER:null --> FIELD
+HEADER:Connection: keep-alive --> IN_VALUE
+HEADER:Connection: keep-alive --> FIELD
+HEADER:Content-Type: application/x-www-form-urlencoded --> IN_VALUE
+HEADER:Content-Type: application/x-www-form-urlencoded --> FIELD
+HEADER:null --> VALUE
+HEADER:null --> IN_VALUE
+HEADER:null --> FIELD
+HEADER --> CONTENT
+REQUEST for //localhost:9001/getProductsServlet on HttpChannelOverHttp@3237b6f9{r=1,c=false,a=IDLE,uri=//localhost:9001/getProductsServlet,age=0}
+POST //localhost:9001/getProductsServlet HTTP/1.1
+secret: I am the server's secret!
+User-Agent: Java/1.8.0_191
+Host: localhost:9001
+Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+Connection: keep-alive
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 45
+
+
+HttpConnection@68cc201d[p=HttpParser{s=CONTENT,0 of 45},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=1,c=false,a=IDLE,uri=//localhost:9001/getProductsServlet,age=2}<-SocketChannelEndPoint@507aed4c{/127.0.0.1:53562<->/127.0.0.1:9001,OPEN,fill=-,flush=-,to=3/30000}{io=0/0,kio=0,kro=1}->HttpConnection@68cc201d[p=HttpParser{s=CONTENT,0 of 45},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=1,c=false,a=IDLE,uri=//localhost:9001/getProductsServlet,age=2} parsed true HttpParser{s=CONTENT,0 of 45}
+HttpChannelOverHttp@3237b6f9{r=1,c=false,a=IDLE,uri=//localhost:9001/getProductsServlet,age=2} handle //localhost:9001/getProductsServlet 
+handling HttpChannelState@1750783a{s=IDLE a=NOT_ASYNC i=true r=IDLE w=false}
+HttpChannelOverHttp@3237b6f9{r=1,c=false,a=DISPATCHED,uri=//localhost:9001/getProductsServlet,age=2} action DISPATCH
+REQUEST POST /getProductsServlet on HttpChannelOverHttp@3237b6f9{r=1,c=false,a=DISPATCHED,uri=//localhost:9001/getProductsServlet,age=2}
+scope null||/getProductsServlet @ o.e.j.s.ServletContextHandler@25a65b77{/,null,AVAILABLE}
+context=||/getProductsServlet @ o.e.j.s.ServletContextHandler@25a65b77{/,null,AVAILABLE}
+sessionHandler=org.eclipse.jetty.server.session.SessionHandler1131040331==dftMaxIdleSec=-1
+session=null
+servlet |/getProductsServlet|null -> TEmPoS.Servlet.Product.GetProductsServlet-7995092a@9d9b35ba==TEmPoS.Servlet.Product.GetProductsServlet,jsp=null,order=-1,inst=true
+chain=null
+HttpConnection@68cc201d[p=HttpParser{s=CONTENT,0 of 45},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=1,c=false,a=DISPATCHED,uri=//localhost:9001/getProductsServlet,age=2}<-SocketChannelEndPoint@507aed4c{/127.0.0.1:53562<->/127.0.0.1:9001,OPEN,fill=-,flush=-,to=3/30000}{io=0/0,kio=0,kro=1}->HttpConnection@68cc201d[p=HttpParser{s=CONTENT,0 of 45},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=1,c=false,a=DISPATCHED,uri=//localhost:9001/getProductsServlet,age=2} parse HeapByteBuffer@3cc1590e[p=277,l=322,c=8192,r=45]={POST /getProducts...-Length: 45\r\n\r\n<<<{"branchId":"Bran...tUser":"Liam",}>>>",}Server: Jetty(...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} {}
+parseNext s=CONTENT HeapByteBuffer@3cc1590e[p=277,l=322,c=8192,r=45]={POST /getProducts...-Length: 45\r\n\r\n<<<{"branchId":"Bran...tUser":"Liam",}>>>",}Server: Jetty(...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+HttpChannelOverHttp@3237b6f9{r=1,c=false,a=DISPATCHED,uri=//localhost:9001/getProductsServlet,age=2} onContent Content@17606f6d{HeapByteBufferR@19a793f1[p=277,l=322,c=8192,r=45]={POST /getProducts...-Length: 45\r\n\r\n<<<{"branchId":"Bran...tUser":"Liam",}>>>",}Server: Jetty(...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}}
+HttpInputOverHTTP@1d98041d[c=0,q=0,[0]=null,s=STREAM] addContent Content@17606f6d{HeapByteBufferR@19a793f1[p=277,l=322,c=8192,r=45]={POST /getProducts...-Length: 45\r\n\r\n<<<{"branchId":"Bran...tUser":"Liam",}>>>",}Server: Jetty(...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}}
+CONTENT --> END
+HttpChannelOverHttp@3237b6f9{r=1,c=false,a=DISPATCHED,uri=//localhost:9001/getProductsServlet,age=2} onContentComplete
+HttpChannelOverHttp@3237b6f9{r=1,c=false,a=DISPATCHED,uri=//localhost:9001/getProductsServlet,age=2} onRequestComplete
+HttpInputOverHTTP@1d98041d[c=0,q=1,[0]=EOF,s=STREAM] addContent EOF
+HttpConnection@68cc201d[p=HttpParser{s=END,45 of 45},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=1,c=false,a=DISPATCHED,uri=//localhost:9001/getProductsServlet,age=3}<-SocketChannelEndPoint@507aed4c{/127.0.0.1:53562<->/127.0.0.1:9001,OPEN,fill=-,flush=-,to=4/30000}{io=0/0,kio=0,kro=1}->HttpConnection@68cc201d[p=HttpParser{s=END,45 of 45},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=1,c=false,a=DISPATCHED,uri=//localhost:9001/getProductsServlet,age=3} parsed false HttpParser{s=END,45 of 45}
+HttpInputOverHTTP@1d98041d[c=45,q=1,[0]=EOF,s=STREAM] read 45 from Content@17606f6d{HeapByteBufferR@19a793f1[p=322,l=322,c=8192,r=0]={POST /getProducts...tUser":"Liam",}<<<>>>",}Server: Jetty(...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}}
+releaseRequestBuffer HttpConnection@68cc201d[p=HttpParser{s=END,45 of 45},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=1,c=false,a=DISPATCHED,uri=//localhost:9001/getProductsServlet,age=3}<-SocketChannelEndPoint@507aed4c{/127.0.0.1:53562<->/127.0.0.1:9001,OPEN,fill=-,flush=-,to=4/30000}{io=0/0,kio=0,kro=1}->HttpConnection@68cc201d[p=HttpParser{s=END,45 of 45},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=1,c=false,a=DISPATCHED,uri=//localhost:9001/getProductsServlet,age=3}
+onEof HttpChannelState@1750783a{s=DISPATCHED a=NOT_ASYNC i=true r=IDLE w=false}
+onEof HttpChannelState@1750783a{s=DISPATCHED a=NOT_ASYNC i=true r=READY w=false}
+sendResponse info=null content=DirectByteBuffer@2064840a[p=0,l=1484,c=32768,r=1484]={<<<{"response":"OK",...and":"Pearl"}]}>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} complete=false committing=true callback=Blocker@589a99ca{null}
+COMMIT for /getProductsServlet on HttpChannelOverHttp@3237b6f9{r=1,c=true,a=DISPATCHED,uri=//localhost:9001/getProductsServlet,age=3}
+200 null HTTP/1.1
+Date: Fri, 05 Apr 2019 19:29:49 GMT
+Content-Type: application/json
+
+
+org.eclipse.jetty.server.HttpConnection$SendCallback@4c959eb3[PROCESSING][i=HTTP/1.1{s=200,h=2,cl=-1},cb=org.eclipse.jetty.server.HttpChannel$CommitCallback@6908a4cb] generate: NEED_HEADER (null,[p=0,l=1484,c=32768,r=1484],false)@START
+generateHeaders HTTP/1.1{s=200,h=2,cl=-1} last=false content=DirectByteBuffer@2064840a[p=0,l=1484,c=32768,r=1484]={<<<{"response":"OK",...and":"Pearl"}]}>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+Date: Fri, 05 Apr 2019 19:29:49 GMT
+Content-Type: application/json
+
+
+CHUNKED_CONTENT
+org.eclipse.jetty.server.HttpConnection$SendCallback@4c959eb3[PROCESSING][i=HTTP/1.1{s=200,h=2,cl=-1},cb=org.eclipse.jetty.server.HttpChannel$CommitCallback@6908a4cb] generate: FLUSH ([p=0,l=153,c=8192,r=153],[p=0,l=1484,c=32768,r=1484],false)@COMMITTED
+write: WriteFlusher@34edfd1b{IDLE}->null [HeapByteBuffer@3cc1590e[p=0,l=153,c=8192,r=153]={<<<HTTP/1.1 200 OK\r\n...80320)\r\n\r\n5CC\r\n>>>ge/jpeg, *; q=.2,...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00},DirectByteBuffer@2064840a[p=0,l=1484,c=32768,r=1484]={<<<{"response":"OK",...and":"Pearl"}]}>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}]
+update WriteFlusher@34edfd1b{WRITING}->null:IDLE-->WRITING
+flushed 1637 SocketChannelEndPoint@507aed4c{/127.0.0.1:53562<->/127.0.0.1:9001,OPEN,fill=-,flush=W,to=5/30000}{io=0/0,kio=0,kro=1}->HttpConnection@68cc201d[p=HttpParser{s=END,45 of 45},g=HttpGenerator@6fdba0c5{s=COMMITTED}]=>HttpChannelOverHttp@3237b6f9{r=1,c=true,a=DISPATCHED,uri=//localhost:9001/getProductsServlet,age=4}
+Flushed=true written=1637 remaining=0 WriteFlusher@34edfd1b{WRITING}->null
+update WriteFlusher@34edfd1b{IDLE}->null:WRITING-->IDLE
+org.eclipse.jetty.server.HttpConnection$SendCallback@4c959eb3[PROCESSING][i=HTTP/1.1{s=200,h=2,cl=-1},cb=org.eclipse.jetty.server.HttpChannel$CommitCallback@6908a4cb] generate: DONE ([p=153,l=153,c=8192,r=0],[p=1484,l=1484,c=32768,r=0],false)@COMMITTED
+FinalSession=null old_session_manager=null this=org.eclipse.jetty.server.session.SessionHandler1131040331==dftMaxIdleSec=-1
+handled=true async=false committed=true on HttpChannelOverHttp@3237b6f9{r=1,c=true,a=DISPATCHED,uri=//localhost:9001/getProductsServlet,age=4}
+unhandle HttpChannelState@1750783a{s=DISPATCHED a=NOT_ASYNC i=true r=READY w=false}
+HttpChannelOverHttp@3237b6f9{r=1,c=true,a=COMPLETING,uri=//localhost:9001/getProductsServlet,age=4} action COMPLETE
+sendResponse info=null content=HeapByteBuffer@4a305366[p=0,l=0,c=0,r=0]={<<<>>>} complete=true committing=false callback=Blocker@589a99ca{null}
+org.eclipse.jetty.server.HttpConnection$SendCallback@4c959eb3[PROCESSING][i=null,cb=org.eclipse.jetty.server.HttpChannel$ContentCallback@38b56685] generate: CONTINUE (null,[p=0,l=0,c=0,r=0],true)@COMPLETING
+org.eclipse.jetty.server.HttpConnection$SendCallback@4c959eb3[PROCESSING][i=null,cb=org.eclipse.jetty.server.HttpChannel$ContentCallback@38b56685] generate: NEED_CHUNK (null,[p=0,l=0,c=0,r=0],true)@COMPLETING
+org.eclipse.jetty.server.HttpConnection$SendCallback@4c959eb3[PROCESSING][i=null,cb=org.eclipse.jetty.server.HttpChannel$ContentCallback@38b56685] generate: FLUSH (null,[p=0,l=0,c=0,r=0],true)@COMPLETING
+write: WriteFlusher@34edfd1b{IDLE}->null [HeapByteBuffer@75aca439[p=0,l=7,c=1024,r=7]={<<<\r\n0\r\n\r\n>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}]
+update WriteFlusher@34edfd1b{WRITING}->null:IDLE-->WRITING
+flushed 7 SocketChannelEndPoint@507aed4c{/127.0.0.1:53562<->/127.0.0.1:9001,OPEN,fill=-,flush=W,to=0/30000}{io=0/0,kio=0,kro=1}->HttpConnection@68cc201d[p=HttpParser{s=END,45 of 45},g=HttpGenerator@6fdba0c5{s=COMPLETING}]=>HttpChannelOverHttp@3237b6f9{r=1,c=true,a=COMPLETING,uri=//localhost:9001/getProductsServlet,age=4}
+Flushed=true written=7 remaining=0 WriteFlusher@34edfd1b{WRITING}->null
+update WriteFlusher@34edfd1b{IDLE}->null:WRITING-->IDLE
+org.eclipse.jetty.server.HttpConnection$SendCallback@4c959eb3[PROCESSING][i=null,cb=org.eclipse.jetty.server.HttpChannel$ContentCallback@38b56685] generate: DONE (null,[p=0,l=0,c=0,r=0],true)@END
+onComplete HttpChannelState@1750783a{s=COMPLETING a=NOT_ASYNC i=false r=READY w=false}
+COMPLETE for /getProductsServlet written=1484
+onEof HttpChannelState@1750783a{s=COMPLETED a=NOT_ASYNC i=false r=READY w=false}
+recycle HttpChannelState@1750783a{s=COMPLETED a=NOT_ASYNC i=false r=READY w=false}
+reset HttpParser{s=END,45 of 45}
+END --> START
+HttpChannelOverHttp@3237b6f9{r=1,c=false,a=IDLE,uri=null,age=0} handle exit, result COMPLETE
+filled 0 SocketChannelEndPoint@507aed4c{/127.0.0.1:53562<->/127.0.0.1:9001,OPEN,fill=-,flush=-,to=2/30000}{io=0/0,kio=0,kro=1}->HttpConnection@68cc201d[p=HttpParser{s=START,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=1,c=false,a=IDLE,uri=null,age=0}
+filled 0 SocketChannelEndPoint@507aed4c{/127.0.0.1:53562<->/127.0.0.1:9001,OPEN,fill=-,flush=-,to=2/30000}{io=0/0,kio=0,kro=1}->HttpConnection@68cc201d[p=HttpParser{s=START,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=1,c=false,a=IDLE,uri=null,age=0}
+HttpConnection@68cc201d[p=HttpParser{s=START,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=1,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@507aed4c{/127.0.0.1:53562<->/127.0.0.1:9001,OPEN,fill=-,flush=-,to=4/30000}{io=0/0,kio=0,kro=1}->HttpConnection@68cc201d[p=HttpParser{s=START,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=1,c=false,a=IDLE,uri=null,age=0} filled 0 HeapByteBuffer@3cc1590e[p=0,l=0,c=8192,r=0]={<<<>>>HTTP/1.1 200 OK\r\n...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+HttpConnection@68cc201d[p=HttpParser{s=START,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=1,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@507aed4c{/127.0.0.1:53562<->/127.0.0.1:9001,OPEN,fill=-,flush=-,to=4/30000}{io=0/0,kio=0,kro=1}->HttpConnection@68cc201d[p=HttpParser{s=START,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=1,c=false,a=IDLE,uri=null,age=0} parse HeapByteBuffer@3cc1590e[p=0,l=0,c=8192,r=0]={<<<>>>HTTP/1.1 200 OK\r\n...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} {}
+parseNext s=START HeapByteBuffer@3cc1590e[p=0,l=0,c=8192,r=0]={<<<>>>HTTP/1.1 200 OK\r\n...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+HttpConnection@68cc201d[p=HttpParser{s=START,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=1,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@507aed4c{/127.0.0.1:53562<->/127.0.0.1:9001,OPEN,fill=-,flush=-,to=4/30000}{io=0/0,kio=0,kro=1}->HttpConnection@68cc201d[p=HttpParser{s=START,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=1,c=false,a=IDLE,uri=null,age=0} parsed false HttpParser{s=START,0 of -1}
+releaseRequestBuffer HttpConnection@68cc201d[p=HttpParser{s=START,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=1,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@507aed4c{/127.0.0.1:53562<->/127.0.0.1:9001,OPEN,fill=-,flush=-,to=4/30000}{io=0/0,kio=0,kro=1}->HttpConnection@68cc201d[p=HttpParser{s=START,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=1,c=false,a=IDLE,uri=null,age=0}
+fillInterested HttpConnection@68cc201d[p=HttpParser{s=START,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=1,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@507aed4c{/127.0.0.1:53562<->/127.0.0.1:9001,OPEN,fill=-,flush=-,to=4/30000}{io=0/0,kio=0,kro=1}->HttpConnection@68cc201d[p=HttpParser{s=START,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=1,c=false,a=IDLE,uri=null,age=0}
+interested FillInterest@605443b9{AC.ReadCB@68cc201d{HttpConnection@68cc201d[p=HttpParser{s=START,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=1,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@507aed4c{/127.0.0.1:53562<->/127.0.0.1:9001,OPEN,fill=FI,flush=-,to=0/30000}{io=0/0,kio=0,kro=1}->HttpConnection@68cc201d[p=HttpParser{s=START,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=1,c=false,a=IDLE,uri=null,age=0}}}
+changeInterests p=false 0->1 for SocketChannelEndPoint@507aed4c{/127.0.0.1:53562<->/127.0.0.1:9001,OPEN,fill=FI,flush=-,to=1/30000}{io=0/1,kio=0,kro=1}->HttpConnection@68cc201d[p=HttpParser{s=START,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=1,c=false,a=IDLE,uri=null,age=0}
+Queued change org.eclipse.jetty.io.ChannelEndPoint$1@74d16621 on org.eclipse.jetty.io.ManagedSelector@49438269 id=2 keys=1 selected=0 updates=0
+Selector sun.nio.ch.WindowsSelectorImpl@e6d9d73 woken up from select, 0/1 selected
+Selector sun.nio.ch.WindowsSelectorImpl@e6d9d73 processing 0 keys, 1 updates
+updateable 1
+update org.eclipse.jetty.io.ChannelEndPoint$1@74d16621
+HttpConnection@68cc201d[p=HttpParser{s=START,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=1,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@507aed4c{/127.0.0.1:53562<->/127.0.0.1:9001,OPEN,fill=FI,flush=-,to=1/30000}{io=0/1,kio=0,kro=1}->HttpConnection@68cc201d[p=HttpParser{s=START,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=1,c=false,a=IDLE,uri=null,age=0} onFillable exit HttpChannelState@1750783a{s=IDLE a=NOT_ASYNC i=true r=IDLE w=false} null
+Key interests updated 0 -> 1 on SocketChannelEndPoint@507aed4c{/127.0.0.1:53562<->/127.0.0.1:9001,OPEN,fill=FI,flush=-,to=1/30000}{io=1/1,kio=1,kro=1}->HttpConnection@68cc201d[p=HttpParser{s=START,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=1,c=false,a=IDLE,uri=null,age=0}
+updates 0
+ran CEP:SocketChannelEndPoint@507aed4c{/127.0.0.1:53562<->/127.0.0.1:9001,OPEN,fill=FI,flush=-,to=1/30000}{io=1/1,kio=1,kro=1}->HttpConnection@68cc201d[p=HttpParser{s=START,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=1,c=false,a=IDLE,uri=null,age=0}:runFillable:BLOCKING
+Selector sun.nio.ch.WindowsSelectorImpl@e6d9d73 waiting on select
+Selector sun.nio.ch.WindowsSelectorImpl@e6d9d73 woken up from select, 1/1 selected
+Selector sun.nio.ch.WindowsSelectorImpl@e6d9d73 processing 1 keys, 0 updates
+selected 1 sun.nio.ch.SelectionKeyImpl@aa62ce SocketChannelEndPoint@507aed4c{/127.0.0.1:53562<->/127.0.0.1:9001,OPEN,fill=FI,flush=-,to=5000/30000}{io=1/1,kio=1,kro=1}->HttpConnection@68cc201d[p=HttpParser{s=START,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=1,c=false,a=IDLE,uri=null,age=0} 
+onSelected 1->0 r=true w=false for SocketChannelEndPoint@507aed4c{/127.0.0.1:53562<->/127.0.0.1:9001,OPEN,fill=FI,flush=-,to=5000/30000}{io=1/0,kio=1,kro=1}->HttpConnection@68cc201d[p=HttpParser{s=START,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=1,c=false,a=IDLE,uri=null,age=0}
+task CEP:SocketChannelEndPoint@507aed4c{/127.0.0.1:53562<->/127.0.0.1:9001,OPEN,fill=FI,flush=-,to=5000/30000}{io=1/0,kio=1,kro=1}->HttpConnection@68cc201d[p=HttpParser{s=START,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=1,c=false,a=IDLE,uri=null,age=0}:runFillable:BLOCKING
+ReservedThreadExecutor@694abbdc{s=1/8,p=0} tryExecute EatWhatYouKill@2cd76f31/SelectorProducer@367ffa75/PRODUCING/p=false/QueuedThreadPool[qtp520022247]@1efee8e7{STARTED,8<=8<=200,i=2,q=0}[pc=0,pic=0,pec=1,epc=0]@2019-04-05T20:29:54.428+01:00
+ReservedThreadExecutor@694abbdc{s=0/8,p=0}@495f603 offer EatWhatYouKill@2cd76f31/SelectorProducer@367ffa75/PRODUCING/p=false/QueuedThreadPool[qtp520022247]@1efee8e7{STARTED,8<=8<=200,i=2,q=0}[pc=0,pic=0,pec=1,epc=0]@2019-04-05T20:29:54.428+01:00
+ReservedThreadExecutor@694abbdc{s=0/8,p=1} startReservedThread p=1
+queue ReservedThreadExecutor@694abbdc{s=0/8,p=1}@419768f5
+run ReservedThreadExecutor@694abbdc{s=0/8,p=1}@419768f5
+ReservedThreadExecutor@694abbdc{s=1/8,p=1}@419768f5 started
+ReservedThreadExecutor@694abbdc{s=0/8,p=1}@495f603 task=EatWhatYouKill@2cd76f31/SelectorProducer@367ffa75/IDLE/p=true/QueuedThreadPool[qtp520022247]@1efee8e7{STARTED,8<=8<=200,i=1,q=0}[pc=0,pic=0,pec=1,epc=0]@2019-04-05T20:29:54.428+01:00
+ReservedThreadExecutor@694abbdc{s=1/8,p=0}@419768f5 waiting
+EatWhatYouKill@2cd76f31/SelectorProducer@367ffa75/IDLE/p=true/QueuedThreadPool[qtp520022247]@1efee8e7{STARTED,8<=8<=200,i=1,q=0}[pc=0,pic=0,pec=1,epc=0]@2019-04-05T20:29:54.428+01:00 m=EXECUTE_PRODUCE_CONSUME t=CEP:SocketChannelEndPoint@507aed4c{/127.0.0.1:53562<->/127.0.0.1:9001,OPEN,fill=FI,flush=-,to=5000/30000}{io=1/0,kio=1,kro=1}->HttpConnection@68cc201d[p=HttpParser{s=START,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=1,c=false,a=IDLE,uri=null,age=0}:runFillable:BLOCKING/BLOCKING
+EatWhatYouKill@2cd76f31/SelectorProducer@367ffa75/IDLE/p=true/QueuedThreadPool[qtp520022247]@1efee8e7{STARTED,8<=8<=200,i=1,q=0}[pc=0,pic=0,pec=1,epc=0]@2019-04-05T20:29:54.428+01:00 tryProduce true
+updateable 0
+updates 0
+fillable FillInterest@605443b9{AC.ReadCB@68cc201d{HttpConnection@68cc201d[p=HttpParser{s=START,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=1,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@507aed4c{/127.0.0.1:53562<->/127.0.0.1:9001,OPEN,fill=FI,flush=-,to=5000/30000}{io=1/0,kio=1,kro=1}->HttpConnection@68cc201d[p=HttpParser{s=START,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=1,c=false,a=IDLE,uri=null,age=0}}}
+Key interests updated 1 -> 0 on SocketChannelEndPoint@507aed4c{/127.0.0.1:53562<->/127.0.0.1:9001,OPEN,fill=FI,flush=-,to=5000/30000}{io=0/0,kio=0,kro=1}->HttpConnection@68cc201d[p=HttpParser{s=START,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=1,c=false,a=IDLE,uri=null,age=0}
+Selector sun.nio.ch.WindowsSelectorImpl@e6d9d73 waiting on select
+HttpConnection@68cc201d[p=HttpParser{s=START,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=1,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@507aed4c{/127.0.0.1:53562<->/127.0.0.1:9001,OPEN,fill=-,flush=-,to=5003/30000}{io=0/0,kio=0,kro=1}->HttpConnection@68cc201d[p=HttpParser{s=START,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=1,c=false,a=IDLE,uri=null,age=0} onFillable enter HttpChannelState@1750783a{s=IDLE a=NOT_ASYNC i=true r=IDLE w=false} null
+filled -1 SocketChannelEndPoint@507aed4c{/127.0.0.1:53562<->/127.0.0.1:9001,OPEN,fill=-,flush=-,to=5003/30000}{io=0/0,kio=0,kro=1}->HttpConnection@68cc201d[p=HttpParser{s=START,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=1,c=false,a=IDLE,uri=null,age=0}
+shutdownInput SocketChannelEndPoint@507aed4c{/127.0.0.1:53562<->/127.0.0.1:9001,OPEN,fill=-,flush=-,to=5003/30000}{io=0/0,kio=0,kro=1}->HttpConnection@68cc201d[p=HttpParser{s=START,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=1,c=false,a=IDLE,uri=null,age=0}
+atEOF HttpParser{s=START,0 of -1}
+HttpConnection@68cc201d[p=HttpParser{s=START,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=1,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@507aed4c{/127.0.0.1:53562<->/127.0.0.1:9001,ISHUT,fill=-,flush=-,to=5003/30000}{io=0/0,kio=0,kro=1}->HttpConnection@68cc201d[p=HttpParser{s=START,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=1,c=false,a=IDLE,uri=null,age=0} filled -1 HeapByteBuffer@3cc1590e[p=0,l=0,c=8192,r=0]={<<<>>>HTTP/1.1 200 OK\r\n...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+HttpConnection@68cc201d[p=HttpParser{s=START,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=1,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@507aed4c{/127.0.0.1:53562<->/127.0.0.1:9001,ISHUT,fill=-,flush=-,to=5004/30000}{io=0/0,kio=0,kro=1}->HttpConnection@68cc201d[p=HttpParser{s=START,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=1,c=false,a=IDLE,uri=null,age=0} parse HeapByteBuffer@3cc1590e[p=0,l=0,c=8192,r=0]={<<<>>>HTTP/1.1 200 OK\r\n...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} {}
+parseNext s=START HeapByteBuffer@3cc1590e[p=0,l=0,c=8192,r=0]={<<<>>>HTTP/1.1 200 OK\r\n...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+START --> CLOSED
+close SocketChannelEndPoint@507aed4c{/127.0.0.1:53562<->/127.0.0.1:9001,ISHUT,fill=-,flush=-,to=5004/30000}{io=0/0,kio=0,kro=1}->HttpConnection@68cc201d[p=HttpParser{s=CLOSED,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=1,c=false,a=IDLE,uri=null,age=0}
+close(null) SocketChannelEndPoint@507aed4c{/127.0.0.1:53562<->/127.0.0.1:9001,ISHUT,fill=-,flush=-,to=5004/30000}{io=0/0,kio=0,kro=1}->HttpConnection@68cc201d[p=HttpParser{s=CLOSED,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=1,c=false,a=IDLE,uri=null,age=0}
+doClose SocketChannelEndPoint@507aed4c{/127.0.0.1:53562<->/127.0.0.1:9001,CLOSED,fill=-,flush=-,to=5004/30000}{io=0/0,kio=0,kro=1}->HttpConnection@68cc201d[p=HttpParser{s=CLOSED,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=1,c=false,a=IDLE,uri=null,age=0}
+ignored: WriteFlusher@34edfd1b{IDLE}->null
+java.nio.channels.ClosedChannelException: null
+	at org.eclipse.jetty.io.WriteFlusher.onClose(WriteFlusher.java:532)
+	at org.eclipse.jetty.io.AbstractEndPoint.onClose(AbstractEndPoint.java:353)
+	at org.eclipse.jetty.io.ChannelEndPoint.onClose(ChannelEndPoint.java:216)
+	at org.eclipse.jetty.io.AbstractEndPoint.doOnClose(AbstractEndPoint.java:225)
+	at org.eclipse.jetty.io.AbstractEndPoint.close(AbstractEndPoint.java:192)
+	at org.eclipse.jetty.io.AbstractEndPoint.close(AbstractEndPoint.java:175)
+	at org.eclipse.jetty.io.AbstractConnection.close(AbstractConnection.java:224)
+	at org.eclipse.jetty.server.HttpChannelOverHttp.earlyEOF(HttpChannelOverHttp.java:236)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:1476)
+	at org.eclipse.jetty.server.HttpConnection.parseRequestBuffer(HttpConnection.java:360)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:250)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:281)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:102)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:118)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:319)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:175)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.produce(EatWhatYouKill.java:139)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:754)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:672)
+	at java.lang.Thread.run(Thread.java:748)
+onClose FillInterest@605443b9{null}
+queue org.eclipse.jetty.io.ManagedSelector$DestroyEndPoint@2373f3b1
+run org.eclipse.jetty.io.ManagedSelector$DestroyEndPoint@2373f3b1
+HttpConnection@68cc201d[p=HttpParser{s=CLOSED,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=1,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@507aed4c{/127.0.0.1:53562<->/127.0.0.1:9001,CLOSED,fill=-,flush=-,to=5004/30000}{io=0/0,kio=-1,kro=-1}->HttpConnection@68cc201d[p=HttpParser{s=CLOSED,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=1,c=false,a=IDLE,uri=null,age=0} parsed false HttpParser{s=CLOSED,0 of -1}
+Destroyed SocketChannelEndPoint@507aed4c{/127.0.0.1:53562<->/127.0.0.1:9001,CLOSED,fill=-,flush=-,to=5004/30000}{io=0/0,kio=-1,kro=-1}->HttpConnection@68cc201d[p=HttpParser{s=CLOSED,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=1,c=false,a=IDLE,uri=null,age=0}
+releaseRequestBuffer HttpConnection@68cc201d[p=HttpParser{s=CLOSED,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=1,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@507aed4c{/127.0.0.1:53562<->/127.0.0.1:9001,CLOSED,fill=-,flush=-,to=5004/30000}{io=0/0,kio=-1,kro=-1}->HttpConnection@68cc201d[p=HttpParser{s=CLOSED,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=1,c=false,a=IDLE,uri=null,age=0}
+onClose HttpConnection@68cc201d[p=HttpParser{s=CLOSED,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=1,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@507aed4c{/127.0.0.1:53562<->/127.0.0.1:9001,CLOSED,fill=-,flush=-,to=5004/30000}{io=0/0,kio=-1,kro=-1}->HttpConnection@68cc201d[p=HttpParser{s=CLOSED,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=1,c=false,a=IDLE,uri=null,age=0}
+HttpConnection@68cc201d[p=HttpParser{s=CLOSED,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=1,c=false,a=IDLE,uri=null,age=0}<-SocketChannelEndPoint@507aed4c{/127.0.0.1:53562<->/127.0.0.1:9001,CLOSED,fill=-,flush=-,to=5004/30000}{io=0/0,kio=-1,kro=-1}->HttpConnection@68cc201d[p=HttpParser{s=CLOSED,0 of -1},g=HttpGenerator@6fdba0c5{s=START}]=>HttpChannelOverHttp@3237b6f9{r=1,c=false,a=IDLE,uri=null,age=0} onFillable exit HttpChannelState@1750783a{s=IDLE a=NOT_ASYNC i=true r=IDLE w=false} null
+ran org.eclipse.jetty.io.ManagedSelector$DestroyEndPoint@2373f3b1
+ran org.eclipse.jetty.io.ManagedSelector$$Lambda$28/1359953204@d35dea7
